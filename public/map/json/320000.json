@@ -1,0 +1,868 @@
+{
+  "adcode": "320000",
+  "name": "江苏省",
+  "postal_code": "210008",
+  "cities": [
+    {
+      "adcode": "320100",
+      "name": "南京市",
+      "postal_code": "210000",
+      "districts": [
+        {
+          "adcode": "320102",
+          "name": "玄武区",
+          "postal_code": "210018",
+          "longitude": "118.792199",
+          "latitude": "32.050678"
+        },
+        {
+          "adcode": "320104",
+          "name": "秦淮区",
+          "postal_code": "210001",
+          "longitude": "118.786088",
+          "latitude": "32.033818"
+        },
+        {
+          "adcode": "320105",
+          "name": "建邺区",
+          "postal_code": "210004",
+          "longitude": "118.732688",
+          "latitude": "32.004538"
+        },
+        {
+          "adcode": "320106",
+          "name": "鼓楼区",
+          "postal_code": "210009",
+          "longitude": "118.769739",
+          "latitude": "32.066966"
+        },
+        {
+          "adcode": "320111",
+          "name": "浦口区",
+          "postal_code": "211800",
+          "longitude": "118.625307",
+          "latitude": "32.05839"
+        },
+        {
+          "adcode": "320113",
+          "name": "栖霞区",
+          "postal_code": "210046",
+          "longitude": "118.808702",
+          "latitude": "32.102147"
+        },
+        {
+          "adcode": "320114",
+          "name": "雨花台区",
+          "postal_code": "210012",
+          "longitude": "118.77207",
+          "latitude": "31.995946"
+        },
+        {
+          "adcode": "320115",
+          "name": "江宁区",
+          "postal_code": "211100",
+          "longitude": "118.850621",
+          "latitude": "31.953418"
+        },
+        {
+          "adcode": "320116",
+          "name": "六合区",
+          "postal_code": "211500",
+          "longitude": "118.85065",
+          "latitude": "32.340655"
+        },
+        {
+          "adcode": "320117",
+          "name": "溧水区",
+          "postal_code": "211200",
+          "longitude": "119.028732",
+          "latitude": "31.653061"
+        },
+        {
+          "adcode": "320118",
+          "name": "高淳区",
+          "postal_code": "211300",
+          "longitude": "118.87589",
+          "latitude": "31.327132"
+        }
+      ],
+      "longitude": "118.767413",
+      "latitude": "32.041544"
+    },
+    {
+      "adcode": "320200",
+      "name": "无锡市",
+      "postal_code": "214000",
+      "districts": [
+        {
+          "adcode": "320205",
+          "name": "锡山区",
+          "postal_code": "214101",
+          "longitude": "120.357298",
+          "latitude": "31.585559"
+        },
+        {
+          "adcode": "320206",
+          "name": "惠山区",
+          "postal_code": "214174",
+          "longitude": "120.303543",
+          "latitude": "31.681019"
+        },
+        {
+          "adcode": "320211",
+          "name": "滨湖区",
+          "postal_code": "214123",
+          "longitude": "120.266053",
+          "latitude": "31.550228"
+        },
+        {
+          "adcode": "320213",
+          "name": "梁溪区",
+          "postal_code": "214000",
+          "longitude": "120.296595",
+          "latitude": "31.575706"
+        },
+        {
+          "adcode": "320214",
+          "name": "新吴区",
+          "postal_code": "214028",
+          "longitude": "120.352782",
+          "latitude": "31.550966"
+        },
+        {
+          "adcode": "320281",
+          "name": "江阴市",
+          "postal_code": "214400",
+          "longitude": "120.275891",
+          "latitude": "31.910984"
+        },
+        {
+          "adcode": "320282",
+          "name": "宜兴市",
+          "postal_code": "214200",
+          "longitude": "119.820538",
+          "latitude": "31.364384"
+        }
+      ],
+      "longitude": "120.301663",
+      "latitude": "31.574729"
+    },
+    {
+      "adcode": "320300",
+      "name": "徐州市",
+      "postal_code": "221000",
+      "districts": [
+        {
+          "adcode": "320302",
+          "name": "鼓楼区",
+          "postal_code": "221005",
+          "longitude": "117.192941",
+          "latitude": "34.269397"
+        },
+        {
+          "adcode": "320303",
+          "name": "云龙区",
+          "postal_code": "221007",
+          "longitude": "117.194589",
+          "latitude": "34.254805"
+        },
+        {
+          "adcode": "320305",
+          "name": "贾汪区",
+          "postal_code": "221003",
+          "longitude": "117.450212",
+          "latitude": "34.441642"
+        },
+        {
+          "adcode": "320311",
+          "name": "泉山区",
+          "postal_code": "221006",
+          "longitude": "117.182225",
+          "latitude": "34.262249"
+        },
+        {
+          "adcode": "320312",
+          "name": "铜山区",
+          "postal_code": "221106",
+          "longitude": "117.183894",
+          "latitude": "34.19288"
+        },
+        {
+          "adcode": "320321",
+          "name": "丰县",
+          "postal_code": "221700",
+          "longitude": "116.592888",
+          "latitude": "34.696946"
+        },
+        {
+          "adcode": "320322",
+          "name": "沛县",
+          "postal_code": "221600",
+          "longitude": "116.937182",
+          "latitude": "34.729044"
+        },
+        {
+          "adcode": "320324",
+          "name": "睢宁县",
+          "postal_code": "221200",
+          "longitude": "117.95066",
+          "latitude": "33.899222"
+        },
+        {
+          "adcode": "320371",
+          "name": "徐州经济技术开发区",
+          "postal_code": "221000",
+          "longitude": "117.2858",
+          "latitude": "34.273088"
+        },
+        {
+          "adcode": "320381",
+          "name": "新沂市",
+          "postal_code": "221400",
+          "longitude": "118.345828",
+          "latitude": "34.368779"
+        },
+        {
+          "adcode": "320382",
+          "name": "邳州市",
+          "postal_code": "221300",
+          "longitude": "117.963923",
+          "latitude": "34.314708"
+        }
+      ],
+      "longitude": "117.184811",
+      "latitude": "34.261792"
+    },
+    {
+      "adcode": "320400",
+      "name": "常州市",
+      "postal_code": "213000",
+      "districts": [
+        {
+          "adcode": "320402",
+          "name": "天宁区",
+          "postal_code": "213000",
+          "longitude": "119.963783",
+          "latitude": "31.779632"
+        },
+        {
+          "adcode": "320404",
+          "name": "钟楼区",
+          "postal_code": "213023",
+          "longitude": "119.948388",
+          "latitude": "31.78096"
+        },
+        {
+          "adcode": "320411",
+          "name": "新北区",
+          "postal_code": "213022",
+          "longitude": "119.974654",
+          "latitude": "31.824664"
+        },
+        {
+          "adcode": "320412",
+          "name": "武进区",
+          "postal_code": "213100",
+          "longitude": "119.958773",
+          "latitude": "31.718566"
+        },
+        {
+          "adcode": "320413",
+          "name": "金坛区",
+          "postal_code": "213200",
+          "longitude": "119.573395",
+          "latitude": "31.744399"
+        },
+        {
+          "adcode": "320481",
+          "name": "溧阳市",
+          "postal_code": "213300",
+          "longitude": "119.487816",
+          "latitude": "31.427081"
+        }
+      ],
+      "longitude": "119.946973",
+      "latitude": "31.772752"
+    },
+    {
+      "adcode": "320500",
+      "name": "苏州市",
+      "postal_code": "215000",
+      "districts": [
+        {
+          "adcode": "320505",
+          "name": "虎丘区",
+          "postal_code": "215004",
+          "longitude": "120.566833",
+          "latitude": "31.294845"
+        },
+        {
+          "adcode": "320506",
+          "name": "吴中区",
+          "postal_code": "215128",
+          "longitude": "120.624621",
+          "latitude": "31.270839"
+        },
+        {
+          "adcode": "320507",
+          "name": "相城区",
+          "postal_code": "215131",
+          "longitude": "120.618956",
+          "latitude": "31.396684"
+        },
+        {
+          "adcode": "320508",
+          "name": "姑苏区",
+          "postal_code": "215008",
+          "longitude": "120.622249",
+          "latitude": "31.311414"
+        },
+        {
+          "adcode": "320509",
+          "name": "吴江区",
+          "postal_code": "215200",
+          "longitude": "120.641601",
+          "latitude": "31.160404"
+        },
+        {
+          "adcode": "320571",
+          "name": "苏州工业园区",
+          "postal_code": "215028",
+          "longitude": "120.733338",
+          "latitude": "31.329949"
+        },
+        {
+          "adcode": "320581",
+          "name": "常熟市",
+          "postal_code": "215500",
+          "longitude": "120.74852",
+          "latitude": "31.658156"
+        },
+        {
+          "adcode": "320582",
+          "name": "张家港市",
+          "postal_code": "215600",
+          "longitude": "120.543441",
+          "latitude": "31.865553"
+        },
+        {
+          "adcode": "320583",
+          "name": "昆山市",
+          "postal_code": "215300",
+          "longitude": "120.958137",
+          "latitude": "31.381925"
+        },
+        {
+          "adcode": "320585",
+          "name": "太仓市",
+          "postal_code": "215400",
+          "longitude": "121.112275",
+          "latitude": "31.452568"
+        }
+      ],
+      "longitude": "120.619585",
+      "latitude": "31.299379"
+    },
+    {
+      "adcode": "320600",
+      "name": "南通市",
+      "postal_code": "226000",
+      "districts": [
+        {
+          "adcode": "320602",
+          "name": "崇川区",
+          "postal_code": "226001",
+          "longitude": "120.86635",
+          "latitude": "32.015278"
+        },
+        {
+          "adcode": "320612",
+          "name": "通州区",
+          "postal_code": "226300",
+          "longitude": "121.073171",
+          "latitude": "32.084287"
+        },
+        {
+          "adcode": "320623",
+          "name": "如东县",
+          "postal_code": "226400",
+          "longitude": "121.186088",
+          "latitude": "32.311832"
+        },
+        {
+          "adcode": "320671",
+          "name": "南通经济技术开发区",
+          "postal_code": "226000",
+          "longitude": "120.959224",
+          "latitude": "31.93862"
+        },
+        {
+          "adcode": "320681",
+          "name": "启东市",
+          "postal_code": "226200",
+          "longitude": "121.659724",
+          "latitude": "31.810158"
+        },
+        {
+          "adcode": "320682",
+          "name": "如皋市",
+          "postal_code": "226500",
+          "longitude": "120.566324",
+          "latitude": "32.391591"
+        },
+        {
+          "adcode": "320684",
+          "name": "海门区",
+          "postal_code": "226100",
+          "longitude": "121.176609",
+          "latitude": "31.893528"
+        },
+        {
+          "adcode": "320685",
+          "name": "海安市",
+          "postal_code": "226600",
+          "longitude": "120.465995",
+          "latitude": "32.540288"
+        }
+      ],
+      "longitude": "120.864608",
+      "latitude": "32.016212"
+    },
+    {
+      "adcode": "320700",
+      "name": "连云港市",
+      "postal_code": "222000",
+      "districts": [
+        {
+          "adcode": "320703",
+          "name": "连云区",
+          "postal_code": "222042",
+          "longitude": "119.366487",
+          "latitude": "34.739529"
+        },
+        {
+          "adcode": "320706",
+          "name": "海州区",
+          "postal_code": "222003",
+          "longitude": "119.179793",
+          "latitude": "34.601584"
+        },
+        {
+          "adcode": "320707",
+          "name": "赣榆区",
+          "postal_code": "222100",
+          "longitude": "119.128774",
+          "latitude": "34.839154"
+        },
+        {
+          "adcode": "320722",
+          "name": "东海县",
+          "postal_code": "222300",
+          "longitude": "118.766489",
+          "latitude": "34.522859"
+        },
+        {
+          "adcode": "320723",
+          "name": "灌云县",
+          "postal_code": "222200",
+          "longitude": "119.255741",
+          "latitude": "34.298436"
+        },
+        {
+          "adcode": "320724",
+          "name": "灌南县",
+          "postal_code": "222500",
+          "longitude": "119.352331",
+          "latitude": "34.092553"
+        },
+        {
+          "adcode": "320771",
+          "name": "连云港经济技术开发区",
+          "postal_code": "222000",
+          "longitude": "119.35444",
+          "latitude": "34.707317"
+        },
+        {
+          "adcode": "320772",
+          "name": "连云港高新技术产业开发区",
+          "postal_code": "222000",
+          "longitude": "119.213179",
+          "latitude": "34.549801"
+        }
+      ],
+      "longitude": "119.178821",
+      "latitude": "34.600018"
+    },
+    {
+      "adcode": "320800",
+      "name": "淮安市",
+      "postal_code": "223200",
+      "districts": [
+        {
+          "adcode": "320803",
+          "name": "淮安区",
+          "postal_code": "223200",
+          "longitude": "119.14634",
+          "latitude": "33.507499"
+        },
+        {
+          "adcode": "320804",
+          "name": "淮阴区",
+          "postal_code": "223300",
+          "longitude": "119.020817",
+          "latitude": "33.622452"
+        },
+        {
+          "adcode": "320812",
+          "name": "清江浦区",
+          "postal_code": "223001",
+          "longitude": "119.019454",
+          "latitude": "33.603234"
+        },
+        {
+          "adcode": "320813",
+          "name": "洪泽区",
+          "postal_code": "223100",
+          "longitude": "118.867875",
+          "latitude": "33.294975"
+        },
+        {
+          "adcode": "320826",
+          "name": "涟水县",
+          "postal_code": "223400",
+          "longitude": "119.266078",
+          "latitude": "33.771308"
+        },
+        {
+          "adcode": "320830",
+          "name": "盱眙县",
+          "postal_code": "211700",
+          "longitude": "118.493823",
+          "latitude": "33.00439"
+        },
+        {
+          "adcode": "320831",
+          "name": "金湖县",
+          "postal_code": "211600",
+          "longitude": "119.016936",
+          "latitude": "33.018162"
+        },
+        {
+          "adcode": "320871",
+          "name": "淮安经济技术开发区",
+          "postal_code": "223200",
+          "longitude": "119.152353",
+          "latitude": "33.599689"
+        }
+      ],
+      "longitude": "119.021265",
+      "latitude": "33.597506"
+    },
+    {
+      "adcode": "320900",
+      "name": "盐城市",
+      "postal_code": "224000",
+      "districts": [
+        {
+          "adcode": "320902",
+          "name": "亭湖区",
+          "postal_code": "224005",
+          "longitude": "120.136078",
+          "latitude": "33.383912"
+        },
+        {
+          "adcode": "320903",
+          "name": "盐都区",
+          "postal_code": "224055",
+          "longitude": "120.139753",
+          "latitude": "33.341288"
+        },
+        {
+          "adcode": "320904",
+          "name": "大丰区",
+          "postal_code": "224100",
+          "longitude": "120.470324",
+          "latitude": "33.199531"
+        },
+        {
+          "adcode": "320921",
+          "name": "响水县",
+          "postal_code": "224600",
+          "longitude": "119.579573",
+          "latitude": "34.19996"
+        },
+        {
+          "adcode": "320922",
+          "name": "滨海县",
+          "postal_code": "224500",
+          "longitude": "119.828434",
+          "latitude": "33.989888"
+        },
+        {
+          "adcode": "320923",
+          "name": "阜宁县",
+          "postal_code": "224400",
+          "longitude": "119.805338",
+          "latitude": "33.78573"
+        },
+        {
+          "adcode": "320924",
+          "name": "射阳县",
+          "postal_code": "224300",
+          "longitude": "120.257444",
+          "latitude": "33.773779"
+        },
+        {
+          "adcode": "320925",
+          "name": "建湖县",
+          "postal_code": "224700",
+          "longitude": "119.793105",
+          "latitude": "33.472621"
+        },
+        {
+          "adcode": "320971",
+          "name": "盐城经济技术开发区",
+          "postal_code": "224000",
+          "longitude": "120.223748",
+          "latitude": "33.385832"
+        },
+        {
+          "adcode": "320981",
+          "name": "东台市",
+          "postal_code": "224200",
+          "longitude": "120.314101",
+          "latitude": "32.853174"
+        }
+      ],
+      "longitude": "120.139998",
+      "latitude": "33.377631"
+    },
+    {
+      "adcode": "321000",
+      "name": "扬州市",
+      "postal_code": "225000",
+      "districts": [
+        {
+          "adcode": "321002",
+          "name": "广陵区",
+          "postal_code": "225002",
+          "longitude": "119.442267",
+          "latitude": "32.392154"
+        },
+        {
+          "adcode": "321003",
+          "name": "邗江区",
+          "postal_code": "225100",
+          "longitude": "119.397777",
+          "latitude": "32.377899"
+        },
+        {
+          "adcode": "321012",
+          "name": "江都区",
+          "postal_code": "225200",
+          "longitude": "119.567481",
+          "latitude": "32.426564"
+        },
+        {
+          "adcode": "321023",
+          "name": "宝应县",
+          "postal_code": "225800",
+          "longitude": "119.321284",
+          "latitude": "33.23694"
+        },
+        {
+          "adcode": "321071",
+          "name": "扬州经济技术开发区",
+          "postal_code": "225000",
+          "longitude": "119.467374",
+          "latitude": "32.311853"
+        },
+        {
+          "adcode": "321081",
+          "name": "仪征市",
+          "postal_code": "211400",
+          "longitude": "119.182443",
+          "latitude": "32.271965"
+        },
+        {
+          "adcode": "321084",
+          "name": "高邮市",
+          "postal_code": "225600",
+          "longitude": "119.443842",
+          "latitude": "32.785164"
+        }
+      ],
+      "longitude": "119.421003",
+      "latitude": "32.393159"
+    },
+    {
+      "adcode": "321100",
+      "name": "镇江市",
+      "postal_code": "212000",
+      "districts": [
+        {
+          "adcode": "321102",
+          "name": "京口区",
+          "postal_code": "212003",
+          "longitude": "119.454571",
+          "latitude": "32.206191"
+        },
+        {
+          "adcode": "321111",
+          "name": "润州区",
+          "postal_code": "212004",
+          "longitude": "119.414877",
+          "latitude": "32.213501"
+        },
+        {
+          "adcode": "321112",
+          "name": "丹徒区",
+          "postal_code": "212001",
+          "longitude": "119.433883",
+          "latitude": "32.128972"
+        },
+        {
+          "adcode": "321171",
+          "name": "镇江新区",
+          "postal_code": "212132",
+          "longitude": "119.522654",
+          "latitude": "32.169142"
+        },
+        {
+          "adcode": "321181",
+          "name": "丹阳市",
+          "postal_code": "212300",
+          "longitude": "119.581911",
+          "latitude": "31.991459"
+        },
+        {
+          "adcode": "321182",
+          "name": "扬中市",
+          "postal_code": "212200",
+          "longitude": "119.828054",
+          "latitude": "32.237266"
+        },
+        {
+          "adcode": "321183",
+          "name": "句容市",
+          "postal_code": "212400",
+          "longitude": "119.167135",
+          "latitude": "31.947355"
+        }
+      ],
+      "longitude": "119.452753",
+      "latitude": "32.204402"
+    },
+    {
+      "adcode": "321200",
+      "name": "泰州市",
+      "postal_code": "225300",
+      "districts": [
+        {
+          "adcode": "321202",
+          "name": "海陵区",
+          "postal_code": "225300",
+          "longitude": "119.920187",
+          "latitude": "32.488406"
+        },
+        {
+          "adcode": "321203",
+          "name": "高港区",
+          "postal_code": "225321",
+          "longitude": "119.88166",
+          "latitude": "32.315701"
+        },
+        {
+          "adcode": "321204",
+          "name": "姜堰区",
+          "postal_code": "225500",
+          "longitude": "120.148208",
+          "latitude": "32.508483"
+        },
+        {
+          "adcode": "321271",
+          "name": "泰州医药高新技术产业开发区",
+          "postal_code": "225300",
+          "longitude": "119.922515",
+          "latitude": "32.399039"
+        },
+        {
+          "adcode": "321281",
+          "name": "兴化市",
+          "postal_code": "225700",
+          "longitude": "119.840162",
+          "latitude": "32.938065"
+        },
+        {
+          "adcode": "321282",
+          "name": "靖江市",
+          "postal_code": "214500",
+          "longitude": "120.26825",
+          "latitude": "32.018168"
+        },
+        {
+          "adcode": "321283",
+          "name": "泰兴市",
+          "postal_code": "225400",
+          "longitude": "120.020228",
+          "latitude": "32.168784"
+        }
+      ],
+      "longitude": "119.915176",
+      "latitude": "32.484882"
+    },
+    {
+      "adcode": "321300",
+      "name": "宿迁市",
+      "postal_code": "223800",
+      "districts": [
+        {
+          "adcode": "321302",
+          "name": "宿城区",
+          "postal_code": "223800",
+          "longitude": "118.278984",
+          "latitude": "33.937726"
+        },
+        {
+          "adcode": "321311",
+          "name": "宿豫区",
+          "postal_code": "223800",
+          "longitude": "118.330012",
+          "latitude": "33.941071"
+        },
+        {
+          "adcode": "321322",
+          "name": "沭阳县",
+          "postal_code": "223600",
+          "longitude": "118.775889",
+          "latitude": "34.129097"
+        },
+        {
+          "adcode": "321323",
+          "name": "泗阳县",
+          "postal_code": "223700",
+          "longitude": "118.681284",
+          "latitude": "33.711433"
+        },
+        {
+          "adcode": "321324",
+          "name": "泗洪县",
+          "postal_code": "223900",
+          "longitude": "118.211824",
+          "latitude": "33.456538"
+        },
+        {
+          "adcode": "321371",
+          "name": "宿迁经济技术开发区",
+          "postal_code": "223800",
+          "longitude": "118.274042",
+          "latitude": "33.897473"
+        }
+      ],
+      "longitude": "118.275162",
+      "latitude": "33.963008"
+    }
+  ],
+  "longitude": "118.767413",
+  "latitude": "32.041544"
+}

@@ -1,0 +1,282 @@
+{
+  "adcode": "500000",
+  "name": "重庆市",
+  "postal_code": "400000",
+  "cities": [
+    {
+      "adcode": "500100",
+      "name": "市辖区",
+      "postal_code": "400000",
+      "districts": [
+        {
+          "adcode": "500101",
+          "name": "万州区",
+          "postal_code": "404100",
+          "longitude": "108.380246",
+          "latitude": "30.807807"
+        },
+        {
+          "adcode": "500102",
+          "name": "涪陵区",
+          "postal_code": "408000",
+          "longitude": "107.394905",
+          "latitude": "29.703652"
+        },
+        {
+          "adcode": "500103",
+          "name": "渝中区",
+          "postal_code": "400010",
+          "longitude": "106.56288",
+          "latitude": "29.556742"
+        },
+        {
+          "adcode": "500104",
+          "name": "大渡口区",
+          "postal_code": "400080",
+          "longitude": "106.48613",
+          "latitude": "29.481002"
+        },
+        {
+          "adcode": "500105",
+          "name": "江北区",
+          "postal_code": "400020",
+          "longitude": "106.532844",
+          "latitude": "29.575352"
+        },
+        {
+          "adcode": "500106",
+          "name": "沙坪坝区",
+          "postal_code": "400030",
+          "longitude": "106.4542",
+          "latitude": "29.541224"
+        },
+        {
+          "adcode": "500107",
+          "name": "九龙坡区",
+          "postal_code": "400050",
+          "longitude": "106.480989",
+          "latitude": "29.523492"
+        },
+        {
+          "adcode": "500108",
+          "name": "南岸区",
+          "postal_code": "400060",
+          "longitude": "106.560813",
+          "latitude": "29.523992"
+        },
+        {
+          "adcode": "500109",
+          "name": "北碚区",
+          "postal_code": "400700",
+          "longitude": "106.437868",
+          "latitude": "29.82543"
+        },
+        {
+          "adcode": "500110",
+          "name": "綦江区",
+          "postal_code": "400800",
+          "longitude": "106.651417",
+          "latitude": "29.028091"
+        },
+        {
+          "adcode": "500111",
+          "name": "大足区",
+          "postal_code": "400900",
+          "longitude": "105.715319",
+          "latitude": "29.700498"
+        },
+        {
+          "adcode": "500112",
+          "name": "渝北区",
+          "postal_code": "401120",
+          "longitude": "106.512851",
+          "latitude": "29.601451"
+        },
+        {
+          "adcode": "500113",
+          "name": "巴南区",
+          "postal_code": "401320",
+          "longitude": "106.519423",
+          "latitude": "29.381919"
+        },
+        {
+          "adcode": "500114",
+          "name": "黔江区",
+          "postal_code": "409700",
+          "longitude": "108.782577",
+          "latitude": "29.527548"
+        },
+        {
+          "adcode": "500115",
+          "name": "长寿区",
+          "postal_code": "401220",
+          "longitude": "107.074854",
+          "latitude": "29.833671"
+        },
+        {
+          "adcode": "500116",
+          "name": "江津区",
+          "postal_code": "402260",
+          "longitude": "106.253156",
+          "latitude": "29.283387"
+        },
+        {
+          "adcode": "500117",
+          "name": "合川区",
+          "postal_code": "401520",
+          "longitude": "106.265554",
+          "latitude": "29.990993"
+        },
+        {
+          "adcode": "500118",
+          "name": "永川区",
+          "postal_code": "402160",
+          "longitude": "105.894714",
+          "latitude": "29.348748"
+        },
+        {
+          "adcode": "500119",
+          "name": "南川区",
+          "postal_code": "408400",
+          "longitude": "107.098153",
+          "latitude": "29.156646"
+        },
+        {
+          "adcode": "500120",
+          "name": "璧山区",
+          "postal_code": "402760",
+          "longitude": "106.231126",
+          "latitude": "29.593581"
+        },
+        {
+          "adcode": "500151",
+          "name": "铜梁区",
+          "postal_code": "402560",
+          "longitude": "106.054948",
+          "latitude": "29.839944"
+        },
+        {
+          "adcode": "500152",
+          "name": "潼南区",
+          "postal_code": "402660",
+          "longitude": "105.841818",
+          "latitude": "30.189554"
+        },
+        {
+          "adcode": "500153",
+          "name": "荣昌区",
+          "postal_code": "402460",
+          "longitude": "105.594061",
+          "latitude": "29.403627"
+        },
+        {
+          "adcode": "500154",
+          "name": "开州区",
+          "postal_code": "405400",
+          "longitude": "108.413317",
+          "latitude": "31.167735"
+        },
+        {
+          "adcode": "500155",
+          "name": "梁平区",
+          "postal_code": "405200",
+          "longitude": "107.800034",
+          "latitude": "30.672168"
+        },
+        {
+          "adcode": "500229",
+          "name": "城口县",
+          "postal_code": "405900",
+          "longitude": "108.6649",
+          "latitude": "31.946293"
+        },
+        {
+          "adcode": "500230",
+          "name": "丰都县",
+          "postal_code": "408200",
+          "longitude": "107.73248",
+          "latitude": "29.866424"
+        },
+        {
+          "adcode": "500231",
+          "name": "垫江县",
+          "postal_code": "408300",
+          "longitude": "107.348692",
+          "latitude": "30.330012"
+        },
+        {
+          "adcode": "500156",
+          "name": "武隆区",
+          "postal_code": "408500",
+          "longitude": "107.75655",
+          "latitude": "29.32376"
+        },
+        {
+          "adcode": "500233",
+          "name": "忠县",
+          "postal_code": "404300",
+          "longitude": "108.037518",
+          "latitude": "30.291537"
+        },
+        {
+          "adcode": "500235",
+          "name": "云阳县",
+          "postal_code": "404500",
+          "longitude": "108.697698",
+          "latitude": "30.930529"
+        },
+        {
+          "adcode": "500236",
+          "name": "奉节县",
+          "postal_code": "404600",
+          "longitude": "109.465774",
+          "latitude": "31.019967"
+        },
+        {
+          "adcode": "500237",
+          "name": "巫山县",
+          "postal_code": "404700",
+          "longitude": "109.878928",
+          "latitude": "31.074843"
+        },
+        {
+          "adcode": "500238",
+          "name": "巫溪县",
+          "postal_code": "405800",
+          "longitude": "109.628912",
+          "latitude": "31.3966"
+        },
+        {
+          "adcode": "500240",
+          "name": "石柱土家族自治县",
+          "postal_code": "409100",
+          "longitude": "108.112448",
+          "latitude": "29.99853"
+        },
+        {
+          "adcode": "500241",
+          "name": "秀山土家族苗族自治县",
+          "postal_code": "409900",
+          "longitude": "108.996043",
+          "latitude": "28.444772"
+        },
+        {
+          "adcode": "500242",
+          "name": "酉阳土家族苗族自治县",
+          "postal_code": "409800",
+          "longitude": "108.767201",
+          "latitude": "28.839828"
+        },
+        {
+          "adcode": "500243",
+          "name": "彭水苗族土家族自治县",
+          "postal_code": "409600",
+          "longitude": "108.166551",
+          "latitude": "29.293856"
+        }
+      ]
+    }
+  ],
+  "longitude": "106.504962",
+  "latitude": "29.533155"
+}

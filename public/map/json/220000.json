@@ -1,0 +1,573 @@
+{
+  "adcode": "220000",
+  "name": "吉林省",
+  "postal_code": "130000",
+  "cities": [
+    {
+      "adcode": "220100",
+      "name": "长春市",
+      "postal_code": "130022",
+      "districts": [
+        {
+          "adcode": "220102",
+          "name": "南关区",
+          "postal_code": "130022",
+          "longitude": "125.337237",
+          "latitude": "43.890235"
+        },
+        {
+          "adcode": "220103",
+          "name": "宽城区",
+          "postal_code": "130051",
+          "longitude": "125.342828",
+          "latitude": "43.903823"
+        },
+        {
+          "adcode": "220104",
+          "name": "朝阳区",
+          "postal_code": "130012",
+          "longitude": "125.318042",
+          "latitude": "43.86491"
+        },
+        {
+          "adcode": "220105",
+          "name": "二道区",
+          "postal_code": "130031",
+          "longitude": "125.384727",
+          "latitude": "43.870824"
+        },
+        {
+          "adcode": "220106",
+          "name": "绿园区",
+          "postal_code": "130062",
+          "longitude": "125.272467",
+          "latitude": "43.892177"
+        },
+        {
+          "adcode": "220112",
+          "name": "双阳区",
+          "postal_code": "130600",
+          "longitude": "125.659018",
+          "latitude": "43.525168"
+        },
+        {
+          "adcode": "220113",
+          "name": "九台区",
+          "postal_code": "130500",
+          "longitude": "125.844682",
+          "latitude": "44.157155"
+        },
+        {
+          "adcode": "220122",
+          "name": "农安县",
+          "postal_code": "130200",
+          "longitude": "125.175287",
+          "latitude": "44.431258"
+        },
+        {
+          "adcode": "220171",
+          "name": "长春经济技术开发区",
+          "postal_code": "130000",
+          "longitude": "125.433746",
+          "latitude": "43.8851"
+        },
+        {
+          "adcode": "220172",
+          "name": "长春净月高新技术产业开发区",
+          "postal_code": "130000",
+          "longitude": "125.432247",
+          "latitude": "43.770073"
+        },
+        {
+          "adcode": "220173",
+          "name": "长春高新技术产业开发区",
+          "postal_code": "130000",
+          "longitude": "125.265253",
+          "latitude": "43.79516"
+        },
+        {
+          "adcode": "220174",
+          "name": "长春汽车经济技术开发区",
+          "postal_code": "130000",
+          "longitude": "125.184523",
+          "latitude": "43.839704"
+        },
+        {
+          "adcode": "220182",
+          "name": "榆树市",
+          "postal_code": "130400",
+          "longitude": "126.550107",
+          "latitude": "44.827642"
+        },
+        {
+          "adcode": "220183",
+          "name": "德惠市",
+          "postal_code": "130300",
+          "longitude": "125.703327",
+          "latitude": "44.533909"
+        },
+        {
+          "adcode": "220184",
+          "name": "公主岭市",
+          "postal_code": "136100",
+          "longitude": "124.817588",
+          "latitude": "43.509474"
+        }
+      ],
+      "longitude": "125.3245",
+      "latitude": "43.886841"
+    },
+    {
+      "adcode": "220200",
+      "name": "吉林市",
+      "postal_code": "132011",
+      "districts": [
+        {
+          "adcode": "220202",
+          "name": "昌邑区",
+          "postal_code": "132002",
+          "longitude": "126.570766",
+          "latitude": "43.851118"
+        },
+        {
+          "adcode": "220203",
+          "name": "龙潭区",
+          "postal_code": "132021",
+          "longitude": "126.561429",
+          "latitude": "43.909755"
+        },
+        {
+          "adcode": "220204",
+          "name": "船营区",
+          "postal_code": "132011",
+          "longitude": "126.55239",
+          "latitude": "43.843804"
+        },
+        {
+          "adcode": "220211",
+          "name": "丰满区",
+          "postal_code": "132013",
+          "longitude": "126.560759",
+          "latitude": "43.816594"
+        },
+        {
+          "adcode": "220221",
+          "name": "永吉县",
+          "postal_code": "132200",
+          "longitude": "126.501622",
+          "latitude": "43.667416"
+        },
+        {
+          "adcode": "220271",
+          "name": "吉林经济开发区",
+          "postal_code": "132000",
+          "longitude": "126.491724",
+          "latitude": "43.975008"
+        },
+        {
+          "adcode": "220272",
+          "name": "吉林高新技术产业开发区",
+          "postal_code": "132000",
+          "longitude": "126.607861",
+          "latitude": "43.798678"
+        },
+        {
+          "adcode": "220273",
+          "name": "吉林中国新加坡食品区",
+          "postal_code": "132000",
+          "longitude": "125.9982",
+          "latitude": "43.731832"
+        },
+        {
+          "adcode": "220281",
+          "name": "蛟河市",
+          "postal_code": "132500",
+          "longitude": "127.342739",
+          "latitude": "43.720579"
+        },
+        {
+          "adcode": "220282",
+          "name": "桦甸市",
+          "postal_code": "132400",
+          "longitude": "126.745445",
+          "latitude": "42.972093"
+        },
+        {
+          "adcode": "220283",
+          "name": "舒兰市",
+          "postal_code": "132600",
+          "longitude": "126.947813",
+          "latitude": "44.410906"
+        },
+        {
+          "adcode": "220284",
+          "name": "磐石市",
+          "postal_code": "132300",
+          "longitude": "126.059929",
+          "latitude": "42.942476"
+        }
+      ],
+      "longitude": "126.55302",
+      "latitude": "43.843577"
+    },
+    {
+      "adcode": "220300",
+      "name": "四平市",
+      "postal_code": "136000",
+      "districts": [
+        {
+          "adcode": "220302",
+          "name": "铁西区",
+          "postal_code": "136000",
+          "longitude": "124.360894",
+          "latitude": "43.176263"
+        },
+        {
+          "adcode": "220303",
+          "name": "铁东区",
+          "postal_code": "136001",
+          "longitude": "124.388464",
+          "latitude": "43.16726"
+        },
+        {
+          "adcode": "220322",
+          "name": "梨树县",
+          "postal_code": "136500",
+          "longitude": "124.335802",
+          "latitude": "43.30831"
+        },
+        {
+          "adcode": "220323",
+          "name": "伊通满族自治县",
+          "postal_code": "130700",
+          "longitude": "125.303124",
+          "latitude": "43.345464"
+        },
+        {
+          "adcode": "220382",
+          "name": "双辽市",
+          "postal_code": "136400",
+          "longitude": "123.505283",
+          "latitude": "43.518275"
+        }
+      ],
+      "longitude": "124.370785",
+      "latitude": "43.170344"
+    },
+    {
+      "adcode": "220400",
+      "name": "辽源市",
+      "postal_code": "136200",
+      "districts": [
+        {
+          "adcode": "220402",
+          "name": "龙山区",
+          "postal_code": "136200",
+          "longitude": "125.145164",
+          "latitude": "42.902702"
+        },
+        {
+          "adcode": "220403",
+          "name": "西安区",
+          "postal_code": "136201",
+          "longitude": "125.151424",
+          "latitude": "42.920415"
+        },
+        {
+          "adcode": "220421",
+          "name": "东丰县",
+          "postal_code": "136300",
+          "longitude": "125.529623",
+          "latitude": "42.675228"
+        },
+        {
+          "adcode": "220422",
+          "name": "东辽县",
+          "postal_code": "136600",
+          "longitude": "124.991995",
+          "latitude": "42.927724"
+        }
+      ],
+      "longitude": "125.145349",
+      "latitude": "42.902692"
+    },
+    {
+      "adcode": "220500",
+      "name": "通化市",
+      "postal_code": "134001",
+      "districts": [
+        {
+          "adcode": "220502",
+          "name": "东昌区",
+          "postal_code": "134001",
+          "longitude": "125.936716",
+          "latitude": "41.721233"
+        },
+        {
+          "adcode": "220503",
+          "name": "二道江区",
+          "postal_code": "134003",
+          "longitude": "126.045987",
+          "latitude": "41.777564"
+        },
+        {
+          "adcode": "220521",
+          "name": "通化县",
+          "postal_code": "134100",
+          "longitude": "125.753121",
+          "latitude": "41.677918"
+        },
+        {
+          "adcode": "220523",
+          "name": "辉南县",
+          "postal_code": "135100",
+          "longitude": "126.042821",
+          "latitude": "42.683459"
+        },
+        {
+          "adcode": "220524",
+          "name": "柳河县",
+          "postal_code": "135300",
+          "longitude": "125.740536",
+          "latitude": "42.281484"
+        },
+        {
+          "adcode": "220581",
+          "name": "梅河口市",
+          "postal_code": "135000",
+          "longitude": "125.687336",
+          "latitude": "42.530002"
+        },
+        {
+          "adcode": "220582",
+          "name": "集安市",
+          "postal_code": "134200",
+          "longitude": "126.186204",
+          "latitude": "41.126276"
+        }
+      ],
+      "longitude": "125.936501",
+      "latitude": "41.721177"
+    },
+    {
+      "adcode": "220600",
+      "name": "白山市",
+      "postal_code": "134300",
+      "districts": [
+        {
+          "adcode": "220602",
+          "name": "浑江区",
+          "postal_code": "134300",
+          "longitude": "126.428035",
+          "latitude": "41.943065"
+        },
+        {
+          "adcode": "220605",
+          "name": "江源区",
+          "postal_code": "134700",
+          "longitude": "126.584229",
+          "latitude": "42.048109"
+        },
+        {
+          "adcode": "220621",
+          "name": "抚松县",
+          "postal_code": "134500",
+          "longitude": "127.273796",
+          "latitude": "42.332643"
+        },
+        {
+          "adcode": "220622",
+          "name": "靖宇县",
+          "postal_code": "135200",
+          "longitude": "126.808386",
+          "latitude": "42.389689"
+        },
+        {
+          "adcode": "220623",
+          "name": "长白朝鲜族自治县",
+          "postal_code": "134400",
+          "longitude": "128.203384",
+          "latitude": "41.419361"
+        },
+        {
+          "adcode": "220681",
+          "name": "临江市",
+          "postal_code": "134600",
+          "longitude": "126.919296",
+          "latitude": "41.810689"
+        }
+      ],
+      "longitude": "126.427839",
+      "latitude": "41.942505"
+    },
+    {
+      "adcode": "220700",
+      "name": "松原市",
+      "postal_code": "138000",
+      "districts": [
+        {
+          "adcode": "220702",
+          "name": "宁江区",
+          "postal_code": "138000",
+          "longitude": "124.827851",
+          "latitude": "45.176498"
+        },
+        {
+          "adcode": "220721",
+          "name": "前郭尔罗斯蒙古族自治县",
+          "postal_code": "138000",
+          "longitude": "124.826808",
+          "latitude": "45.116288"
+        },
+        {
+          "adcode": "220722",
+          "name": "长岭县",
+          "postal_code": "131500",
+          "longitude": "123.985184",
+          "latitude": "44.276579"
+        },
+        {
+          "adcode": "220723",
+          "name": "乾安县",
+          "postal_code": "131400",
+          "longitude": "124.024361",
+          "latitude": "45.006846"
+        },
+        {
+          "adcode": "220771",
+          "name": "吉林松原经济开发区",
+          "postal_code": "138000",
+          "longitude": "124.806265",
+          "latitude": "45.148249"
+        },
+        {
+          "adcode": "220781",
+          "name": "扶余市",
+          "postal_code": "131200",
+          "longitude": "126.042758",
+          "latitude": "44.986199"
+        }
+      ],
+      "longitude": "124.823608",
+      "latitude": "45.118243"
+    },
+    {
+      "adcode": "220800",
+      "name": "白城市",
+      "postal_code": "137000",
+      "districts": [
+        {
+          "adcode": "220802",
+          "name": "洮北区",
+          "postal_code": "137000",
+          "longitude": "122.842499",
+          "latitude": "45.619253"
+        },
+        {
+          "adcode": "220821",
+          "name": "镇赉县",
+          "postal_code": "137300",
+          "longitude": "123.202246",
+          "latitude": "45.846089"
+        },
+        {
+          "adcode": "220822",
+          "name": "通榆县",
+          "postal_code": "137200",
+          "longitude": "123.088543",
+          "latitude": "44.80915"
+        },
+        {
+          "adcode": "220871",
+          "name": "吉林白城经济开发区",
+          "postal_code": "137000",
+          "longitude": "122.834485",
+          "latitude": "45.60382"
+        },
+        {
+          "adcode": "220881",
+          "name": "洮南市",
+          "postal_code": "137100",
+          "longitude": "122.783779",
+          "latitude": "45.339113"
+        },
+        {
+          "adcode": "220882",
+          "name": "大安市",
+          "postal_code": "131300",
+          "longitude": "124.291512",
+          "latitude": "45.507648"
+        }
+      ],
+      "longitude": "122.841114",
+      "latitude": "45.619026"
+    },
+    {
+      "adcode": "222400",
+      "name": "延边朝鲜族自治州",
+      "postal_code": "133000",
+      "districts": [
+        {
+          "adcode": "222401",
+          "name": "延吉市",
+          "postal_code": "133000",
+          "longitude": "129.51579",
+          "latitude": "42.906964"
+        },
+        {
+          "adcode": "222402",
+          "name": "图们市",
+          "postal_code": "133100",
+          "longitude": "129.846701",
+          "latitude": "42.966621"
+        },
+        {
+          "adcode": "222403",
+          "name": "敦化市",
+          "postal_code": "133700",
+          "longitude": "128.22986",
+          "latitude": "43.366921"
+        },
+        {
+          "adcode": "222404",
+          "name": "珲春市",
+          "postal_code": "133300",
+          "longitude": "130.365787",
+          "latitude": "42.871057"
+        },
+        {
+          "adcode": "222405",
+          "name": "龙井市",
+          "postal_code": "133400",
+          "longitude": "129.425747",
+          "latitude": "42.771029"
+        },
+        {
+          "adcode": "222406",
+          "name": "和龙市",
+          "postal_code": "133500",
+          "longitude": "129.008748",
+          "latitude": "42.547004"
+        },
+        {
+          "adcode": "222424",
+          "name": "汪清县",
+          "postal_code": "133200",
+          "longitude": "129.766161",
+          "latitude": "43.315426"
+        },
+        {
+          "adcode": "222426",
+          "name": "安图县",
+          "postal_code": "133600",
+          "longitude": "128.901865",
+          "latitude": "43.110994"
+        }
+      ],
+      "longitude": "129.513228",
+      "latitude": "42.904823"
+    }
+  ],
+  "longitude": "125.3245",
+  "latitude": "43.886841"
+}

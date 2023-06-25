@@ -1,0 +1,808 @@
+{
+  "adcode": "360000",
+  "name": "江西省",
+  "postal_code": "330000",
+  "cities": [
+    {
+      "adcode": "360100",
+      "name": "南昌市",
+      "postal_code": "330008",
+      "districts": [
+        {
+          "adcode": "360102",
+          "name": "东湖区",
+          "postal_code": "330006",
+          "longitude": "115.889675",
+          "latitude": "28.682988"
+        },
+        {
+          "adcode": "360103",
+          "name": "西湖区",
+          "postal_code": "330009",
+          "longitude": "115.91065",
+          "latitude": "28.662901"
+        },
+        {
+          "adcode": "360104",
+          "name": "青云谱区",
+          "postal_code": "330001",
+          "longitude": "115.907292",
+          "latitude": "28.635724"
+        },
+        {
+          "adcode": "360111",
+          "name": "青山湖区",
+          "postal_code": "330029",
+          "longitude": "115.949044",
+          "latitude": "28.689292"
+        },
+        {
+          "adcode": "360112",
+          "name": "新建区",
+          "postal_code": "330100",
+          "longitude": "115.820806",
+          "latitude": "28.690788"
+        },
+        {
+          "adcode": "360113",
+          "name": "红谷滩区",
+          "postal_code": "331700",
+          "longitude": "115.8580521",
+          "latitude": "28.69819928"
+        },
+        {
+          "adcode": "360121",
+          "name": "南昌县",
+          "postal_code": "330200",
+          "longitude": "115.942465",
+          "latitude": "28.543781"
+        },
+        {
+          "adcode": "360123",
+          "name": "安义县",
+          "postal_code": "330500",
+          "longitude": "115.553109",
+          "latitude": "28.841334"
+        },
+        {
+          "adcode": "360124",
+          "name": "进贤县",
+          "postal_code": "331700",
+          "longitude": "116.267671",
+          "latitude": "28.365681"
+        }
+      ],
+      "longitude": "115.892151",
+      "latitude": "28.676493"
+    },
+    {
+      "adcode": "360200",
+      "name": "景德镇市",
+      "postal_code": "333000",
+      "districts": [
+        {
+          "adcode": "360202",
+          "name": "昌江区",
+          "postal_code": "333000",
+          "longitude": "117.195023",
+          "latitude": "29.288465"
+        },
+        {
+          "adcode": "360203",
+          "name": "珠山区",
+          "postal_code": "333000",
+          "longitude": "117.214814",
+          "latitude": "29.292812"
+        },
+        {
+          "adcode": "360222",
+          "name": "浮梁县",
+          "postal_code": "333400",
+          "longitude": "117.217611",
+          "latitude": "29.352251"
+        },
+        {
+          "adcode": "360281",
+          "name": "乐平市",
+          "postal_code": "333300",
+          "longitude": "117.129376",
+          "latitude": "28.967361"
+        }
+      ],
+      "longitude": "117.214664",
+      "latitude": "29.29256"
+    },
+    {
+      "adcode": "360300",
+      "name": "萍乡市",
+      "postal_code": "337000",
+      "districts": [
+        {
+          "adcode": "360302",
+          "name": "安源区",
+          "postal_code": "337000",
+          "longitude": "113.855044",
+          "latitude": "27.625826"
+        },
+        {
+          "adcode": "360313",
+          "name": "湘东区",
+          "postal_code": "337016",
+          "longitude": "113.7456",
+          "latitude": "27.639319"
+        },
+        {
+          "adcode": "360321",
+          "name": "莲花县",
+          "postal_code": "337100",
+          "longitude": "113.955582",
+          "latitude": "27.127807"
+        },
+        {
+          "adcode": "360322",
+          "name": "上栗县",
+          "postal_code": "337009",
+          "longitude": "113.800525",
+          "latitude": "27.877041"
+        },
+        {
+          "adcode": "360323",
+          "name": "芦溪县",
+          "postal_code": "337053",
+          "longitude": "114.041206",
+          "latitude": "27.633633"
+        }
+      ],
+      "longitude": "113.852186",
+      "latitude": "27.622946"
+    },
+    {
+      "adcode": "360400",
+      "name": "九江市",
+      "postal_code": "332005",
+      "districts": [
+        {
+          "adcode": "360402",
+          "name": "濂溪区",
+          "postal_code": "332005",
+          "longitude": "115.99012",
+          "latitude": "29.676175"
+        },
+        {
+          "adcode": "360403",
+          "name": "浔阳区",
+          "postal_code": "332000",
+          "longitude": "115.995947",
+          "latitude": "29.72465"
+        },
+        {
+          "adcode": "360404",
+          "name": "柴桑区",
+          "postal_code": "332100",
+          "longitude": "115.892977",
+          "latitude": "29.610264"
+        },
+        {
+          "adcode": "360423",
+          "name": "武宁县",
+          "postal_code": "332300",
+          "longitude": "115.105646",
+          "latitude": "29.260182"
+        },
+        {
+          "adcode": "360424",
+          "name": "修水县",
+          "postal_code": "332400",
+          "longitude": "114.573428",
+          "latitude": "29.032729"
+        },
+        {
+          "adcode": "360425",
+          "name": "永修县",
+          "postal_code": "330300",
+          "longitude": "115.809055",
+          "latitude": "29.018212"
+        },
+        {
+          "adcode": "360426",
+          "name": "德安县",
+          "postal_code": "330400",
+          "longitude": "115.762611",
+          "latitude": "29.327474"
+        },
+        {
+          "adcode": "360428",
+          "name": "都昌县",
+          "postal_code": "332600",
+          "longitude": "116.205114",
+          "latitude": "29.275105"
+        },
+        {
+          "adcode": "360429",
+          "name": "湖口县",
+          "postal_code": "332500",
+          "longitude": "116.244313",
+          "latitude": "29.7263"
+        },
+        {
+          "adcode": "360430",
+          "name": "彭泽县",
+          "postal_code": "332700",
+          "longitude": "116.55584",
+          "latitude": "29.898865"
+        },
+        {
+          "adcode": "360481",
+          "name": "瑞昌市",
+          "postal_code": "332200",
+          "longitude": "115.669081",
+          "latitude": "29.676599"
+        },
+        {
+          "adcode": "360482",
+          "name": "共青城市",
+          "postal_code": "332020",
+          "longitude": "115.805712",
+          "latitude": "29.247884"
+        },
+        {
+          "adcode": "360483",
+          "name": "庐山市",
+          "postal_code": "332900",
+          "longitude": "116.043743",
+          "latitude": "29.456169"
+        }
+      ],
+      "longitude": "115.992811",
+      "latitude": "29.712034"
+    },
+    {
+      "adcode": "360500",
+      "name": "新余市",
+      "postal_code": "338025",
+      "districts": [
+        {
+          "adcode": "360502",
+          "name": "渝水区",
+          "postal_code": "338025",
+          "longitude": "114.923923",
+          "latitude": "27.819171"
+        },
+        {
+          "adcode": "360521",
+          "name": "分宜县",
+          "postal_code": "336600",
+          "longitude": "114.675262",
+          "latitude": "27.811301"
+        }
+      ],
+      "longitude": "114.930835",
+      "latitude": "27.810834"
+    },
+    {
+      "adcode": "360600",
+      "name": "鹰潭市",
+      "postal_code": "335000",
+      "districts": [
+        {
+          "adcode": "360602",
+          "name": "月湖区",
+          "postal_code": "335000",
+          "longitude": "117.034112",
+          "latitude": "28.239076"
+        },
+        {
+          "adcode": "360603",
+          "name": "余江区",
+          "postal_code": "335200",
+          "longitude": "116.822763",
+          "latitude": "28.206177"
+        },
+        {
+          "adcode": "360681",
+          "name": "贵溪市",
+          "postal_code": "335400",
+          "longitude": "117.212103",
+          "latitude": "28.283693"
+        }
+      ],
+      "longitude": "117.033838",
+      "latitude": "28.238638"
+    },
+    {
+      "adcode": "360700",
+      "name": "赣州市",
+      "postal_code": "341000",
+      "districts": [
+        {
+          "adcode": "360702",
+          "name": "章贡区",
+          "postal_code": "341000",
+          "longitude": "114.93872",
+          "latitude": "25.851367"
+        },
+        {
+          "adcode": "360703",
+          "name": "南康区",
+          "postal_code": "341400",
+          "longitude": "114.756933",
+          "latitude": "25.661721"
+        },
+        {
+          "adcode": "360704",
+          "name": "赣县区",
+          "postal_code": "341100",
+          "longitude": "115.018461",
+          "latitude": "25.865432"
+        },
+        {
+          "adcode": "360722",
+          "name": "信丰县",
+          "postal_code": "341600",
+          "longitude": "114.930893",
+          "latitude": "25.38023"
+        },
+        {
+          "adcode": "360723",
+          "name": "大余县",
+          "postal_code": "341500",
+          "longitude": "114.362243",
+          "latitude": "25.395937"
+        },
+        {
+          "adcode": "360724",
+          "name": "上犹县",
+          "postal_code": "341200",
+          "longitude": "114.540537",
+          "latitude": "25.794284"
+        },
+        {
+          "adcode": "360725",
+          "name": "崇义县",
+          "postal_code": "341300",
+          "longitude": "114.307348",
+          "latitude": "25.687911"
+        },
+        {
+          "adcode": "360726",
+          "name": "安远县",
+          "postal_code": "342100",
+          "longitude": "115.392328",
+          "latitude": "25.134591"
+        },
+        {
+          "adcode": "360728",
+          "name": "定南县",
+          "postal_code": "341900",
+          "longitude": "115.03267",
+          "latitude": "24.774277"
+        },
+        {
+          "adcode": "360729",
+          "name": "全南县",
+          "postal_code": "341800",
+          "longitude": "114.531589",
+          "latitude": "24.742651"
+        },
+        {
+          "adcode": "360730",
+          "name": "宁都县",
+          "postal_code": "342800",
+          "longitude": "116.018782",
+          "latitude": "26.472054"
+        },
+        {
+          "adcode": "360731",
+          "name": "于都县",
+          "postal_code": "342300",
+          "longitude": "115.411198",
+          "latitude": "25.955033"
+        },
+        {
+          "adcode": "360732",
+          "name": "兴国县",
+          "postal_code": "342400",
+          "longitude": "115.351896",
+          "latitude": "26.330489"
+        },
+        {
+          "adcode": "360733",
+          "name": "会昌县",
+          "postal_code": "342600",
+          "longitude": "115.791158",
+          "latitude": "25.599125"
+        },
+        {
+          "adcode": "360734",
+          "name": "寻乌县",
+          "postal_code": "342200",
+          "longitude": "115.651399",
+          "latitude": "24.954136"
+        },
+        {
+          "adcode": "360735",
+          "name": "石城县",
+          "postal_code": "342700",
+          "longitude": "116.342249",
+          "latitude": "26.326582"
+        },
+        {
+          "adcode": "360781",
+          "name": "瑞金市",
+          "postal_code": "342500",
+          "longitude": "116.034854",
+          "latitude": "25.875278"
+        },
+        {
+          "adcode": "360783",
+          "name": "龙南市",
+          "postal_code": "341700",
+          "longitude": "114.792657",
+          "latitude": "24.90476"
+        }
+      ],
+      "longitude": "114.940278",
+      "latitude": "25.85097"
+    },
+    {
+      "adcode": "360800",
+      "name": "吉安市",
+      "postal_code": "343000",
+      "districts": [
+        {
+          "adcode": "360802",
+          "name": "吉州区",
+          "postal_code": "343000",
+          "longitude": "114.987331",
+          "latitude": "27.112367"
+        },
+        {
+          "adcode": "360803",
+          "name": "青原区",
+          "postal_code": "343009",
+          "longitude": "115.016306",
+          "latitude": "27.105879"
+        },
+        {
+          "adcode": "360821",
+          "name": "吉安县",
+          "postal_code": "343100",
+          "longitude": "114.905117",
+          "latitude": "27.040042"
+        },
+        {
+          "adcode": "360822",
+          "name": "吉水县",
+          "postal_code": "331600",
+          "longitude": "115.134569",
+          "latitude": "27.213445"
+        },
+        {
+          "adcode": "360823",
+          "name": "峡江县",
+          "postal_code": "331400",
+          "longitude": "115.319331",
+          "latitude": "27.580862"
+        },
+        {
+          "adcode": "360824",
+          "name": "新干县",
+          "postal_code": "331300",
+          "longitude": "115.399294",
+          "latitude": "27.755758"
+        },
+        {
+          "adcode": "360825",
+          "name": "永丰县",
+          "postal_code": "331500",
+          "longitude": "115.435559",
+          "latitude": "27.321087"
+        },
+        {
+          "adcode": "360826",
+          "name": "泰和县",
+          "postal_code": "343700",
+          "longitude": "114.901393",
+          "latitude": "26.790164"
+        },
+        {
+          "adcode": "360827",
+          "name": "遂川县",
+          "postal_code": "343900",
+          "longitude": "114.51689",
+          "latitude": "26.323705"
+        },
+        {
+          "adcode": "360828",
+          "name": "万安县",
+          "postal_code": "343800",
+          "longitude": "114.784694",
+          "latitude": "26.462085"
+        },
+        {
+          "adcode": "360829",
+          "name": "安福县",
+          "postal_code": "343200",
+          "longitude": "114.61384",
+          "latitude": "27.382746"
+        },
+        {
+          "adcode": "360830",
+          "name": "永新县",
+          "postal_code": "343400",
+          "longitude": "114.242534",
+          "latitude": "26.944721"
+        },
+        {
+          "adcode": "360881",
+          "name": "井冈山市",
+          "postal_code": "343600",
+          "longitude": "114.284421",
+          "latitude": "26.745919"
+        }
+      ],
+      "longitude": "114.986373",
+      "latitude": "27.111699"
+    },
+    {
+      "adcode": "360900",
+      "name": "宜春市",
+      "postal_code": "336000",
+      "districts": [
+        {
+          "adcode": "360902",
+          "name": "袁州区",
+          "postal_code": "336000",
+          "longitude": "114.387379",
+          "latitude": "27.800117"
+        },
+        {
+          "adcode": "360921",
+          "name": "奉新县",
+          "postal_code": "330700",
+          "longitude": "115.389899",
+          "latitude": "28.700672"
+        },
+        {
+          "adcode": "360922",
+          "name": "万载县",
+          "postal_code": "336100",
+          "longitude": "114.449012",
+          "latitude": "28.104528"
+        },
+        {
+          "adcode": "360923",
+          "name": "上高县",
+          "postal_code": "336400",
+          "longitude": "114.932653",
+          "latitude": "28.234789"
+        },
+        {
+          "adcode": "360924",
+          "name": "宜丰县",
+          "postal_code": "336300",
+          "longitude": "114.787381",
+          "latitude": "28.388289"
+        },
+        {
+          "adcode": "360925",
+          "name": "靖安县",
+          "postal_code": "330600",
+          "longitude": "115.361744",
+          "latitude": "28.86054"
+        },
+        {
+          "adcode": "360926",
+          "name": "铜鼓县",
+          "postal_code": "336200",
+          "longitude": "114.37014",
+          "latitude": "28.520956"
+        },
+        {
+          "adcode": "360981",
+          "name": "丰城市",
+          "postal_code": "331100",
+          "longitude": "115.786005",
+          "latitude": "28.191584"
+        },
+        {
+          "adcode": "360982",
+          "name": "樟树市",
+          "postal_code": "331200",
+          "longitude": "115.543388",
+          "latitude": "28.055898"
+        },
+        {
+          "adcode": "360983",
+          "name": "高安市",
+          "postal_code": "330800",
+          "longitude": "115.381527",
+          "latitude": "28.420951"
+        }
+      ],
+      "longitude": "114.391136",
+      "latitude": "27.8043"
+    },
+    {
+      "adcode": "361000",
+      "name": "抚州市",
+      "postal_code": "344000",
+      "districts": [
+        {
+          "adcode": "361002",
+          "name": "临川区",
+          "postal_code": "344100",
+          "longitude": "116.361404",
+          "latitude": "27.981919"
+        },
+        {
+          "adcode": "361003",
+          "name": "东乡区",
+          "postal_code": "331800",
+          "longitude": "116.605341",
+          "latitude": "28.2325"
+        },
+        {
+          "adcode": "361021",
+          "name": "南城县",
+          "postal_code": "344700",
+          "longitude": "116.63945",
+          "latitude": "27.55531"
+        },
+        {
+          "adcode": "361022",
+          "name": "黎川县",
+          "postal_code": "344600",
+          "longitude": "116.91457",
+          "latitude": "27.292561"
+        },
+        {
+          "adcode": "361023",
+          "name": "南丰县",
+          "postal_code": "344500",
+          "longitude": "116.532994",
+          "latitude": "27.210132"
+        },
+        {
+          "adcode": "361024",
+          "name": "崇仁县",
+          "postal_code": "344200",
+          "longitude": "116.059109",
+          "latitude": "27.760907"
+        },
+        {
+          "adcode": "361025",
+          "name": "乐安县",
+          "postal_code": "344300",
+          "longitude": "115.838432",
+          "latitude": "27.420101"
+        },
+        {
+          "adcode": "361026",
+          "name": "宜黄县",
+          "postal_code": "344400",
+          "longitude": "116.223023",
+          "latitude": "27.546512"
+        },
+        {
+          "adcode": "361027",
+          "name": "金溪县",
+          "postal_code": "344800",
+          "longitude": "116.778751",
+          "latitude": "27.907387"
+        },
+        {
+          "adcode": "361028",
+          "name": "资溪县",
+          "postal_code": "335300",
+          "longitude": "117.066095",
+          "latitude": "27.70653"
+        },
+        {
+          "adcode": "361030",
+          "name": "广昌县",
+          "postal_code": "344900",
+          "longitude": "116.327291",
+          "latitude": "26.838426"
+        }
+      ],
+      "longitude": "116.358351",
+      "latitude": "27.98385"
+    },
+    {
+      "adcode": "361100",
+      "name": "上饶市",
+      "postal_code": "334000",
+      "districts": [
+        {
+          "adcode": "361102",
+          "name": "信州区",
+          "postal_code": "334000",
+          "longitude": "117.970522",
+          "latitude": "28.445378"
+        },
+        {
+          "adcode": "361103",
+          "name": "广丰区",
+          "postal_code": "334600",
+          "longitude": "118.189852",
+          "latitude": "28.440285"
+        },
+        {
+          "adcode": "361104",
+          "name": "广信区",
+          "postal_code": "334100",
+          "longitude": "117.90612",
+          "latitude": "28.453897"
+        },
+        {
+          "adcode": "361123",
+          "name": "玉山县",
+          "postal_code": "334700",
+          "longitude": "118.244408",
+          "latitude": "28.673479"
+        },
+        {
+          "adcode": "361124",
+          "name": "铅山县",
+          "postal_code": "334500",
+          "longitude": "117.711906",
+          "latitude": "28.310892"
+        },
+        {
+          "adcode": "361125",
+          "name": "横峰县",
+          "postal_code": "334300",
+          "longitude": "117.608247",
+          "latitude": "28.415103"
+        },
+        {
+          "adcode": "361126",
+          "name": "弋阳县",
+          "postal_code": "334400",
+          "longitude": "117.435002",
+          "latitude": "28.402391"
+        },
+        {
+          "adcode": "361127",
+          "name": "余干县",
+          "postal_code": "335100",
+          "longitude": "116.691072",
+          "latitude": "28.69173"
+        },
+        {
+          "adcode": "361128",
+          "name": "鄱阳县",
+          "postal_code": "333100",
+          "longitude": "116.673748",
+          "latitude": "28.993374"
+        },
+        {
+          "adcode": "361129",
+          "name": "万年县",
+          "postal_code": "335500",
+          "longitude": "117.07015",
+          "latitude": "28.692589"
+        },
+        {
+          "adcode": "361130",
+          "name": "婺源县",
+          "postal_code": "333200",
+          "longitude": "117.86219",
+          "latitude": "29.254015"
+        },
+        {
+          "adcode": "361181",
+          "name": "德兴市",
+          "postal_code": "334200",
+          "longitude": "117.578732",
+          "latitude": "28.945034"
+        }
+      ],
+      "longitude": "117.971185",
+      "latitude": "28.44442"
+    }
+  ],
+  "longitude": "115.892151",
+  "latitude": "28.676493"
+}

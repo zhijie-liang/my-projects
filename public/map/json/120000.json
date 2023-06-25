@@ -1,0 +1,128 @@
+{
+  "adcode": "120000",
+  "name": "天津市",
+  "postal_code": "300000",
+  "cities": [
+    {
+      "adcode": "120100",
+      "name": "市辖区",
+      "postal_code": "300000",
+      "districts": [
+        {
+          "adcode": "120101",
+          "name": "和平区",
+          "postal_code": "300041",
+          "longitude": "117.195907",
+          "latitude": "39.118327"
+        },
+        {
+          "adcode": "120102",
+          "name": "河东区",
+          "postal_code": "300171",
+          "longitude": "117.226568",
+          "latitude": "39.122125"
+        },
+        {
+          "adcode": "120103",
+          "name": "河西区",
+          "postal_code": "300202",
+          "longitude": "117.217536",
+          "latitude": "39.101897"
+        },
+        {
+          "adcode": "120104",
+          "name": "南开区",
+          "postal_code": "300100",
+          "longitude": "117.164143",
+          "latitude": "39.120474"
+        },
+        {
+          "adcode": "120105",
+          "name": "河北区",
+          "postal_code": "300143",
+          "longitude": "117.201569",
+          "latitude": "39.156632"
+        },
+        {
+          "adcode": "120106",
+          "name": "红桥区",
+          "postal_code": "300131",
+          "longitude": "117.163301",
+          "latitude": "39.175066"
+        },
+        {
+          "adcode": "120110",
+          "name": "东丽区",
+          "postal_code": "300300",
+          "longitude": "117.313967",
+          "latitude": "39.087764"
+        },
+        {
+          "adcode": "120111",
+          "name": "西青区",
+          "postal_code": "300380",
+          "longitude": "117.012247",
+          "latitude": "39.139446"
+        },
+        {
+          "adcode": "120112",
+          "name": "津南区",
+          "postal_code": "300350",
+          "longitude": "117.382549",
+          "latitude": "38.989577"
+        },
+        {
+          "adcode": "120113",
+          "name": "北辰区",
+          "postal_code": "300400",
+          "longitude": "117.13482",
+          "latitude": "39.225555"
+        },
+        {
+          "adcode": "120114",
+          "name": "武清区",
+          "postal_code": "301700",
+          "longitude": "117.057959",
+          "latitude": "39.376925"
+        },
+        {
+          "adcode": "120115",
+          "name": "宝坻区",
+          "postal_code": "301800",
+          "longitude": "117.308094",
+          "latitude": "39.716965"
+        },
+        {
+          "adcode": "120116",
+          "name": "滨海新区",
+          "postal_code": "300457",
+          "longitude": "117.654173",
+          "latitude": "39.032846"
+        },
+        {
+          "adcode": "120117",
+          "name": "宁河区",
+          "postal_code": "301500",
+          "longitude": "117.82828",
+          "latitude": "39.328886"
+        },
+        {
+          "adcode": "120118",
+          "name": "静海区",
+          "postal_code": "301600",
+          "longitude": "116.925304",
+          "latitude": "38.935671"
+        },
+        {
+          "adcode": "120119",
+          "name": "蓟州区",
+          "postal_code": "301900",
+          "longitude": "117.407449",
+          "latitude": "40.045342"
+        }
+      ]
+    }
+  ],
+  "longitude": "117.190182",
+  "latitude": "39.125596"
+}

@@ -1,0 +1,618 @@
+{
+  "adcode": "540000",
+  "name": "西藏自治区",
+  "postal_code": "850000",
+  "cities": [
+    {
+      "adcode": "540100",
+      "name": "拉萨市",
+      "postal_code": "850000",
+      "districts": [
+        {
+          "adcode": "540102",
+          "name": "城关区",
+          "postal_code": "850000",
+          "longitude": "91.132911",
+          "latitude": "29.659472"
+        },
+        {
+          "adcode": "540103",
+          "name": "堆龙德庆区",
+          "postal_code": "851400",
+          "longitude": "91.002823",
+          "latitude": "29.647347"
+        },
+        {
+          "adcode": "540104",
+          "name": "达孜区",
+          "postal_code": "850100",
+          "longitude": "91.350976",
+          "latitude": "29.670314"
+        },
+        {
+          "adcode": "540121",
+          "name": "林周县",
+          "postal_code": "851600",
+          "longitude": "91.261842",
+          "latitude": "29.895754"
+        },
+        {
+          "adcode": "540122",
+          "name": "当雄县",
+          "postal_code": "851500",
+          "longitude": "91.103551",
+          "latitude": "30.474819"
+        },
+        {
+          "adcode": "540123",
+          "name": "尼木县",
+          "postal_code": "851600",
+          "longitude": "90.165545",
+          "latitude": "29.431346"
+        },
+        {
+          "adcode": "540124",
+          "name": "曲水县",
+          "postal_code": "850600",
+          "longitude": "90.738051",
+          "latitude": "29.349895"
+        },
+        {
+          "adcode": "540127",
+          "name": "墨竹工卡县",
+          "postal_code": "850200",
+          "longitude": "91.731158",
+          "latitude": "29.834657"
+        },
+        {
+          "adcode": "540171",
+          "name": "格尔木藏青工业园区",
+          "postal_code": "850000",
+          "longitude": "95.097919",
+          "latitude": "36.34756"
+        },
+        {
+          "adcode": "540172",
+          "name": "拉萨经济技术开发区",
+          "postal_code": "850000",
+          "longitude": "91.027856",
+          "latitude": "29.647017"
+        },
+        {
+          "adcode": "540173",
+          "name": "西藏文化旅游创意园区",
+          "postal_code": "850000",
+          "longitude": "91.14173",
+          "latitude": "29.622843"
+        },
+        {
+          "adcode": "540174",
+          "name": "达孜工业园区",
+          "postal_code": "850100",
+          "longitude": "91.339583",
+          "latitude": "29.673612"
+        }
+      ],
+      "longitude": "91.132212",
+      "latitude": "29.660361"
+    },
+    {
+      "adcode": "540200",
+      "name": "日喀则市",
+      "postal_code": "857000",
+      "districts": [
+        {
+          "adcode": "540202",
+          "name": "桑珠孜区",
+          "postal_code": "857000",
+          "longitude": "88.88667",
+          "latitude": "29.267003"
+        },
+        {
+          "adcode": "540221",
+          "name": "南木林县",
+          "postal_code": "857100",
+          "longitude": "89.099434",
+          "latitude": "29.680459"
+        },
+        {
+          "adcode": "540222",
+          "name": "江孜县",
+          "postal_code": "857400",
+          "longitude": "89.605044",
+          "latitude": "28.908845"
+        },
+        {
+          "adcode": "540223",
+          "name": "定日县",
+          "postal_code": "858200",
+          "longitude": "87.123887",
+          "latitude": "28.656667"
+        },
+        {
+          "adcode": "540224",
+          "name": "萨迦县",
+          "postal_code": "857800",
+          "longitude": "88.023007",
+          "latitude": "28.901077"
+        },
+        {
+          "adcode": "540225",
+          "name": "拉孜县",
+          "postal_code": "858100",
+          "longitude": "87.63743",
+          "latitude": "29.085136"
+        },
+        {
+          "adcode": "540226",
+          "name": "昂仁县",
+          "postal_code": "858500",
+          "longitude": "87.23578",
+          "latitude": "29.294758"
+        },
+        {
+          "adcode": "540227",
+          "name": "谢通门县",
+          "postal_code": "858900",
+          "longitude": "88.260517",
+          "latitude": "29.431597"
+        },
+        {
+          "adcode": "540228",
+          "name": "白朗县",
+          "postal_code": "857300",
+          "longitude": "89.263618",
+          "latitude": "29.106627"
+        },
+        {
+          "adcode": "540229",
+          "name": "仁布县",
+          "postal_code": "857200",
+          "longitude": "89.843207",
+          "latitude": "29.230299"
+        },
+        {
+          "adcode": "540230",
+          "name": "康马县",
+          "postal_code": "857500",
+          "longitude": "89.683406",
+          "latitude": "28.554719"
+        },
+        {
+          "adcode": "540231",
+          "name": "定结县",
+          "postal_code": "857900",
+          "longitude": "87.767723",
+          "latitude": "28.36409"
+        },
+        {
+          "adcode": "540232",
+          "name": "仲巴县",
+          "postal_code": "858800",
+          "longitude": "84.032826",
+          "latitude": "29.768336"
+        },
+        {
+          "adcode": "540233",
+          "name": "亚东县",
+          "postal_code": "857600",
+          "longitude": "88.906806",
+          "latitude": "27.482772"
+        },
+        {
+          "adcode": "540234",
+          "name": "吉隆县",
+          "postal_code": "858700",
+          "longitude": "85.298349",
+          "latitude": "28.852416"
+        },
+        {
+          "adcode": "540235",
+          "name": "聂拉木县",
+          "postal_code": "858300",
+          "longitude": "85.981953",
+          "latitude": "28.15595"
+        },
+        {
+          "adcode": "540236",
+          "name": "萨嘎县",
+          "postal_code": "857800",
+          "longitude": "85.234622",
+          "latitude": "29.328194"
+        },
+        {
+          "adcode": "540237",
+          "name": "岗巴县",
+          "postal_code": "857700",
+          "longitude": "88.518903",
+          "latitude": "28.274371"
+        }
+      ],
+      "longitude": "88.885148",
+      "latitude": "29.267519"
+    },
+    {
+      "adcode": "540300",
+      "name": "昌都市",
+      "postal_code": "854000",
+      "districts": [
+        {
+          "adcode": "540302",
+          "name": "卡若区",
+          "postal_code": "854000",
+          "longitude": "97.178255",
+          "latitude": "31.137035"
+        },
+        {
+          "adcode": "540321",
+          "name": "江达县",
+          "postal_code": "854100",
+          "longitude": "98.218351",
+          "latitude": "31.499534"
+        },
+        {
+          "adcode": "540322",
+          "name": "贡觉县",
+          "postal_code": "854200",
+          "longitude": "98.271191",
+          "latitude": "30.859206"
+        },
+        {
+          "adcode": "540323",
+          "name": "类乌齐县",
+          "postal_code": "855600",
+          "longitude": "96.601259",
+          "latitude": "31.213048"
+        },
+        {
+          "adcode": "540324",
+          "name": "丁青县",
+          "postal_code": "855700",
+          "longitude": "95.597748",
+          "latitude": "31.410681"
+        },
+        {
+          "adcode": "540325",
+          "name": "察雅县",
+          "postal_code": "854300",
+          "longitude": "97.565701",
+          "latitude": "30.653038"
+        },
+        {
+          "adcode": "540326",
+          "name": "八宿县",
+          "postal_code": "854600",
+          "longitude": "96.917893",
+          "latitude": "30.053408"
+        },
+        {
+          "adcode": "540327",
+          "name": "左贡县",
+          "postal_code": "854400",
+          "longitude": "97.840532",
+          "latitude": "29.671335"
+        },
+        {
+          "adcode": "540328",
+          "name": "芒康县",
+          "postal_code": "854500",
+          "longitude": "98.596444",
+          "latitude": "29.686615"
+        },
+        {
+          "adcode": "540329",
+          "name": "洛隆县",
+          "postal_code": "855400",
+          "longitude": "95.823418",
+          "latitude": "30.741947"
+        },
+        {
+          "adcode": "540330",
+          "name": "边坝县",
+          "postal_code": "855500",
+          "longitude": "94.707504",
+          "latitude": "30.933849"
+        }
+      ],
+      "longitude": "97.178452",
+      "latitude": "31.136875"
+    },
+    {
+      "adcode": "540400",
+      "name": "林芝市",
+      "postal_code": "860000",
+      "districts": [
+        {
+          "adcode": "540402",
+          "name": "巴宜区",
+          "postal_code": "860000",
+          "longitude": "94.360987",
+          "latitude": "29.653732"
+        },
+        {
+          "adcode": "540421",
+          "name": "工布江达县",
+          "postal_code": "860200",
+          "longitude": "93.246515",
+          "latitude": "29.88447"
+        },
+        {
+          "adcode": "540422",
+          "name": "米林县",
+          "postal_code": "860500",
+          "longitude": "94.213679",
+          "latitude": "29.213811"
+        },
+        {
+          "adcode": "540423",
+          "name": "墨脱县",
+          "postal_code": "860700",
+          "longitude": "95.332245",
+          "latitude": "29.32573"
+        },
+        {
+          "adcode": "540424",
+          "name": "波密县",
+          "postal_code": "860300",
+          "longitude": "95.768151",
+          "latitude": "29.858771"
+        },
+        {
+          "adcode": "540425",
+          "name": "察隅县",
+          "postal_code": "860600",
+          "longitude": "97.465002",
+          "latitude": "28.660244"
+        },
+        {
+          "adcode": "540426",
+          "name": "朗县",
+          "postal_code": "860400",
+          "longitude": "93.073429",
+          "latitude": "29.0446"
+        }
+      ],
+      "longitude": "94.362348",
+      "latitude": "29.654693"
+    },
+    {
+      "adcode": "540500",
+      "name": "山南市",
+      "postal_code": "856000",
+      "districts": [
+        {
+          "adcode": "540502",
+          "name": "乃东区",
+          "postal_code": "856100",
+          "longitude": "91.76525",
+          "latitude": "29.236106"
+        },
+        {
+          "adcode": "540521",
+          "name": "扎囊县",
+          "postal_code": "850800",
+          "longitude": "91.338",
+          "latitude": "29.246476"
+        },
+        {
+          "adcode": "540522",
+          "name": "贡嘎县",
+          "postal_code": "850700",
+          "longitude": "90.985271",
+          "latitude": "29.289078"
+        },
+        {
+          "adcode": "540523",
+          "name": "桑日县",
+          "postal_code": "856200",
+          "longitude": "92.015732",
+          "latitude": "29.259774"
+        },
+        {
+          "adcode": "540524",
+          "name": "琼结县",
+          "postal_code": "856800",
+          "longitude": "91.683753",
+          "latitude": "29.025242"
+        },
+        {
+          "adcode": "540525",
+          "name": "曲松县",
+          "postal_code": "856300",
+          "longitude": "92.201066",
+          "latitude": "29.063656"
+        },
+        {
+          "adcode": "540526",
+          "name": "措美县",
+          "postal_code": "856900",
+          "longitude": "91.432347",
+          "latitude": "28.437353"
+        },
+        {
+          "adcode": "540527",
+          "name": "洛扎县",
+          "postal_code": "851200",
+          "longitude": "90.858243",
+          "latitude": "28.385765"
+        },
+        {
+          "adcode": "540528",
+          "name": "加查县",
+          "postal_code": "856400",
+          "longitude": "92.591043",
+          "latitude": "29.140921"
+        },
+        {
+          "adcode": "540529",
+          "name": "隆子县",
+          "postal_code": "856600",
+          "longitude": "92.463309",
+          "latitude": "28.408548"
+        },
+        {
+          "adcode": "540530",
+          "name": "错那县",
+          "postal_code": "856700",
+          "longitude": "91.960132",
+          "latitude": "27.991707"
+        },
+        {
+          "adcode": "540531",
+          "name": "浪卡子县",
+          "postal_code": "851100",
+          "longitude": "90.398747",
+          "latitude": "28.96836"
+        }
+      ],
+      "longitude": "91.766529",
+      "latitude": "29.236023"
+    },
+    {
+      "adcode": "540600",
+      "name": "那曲市",
+      "postal_code": "852000",
+      "districts": [
+        {
+          "adcode": "540602",
+          "name": "色尼区",
+          "postal_code": "852000",
+          "longitude": "92.061862",
+          "latitude": "31.475756"
+        },
+        {
+          "adcode": "540621",
+          "name": "嘉黎县",
+          "postal_code": "852400",
+          "longitude": "93.232907",
+          "latitude": "30.640846"
+        },
+        {
+          "adcode": "540622",
+          "name": "比如县",
+          "postal_code": "852300",
+          "longitude": "93.68044",
+          "latitude": "31.479917"
+        },
+        {
+          "adcode": "540623",
+          "name": "聂荣县",
+          "postal_code": "853500",
+          "longitude": "92.303659",
+          "latitude": "32.107855"
+        },
+        {
+          "adcode": "540624",
+          "name": "安多县",
+          "postal_code": "853400",
+          "longitude": "91.681879",
+          "latitude": "32.260299"
+        },
+        {
+          "adcode": "540625",
+          "name": "申扎县",
+          "postal_code": "853100",
+          "longitude": "88.709777",
+          "latitude": "30.929056"
+        },
+        {
+          "adcode": "540626",
+          "name": "索县",
+          "postal_code": "852200",
+          "longitude": "93.784964",
+          "latitude": "31.886173"
+        },
+        {
+          "adcode": "540627",
+          "name": "班戈县",
+          "postal_code": "852500",
+          "longitude": "90.011822",
+          "latitude": "31.394578"
+        },
+        {
+          "adcode": "540628",
+          "name": "巴青县",
+          "postal_code": "852100",
+          "longitude": "94.054049",
+          "latitude": "31.918691"
+        },
+        {
+          "adcode": "540629",
+          "name": "尼玛县",
+          "postal_code": "853200",
+          "longitude": "87.236646",
+          "latitude": "31.784979"
+        },
+        {
+          "adcode": "540630",
+          "name": "双湖县",
+          "postal_code": "852600",
+          "longitude": "88.838578",
+          "latitude": "33.18698"
+        }
+      ],
+      "longitude": "92.060214",
+      "latitude": "31.476004"
+    },
+    {
+      "adcode": "542500",
+      "name": "阿里地区",
+      "postal_code": "859000",
+      "districts": [
+        {
+          "adcode": "542521",
+          "name": "普兰县",
+          "postal_code": "859500",
+          "longitude": "81.177588",
+          "latitude": "30.291896"
+        },
+        {
+          "adcode": "542522",
+          "name": "札达县",
+          "postal_code": "859600",
+          "longitude": "79.803191",
+          "latitude": "31.478587"
+        },
+        {
+          "adcode": "542523",
+          "name": "噶尔县",
+          "postal_code": "859400",
+          "longitude": "80.105005",
+          "latitude": "32.503373"
+        },
+        {
+          "adcode": "542524",
+          "name": "日土县",
+          "postal_code": "859700",
+          "longitude": "79.731937",
+          "latitude": "33.382454"
+        },
+        {
+          "adcode": "542525",
+          "name": "革吉县",
+          "postal_code": "859100",
+          "longitude": "81.142896",
+          "latitude": "32.389192"
+        },
+        {
+          "adcode": "542526",
+          "name": "改则县",
+          "postal_code": "859200",
+          "longitude": "84.062384",
+          "latitude": "32.302076"
+        },
+        {
+          "adcode": "542527",
+          "name": "措勤县",
+          "postal_code": "859300",
+          "longitude": "85.159254",
+          "latitude": "31.016774"
+        }
+      ],
+      "longitude": "80.105498",
+      "latitude": "32.503187"
+    }
+  ],
+  "longitude": "91.132212",
+  "latitude": "29.660361"
+}
