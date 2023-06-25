@@ -1,0 +1,402 @@
+{
+  "adcode": "630000",
+  "name": "青海省",
+  "postal_code": "810000",
+  "cities": [
+    {
+      "adcode": "630100",
+      "name": "西宁市",
+      "postal_code": "810000",
+      "districts": [
+        {
+          "adcode": "630102",
+          "name": "城东区",
+          "postal_code": "810007",
+          "longitude": "101.796095",
+          "latitude": "36.616043"
+        },
+        {
+          "adcode": "630103",
+          "name": "城中区",
+          "postal_code": "810000",
+          "longitude": "101.784554",
+          "latitude": "36.621181"
+        },
+        {
+          "adcode": "630104",
+          "name": "城西区",
+          "postal_code": "810001",
+          "longitude": "101.763649",
+          "latitude": "36.628323"
+        },
+        {
+          "adcode": "630105",
+          "name": "城北区",
+          "postal_code": "810003",
+          "longitude": "101.761297",
+          "latitude": "36.648448"
+        },
+        {
+          "adcode": "630106",
+          "name": "湟中区",
+          "postal_code": "811600",
+          "longitude": "101.569475",
+          "latitude": "36.500419"
+        },
+        {
+          "adcode": "630121",
+          "name": "大通回族土族自治县",
+          "postal_code": "810100",
+          "longitude": "101.684183",
+          "latitude": "36.931343"
+        },
+        {
+          "adcode": "630123",
+          "name": "湟源县",
+          "postal_code": "812100",
+          "longitude": "101.263435",
+          "latitude": "36.684818"
+        }
+      ],
+      "longitude": "101.778916",
+      "latitude": "36.623178"
+    },
+    {
+      "adcode": "632100",
+      "name": "海东市",
+      "postal_code": "810600",
+      "districts": [
+        {
+          "adcode": "630202",
+          "name": "乐都区",
+          "postal_code": "810700",
+          "longitude": "102.402431",
+          "latitude": "36.480291"
+        },
+        {
+          "adcode": "630203",
+          "name": "平安区",
+          "postal_code": "810600",
+          "longitude": "102.104295",
+          "latitude": "36.502714"
+        },
+        {
+          "adcode": "630222",
+          "name": "民和回族土族自治县",
+          "postal_code": "810800",
+          "longitude": "102.804209",
+          "latitude": "36.329451"
+        },
+        {
+          "adcode": "630223",
+          "name": "互助土族自治县",
+          "postal_code": "810500",
+          "longitude": "101.956734",
+          "latitude": "36.83994"
+        },
+        {
+          "adcode": "630224",
+          "name": "化隆回族自治县",
+          "postal_code": "810900",
+          "longitude": "102.262329",
+          "latitude": "36.098322"
+        },
+        {
+          "adcode": "630225",
+          "name": "循化撒拉族自治县",
+          "postal_code": "811100",
+          "longitude": "102.486534",
+          "latitude": "35.847247"
+        }
+      ],
+      "longitude": "102.10327",
+      "latitude": "36.502916"
+    },
+    {
+      "adcode": "632200",
+      "name": "海北藏族自治州",
+      "postal_code": "812200",
+      "districts": [
+        {
+          "adcode": "632221",
+          "name": "门源回族自治县",
+          "postal_code": "810300",
+          "longitude": "101.618461",
+          "latitude": "37.376627"
+        },
+        {
+          "adcode": "632222",
+          "name": "祁连县",
+          "postal_code": "810400",
+          "longitude": "100.249778",
+          "latitude": "38.175409"
+        },
+        {
+          "adcode": "632223",
+          "name": "海晏县",
+          "postal_code": "812200",
+          "longitude": "100.90049",
+          "latitude": "36.959542"
+        },
+        {
+          "adcode": "632224",
+          "name": "刚察县",
+          "postal_code": "812300",
+          "longitude": "100.138417",
+          "latitude": "37.326263"
+        }
+      ],
+      "longitude": "100.901059",
+      "latitude": "36.959435"
+    },
+    {
+      "adcode": "632300",
+      "name": "黄南藏族自治州",
+      "postal_code": "811300",
+      "districts": [
+        {
+          "adcode": "632301",
+          "name": "同仁市",
+          "postal_code": "811300",
+          "longitude": "102.017604",
+          "latitude": "35.516337"
+        },
+        {
+          "adcode": "632322",
+          "name": "尖扎县",
+          "postal_code": "811200",
+          "longitude": "102.031953",
+          "latitude": "35.938205"
+        },
+        {
+          "adcode": "632323",
+          "name": "泽库县",
+          "postal_code": "811400",
+          "longitude": "101.469343",
+          "latitude": "35.036842"
+        },
+        {
+          "adcode": "632324",
+          "name": "河南蒙古族自治县",
+          "postal_code": "811500",
+          "longitude": "101.611877",
+          "latitude": "34.734522"
+        }
+      ],
+      "longitude": "102.019988",
+      "latitude": "35.517744"
+    },
+    {
+      "adcode": "632500",
+      "name": "海南藏族自治州",
+      "postal_code": "813000",
+      "districts": [
+        {
+          "adcode": "632521",
+          "name": "共和县",
+          "postal_code": "813000",
+          "longitude": "100.619597",
+          "latitude": "36.280286"
+        },
+        {
+          "adcode": "632522",
+          "name": "同德县",
+          "postal_code": "813200",
+          "longitude": "100.579465",
+          "latitude": "35.254492"
+        },
+        {
+          "adcode": "632523",
+          "name": "贵德县",
+          "postal_code": "811700",
+          "longitude": "101.431856",
+          "latitude": "36.040456"
+        },
+        {
+          "adcode": "632524",
+          "name": "兴海县",
+          "postal_code": "813300",
+          "longitude": "99.986963",
+          "latitude": "35.58909"
+        },
+        {
+          "adcode": "632525",
+          "name": "贵南县",
+          "postal_code": "813100",
+          "longitude": "100.74792",
+          "latitude": "35.587085"
+        }
+      ],
+      "longitude": "100.619542",
+      "latitude": "36.280353"
+    },
+    {
+      "adcode": "632600",
+      "name": "果洛藏族自治州",
+      "postal_code": "814000",
+      "districts": [
+        {
+          "adcode": "632621",
+          "name": "玛沁县",
+          "postal_code": "814000",
+          "longitude": "100.243531",
+          "latitude": "34.473386"
+        },
+        {
+          "adcode": "632622",
+          "name": "班玛县",
+          "postal_code": "814300",
+          "longitude": "100.737955",
+          "latitude": "32.931589"
+        },
+        {
+          "adcode": "632623",
+          "name": "甘德县",
+          "postal_code": "814100",
+          "longitude": "99.902589",
+          "latitude": "33.966987"
+        },
+        {
+          "adcode": "632624",
+          "name": "达日县",
+          "postal_code": "814200",
+          "longitude": "99.651715",
+          "latitude": "33.753259"
+        },
+        {
+          "adcode": "632625",
+          "name": "久治县",
+          "postal_code": "624700",
+          "longitude": "101.484884",
+          "latitude": "33.430217"
+        },
+        {
+          "adcode": "632626",
+          "name": "玛多县",
+          "postal_code": "813500",
+          "longitude": "98.211343",
+          "latitude": "34.91528"
+        }
+      ],
+      "longitude": "100.242143",
+      "latitude": "34.4736"
+    },
+    {
+      "adcode": "632700",
+      "name": "玉树藏族自治州",
+      "postal_code": "815000",
+      "districts": [
+        {
+          "adcode": "632701",
+          "name": "玉树市",
+          "postal_code": "815000",
+          "longitude": "97.008762",
+          "latitude": "33.00393"
+        },
+        {
+          "adcode": "632722",
+          "name": "杂多县",
+          "postal_code": "815300",
+          "longitude": "95.293423",
+          "latitude": "32.891886"
+        },
+        {
+          "adcode": "632723",
+          "name": "称多县",
+          "postal_code": "815100",
+          "longitude": "97.110893",
+          "latitude": "33.367884"
+        },
+        {
+          "adcode": "632724",
+          "name": "治多县",
+          "postal_code": "815400",
+          "longitude": "95.616843",
+          "latitude": "33.852322"
+        },
+        {
+          "adcode": "632725",
+          "name": "囊谦县",
+          "postal_code": "815200",
+          "longitude": "96.479797",
+          "latitude": "32.203206"
+        },
+        {
+          "adcode": "632726",
+          "name": "曲麻莱县",
+          "postal_code": "815500",
+          "longitude": "95.800674",
+          "latitude": "34.12654"
+        }
+      ],
+      "longitude": "97.008522",
+      "latitude": "33.004049"
+    },
+    {
+      "adcode": "632800",
+      "name": "海西蒙古族藏族自治州",
+      "postal_code": "817000",
+      "districts": [
+        {
+          "adcode": "632801",
+          "name": "格尔木市",
+          "postal_code": "816000",
+          "longitude": "94.905777",
+          "latitude": "36.401541"
+        },
+        {
+          "adcode": "632802",
+          "name": "德令哈市",
+          "postal_code": "817000",
+          "longitude": "97.370143",
+          "latitude": "37.374555"
+        },
+        {
+          "adcode": "632803",
+          "name": "茫崖市",
+          "postal_code": "817000",
+          "longitude": "90.855955",
+          "latitude": "38.247117"
+        },
+        {
+          "adcode": "632821",
+          "name": "乌兰县",
+          "postal_code": "817100",
+          "longitude": "98.479852",
+          "latitude": "36.930389"
+        },
+        {
+          "adcode": "632822",
+          "name": "都兰县",
+          "postal_code": "816100",
+          "longitude": "98.089161",
+          "latitude": "36.298553"
+        },
+        {
+          "adcode": "632823",
+          "name": "天峻县",
+          "postal_code": "817200",
+          "longitude": "99.02078",
+          "latitude": "37.29906"
+        },
+        {
+          "adcode": "632825",
+          "name": "海西蒙古族藏族自治州直辖",
+          "longitude": "95.357233",
+          "latitude": "37.853631"
+        },
+        {
+          "adcode": "632857",
+          "name": "大柴旦行政委员会",
+          "postal_code": "817300",
+          "longitude": "95.371763",
+          "latitude": "37.85802"
+        }
+      ],
+      "longitude": "97.370785",
+      "latitude": "37.374663"
+    }
+  ],
+  "longitude": "101.778916",
+  "latitude": "36.623178"
+}

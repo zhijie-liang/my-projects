@@ -1,0 +1,1008 @@
+{
+  "adcode": "230000",
+  "name": "黑龙江省",
+  "postal_code": "150000",
+  "cities": [
+    {
+      "adcode": "230100",
+      "name": "哈尔滨市",
+      "postal_code": "150000",
+      "districts": [
+        {
+          "adcode": "230102",
+          "name": "道里区",
+          "postal_code": "150010",
+          "longitude": "126.612532",
+          "latitude": "45.762035"
+        },
+        {
+          "adcode": "230103",
+          "name": "南岗区",
+          "postal_code": "150006",
+          "longitude": "126.652098",
+          "latitude": "45.755971"
+        },
+        {
+          "adcode": "230104",
+          "name": "道外区",
+          "postal_code": "150020",
+          "longitude": "126.648838",
+          "latitude": "45.78454"
+        },
+        {
+          "adcode": "230108",
+          "name": "平房区",
+          "postal_code": "150060",
+          "longitude": "126.629257",
+          "latitude": "45.605567"
+        },
+        {
+          "adcode": "230109",
+          "name": "松北区",
+          "postal_code": "150028",
+          "longitude": "126.563066",
+          "latitude": "45.814656"
+        },
+        {
+          "adcode": "230110",
+          "name": "香坊区",
+          "postal_code": "150036",
+          "longitude": "126.667049",
+          "latitude": "45.713067"
+        },
+        {
+          "adcode": "230111",
+          "name": "呼兰区",
+          "postal_code": "150500",
+          "longitude": "126.603302",
+          "latitude": "45.98423"
+        },
+        {
+          "adcode": "230112",
+          "name": "阿城区",
+          "postal_code": "150300",
+          "longitude": "126.972726",
+          "latitude": "45.538372"
+        },
+        {
+          "adcode": "230113",
+          "name": "双城区",
+          "postal_code": "150100",
+          "longitude": "126.308784",
+          "latitude": "45.377942"
+        },
+        {
+          "adcode": "230123",
+          "name": "依兰县",
+          "postal_code": "154800",
+          "longitude": "129.565594",
+          "latitude": "46.315105"
+        },
+        {
+          "adcode": "230124",
+          "name": "方正县",
+          "postal_code": "150800",
+          "longitude": "128.836131",
+          "latitude": "45.839536"
+        },
+        {
+          "adcode": "230125",
+          "name": "宾县",
+          "postal_code": "150400",
+          "longitude": "127.48594",
+          "latitude": "45.759369"
+        },
+        {
+          "adcode": "230126",
+          "name": "巴彦县",
+          "postal_code": "151800",
+          "longitude": "127.403602",
+          "latitude": "46.081889"
+        },
+        {
+          "adcode": "230127",
+          "name": "木兰县",
+          "postal_code": "151900",
+          "longitude": "128.042675",
+          "latitude": "45.949826"
+        },
+        {
+          "adcode": "230128",
+          "name": "通河县",
+          "postal_code": "150900",
+          "longitude": "128.747786",
+          "latitude": "45.977618"
+        },
+        {
+          "adcode": "230129",
+          "name": "延寿县",
+          "postal_code": "150700",
+          "longitude": "128.331886",
+          "latitude": "45.455648"
+        },
+        {
+          "adcode": "230183",
+          "name": "尚志市",
+          "postal_code": "150600",
+          "longitude": "127.968539",
+          "latitude": "45.214953"
+        },
+        {
+          "adcode": "230184",
+          "name": "五常市",
+          "postal_code": "150200",
+          "longitude": "127.15759",
+          "latitude": "44.919418"
+        }
+      ],
+      "longitude": "126.642464",
+      "latitude": "45.756967"
+    },
+    {
+      "adcode": "230200",
+      "name": "齐齐哈尔市",
+      "postal_code": "161000",
+      "districts": [
+        {
+          "adcode": "230202",
+          "name": "龙沙区",
+          "postal_code": "161000",
+          "longitude": "123.957338",
+          "latitude": "47.341736"
+        },
+        {
+          "adcode": "230203",
+          "name": "建华区",
+          "postal_code": "161006",
+          "longitude": "123.955888",
+          "latitude": "47.354494"
+        },
+        {
+          "adcode": "230204",
+          "name": "铁锋区",
+          "postal_code": "161000",
+          "longitude": "123.973555",
+          "latitude": "47.339499"
+        },
+        {
+          "adcode": "230205",
+          "name": "昂昂溪区",
+          "postal_code": "161031",
+          "longitude": "123.813181",
+          "latitude": "47.156867"
+        },
+        {
+          "adcode": "230206",
+          "name": "富拉尔基区",
+          "postal_code": "161041",
+          "longitude": "123.638873",
+          "latitude": "47.20697"
+        },
+        {
+          "adcode": "230207",
+          "name": "碾子山区",
+          "postal_code": "161046",
+          "longitude": "122.887972",
+          "latitude": "47.51401"
+        },
+        {
+          "adcode": "230208",
+          "name": "梅里斯达斡尔族区",
+          "postal_code": "161021",
+          "longitude": "123.754599",
+          "latitude": "47.311113"
+        },
+        {
+          "adcode": "230221",
+          "name": "龙江县",
+          "postal_code": "161100",
+          "longitude": "123.187225",
+          "latitude": "47.336388"
+        },
+        {
+          "adcode": "230223",
+          "name": "依安县",
+          "postal_code": "161500",
+          "longitude": "125.307561",
+          "latitude": "47.890098"
+        },
+        {
+          "adcode": "230224",
+          "name": "泰来县",
+          "postal_code": "162400",
+          "longitude": "123.41953",
+          "latitude": "46.39233"
+        },
+        {
+          "adcode": "230225",
+          "name": "甘南县",
+          "postal_code": "162100",
+          "longitude": "123.506034",
+          "latitude": "47.917838"
+        },
+        {
+          "adcode": "230227",
+          "name": "富裕县",
+          "postal_code": "161200",
+          "longitude": "124.469106",
+          "latitude": "47.797172"
+        },
+        {
+          "adcode": "230229",
+          "name": "克山县",
+          "postal_code": "161600",
+          "longitude": "125.874355",
+          "latitude": "48.034342"
+        },
+        {
+          "adcode": "230230",
+          "name": "克东县",
+          "postal_code": "164800",
+          "longitude": "126.249094",
+          "latitude": "48.03732"
+        },
+        {
+          "adcode": "230231",
+          "name": "拜泉县",
+          "postal_code": "164700",
+          "longitude": "126.091911",
+          "latitude": "47.607363"
+        },
+        {
+          "adcode": "230281",
+          "name": "讷河市",
+          "postal_code": "161300",
+          "longitude": "124.882172",
+          "latitude": "48.481133"
+        }
+      ],
+      "longitude": "123.95792",
+      "latitude": "47.342081"
+    },
+    {
+      "adcode": "230300",
+      "name": "鸡西市",
+      "postal_code": "158100",
+      "districts": [
+        {
+          "adcode": "230302",
+          "name": "鸡冠区",
+          "postal_code": "158100",
+          "longitude": "130.974374",
+          "latitude": "45.30034"
+        },
+        {
+          "adcode": "230303",
+          "name": "恒山区",
+          "postal_code": "158130",
+          "longitude": "130.910636",
+          "latitude": "45.213242"
+        },
+        {
+          "adcode": "230304",
+          "name": "滴道区",
+          "postal_code": "158150",
+          "longitude": "130.846823",
+          "latitude": "45.348812"
+        },
+        {
+          "adcode": "230305",
+          "name": "梨树区",
+          "postal_code": "158160",
+          "longitude": "130.697781",
+          "latitude": "45.092195"
+        },
+        {
+          "adcode": "230306",
+          "name": "城子河区",
+          "postal_code": "158170",
+          "longitude": "131.010501",
+          "latitude": "45.338248"
+        },
+        {
+          "adcode": "230307",
+          "name": "麻山区",
+          "postal_code": "158180",
+          "longitude": "130.481126",
+          "latitude": "45.209607"
+        },
+        {
+          "adcode": "230321",
+          "name": "鸡东县",
+          "postal_code": "158200",
+          "longitude": "131.148907",
+          "latitude": "45.250892"
+        },
+        {
+          "adcode": "230381",
+          "name": "虎林市",
+          "postal_code": "158400",
+          "longitude": "132.973881",
+          "latitude": "45.767985"
+        },
+        {
+          "adcode": "230382",
+          "name": "密山市",
+          "postal_code": "158300",
+          "longitude": "131.874137",
+          "latitude": "45.54725"
+        }
+      ],
+      "longitude": "130.975966",
+      "latitude": "45.300046"
+    },
+    {
+      "adcode": "230400",
+      "name": "鹤岗市",
+      "postal_code": "154100",
+      "districts": [
+        {
+          "adcode": "230402",
+          "name": "向阳区",
+          "postal_code": "154100",
+          "longitude": "130.292478",
+          "latitude": "47.345372"
+        },
+        {
+          "adcode": "230403",
+          "name": "工农区",
+          "postal_code": "154101",
+          "longitude": "130.276652",
+          "latitude": "47.331678"
+        },
+        {
+          "adcode": "230404",
+          "name": "南山区",
+          "postal_code": "154104",
+          "longitude": "130.275533",
+          "latitude": "47.31324"
+        },
+        {
+          "adcode": "230405",
+          "name": "兴安区",
+          "postal_code": "154102",
+          "longitude": "130.236169",
+          "latitude": "47.252911"
+        },
+        {
+          "adcode": "230406",
+          "name": "东山区",
+          "postal_code": "154106",
+          "longitude": "130.31714",
+          "latitude": "47.337385"
+        },
+        {
+          "adcode": "230407",
+          "name": "兴山区",
+          "postal_code": "154105",
+          "longitude": "130.30534",
+          "latitude": "47.35997"
+        },
+        {
+          "adcode": "230421",
+          "name": "萝北县",
+          "postal_code": "154200",
+          "longitude": "130.829087",
+          "latitude": "47.577577"
+        },
+        {
+          "adcode": "230422",
+          "name": "绥滨县",
+          "postal_code": "156200",
+          "longitude": "131.860526",
+          "latitude": "47.289892"
+        }
+      ],
+      "longitude": "130.277487",
+      "latitude": "47.332085"
+    },
+    {
+      "adcode": "230500",
+      "name": "双鸭山市",
+      "postal_code": "155100",
+      "districts": [
+        {
+          "adcode": "230502",
+          "name": "尖山区",
+          "postal_code": "155100",
+          "longitude": "131.15896",
+          "latitude": "46.642961"
+        },
+        {
+          "adcode": "230503",
+          "name": "岭东区",
+          "postal_code": "155120",
+          "longitude": "131.163675",
+          "latitude": "46.591076"
+        },
+        {
+          "adcode": "230505",
+          "name": "四方台区",
+          "postal_code": "155130",
+          "longitude": "131.333181",
+          "latitude": "46.594347"
+        },
+        {
+          "adcode": "230506",
+          "name": "宝山区",
+          "postal_code": "155131",
+          "longitude": "131.404294",
+          "latitude": "46.573366"
+        },
+        {
+          "adcode": "230521",
+          "name": "集贤县",
+          "postal_code": "155900",
+          "longitude": "131.13933",
+          "latitude": "46.72898"
+        },
+        {
+          "adcode": "230522",
+          "name": "友谊县",
+          "postal_code": "155800",
+          "longitude": "131.810622",
+          "latitude": "46.775159"
+        },
+        {
+          "adcode": "230523",
+          "name": "宝清县",
+          "postal_code": "155600",
+          "longitude": "132.206415",
+          "latitude": "46.328781"
+        },
+        {
+          "adcode": "230524",
+          "name": "饶河县",
+          "postal_code": "155700",
+          "longitude": "134.021162",
+          "latitude": "46.801288"
+        }
+      ],
+      "longitude": "131.157304",
+      "latitude": "46.643442"
+    },
+    {
+      "adcode": "230600",
+      "name": "大庆市",
+      "postal_code": "163000",
+      "districts": [
+        {
+          "adcode": "230602",
+          "name": "萨尔图区",
+          "postal_code": "163001",
+          "longitude": "125.114643",
+          "latitude": "46.596356"
+        },
+        {
+          "adcode": "230603",
+          "name": "龙凤区",
+          "postal_code": "163711",
+          "longitude": "125.145794",
+          "latitude": "46.573948"
+        },
+        {
+          "adcode": "230604",
+          "name": "让胡路区",
+          "postal_code": "163712",
+          "longitude": "124.868341",
+          "latitude": "46.653254"
+        },
+        {
+          "adcode": "230605",
+          "name": "红岗区",
+          "postal_code": "163511",
+          "longitude": "124.889528",
+          "latitude": "46.403049"
+        },
+        {
+          "adcode": "230606",
+          "name": "大同区",
+          "postal_code": "163515",
+          "longitude": "124.818509",
+          "latitude": "46.034304"
+        },
+        {
+          "adcode": "230621",
+          "name": "肇州县",
+          "postal_code": "166400",
+          "longitude": "125.273254",
+          "latitude": "45.708685"
+        },
+        {
+          "adcode": "230622",
+          "name": "肇源县",
+          "postal_code": "166500",
+          "longitude": "125.081974",
+          "latitude": "45.518832"
+        },
+        {
+          "adcode": "230623",
+          "name": "林甸县",
+          "postal_code": "166300",
+          "longitude": "124.877742",
+          "latitude": "47.186411"
+        },
+        {
+          "adcode": "230624",
+          "name": "杜尔伯特蒙古族自治县",
+          "postal_code": "166200",
+          "longitude": "124.446259",
+          "latitude": "46.865973"
+        },
+        {
+          "adcode": "230671",
+          "name": "大庆高新技术产业开发区",
+          "postal_code": "163000",
+          "longitude": "125.163981",
+          "latitude": "46.565649"
+        }
+      ],
+      "longitude": "125.11272",
+      "latitude": "46.590734"
+    },
+    {
+      "adcode": "230700",
+      "name": "伊春市",
+      "postal_code": "153000",
+      "districts": [
+        {
+          "adcode": 230717,
+          "name": "伊美区",
+          "postal_code": "153000",
+          "longitude": "128.907303",
+          "latitude": "47.728171"
+        },
+        {
+          "adcode": 230718,
+          "name": "乌翠区",
+          "postal_code": "153000",
+          "longitude": "128.669859",
+          "latitude": "47.726728"
+        },
+        {
+          "adcode": 230719,
+          "name": "友好区",
+          "postal_code": "153000",
+          "longitude": "128.84075",
+          "latitude": "47.853778"
+        },
+        {
+          "adcode": 230722,
+          "name": "嘉荫县",
+          "postal_code": "153200",
+          "longitude": "130.397684",
+          "latitude": "48.891378"
+        },
+        {
+          "adcode": 230723,
+          "name": "汤旺县",
+          "postal_code": "153000",
+          "longitude": "129.571108",
+          "latitude": "48.454651"
+        },
+        {
+          "adcode": 230724,
+          "name": "丰林县",
+          "postal_code": "153000",
+          "longitude": "129.5336",
+          "latitude": "48.290455"
+        },
+        {
+          "adcode": 230725,
+          "name": "大箐山县",
+          "postal_code": "153100",
+          "longitude": "129.020793",
+          "latitude": "47.028397"
+        },
+        {
+          "adcode": 230726,
+          "name": "南岔县",
+          "postal_code": "153100",
+          "longitude": "129.28246",
+          "latitude": "47.137314"
+        },
+        {
+          "adcode": 230751,
+          "name": "金林区",
+          "postal_code": "153000",
+          "longitude": "129.429117",
+          "latitude": "47.413074"
+        },
+        {
+          "adcode": 230781,
+          "name": "铁力市",
+          "postal_code": "152500",
+          "longitude": "128.030561",
+          "latitude": "46.985772"
+        }
+      ],
+      "longitude": "128.899396",
+      "latitude": "47.724775"
+    },
+    {
+      "adcode": "230800",
+      "name": "佳木斯市",
+      "postal_code": "154000",
+      "districts": [
+        {
+          "adcode": "230803",
+          "name": "向阳区",
+          "postal_code": "154002",
+          "longitude": "130.361786",
+          "latitude": "46.809645"
+        },
+        {
+          "adcode": "230804",
+          "name": "前进区",
+          "postal_code": "154002",
+          "longitude": "130.377684",
+          "latitude": "46.812345"
+        },
+        {
+          "adcode": "230805",
+          "name": "东风区",
+          "postal_code": "154005",
+          "longitude": "130.403297",
+          "latitude": "46.822476"
+        },
+        {
+          "adcode": "230811",
+          "name": "郊区",
+          "postal_code": "154004",
+          "longitude": "130.351588",
+          "latitude": "46.80712"
+        },
+        {
+          "adcode": "230822",
+          "name": "桦南县",
+          "postal_code": "154400",
+          "longitude": "130.570112",
+          "latitude": "46.240118"
+        },
+        {
+          "adcode": "230826",
+          "name": "桦川县",
+          "postal_code": "154300",
+          "longitude": "130.723713",
+          "latitude": "47.023039"
+        },
+        {
+          "adcode": "230828",
+          "name": "汤原县",
+          "postal_code": "154700",
+          "longitude": "129.904463",
+          "latitude": "46.730048"
+        },
+        {
+          "adcode": "230881",
+          "name": "同江市",
+          "postal_code": "156400",
+          "longitude": "132.510119",
+          "latitude": "47.651131"
+        },
+        {
+          "adcode": "230882",
+          "name": "富锦市",
+          "postal_code": "156100",
+          "longitude": "132.037951",
+          "latitude": "47.250747"
+        },
+        {
+          "adcode": "230883",
+          "name": "抚远市",
+          "postal_code": "156500",
+          "longitude": "134.294501",
+          "latitude": "48.364707"
+        }
+      ],
+      "longitude": "130.361634",
+      "latitude": "46.809606"
+    },
+    {
+      "adcode": "230900",
+      "name": "七台河市",
+      "postal_code": "154600",
+      "districts": [
+        {
+          "adcode": "230902",
+          "name": "新兴区",
+          "postal_code": "154604",
+          "longitude": "130.889482",
+          "latitude": "45.794258"
+        },
+        {
+          "adcode": "230903",
+          "name": "桃山区",
+          "postal_code": "154600",
+          "longitude": "131.015848",
+          "latitude": "45.771217"
+        },
+        {
+          "adcode": "230904",
+          "name": "茄子河区",
+          "postal_code": "154622",
+          "longitude": "131.071561",
+          "latitude": "45.776587"
+        },
+        {
+          "adcode": "230921",
+          "name": "勃利县",
+          "postal_code": "154500",
+          "longitude": "130.575025",
+          "latitude": "45.751573"
+        }
+      ],
+      "longitude": "131.015584",
+      "latitude": "45.771266"
+    },
+    {
+      "adcode": "231000",
+      "name": "牡丹江市",
+      "postal_code": "157000",
+      "districts": [
+        {
+          "adcode": "231002",
+          "name": "东安区",
+          "postal_code": "157000",
+          "longitude": "129.623292",
+          "latitude": "44.582399"
+        },
+        {
+          "adcode": "231003",
+          "name": "阳明区",
+          "postal_code": "157013",
+          "longitude": "129.634645",
+          "latitude": "44.596328"
+        },
+        {
+          "adcode": "231004",
+          "name": "爱民区",
+          "postal_code": "157009",
+          "longitude": "129.601232",
+          "latitude": "44.595443"
+        },
+        {
+          "adcode": "231005",
+          "name": "西安区",
+          "postal_code": "157000",
+          "longitude": "129.61311",
+          "latitude": "44.581032"
+        },
+        {
+          "adcode": "231025",
+          "name": "林口县",
+          "postal_code": "157600",
+          "longitude": "130.268402",
+          "latitude": "45.286645"
+        },
+        {
+          "adcode": "231081",
+          "name": "绥芬河市",
+          "postal_code": "157300",
+          "longitude": "131.164856",
+          "latitude": "44.396864"
+        },
+        {
+          "adcode": "231083",
+          "name": "海林市",
+          "postal_code": "157100",
+          "longitude": "129.387902",
+          "latitude": "44.574149"
+        },
+        {
+          "adcode": "231084",
+          "name": "宁安市",
+          "postal_code": "157400",
+          "longitude": "129.470019",
+          "latitude": "44.346836"
+        },
+        {
+          "adcode": "231085",
+          "name": "穆棱市",
+          "postal_code": "157500",
+          "longitude": "130.527085",
+          "latitude": "44.91967"
+        },
+        {
+          "adcode": "231086",
+          "name": "东宁市",
+          "postal_code": "157200",
+          "longitude": "131.125296",
+          "latitude": "44.063578"
+        }
+      ],
+      "longitude": "129.618602",
+      "latitude": "44.582962"
+    },
+    {
+      "adcode": "231100",
+      "name": "黑河市",
+      "postal_code": "164300",
+      "districts": [
+        {
+          "adcode": "231102",
+          "name": "爱辉区",
+          "postal_code": "164300",
+          "longitude": "127.497639",
+          "latitude": "50.249027"
+        },
+        {
+          "adcode": "231123",
+          "name": "逊克县",
+          "postal_code": "164400",
+          "longitude": "128.476152",
+          "latitude": "49.582974"
+        },
+        {
+          "adcode": "231124",
+          "name": "孙吴县",
+          "postal_code": "164200",
+          "longitude": "127.327315",
+          "latitude": "49.423941"
+        },
+        {
+          "adcode": "231181",
+          "name": "北安市",
+          "postal_code": "164000",
+          "longitude": "126.508737",
+          "latitude": "48.245437"
+        },
+        {
+          "adcode": "231182",
+          "name": "五大连池市",
+          "postal_code": "164100",
+          "longitude": "126.197694",
+          "latitude": "48.512688"
+        },
+        {
+          "adcode": "231183",
+          "name": "嫩江市",
+          "postal_code": "161400",
+          "longitude": "125.229904",
+          "latitude": "49.177461"
+        }
+      ],
+      "longitude": "127.499023",
+      "latitude": "50.249585"
+    },
+    {
+      "adcode": "231200",
+      "name": "绥化市",
+      "postal_code": "152000",
+      "districts": [
+        {
+          "adcode": "231202",
+          "name": "北林区",
+          "postal_code": "152000",
+          "longitude": "126.990665",
+          "latitude": "46.634912"
+        },
+        {
+          "adcode": "231221",
+          "name": "望奎县",
+          "postal_code": "152100",
+          "longitude": "126.484191",
+          "latitude": "46.83352"
+        },
+        {
+          "adcode": "231222",
+          "name": "兰西县",
+          "postal_code": "151500",
+          "longitude": "126.289315",
+          "latitude": "46.259037"
+        },
+        {
+          "adcode": "231223",
+          "name": "青冈县",
+          "postal_code": "151600",
+          "longitude": "126.112268",
+          "latitude": "46.686596"
+        },
+        {
+          "adcode": "231224",
+          "name": "庆安县",
+          "postal_code": "152400",
+          "longitude": "127.510024",
+          "latitude": "46.879203"
+        },
+        {
+          "adcode": "231225",
+          "name": "明水县",
+          "postal_code": "151700",
+          "longitude": "125.907544",
+          "latitude": "47.183527"
+        },
+        {
+          "adcode": "231226",
+          "name": "绥棱县",
+          "postal_code": "152200",
+          "longitude": "127.111121",
+          "latitude": "47.247195"
+        },
+        {
+          "adcode": "231281",
+          "name": "安达市",
+          "postal_code": "151400",
+          "longitude": "125.329926",
+          "latitude": "46.410614"
+        },
+        {
+          "adcode": "231282",
+          "name": "肇东市",
+          "postal_code": "151100",
+          "longitude": "125.991402",
+          "latitude": "46.069471"
+        },
+        {
+          "adcode": "231283",
+          "name": "海伦市",
+          "postal_code": "152300",
+          "longitude": "126.969383",
+          "latitude": "47.460428"
+        }
+      ],
+      "longitude": "126.99293",
+      "latitude": "46.637393"
+    },
+    {
+      "adcode": "232700",
+      "name": "大兴安岭地区",
+      "postal_code": "165000",
+      "districts": [
+        {
+          "adcode": "232701",
+          "name": "漠河市",
+          "postal_code": "165300",
+          "longitude": "122.536256",
+          "latitude": "52.972074"
+        },
+        {
+          "adcode": "232718",
+          "name": "加格达奇区",
+          "postal_code": "165300",
+          "longitude": "124.126716",
+          "latitude": "50.424654"
+        },
+        {
+          "adcode": "232721",
+          "name": "呼玛县",
+          "postal_code": "165100",
+          "longitude": "126.662105",
+          "latitude": "51.726998"
+        },
+        {
+          "adcode": "232722",
+          "name": "塔河县",
+          "postal_code": "165200",
+          "longitude": "124.710516",
+          "latitude": "52.335229"
+        },
+        {
+          "adcode": "232762",
+          "name": "松岭区",
+          "postal_code": "165000",
+          "longitude": "124.29595",
+          "latitude": "50.800816"
+        },
+        {
+          "adcode": "232763",
+          "name": "新林区",
+          "postal_code": "165023",
+          "longitude": "124.405049",
+          "latitude": "51.679761"
+        },
+        {
+          "adcode": "232764",
+          "name": "呼中区",
+          "postal_code": "165036",
+          "longitude": "123.606215",
+          "latitude": "52.0421"
+        }
+      ],
+      "longitude": "124.711526",
+      "latitude": "52.335262"
+    }
+  ],
+  "longitude": "126.642464",
+  "latitude": "45.756967"
+}

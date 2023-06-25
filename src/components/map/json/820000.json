@@ -1,0 +1,69 @@
+{
+  "adcode": 820000,
+  "name": "澳门特别行政区",
+  "postal_code": "999078",
+  "cities": [
+    {
+      "districts": [
+        {
+          "adcode": "820001",
+          "name": "花地玛堂区",
+          "postal_code": "999078",
+          "longitude": "113.5528956",
+          "latitude": "22.20787"
+        },
+        {
+          "adcode": "820002",
+          "name": "花王堂区",
+          "postal_code": "999078",
+          "longitude": "113.5489608",
+          "latitude": "22.1992075"
+        },
+        {
+          "adcode": "820003",
+          "name": "望德堂区",
+          "postal_code": "999078",
+          "longitude": "113.5501828",
+          "latitude": "22.19372083"
+        },
+        {
+          "adcode": "820004",
+          "name": "大堂区",
+          "postal_code": "999078",
+          "longitude": "113.5536475",
+          "latitude": "22.18853944"
+        },
+        {
+          "adcode": "820005",
+          "name": "风顺堂区",
+          "postal_code": "999078",
+          "longitude": "113.5419278",
+          "latitude": "22.18736806"
+        },
+        {
+          "adcode": "820006",
+          "name": "嘉模堂区",
+          "postal_code": "999078",
+          "longitude": "113.5587044",
+          "latitude": "22.15375944"
+        },
+        {
+          "adcode": "820007",
+          "name": "路凼填海区",
+          "postal_code": "999078",
+          "longitude": "113.5695992",
+          "latitude": "22.13663"
+        },
+        {
+          "adcode": "820008",
+          "name": "圣方济各堂区",
+          "postal_code": "999078",
+          "longitude": "113.5599542",
+          "latitude": "22.12348639"
+        }
+      ]
+    }
+  ],
+  "longitude": "113.5528956",
+  "latitude": "22.20787"
+}

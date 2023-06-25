@@ -1,0 +1,835 @@
+{
+  "adcode": "210000",
+  "name": "辽宁省",
+  "postal_code": "110000",
+  "cities": [
+    {
+      "adcode": "210100",
+      "name": "沈阳市",
+      "postal_code": "110013",
+      "districts": [
+        {
+          "adcode": "210102",
+          "name": "和平区",
+          "postal_code": "110001",
+          "longitude": "123.406664",
+          "latitude": "41.788074"
+        },
+        {
+          "adcode": "210103",
+          "name": "沈河区",
+          "postal_code": "110011",
+          "longitude": "123.445696",
+          "latitude": "41.795591"
+        },
+        {
+          "adcode": "210104",
+          "name": "大东区",
+          "postal_code": "110041",
+          "longitude": "123.469956",
+          "latitude": "41.808503"
+        },
+        {
+          "adcode": "210105",
+          "name": "皇姑区",
+          "postal_code": "110031",
+          "longitude": "123.405677",
+          "latitude": "41.822336"
+        },
+        {
+          "adcode": "210106",
+          "name": "铁西区",
+          "postal_code": "110021",
+          "longitude": "123.350664",
+          "latitude": "41.787808"
+        },
+        {
+          "adcode": "210111",
+          "name": "苏家屯区",
+          "postal_code": "110101",
+          "longitude": "123.341604",
+          "latitude": "41.665904"
+        },
+        {
+          "adcode": "210112",
+          "name": "浑南区",
+          "postal_code": "110179",
+          "longitude": "123.458981",
+          "latitude": "41.741946"
+        },
+        {
+          "adcode": "210113",
+          "name": "沈北新区",
+          "postal_code": "110121",
+          "longitude": "123.521471",
+          "latitude": "42.052312"
+        },
+        {
+          "adcode": "210114",
+          "name": "于洪区",
+          "postal_code": "110141",
+          "longitude": "123.310829",
+          "latitude": "41.795833"
+        },
+        {
+          "adcode": "210115",
+          "name": "辽中区",
+          "postal_code": "110200",
+          "longitude": "122.731269",
+          "latitude": "41.512725"
+        },
+        {
+          "adcode": "210123",
+          "name": "康平县",
+          "postal_code": "110500",
+          "longitude": "123.352703",
+          "latitude": "42.741533"
+        },
+        {
+          "adcode": "210124",
+          "name": "法库县",
+          "postal_code": "110400",
+          "longitude": "123.416722",
+          "latitude": "42.507045"
+        },
+        {
+          "adcode": "210181",
+          "name": "新民市",
+          "postal_code": "110300",
+          "longitude": "122.828868",
+          "latitude": "41.996508"
+        }
+      ],
+      "longitude": "123.429096",
+      "latitude": "41.796767"
+    },
+    {
+      "adcode": "210200",
+      "name": "大连市",
+      "postal_code": "116011",
+      "districts": [
+        {
+          "adcode": "210202",
+          "name": "中山区",
+          "postal_code": "116001",
+          "longitude": "121.64376",
+          "latitude": "38.921553"
+        },
+        {
+          "adcode": "210203",
+          "name": "西岗区",
+          "postal_code": "116011",
+          "longitude": "121.616112",
+          "latitude": "38.914266"
+        },
+        {
+          "adcode": "210204",
+          "name": "沙河口区",
+          "postal_code": "116021",
+          "longitude": "121.593702",
+          "latitude": "38.912859"
+        },
+        {
+          "adcode": "210211",
+          "name": "甘井子区",
+          "postal_code": "116033",
+          "longitude": "121.582614",
+          "latitude": "38.975148"
+        },
+        {
+          "adcode": "210212",
+          "name": "旅顺口区",
+          "postal_code": "116041",
+          "longitude": "121.26713",
+          "latitude": "38.812043"
+        },
+        {
+          "adcode": "210213",
+          "name": "金州区",
+          "postal_code": "116100",
+          "longitude": "121.789413",
+          "latitude": "39.052745"
+        },
+        {
+          "adcode": "210214",
+          "name": "普兰店区",
+          "postal_code": "116200",
+          "longitude": "121.9705",
+          "latitude": "39.401555"
+        },
+        {
+          "adcode": "210224",
+          "name": "长海县",
+          "postal_code": "116500",
+          "longitude": "122.587824",
+          "latitude": "39.272399"
+        },
+        {
+          "adcode": "210281",
+          "name": "瓦房店市",
+          "postal_code": "116300",
+          "longitude": "122.002656",
+          "latitude": "39.63065"
+        },
+        {
+          "adcode": "210283",
+          "name": "庄河市",
+          "postal_code": "116400",
+          "longitude": "122.970612",
+          "latitude": "39.69829"
+        }
+      ],
+      "longitude": "121.618622",
+      "latitude": "38.91459"
+    },
+    {
+      "adcode": "210300",
+      "name": "鞍山市",
+      "postal_code": "114001",
+      "districts": [
+        {
+          "adcode": "210302",
+          "name": "铁东区",
+          "postal_code": "114001",
+          "longitude": "122.994475",
+          "latitude": "41.110344"
+        },
+        {
+          "adcode": "210303",
+          "name": "铁西区",
+          "postal_code": "114013",
+          "longitude": "122.971834",
+          "latitude": "41.11069"
+        },
+        {
+          "adcode": "210304",
+          "name": "立山区",
+          "postal_code": "114031",
+          "longitude": "123.024806",
+          "latitude": "41.150622"
+        },
+        {
+          "adcode": "210311",
+          "name": "千山区",
+          "postal_code": "114041",
+          "longitude": "122.949298",
+          "latitude": "41.068909"
+        },
+        {
+          "adcode": "210321",
+          "name": "台安县",
+          "postal_code": "114100",
+          "longitude": "122.429736",
+          "latitude": "41.38686"
+        },
+        {
+          "adcode": "210323",
+          "name": "岫岩满族自治县",
+          "postal_code": "114300",
+          "longitude": "123.28833",
+          "latitude": "40.281509"
+        },
+        {
+          "adcode": "210381",
+          "name": "海城市",
+          "postal_code": "114200",
+          "longitude": "122.752199",
+          "latitude": "40.852533"
+        }
+      ],
+      "longitude": "122.995632",
+      "latitude": "41.110626"
+    },
+    {
+      "adcode": "210400",
+      "name": "抚顺市",
+      "postal_code": "113008",
+      "districts": [
+        {
+          "adcode": "210402",
+          "name": "新抚区",
+          "postal_code": "113008",
+          "longitude": "123.902858",
+          "latitude": "41.86082"
+        },
+        {
+          "adcode": "210403",
+          "name": "东洲区",
+          "postal_code": "113003",
+          "longitude": "124.047219",
+          "latitude": "41.866829"
+        },
+        {
+          "adcode": "210404",
+          "name": "望花区",
+          "postal_code": "113001",
+          "longitude": "123.801509",
+          "latitude": "41.851803"
+        },
+        {
+          "adcode": "210411",
+          "name": "顺城区",
+          "postal_code": "113006",
+          "longitude": "123.917165",
+          "latitude": "41.881132"
+        },
+        {
+          "adcode": "210421",
+          "name": "抚顺县",
+          "postal_code": "113006",
+          "longitude": "124.097979",
+          "latitude": "41.922644"
+        },
+        {
+          "adcode": "210422",
+          "name": "新宾满族自治县",
+          "postal_code": "113200",
+          "longitude": "125.037547",
+          "latitude": "41.732456"
+        },
+        {
+          "adcode": "210423",
+          "name": "清原满族自治县",
+          "postal_code": "113300",
+          "longitude": "124.927192",
+          "latitude": "42.10135"
+        }
+      ],
+      "longitude": "123.921109",
+      "latitude": "41.875956"
+    },
+    {
+      "adcode": "210500",
+      "name": "本溪市",
+      "postal_code": "117000",
+      "districts": [
+        {
+          "adcode": "210502",
+          "name": "平山区",
+          "postal_code": "117000",
+          "longitude": "123.761231",
+          "latitude": "41.291581"
+        },
+        {
+          "adcode": "210503",
+          "name": "溪湖区",
+          "postal_code": "117002",
+          "longitude": "123.765226",
+          "latitude": "41.330056"
+        },
+        {
+          "adcode": "210504",
+          "name": "明山区",
+          "postal_code": "117021",
+          "longitude": "123.763288",
+          "latitude": "41.302429"
+        },
+        {
+          "adcode": "210505",
+          "name": "南芬区",
+          "postal_code": "117014",
+          "longitude": "123.748381",
+          "latitude": "41.104093"
+        },
+        {
+          "adcode": "210521",
+          "name": "本溪满族自治县",
+          "postal_code": "117100",
+          "longitude": "124.126156",
+          "latitude": "41.300344"
+        },
+        {
+          "adcode": "210522",
+          "name": "桓仁满族自治县",
+          "postal_code": "117200",
+          "longitude": "125.359195",
+          "latitude": "41.268997"
+        }
+      ],
+      "longitude": "123.770519",
+      "latitude": "41.297909"
+    },
+    {
+      "adcode": "210600",
+      "name": "丹东市",
+      "postal_code": "118000",
+      "districts": [
+        {
+          "adcode": "210602",
+          "name": "元宝区",
+          "postal_code": "118000",
+          "longitude": "124.397814",
+          "latitude": "40.136483"
+        },
+        {
+          "adcode": "210603",
+          "name": "振兴区",
+          "postal_code": "118002",
+          "longitude": "124.361153",
+          "latitude": "40.102801"
+        },
+        {
+          "adcode": "210604",
+          "name": "振安区",
+          "postal_code": "118001",
+          "longitude": "124.427709",
+          "latitude": "40.158557"
+        },
+        {
+          "adcode": "210624",
+          "name": "宽甸满族自治县",
+          "postal_code": "118200",
+          "longitude": "124.784867",
+          "latitude": "40.730412"
+        },
+        {
+          "adcode": "210681",
+          "name": "东港市",
+          "postal_code": "118300",
+          "longitude": "124.149437",
+          "latitude": "39.883467"
+        },
+        {
+          "adcode": "210682",
+          "name": "凤城市",
+          "postal_code": "118100",
+          "longitude": "124.071067",
+          "latitude": "40.457567"
+        }
+      ],
+      "longitude": "124.383044",
+      "latitude": "40.124296"
+    },
+    {
+      "adcode": "210700",
+      "name": "锦州市",
+      "postal_code": "121000",
+      "districts": [
+        {
+          "adcode": "210702",
+          "name": "古塔区",
+          "postal_code": "121001",
+          "longitude": "121.130085",
+          "latitude": "41.115719"
+        },
+        {
+          "adcode": "210703",
+          "name": "凌河区",
+          "postal_code": "121000",
+          "longitude": "121.151304",
+          "latitude": "41.114662"
+        },
+        {
+          "adcode": "210711",
+          "name": "太和区",
+          "postal_code": "121011",
+          "longitude": "121.107297",
+          "latitude": "41.105378"
+        },
+        {
+          "adcode": "210726",
+          "name": "黑山县",
+          "postal_code": "121400",
+          "longitude": "122.117915",
+          "latitude": "41.691804"
+        },
+        {
+          "adcode": "210727",
+          "name": "义县",
+          "postal_code": "121100",
+          "longitude": "121.242831",
+          "latitude": "41.537224"
+        },
+        {
+          "adcode": "210781",
+          "name": "凌海市",
+          "postal_code": "121200",
+          "longitude": "121.364236",
+          "latitude": "41.171738"
+        },
+        {
+          "adcode": "210782",
+          "name": "北镇市",
+          "postal_code": "121300",
+          "longitude": "121.795962",
+          "latitude": "41.598764"
+        }
+      ],
+      "longitude": "121.135742",
+      "latitude": "41.119269"
+    },
+    {
+      "adcode": "210800",
+      "name": "营口市",
+      "postal_code": "115002",
+      "districts": [
+        {
+          "adcode": "210802",
+          "name": "站前区",
+          "postal_code": "115002",
+          "longitude": "122.253235",
+          "latitude": "40.669949"
+        },
+        {
+          "adcode": "210803",
+          "name": "西市区",
+          "postal_code": "115004",
+          "longitude": "122.210067",
+          "latitude": "40.663086"
+        },
+        {
+          "adcode": "210804",
+          "name": "鲅鱼圈区",
+          "postal_code": "115007",
+          "longitude": "122.127242",
+          "latitude": "40.263646"
+        },
+        {
+          "adcode": "210811",
+          "name": "老边区",
+          "postal_code": "115005",
+          "longitude": "122.382584",
+          "latitude": "40.682723"
+        },
+        {
+          "adcode": "210881",
+          "name": "盖州市",
+          "postal_code": "115200",
+          "longitude": "122.355534",
+          "latitude": "40.405234"
+        },
+        {
+          "adcode": "210882",
+          "name": "大石桥市",
+          "postal_code": "115100",
+          "longitude": "122.505894",
+          "latitude": "40.633973"
+        }
+      ],
+      "longitude": "122.235151",
+      "latitude": "40.667432"
+    },
+    {
+      "adcode": "210900",
+      "name": "阜新市",
+      "postal_code": "123000",
+      "districts": [
+        {
+          "adcode": "210902",
+          "name": "海州区",
+          "postal_code": "123000",
+          "longitude": "121.657639",
+          "latitude": "42.011162"
+        },
+        {
+          "adcode": "210903",
+          "name": "新邱区",
+          "postal_code": "123005",
+          "longitude": "121.790541",
+          "latitude": "42.086603"
+        },
+        {
+          "adcode": "210904",
+          "name": "太平区",
+          "postal_code": "123003",
+          "longitude": "121.677575",
+          "latitude": "42.011145"
+        },
+        {
+          "adcode": "210905",
+          "name": "清河门区",
+          "postal_code": "123006",
+          "longitude": "121.42018",
+          "latitude": "41.780477"
+        },
+        {
+          "adcode": "210911",
+          "name": "细河区",
+          "postal_code": "123000",
+          "longitude": "121.654791",
+          "latitude": "42.019218"
+        },
+        {
+          "adcode": "210921",
+          "name": "阜新蒙古族自治县",
+          "postal_code": "123100",
+          "longitude": "121.743125",
+          "latitude": "42.058607"
+        },
+        {
+          "adcode": "210922",
+          "name": "彰武县",
+          "postal_code": "123200",
+          "longitude": "122.537444",
+          "latitude": "42.384823"
+        }
+      ],
+      "longitude": "121.648962",
+      "latitude": "42.011796"
+    },
+    {
+      "adcode": "211000",
+      "name": "辽阳市",
+      "postal_code": "111000",
+      "districts": [
+        {
+          "adcode": "211002",
+          "name": "白塔区",
+          "postal_code": "111000",
+          "longitude": "123.172611",
+          "latitude": "41.26745"
+        },
+        {
+          "adcode": "211003",
+          "name": "文圣区",
+          "postal_code": "111000",
+          "longitude": "123.188227",
+          "latitude": "41.266765"
+        },
+        {
+          "adcode": "211004",
+          "name": "宏伟区",
+          "postal_code": "111003",
+          "longitude": "123.200461",
+          "latitude": "41.205747"
+        },
+        {
+          "adcode": "211005",
+          "name": "弓长岭区",
+          "postal_code": "111008",
+          "longitude": "123.431633",
+          "latitude": "41.157831"
+        },
+        {
+          "adcode": "211011",
+          "name": "太子河区",
+          "postal_code": "111000",
+          "longitude": "123.185336",
+          "latitude": "41.251682"
+        },
+        {
+          "adcode": "211021",
+          "name": "辽阳县",
+          "postal_code": "111200",
+          "longitude": "123.079674",
+          "latitude": "41.216479"
+        },
+        {
+          "adcode": "211081",
+          "name": "灯塔市",
+          "postal_code": "111300",
+          "longitude": "123.325864",
+          "latitude": "41.427836"
+        }
+      ],
+      "longitude": "123.18152",
+      "latitude": "41.269402"
+    },
+    {
+      "adcode": "211100",
+      "name": "盘锦市",
+      "postal_code": "124010",
+      "districts": [
+        {
+          "adcode": "211102",
+          "name": "双台子区",
+          "postal_code": "124000",
+          "longitude": "122.055733",
+          "latitude": "41.190365"
+        },
+        {
+          "adcode": "211103",
+          "name": "兴隆台区",
+          "postal_code": "124010",
+          "longitude": "122.071624",
+          "latitude": "41.122423"
+        },
+        {
+          "adcode": "211104",
+          "name": "大洼区",
+          "postal_code": "124200",
+          "longitude": "122.071708",
+          "latitude": "40.994428"
+        },
+        {
+          "adcode": "211122",
+          "name": "盘山县",
+          "postal_code": "124000",
+          "longitude": "121.98528",
+          "latitude": "41.240701"
+        }
+      ],
+      "longitude": "122.06957",
+      "latitude": "41.124484"
+    },
+    {
+      "adcode": "211200",
+      "name": "铁岭市",
+      "postal_code": "112000",
+      "districts": [
+        {
+          "adcode": "211202",
+          "name": "银州区",
+          "postal_code": "112000",
+          "longitude": "123.844877",
+          "latitude": "42.292278"
+        },
+        {
+          "adcode": "211204",
+          "name": "清河区",
+          "postal_code": "112003",
+          "longitude": "124.14896",
+          "latitude": "42.542978"
+        },
+        {
+          "adcode": "211221",
+          "name": "铁岭县",
+          "postal_code": "112000",
+          "longitude": "123.725669",
+          "latitude": "42.223316"
+        },
+        {
+          "adcode": "211223",
+          "name": "西丰县",
+          "postal_code": "112400",
+          "longitude": "124.72332",
+          "latitude": "42.738091"
+        },
+        {
+          "adcode": "211224",
+          "name": "昌图县",
+          "postal_code": "112500",
+          "longitude": "124.11017",
+          "latitude": "42.784441"
+        },
+        {
+          "adcode": "211281",
+          "name": "调兵山市",
+          "postal_code": "112700",
+          "longitude": "123.545366",
+          "latitude": "42.450734"
+        },
+        {
+          "adcode": "211282",
+          "name": "开原市",
+          "postal_code": "112300",
+          "longitude": "124.045551",
+          "latitude": "42.542141"
+        }
+      ],
+      "longitude": "123.844279",
+      "latitude": "42.290585"
+    },
+    {
+      "adcode": "211300",
+      "name": "朝阳市",
+      "postal_code": "122000",
+      "districts": [
+        {
+          "adcode": "211302",
+          "name": "双塔区",
+          "postal_code": "122000",
+          "longitude": "120.44877",
+          "latitude": "41.579389"
+        },
+        {
+          "adcode": "211303",
+          "name": "龙城区",
+          "postal_code": "122000",
+          "longitude": "120.413376",
+          "latitude": "41.576749"
+        },
+        {
+          "adcode": "211321",
+          "name": "朝阳县",
+          "postal_code": "122000",
+          "longitude": "120.404217",
+          "latitude": "41.526342"
+        },
+        {
+          "adcode": "211322",
+          "name": "建平县",
+          "postal_code": "122400",
+          "longitude": "119.642363",
+          "latitude": "41.402576"
+        },
+        {
+          "adcode": "211324",
+          "name": "喀喇沁左翼蒙古族自治县",
+          "postal_code": "122300",
+          "longitude": "119.744883",
+          "latitude": "41.125428"
+        },
+        {
+          "adcode": "211381",
+          "name": "北票市",
+          "postal_code": "122100",
+          "longitude": "120.766951",
+          "latitude": "41.803286"
+        },
+        {
+          "adcode": "211382",
+          "name": "凌源市",
+          "postal_code": "122500",
+          "longitude": "119.404789",
+          "latitude": "41.243086"
+        }
+      ],
+      "longitude": "120.451176",
+      "latitude": "41.576758"
+    },
+    {
+      "adcode": "211400",
+      "name": "葫芦岛市",
+      "postal_code": "125000",
+      "districts": [
+        {
+          "adcode": "211402",
+          "name": "连山区",
+          "postal_code": "125001",
+          "longitude": "120.85937",
+          "latitude": "40.755143"
+        },
+        {
+          "adcode": "211403",
+          "name": "龙港区",
+          "postal_code": "125002",
+          "longitude": "120.838569",
+          "latitude": "40.709991"
+        },
+        {
+          "adcode": "211404",
+          "name": "南票区",
+          "postal_code": "125027",
+          "longitude": "120.752314",
+          "latitude": "41.098813"
+        },
+        {
+          "adcode": "211421",
+          "name": "绥中县",
+          "postal_code": "125200",
+          "longitude": "120.342112",
+          "latitude": "40.328407"
+        },
+        {
+          "adcode": "211422",
+          "name": "建昌县",
+          "postal_code": "125300",
+          "longitude": "119.807776",
+          "latitude": "40.812871"
+        },
+        {
+          "adcode": "211481",
+          "name": "兴城市",
+          "postal_code": "125100",
+          "longitude": "120.729365",
+          "latitude": "40.619413"
+        }
+      ],
+      "longitude": "120.856394",
+      "latitude": "40.755572"
+    }
+  ],
+  "longitude": "123.429096",
+  "latitude": "41.796767"
+}

@@ -1,0 +1,209 @@
+{
+  "adcode": "640000",
+  "name": "宁夏回族自治区",
+  "postal_code": "750000",
+  "cities": [
+    {
+      "adcode": "640100",
+      "name": "银川市",
+      "postal_code": "750000",
+      "districts": [
+        {
+          "adcode": "640104",
+          "name": "兴庆区",
+          "postal_code": "750001",
+          "longitude": "106.278393",
+          "latitude": "38.46747"
+        },
+        {
+          "adcode": "640105",
+          "name": "西夏区",
+          "postal_code": "750021",
+          "longitude": "106.132116",
+          "latitude": "38.492424"
+        },
+        {
+          "adcode": "640106",
+          "name": "金凤区",
+          "postal_code": "750011",
+          "longitude": "106.228486",
+          "latitude": "38.477353"
+        },
+        {
+          "adcode": "640121",
+          "name": "永宁县",
+          "postal_code": "750100",
+          "longitude": "106.253781",
+          "latitude": "38.28043"
+        },
+        {
+          "adcode": "640122",
+          "name": "贺兰县",
+          "postal_code": "750200",
+          "longitude": "106.345904",
+          "latitude": "38.554563"
+        },
+        {
+          "adcode": "640181",
+          "name": "灵武市",
+          "postal_code": "750004",
+          "longitude": "106.334701",
+          "latitude": "38.094058"
+        }
+      ],
+      "longitude": "106.278179",
+      "latitude": "38.46637"
+    },
+    {
+      "adcode": "640200",
+      "name": "石嘴山市",
+      "postal_code": "753000",
+      "districts": [
+        {
+          "adcode": "640202",
+          "name": "大武口区",
+          "postal_code": "753000",
+          "longitude": "106.376651",
+          "latitude": "39.014158"
+        },
+        {
+          "adcode": "640205",
+          "name": "惠农区",
+          "postal_code": "753600",
+          "longitude": "106.775513",
+          "latitude": "39.230094"
+        },
+        {
+          "adcode": "640221",
+          "name": "平罗县",
+          "postal_code": "753400",
+          "longitude": "106.54489",
+          "latitude": "38.90674"
+        }
+      ],
+      "longitude": "106.376173",
+      "latitude": "39.01333"
+    },
+    {
+      "adcode": "640300",
+      "name": "吴忠市",
+      "postal_code": "751100",
+      "districts": [
+        {
+          "adcode": "640302",
+          "name": "利通区",
+          "postal_code": "751100",
+          "longitude": "106.199419",
+          "latitude": "37.985967"
+        },
+        {
+          "adcode": "640303",
+          "name": "红寺堡区",
+          "postal_code": "751900",
+          "longitude": "106.067315",
+          "latitude": "37.421616"
+        },
+        {
+          "adcode": "640323",
+          "name": "盐池县",
+          "postal_code": "751500",
+          "longitude": "107.40541",
+          "latitude": "37.784222"
+        },
+        {
+          "adcode": "640324",
+          "name": "同心县",
+          "postal_code": "751300",
+          "longitude": "105.914764",
+          "latitude": "36.9829"
+        },
+        {
+          "adcode": "640381",
+          "name": "青铜峡市",
+          "postal_code": "751600",
+          "longitude": "106.075395",
+          "latitude": "38.021509"
+        }
+      ],
+      "longitude": "106.199409",
+      "latitude": "37.986165"
+    },
+    {
+      "adcode": "640400",
+      "name": "固原市",
+      "postal_code": "756000",
+      "districts": [
+        {
+          "adcode": "640402",
+          "name": "原州区",
+          "postal_code": "756000",
+          "longitude": "106.28477",
+          "latitude": "36.005337"
+        },
+        {
+          "adcode": "640422",
+          "name": "西吉县",
+          "postal_code": "756200",
+          "longitude": "105.731801",
+          "latitude": "35.965384"
+        },
+        {
+          "adcode": "640423",
+          "name": "隆德县",
+          "postal_code": "756300",
+          "longitude": "106.12344",
+          "latitude": "35.618234"
+        },
+        {
+          "adcode": "640424",
+          "name": "泾源县",
+          "postal_code": "756400",
+          "longitude": "106.338674",
+          "latitude": "35.49344"
+        },
+        {
+          "adcode": "640425",
+          "name": "彭阳县",
+          "postal_code": "756500",
+          "longitude": "106.641512",
+          "latitude": "35.849975"
+        }
+      ],
+      "longitude": "106.285241",
+      "latitude": "36.004561"
+    },
+    {
+      "adcode": "640500",
+      "name": "中卫市",
+      "postal_code": "755000",
+      "districts": [
+        {
+          "adcode": "640502",
+          "name": "沙坡头区",
+          "postal_code": "755000",
+          "longitude": "105.190536",
+          "latitude": "37.514564"
+        },
+        {
+          "adcode": "640521",
+          "name": "中宁县",
+          "postal_code": "755100",
+          "longitude": "105.675784",
+          "latitude": "37.489736"
+        },
+        {
+          "adcode": "640522",
+          "name": "海原县",
+          "postal_code": "755200",
+          "longitude": "105.647323",
+          "latitude": "36.562007"
+        },
+        { "adcode": "659010", "name": "胡杨河市", "longitude": "84.8275959", "latitude": "44.69288853" }
+      ],
+      "longitude": "105.189568",
+      "latitude": "37.514951"
+    }
+  ],
+  "longitude": "106.278179",
+  "latitude": "38.46637"
+}

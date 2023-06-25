@@ -1,0 +1,231 @@
+{
+  "adcode": "460000",
+  "name": "海南省",
+  "postal_code": "570000",
+  "cities": [
+    {
+      "adcode": "460100",
+      "name": "海口市",
+      "postal_code": "570000",
+      "districts": [
+        {
+          "adcode": "460105",
+          "name": "秀英区",
+          "postal_code": "570311",
+          "longitude": "110.282393",
+          "latitude": "20.008145"
+        },
+        {
+          "adcode": "460106",
+          "name": "龙华区",
+          "postal_code": "570145",
+          "longitude": "110.330373",
+          "latitude": "20.031026"
+        },
+        {
+          "adcode": "460107",
+          "name": "琼山区",
+          "postal_code": "571100",
+          "longitude": "110.354722",
+          "latitude": "20.001051"
+        },
+        {
+          "adcode": "460108",
+          "name": "美兰区",
+          "postal_code": "570203",
+          "longitude": "110.356566",
+          "latitude": "20.03074"
+        }
+      ],
+      "longitude": "110.33119",
+      "latitude": "20.031971"
+    },
+    {
+      "adcode": "460200",
+      "name": "三亚市",
+      "postal_code": "572000",
+      "districts": [
+        {
+          "adcode": "460202",
+          "name": "海棠区",
+          "postal_code": "572000",
+          "longitude": "109.760778",
+          "latitude": "18.407516"
+        },
+        {
+          "adcode": "460203",
+          "name": "吉阳区",
+          "postal_code": "572000",
+          "longitude": "109.512081",
+          "latitude": "18.247436"
+        },
+        {
+          "adcode": "460204",
+          "name": "天涯区",
+          "postal_code": "572000",
+          "longitude": "109.506357",
+          "latitude": "18.24734"
+        },
+        {
+          "adcode": "460205",
+          "name": "崖州区",
+          "postal_code": "572000",
+          "longitude": "109.174306",
+          "latitude": "18.352192"
+        }
+      ],
+      "longitude": "109.508268",
+      "latitude": "18.247872"
+    },
+    {
+      "adcode": "460300",
+      "name": "三沙市",
+      "postal_code": "573199",
+      "districts": [
+        {
+          "adcode": "460301",
+          "name": "西沙区",
+          "postal_code": "572200",
+          "longitude": "112.3386402",
+          "latitude": "16.8310066"
+        },
+        {
+          "adcode": "460302",
+          "name": "南沙区",
+          "postal_code": "572200",
+          "longitude": "112.891018",
+          "latitude": "9.543575"
+        },
+        { "adcode": "460321", "name": "西沙群岛", "postal_code": "573199" },
+        { "adcode": "460322", "name": "南沙群岛", "postal_code": "573199" },
+        { "adcode": "460323", "name": "中沙群岛的岛礁及其海域", "postal_code": "572000" }
+      ],
+      "longitude": "112.34882",
+      "latitude": "16.831039"
+    },
+    {
+      "adcode": "460400",
+      "name": "儋州市",
+      "postal_code": "571700",
+      "longitude": "109.576782",
+      "latitude": "19.517486"
+    },
+    {
+      "adcode": "469001",
+      "name": "五指山市",
+      "postal_code": "572200",
+      "longitude": "109.516662",
+      "latitude": "18.776921"
+    },
+    {
+      "adcode": "469002",
+      "name": "琼海市",
+      "postal_code": "571400",
+      "longitude": "110.466785",
+      "latitude": "19.246011"
+    },
+    {
+      "adcode": "469005",
+      "name": "文昌市",
+      "postal_code": "571300",
+      "longitude": "110.753975",
+      "latitude": "19.612986"
+    },
+    {
+      "adcode": "469006",
+      "name": "万宁市",
+      "postal_code": "571500",
+      "longitude": "110.388793",
+      "latitude": "18.796216"
+    },
+    {
+      "adcode": "469007",
+      "name": "东方市",
+      "postal_code": "572600",
+      "longitude": "108.653789",
+      "latitude": "19.10198"
+    },
+    {
+      "adcode": "469021",
+      "name": "定安县",
+      "postal_code": "571229",
+      "districts": [],
+      "longitude": "110.349235",
+      "latitude": "19.684966"
+    },
+    {
+      "adcode": "469022",
+      "name": "屯昌县",
+      "postal_code": "571600",
+      "districts": [],
+      "longitude": "110.102773",
+      "latitude": "19.362916"
+    },
+    {
+      "adcode": "469023",
+      "name": "澄迈县",
+      "postal_code": "571900",
+      "districts": [],
+      "longitude": "110.007147",
+      "latitude": "19.737095"
+    },
+    {
+      "adcode": "469024",
+      "name": "临高县",
+      "postal_code": "571800",
+      "districts": [],
+      "longitude": "109.687697",
+      "latitude": "19.908293"
+    },
+    {
+      "adcode": "469025",
+      "name": "白沙黎族自治县",
+      "postal_code": "572800",
+      "districts": [],
+      "longitude": "109.452606",
+      "latitude": "19.224584"
+    },
+    {
+      "adcode": "469026",
+      "name": "昌江黎族自治县",
+      "postal_code": "572700",
+      "districts": [],
+      "longitude": "109.053351",
+      "latitude": "19.260968"
+    },
+    {
+      "adcode": "469027",
+      "name": "乐东黎族自治县",
+      "postal_code": "572500",
+      "districts": [],
+      "longitude": "109.175444",
+      "latitude": "18.74758"
+    },
+    {
+      "adcode": "469028",
+      "name": "陵水黎族自治县",
+      "postal_code": "572400",
+      "districts": [],
+      "longitude": "110.037218",
+      "latitude": "18.505006"
+    },
+    {
+      "adcode": "469029",
+      "name": "保亭黎族苗族自治县",
+      "postal_code": "572300",
+      "districts": [],
+      "longitude": "109.70245",
+      "latitude": "18.636371"
+    },
+    {
+      "adcode": "469030",
+      "name": "琼中黎族苗族自治县",
+      "postal_code": "572900",
+      "districts": [],
+      "longitude": "109.839996",
+      "latitude": "19.03557"
+    }
+  ],
+  "longitude": "110.33119",
+  "latitude": "20.031971"
+}

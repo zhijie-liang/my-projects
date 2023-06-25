@@ -1,0 +1,706 @@
+{
+  "adcode": "520000",
+  "name": "贵州省",
+  "postal_code": "550000",
+  "cities": [
+    {
+      "adcode": "520100",
+      "name": "贵阳市",
+      "postal_code": "550000",
+      "districts": [
+        {
+          "adcode": "520102",
+          "name": "南明区",
+          "postal_code": "550001",
+          "longitude": "106.715963",
+          "latitude": "26.573743"
+        },
+        {
+          "adcode": "520103",
+          "name": "云岩区",
+          "postal_code": "550001",
+          "longitude": "106.713397",
+          "latitude": "26.58301"
+        },
+        {
+          "adcode": "520111",
+          "name": "花溪区",
+          "postal_code": "550025",
+          "longitude": "106.670791",
+          "latitude": "26.410464"
+        },
+        {
+          "adcode": "520112",
+          "name": "乌当区",
+          "postal_code": "550018",
+          "longitude": "106.762123",
+          "latitude": "26.630928"
+        },
+        {
+          "adcode": "520113",
+          "name": "白云区",
+          "postal_code": "550014",
+          "longitude": "106.633037",
+          "latitude": "26.676849"
+        },
+        {
+          "adcode": "520115",
+          "name": "观山湖区",
+          "postal_code": "550009",
+          "longitude": "106.626323",
+          "latitude": "26.646358"
+        },
+        {
+          "adcode": "520121",
+          "name": "开阳县",
+          "postal_code": "550300",
+          "longitude": "106.969438",
+          "latitude": "27.056793"
+        },
+        {
+          "adcode": "520122",
+          "name": "息烽县",
+          "postal_code": "551100",
+          "longitude": "106.737693",
+          "latitude": "27.092665"
+        },
+        {
+          "adcode": "520123",
+          "name": "修文县",
+          "postal_code": "550200",
+          "longitude": "106.599218",
+          "latitude": "26.840672"
+        },
+        {
+          "adcode": "520181",
+          "name": "清镇市",
+          "postal_code": "551400",
+          "longitude": "106.470278",
+          "latitude": "26.551289"
+        }
+      ],
+      "longitude": "106.713478",
+      "latitude": "26.578343"
+    },
+    {
+      "adcode": "520200",
+      "name": "六盘水市",
+      "postal_code": "553000",
+      "districts": [
+        {
+          "adcode": "520201",
+          "name": "钟山区",
+          "postal_code": "553000",
+          "longitude": "104.846244",
+          "latitude": "26.584805"
+        },
+        {
+          "adcode": "520203",
+          "name": "六枝特区",
+          "postal_code": "553400",
+          "longitude": "105.474235",
+          "latitude": "26.210662"
+        },
+        {
+          "adcode": "520221",
+          "name": "水城区",
+          "postal_code": "553000",
+          "longitude": "104.95685",
+          "latitude": "26.540478"
+        },
+        {
+          "adcode": "520281",
+          "name": "盘州市",
+          "postal_code": "553500",
+          "longitude": "104.468367",
+          "latitude": "25.706966"
+        }
+      ],
+      "longitude": "104.846743",
+      "latitude": "26.584643"
+    },
+    {
+      "adcode": "520300",
+      "name": "遵义市",
+      "postal_code": "563000",
+      "districts": [
+        {
+          "adcode": "520302",
+          "name": "红花岗区",
+          "postal_code": "563000",
+          "longitude": "106.943784",
+          "latitude": "27.694395"
+        },
+        {
+          "adcode": "520303",
+          "name": "汇川区",
+          "postal_code": "563000",
+          "longitude": "106.937265",
+          "latitude": "27.706626"
+        },
+        {
+          "adcode": "520304",
+          "name": "播州区",
+          "postal_code": "563100",
+          "longitude": "106.831668",
+          "latitude": "27.535288"
+        },
+        {
+          "adcode": "520322",
+          "name": "桐梓县",
+          "postal_code": "563200",
+          "longitude": "106.826591",
+          "latitude": "28.131559"
+        },
+        {
+          "adcode": "520323",
+          "name": "绥阳县",
+          "postal_code": "563300",
+          "longitude": "107.191024",
+          "latitude": "27.951342"
+        },
+        {
+          "adcode": "520324",
+          "name": "正安县",
+          "postal_code": "563400",
+          "longitude": "107.441872",
+          "latitude": "28.550337"
+        },
+        {
+          "adcode": "520325",
+          "name": "道真仡佬族苗族自治县",
+          "postal_code": "563500",
+          "longitude": "107.605342",
+          "latitude": "28.880088"
+        },
+        {
+          "adcode": "520326",
+          "name": "务川仡佬族苗族自治县",
+          "postal_code": "564300",
+          "longitude": "107.887857",
+          "latitude": "28.521567"
+        },
+        {
+          "adcode": "520327",
+          "name": "凤冈县",
+          "postal_code": "564200",
+          "longitude": "107.722021",
+          "latitude": "27.960858"
+        },
+        {
+          "adcode": "520328",
+          "name": "湄潭县",
+          "postal_code": "564100",
+          "longitude": "107.485723",
+          "latitude": "27.765839"
+        },
+        {
+          "adcode": "520329",
+          "name": "余庆县",
+          "postal_code": "564400",
+          "longitude": "107.892566",
+          "latitude": "27.221552"
+        },
+        {
+          "adcode": "520330",
+          "name": "习水县",
+          "postal_code": "564600",
+          "longitude": "106.200954",
+          "latitude": "28.327826"
+        },
+        {
+          "adcode": "520381",
+          "name": "赤水市",
+          "postal_code": "564700",
+          "longitude": "105.698116",
+          "latitude": "28.587057"
+        },
+        {
+          "adcode": "520382",
+          "name": "仁怀市",
+          "postal_code": "564500",
+          "longitude": "106.412476",
+          "latitude": "27.803377"
+        }
+      ],
+      "longitude": "106.937265",
+      "latitude": "27.706626"
+    },
+    {
+      "adcode": "520400",
+      "name": "安顺市",
+      "postal_code": "561000",
+      "districts": [
+        {
+          "adcode": "520402",
+          "name": "西秀区",
+          "postal_code": "561000",
+          "longitude": "105.946169",
+          "latitude": "26.248323"
+        },
+        {
+          "adcode": "520403",
+          "name": "平坝区",
+          "postal_code": "561100",
+          "longitude": "106.259942",
+          "latitude": "26.40608"
+        },
+        {
+          "adcode": "520422",
+          "name": "普定县",
+          "postal_code": "562100",
+          "longitude": "105.745609",
+          "latitude": "26.305794"
+        },
+        {
+          "adcode": "520423",
+          "name": "镇宁布依族苗族自治县",
+          "postal_code": "561200",
+          "longitude": "105.768656",
+          "latitude": "26.056096"
+        },
+        {
+          "adcode": "520424",
+          "name": "关岭布依族苗族自治县",
+          "postal_code": "561300",
+          "longitude": "105.618454",
+          "latitude": "25.944248"
+        },
+        {
+          "adcode": "520425",
+          "name": "紫云苗族布依族自治县",
+          "postal_code": "550800",
+          "longitude": "106.084515",
+          "latitude": "25.751567"
+        }
+      ],
+      "longitude": "105.932188",
+      "latitude": "26.245544"
+    },
+    {
+      "adcode": "520500",
+      "name": "毕节市",
+      "postal_code": "551700",
+      "districts": [
+        {
+          "adcode": "520502",
+          "name": "七星关区",
+          "postal_code": "551700",
+          "longitude": "105.284852",
+          "latitude": "27.302085"
+        },
+        {
+          "adcode": "520521",
+          "name": "大方县",
+          "postal_code": "551600",
+          "longitude": "105.609254",
+          "latitude": "27.143521"
+        },
+        {
+          "adcode": "520522",
+          "name": "黔西市",
+          "postal_code": "551500",
+          "longitude": "106.038299",
+          "latitude": "27.024923"
+        },
+        {
+          "adcode": "520523",
+          "name": "金沙县",
+          "postal_code": "551800",
+          "longitude": "106.222103",
+          "latitude": "27.459693"
+        },
+        {
+          "adcode": "520524",
+          "name": "织金县",
+          "postal_code": "552100",
+          "longitude": "105.768997",
+          "latitude": "26.668497"
+        },
+        {
+          "adcode": "520525",
+          "name": "纳雍县",
+          "postal_code": "553300",
+          "longitude": "105.375322",
+          "latitude": "26.769875"
+        },
+        {
+          "adcode": "520526",
+          "name": "威宁彝族回族苗族自治县",
+          "postal_code": "553100",
+          "longitude": "104.286523",
+          "latitude": "26.859099"
+        },
+        {
+          "adcode": "520527",
+          "name": "赫章县",
+          "postal_code": "553200",
+          "longitude": "104.726438",
+          "latitude": "27.119243"
+        }
+      ],
+      "longitude": "105.28501",
+      "latitude": "27.301693"
+    },
+    {
+      "adcode": "520600",
+      "name": "铜仁市",
+      "postal_code": "554300",
+      "districts": [
+        {
+          "adcode": "520602",
+          "name": "碧江区",
+          "postal_code": "554300",
+          "longitude": "109.192117",
+          "latitude": "27.718745"
+        },
+        {
+          "adcode": "520603",
+          "name": "万山区",
+          "postal_code": "554200",
+          "longitude": "109.21199",
+          "latitude": "27.51903"
+        },
+        {
+          "adcode": "520621",
+          "name": "江口县",
+          "postal_code": "554400",
+          "longitude": "108.848427",
+          "latitude": "27.691904"
+        },
+        {
+          "adcode": "520622",
+          "name": "玉屏侗族自治县",
+          "postal_code": "554000",
+          "longitude": "108.917882",
+          "latitude": "27.238024"
+        },
+        {
+          "adcode": "520623",
+          "name": "石阡县",
+          "postal_code": "555100",
+          "longitude": "108.229854",
+          "latitude": "27.519386"
+        },
+        {
+          "adcode": "520624",
+          "name": "思南县",
+          "postal_code": "565100",
+          "longitude": "108.255827",
+          "latitude": "27.941331"
+        },
+        {
+          "adcode": "520625",
+          "name": "印江土家族苗族自治县",
+          "postal_code": "555200",
+          "longitude": "108.405517",
+          "latitude": "27.997976"
+        },
+        {
+          "adcode": "520626",
+          "name": "德江县",
+          "postal_code": "565200",
+          "longitude": "108.117317",
+          "latitude": "28.26094"
+        },
+        {
+          "adcode": "520627",
+          "name": "沿河土家族自治县",
+          "postal_code": "565300",
+          "longitude": "108.495746",
+          "latitude": "28.560487"
+        },
+        {
+          "adcode": "520628",
+          "name": "松桃苗族自治县",
+          "postal_code": "554100",
+          "longitude": "109.202627",
+          "latitude": "28.165419"
+        }
+      ],
+      "longitude": "109.191555",
+      "latitude": "27.718346"
+    },
+    {
+      "adcode": "522300",
+      "name": "黔西南布依族苗族自治州",
+      "postal_code": "562400",
+      "districts": [
+        {
+          "adcode": "522301",
+          "name": "兴义市",
+          "postal_code": "562400",
+          "longitude": "104.897982",
+          "latitude": "25.088599"
+        },
+        {
+          "adcode": "522302",
+          "name": "兴仁市",
+          "postal_code": "562300",
+          "longitude": "105.192778",
+          "latitude": "25.431378"
+        },
+        {
+          "adcode": "522323",
+          "name": "普安县",
+          "postal_code": "561500",
+          "longitude": "104.955347",
+          "latitude": "25.786404"
+        },
+        {
+          "adcode": "522324",
+          "name": "晴隆县",
+          "postal_code": "561400",
+          "longitude": "105.218773",
+          "latitude": "25.832881"
+        },
+        {
+          "adcode": "522325",
+          "name": "贞丰县",
+          "postal_code": "562200",
+          "longitude": "105.650133",
+          "latitude": "25.385752"
+        },
+        {
+          "adcode": "522326",
+          "name": "望谟县",
+          "postal_code": "552300",
+          "longitude": "106.091563",
+          "latitude": "25.166667"
+        },
+        {
+          "adcode": "522327",
+          "name": "册亨县",
+          "postal_code": "552200",
+          "longitude": "105.81241",
+          "latitude": "24.983338"
+        },
+        {
+          "adcode": "522328",
+          "name": "安龙县",
+          "postal_code": "552400",
+          "longitude": "105.471498",
+          "latitude": "25.108959"
+        }
+      ],
+      "longitude": "104.897971",
+      "latitude": "25.08812"
+    },
+    {
+      "adcode": "522600",
+      "name": "黔东南苗族侗族自治州",
+      "postal_code": "556000",
+      "districts": [
+        {
+          "adcode": "522601",
+          "name": "凯里市",
+          "postal_code": "556000",
+          "longitude": "107.977541",
+          "latitude": "26.582964"
+        },
+        {
+          "adcode": "522622",
+          "name": "黄平县",
+          "postal_code": "556100",
+          "longitude": "107.901337",
+          "latitude": "26.896973"
+        },
+        {
+          "adcode": "522623",
+          "name": "施秉县",
+          "postal_code": "556200",
+          "longitude": "108.12678",
+          "latitude": "27.034657"
+        },
+        {
+          "adcode": "522624",
+          "name": "三穗县",
+          "postal_code": "556500",
+          "longitude": "108.681121",
+          "latitude": "26.959884"
+        },
+        {
+          "adcode": "522625",
+          "name": "镇远县",
+          "postal_code": "557700",
+          "longitude": "108.423656",
+          "latitude": "27.050233"
+        },
+        {
+          "adcode": "522626",
+          "name": "岑巩县",
+          "postal_code": "557800",
+          "longitude": "108.816459",
+          "latitude": "27.173244"
+        },
+        {
+          "adcode": "522627",
+          "name": "天柱县",
+          "postal_code": "556600",
+          "longitude": "109.212798",
+          "latitude": "26.909684"
+        },
+        {
+          "adcode": "522628",
+          "name": "锦屏县",
+          "postal_code": "556700",
+          "longitude": "109.20252",
+          "latitude": "26.680625"
+        },
+        {
+          "adcode": "522629",
+          "name": "剑河县",
+          "postal_code": "556400",
+          "longitude": "108.440499",
+          "latitude": "26.727349"
+        },
+        {
+          "adcode": "522630",
+          "name": "台江县",
+          "postal_code": "556300",
+          "longitude": "108.314637",
+          "latitude": "26.669138"
+        },
+        {
+          "adcode": "522631",
+          "name": "黎平县",
+          "postal_code": "557300",
+          "longitude": "109.136504",
+          "latitude": "26.230636"
+        },
+        {
+          "adcode": "522632",
+          "name": "榕江县",
+          "postal_code": "557200",
+          "longitude": "108.521026",
+          "latitude": "25.931085"
+        },
+        {
+          "adcode": "522633",
+          "name": "从江县",
+          "postal_code": "557400",
+          "longitude": "108.912648",
+          "latitude": "25.747058"
+        },
+        {
+          "adcode": "522634",
+          "name": "雷山县",
+          "postal_code": "557100",
+          "longitude": "108.079613",
+          "latitude": "26.381027"
+        },
+        {
+          "adcode": "522635",
+          "name": "麻江县",
+          "postal_code": "557600",
+          "longitude": "107.593172",
+          "latitude": "26.494803"
+        },
+        {
+          "adcode": "522636",
+          "name": "丹寨县",
+          "postal_code": "557500",
+          "longitude": "107.794808",
+          "latitude": "26.199497"
+        }
+      ],
+      "longitude": "107.977488",
+      "latitude": "26.583352"
+    },
+    {
+      "adcode": "522700",
+      "name": "黔南布依族苗族自治州",
+      "postal_code": "558000",
+      "districts": [
+        {
+          "adcode": "522701",
+          "name": "都匀市",
+          "postal_code": "558000",
+          "longitude": "107.517021",
+          "latitude": "26.258205"
+        },
+        {
+          "adcode": "522702",
+          "name": "福泉市",
+          "postal_code": "550500",
+          "longitude": "107.513508",
+          "latitude": "26.702508"
+        },
+        {
+          "adcode": "522722",
+          "name": "荔波县",
+          "postal_code": "558400",
+          "longitude": "107.8838",
+          "latitude": "25.412239"
+        },
+        {
+          "adcode": "522723",
+          "name": "贵定县",
+          "postal_code": "551300",
+          "longitude": "107.233588",
+          "latitude": "26.580807"
+        },
+        {
+          "adcode": "522725",
+          "name": "瓮安县",
+          "postal_code": "550400",
+          "longitude": "107.478417",
+          "latitude": "27.066339"
+        },
+        {
+          "adcode": "522726",
+          "name": "独山县",
+          "postal_code": "558200",
+          "longitude": "107.542757",
+          "latitude": "25.826283"
+        },
+        {
+          "adcode": "522727",
+          "name": "平塘县",
+          "postal_code": "558300",
+          "longitude": "107.32405",
+          "latitude": "25.831803"
+        },
+        {
+          "adcode": "522728",
+          "name": "罗甸县",
+          "postal_code": "550100",
+          "longitude": "106.750006",
+          "latitude": "25.429894"
+        },
+        {
+          "adcode": "522729",
+          "name": "长顺县",
+          "postal_code": "550700",
+          "longitude": "106.447376",
+          "latitude": "26.022116"
+        },
+        {
+          "adcode": "522730",
+          "name": "龙里县",
+          "postal_code": "551200",
+          "longitude": "106.977733",
+          "latitude": "26.448809"
+        },
+        {
+          "adcode": "522731",
+          "name": "惠水县",
+          "postal_code": "550600",
+          "longitude": "106.657848",
+          "latitude": "26.128637"
+        },
+        {
+          "adcode": "522732",
+          "name": "三都水族自治县",
+          "postal_code": "558100",
+          "longitude": "107.87747",
+          "latitude": "25.985183"
+        }
+      ],
+      "longitude": "107.517156",
+      "latitude": "26.258219"
+    }
+  ],
+  "longitude": "106.713478",
+  "latitude": "26.578343"
+}

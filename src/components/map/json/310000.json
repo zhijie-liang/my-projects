@@ -1,0 +1,128 @@
+{
+  "adcode": "310000",
+  "name": "上海市",
+  "postal_code": "200000",
+  "cities": [
+    {
+      "adcode": "310100",
+      "name": "市辖区",
+      "postal_code": "200000",
+      "districts": [
+        {
+          "adcode": "310101",
+          "name": "黄浦区",
+          "postal_code": "200001",
+          "longitude": "121.490317",
+          "latitude": "31.222771"
+        },
+        {
+          "adcode": "310104",
+          "name": "徐汇区",
+          "postal_code": "200030",
+          "longitude": "121.43752",
+          "latitude": "31.179973"
+        },
+        {
+          "adcode": "310105",
+          "name": "长宁区",
+          "postal_code": "200050",
+          "longitude": "121.4222",
+          "latitude": "31.218123"
+        },
+        {
+          "adcode": "310106",
+          "name": "静安区",
+          "postal_code": "200040",
+          "longitude": "121.448224",
+          "latitude": "31.229003"
+        },
+        {
+          "adcode": "310107",
+          "name": "普陀区",
+          "postal_code": "200333",
+          "longitude": "121.392499",
+          "latitude": "31.241701"
+        },
+        {
+          "adcode": "310109",
+          "name": "虹口区",
+          "postal_code": "200080",
+          "longitude": "121.491832",
+          "latitude": "31.26097"
+        },
+        {
+          "adcode": "310110",
+          "name": "杨浦区",
+          "postal_code": "200082",
+          "longitude": "121.522797",
+          "latitude": "31.270755"
+        },
+        {
+          "adcode": "310112",
+          "name": "闵行区",
+          "postal_code": "201100",
+          "longitude": "121.375972",
+          "latitude": "31.111658"
+        },
+        {
+          "adcode": "310113",
+          "name": "宝山区",
+          "postal_code": "201900",
+          "longitude": "121.489934",
+          "latitude": "31.398896"
+        },
+        {
+          "adcode": "310114",
+          "name": "嘉定区",
+          "postal_code": "201800",
+          "longitude": "121.250333",
+          "latitude": "31.383524"
+        },
+        {
+          "adcode": "310115",
+          "name": "浦东新区",
+          "postal_code": "200135",
+          "longitude": "121.567706",
+          "latitude": "31.245944"
+        },
+        {
+          "adcode": "310116",
+          "name": "金山区",
+          "postal_code": "200540",
+          "longitude": "121.330736",
+          "latitude": "30.724697"
+        },
+        {
+          "adcode": "310117",
+          "name": "松江区",
+          "postal_code": "201600",
+          "longitude": "121.223543",
+          "latitude": "31.03047"
+        },
+        {
+          "adcode": "310118",
+          "name": "青浦区",
+          "postal_code": "201700",
+          "longitude": "121.113021",
+          "latitude": "31.151209"
+        },
+        {
+          "adcode": "310120",
+          "name": "奉贤区",
+          "postal_code": "201400",
+          "longitude": "121.458472",
+          "latitude": "30.912345"
+        },
+        {
+          "adcode": "310151",
+          "name": "崇明区",
+          "postal_code": "202150",
+          "longitude": "121.397516",
+          "latitude": "31.626946"
+        }
+      ]
+    }
+  ],
+  "longitude": "121.472644",
+  "latitude": "31.231706"
+}

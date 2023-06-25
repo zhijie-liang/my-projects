@@ -1,0 +1,130 @@
+{
+  "adcode": "110000",
+  "name": "北京市",
+  "postal_code": "100000",
+  "cities": [
+    {
+      "adcode": "110100",
+      "name": "市辖区",
+      "postal_code": "100000",
+      "districts": [
+        {
+          "adcode": "110101",
+          "name": "东城区",
+          "postal_code": "100010",
+          "longitude": "116.418757",
+          "latitude": "39.917544"
+        },
+        {
+          "adcode": "110102",
+          "name": "西城区",
+          "postal_code": "100032",
+          "longitude": "116.366794",
+          "latitude": "39.915309"
+        },
+        {
+          "adcode": "110105",
+          "name": "朝阳区",
+          "postal_code": "100020",
+          "longitude": "116.486409",
+          "latitude": "39.921489"
+        },
+        {
+          "adcode": "110106",
+          "name": "丰台区",
+          "postal_code": "100071",
+          "longitude": "116.286968",
+          "latitude": "39.863642"
+        },
+        {
+          "adcode": "110107",
+          "name": "石景山区",
+          "postal_code": "100043",
+          "longitude": "116.195445",
+          "latitude": "39.914601"
+        },
+        {
+          "adcode": "110108",
+          "name": "海淀区",
+          "postal_code": "100089",
+          "longitude": "116.310316",
+          "latitude": "39.956074"
+        },
+        {
+          "adcode": "110109",
+          "name": "门头沟区",
+          "postal_code": "102300",
+          "longitude": "116.105381",
+          "latitude": "39.937183"
+        },
+        {
+          "adcode": "110111",
+          "name": "房山区",
+          "postal_code": "102488",
+          "longitude": "116.139157",
+          "latitude": "39.735535"
+        },
+        {
+          "adcode": "110112",
+          "name": "通州区",
+          "postal_code": "101149",
+          "longitude": "116.658603",
+          "latitude": "39.902486"
+        },
+        {
+          "adcode": "110113",
+          "name": "顺义区",
+          "postal_code": "101300",
+          "longitude": "116.653525",
+          "latitude": "40.128936"
+        },
+        {
+          "adcode": "110114",
+          "name": "昌平区",
+          "postal_code": "102200",
+          "longitude": "116.235906",
+          "latitude": "40.218085"
+        },
+        {
+          "adcode": "110115",
+          "name": "大兴区",
+          "postal_code": "102600",
+          "longitude": "116.338033",
+          "latitude": "39.728908"
+        },
+        {
+          "adcode": "110116",
+          "name": "怀柔区",
+          "postal_code": "101400",
+          "longitude": "116.637122",
+          "latitude": "40.324272"
+        },
+        {
+          "adcode": "110117",
+          "name": "平谷区",
+          "postal_code": "101200",
+          "longitude": "117.112335",
+          "latitude": "40.144783"
+        },
+        {
+          "adcode": "110118",
+          "name": "密云区",
+          "postal_code": "101500",
+          "longitude": "116.843352",
+          "latitude": "40.377362"
+        },
+        {
+          "adcode": "110119",
+          "name": "延庆区",
+          "postal_code": "102100",
+          "longitude": "115.985006",
+          "latitude": "40.465325"
+        }
+      ],
+      "longitude": "116.405285",
+      "latitude": "39.904989"
+    }
+  ],
+  "longitude": "116.405285",
+  "latitude": "39.904989"
+}

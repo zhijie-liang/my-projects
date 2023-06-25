@@ -1,0 +1,1282 @@
+{
+  "adcode": "410000",
+  "name": "河南省",
+  "postal_code": "450000",
+  "cities": [
+    {
+      "adcode": "410100",
+      "name": "郑州市",
+      "postal_code": "450000",
+      "districts": [
+        {
+          "adcode": "410102",
+          "name": "中原区",
+          "postal_code": "450007",
+          "longitude": "113.611576",
+          "latitude": "34.748286"
+        },
+        {
+          "adcode": "410103",
+          "name": "二七区",
+          "postal_code": "450052",
+          "longitude": "113.645422",
+          "latitude": "34.730936"
+        },
+        {
+          "adcode": "410104",
+          "name": "管城回族区",
+          "postal_code": "450000",
+          "longitude": "113.685313",
+          "latitude": "34.746453"
+        },
+        {
+          "adcode": "410105",
+          "name": "金水区",
+          "postal_code": "450003",
+          "longitude": "113.686037",
+          "latitude": "34.775838"
+        },
+        {
+          "adcode": "410106",
+          "name": "上街区",
+          "postal_code": "450041",
+          "longitude": "113.298282",
+          "latitude": "34.808689"
+        },
+        {
+          "adcode": "410108",
+          "name": "惠济区",
+          "postal_code": "450053",
+          "longitude": "113.61836",
+          "latitude": "34.828591"
+        },
+        {
+          "adcode": "410122",
+          "name": "中牟县",
+          "postal_code": "451450",
+          "longitude": "114.022521",
+          "latitude": "34.721976"
+        },
+        {
+          "adcode": "410181",
+          "name": "巩义市",
+          "postal_code": "451200",
+          "longitude": "112.98283",
+          "latitude": "34.75218"
+        },
+        {
+          "adcode": "410182",
+          "name": "荥阳市",
+          "postal_code": "450100",
+          "longitude": "113.391523",
+          "latitude": "34.789077"
+        },
+        {
+          "adcode": "410183",
+          "name": "新密市",
+          "postal_code": "452300",
+          "longitude": "113.380616",
+          "latitude": "34.537846"
+        },
+        {
+          "adcode": "410184",
+          "name": "新郑市",
+          "postal_code": "451100",
+          "longitude": "113.73967",
+          "latitude": "34.394219"
+        },
+        {
+          "adcode": "410185",
+          "name": "登封市",
+          "postal_code": "452470",
+          "longitude": "113.037768",
+          "latitude": "34.459939"
+        }
+      ],
+      "longitude": "113.665412",
+      "latitude": "34.757975"
+    },
+    {
+      "adcode": "410200",
+      "name": "开封市",
+      "postal_code": "475001",
+      "districts": [
+        {
+          "adcode": "410202",
+          "name": "龙亭区",
+          "postal_code": "475100",
+          "longitude": "114.353348",
+          "latitude": "34.799833"
+        },
+        {
+          "adcode": "410203",
+          "name": "顺河回族区",
+          "postal_code": "475000",
+          "longitude": "114.364875",
+          "latitude": "34.800459"
+        },
+        {
+          "adcode": "410204",
+          "name": "鼓楼区",
+          "postal_code": "475000",
+          "longitude": "114.3485",
+          "latitude": "34.792383"
+        },
+        {
+          "adcode": "410205",
+          "name": "禹王台区",
+          "postal_code": "475003",
+          "longitude": "114.350246",
+          "latitude": "34.779727"
+        },
+        {
+          "adcode": "410212",
+          "name": "祥符区",
+          "postal_code": "475100",
+          "longitude": "114.437622",
+          "latitude": "34.756476"
+        },
+        {
+          "adcode": "410221",
+          "name": "杞县",
+          "postal_code": "475200",
+          "longitude": "114.770472",
+          "latitude": "34.554585"
+        },
+        {
+          "adcode": "410222",
+          "name": "通许县",
+          "postal_code": "475400",
+          "longitude": "114.467734",
+          "latitude": "34.477302"
+        },
+        {
+          "adcode": "410223",
+          "name": "尉氏县",
+          "postal_code": "475500",
+          "longitude": "114.193927",
+          "latitude": "34.412256"
+        },
+        {
+          "adcode": "410225",
+          "name": "兰考县",
+          "postal_code": "475300",
+          "longitude": "114.820572",
+          "latitude": "34.829899"
+        }
+      ],
+      "longitude": "114.341447",
+      "latitude": "34.797049"
+    },
+    {
+      "adcode": "410300",
+      "name": "洛阳市",
+      "postal_code": "471000",
+      "districts": [
+        {
+          "adcode": "410302",
+          "name": "老城区",
+          "postal_code": "471002",
+          "longitude": "112.477298",
+          "latitude": "34.682945"
+        },
+        {
+          "adcode": "410303",
+          "name": "西工区",
+          "postal_code": "471000",
+          "longitude": "112.443232",
+          "latitude": "34.667847"
+        },
+        {
+          "adcode": "410304",
+          "name": "瀍河回族区",
+          "postal_code": "471002",
+          "longitude": "112.491625",
+          "latitude": "34.684738"
+        },
+        {
+          "adcode": "410305",
+          "name": "涧西区",
+          "postal_code": "471003",
+          "longitude": "112.399243",
+          "latitude": "34.654251"
+        },
+        {
+          "adcode": "410306",
+          "name": "孟津区",
+          "postal_code": "471100",
+          "longitude": "112.443892",
+          "latitude": "34.826485"
+        },
+        {
+          "adcode": "410311",
+          "name": "洛龙区",
+          "postal_code": "471000",
+          "longitude": "112.456634",
+          "latitude": "34.618557"
+        },
+        {
+          "adcode": "410323",
+          "name": "新安县",
+          "postal_code": "471800",
+          "longitude": "112.141403",
+          "latitude": "34.728679"
+        },
+        {
+          "adcode": "410324",
+          "name": "栾川县",
+          "postal_code": "471500",
+          "longitude": "111.618386",
+          "latitude": "33.783195"
+        },
+        {
+          "adcode": "410325",
+          "name": "嵩县",
+          "postal_code": "471400",
+          "longitude": "112.087765",
+          "latitude": "34.131563"
+        },
+        {
+          "adcode": "410326",
+          "name": "汝阳县",
+          "postal_code": "471200",
+          "longitude": "112.473789",
+          "latitude": "34.15323"
+        },
+        {
+          "adcode": "410327",
+          "name": "宜阳县",
+          "postal_code": "471600",
+          "longitude": "112.179989",
+          "latitude": "34.516478"
+        },
+        {
+          "adcode": "410328",
+          "name": "洛宁县",
+          "postal_code": "471700",
+          "longitude": "111.655399",
+          "latitude": "34.387179"
+        },
+        {
+          "adcode": "410329",
+          "name": "伊川县",
+          "postal_code": "471300",
+          "longitude": "112.429384",
+          "latitude": "34.423416"
+        },
+        {
+          "adcode": "410381",
+          "name": "偃师区",
+          "postal_code": "471900",
+          "longitude": "112.787739",
+          "latitude": "34.723042"
+        },
+        {
+          "adcode": "410371",
+          "name": "洛阳高新技术产业开发区",
+          "postal_code": "471003",
+          "longitude": "112.384901",
+          "latitude": "34.614293"
+        }
+      ],
+      "longitude": "112.434468",
+      "latitude": "34.663041"
+    },
+    {
+      "adcode": "410400",
+      "name": "平顶山市",
+      "postal_code": "467000",
+      "districts": [
+        {
+          "adcode": "410402",
+          "name": "新华区",
+          "postal_code": "467002",
+          "longitude": "113.299061",
+          "latitude": "33.737579"
+        },
+        {
+          "adcode": "410403",
+          "name": "卫东区",
+          "postal_code": "467021",
+          "longitude": "113.310327",
+          "latitude": "33.739285"
+        },
+        {
+          "adcode": "410404",
+          "name": "石龙区",
+          "postal_code": "467045",
+          "longitude": "112.889885",
+          "latitude": "33.901538"
+        },
+        {
+          "adcode": "410411",
+          "name": "湛河区",
+          "postal_code": "467000",
+          "longitude": "113.320873",
+          "latitude": "33.725681"
+        },
+        {
+          "adcode": "410421",
+          "name": "宝丰县",
+          "postal_code": "467400",
+          "longitude": "113.066812",
+          "latitude": "33.866359"
+        },
+        {
+          "adcode": "410422",
+          "name": "叶县",
+          "postal_code": "467200",
+          "longitude": "113.358298",
+          "latitude": "33.621252"
+        },
+        {
+          "adcode": "410423",
+          "name": "鲁山县",
+          "postal_code": "467300",
+          "longitude": "112.906703",
+          "latitude": "33.740325"
+        },
+        {
+          "adcode": "410425",
+          "name": "郏县",
+          "postal_code": "467100",
+          "longitude": "113.220451",
+          "latitude": "33.971993"
+        },
+        {
+          "adcode": "410481",
+          "name": "舞钢市",
+          "postal_code": "462500",
+          "longitude": "113.52625",
+          "latitude": "33.302082"
+        },
+        {
+          "adcode": "410482",
+          "name": "汝州市",
+          "postal_code": "467500",
+          "longitude": "112.845336",
+          "latitude": "34.167408"
+        }
+      ],
+      "longitude": "113.307718",
+      "latitude": "33.735241"
+    },
+    {
+      "adcode": "410500",
+      "name": "安阳市",
+      "postal_code": "455000",
+      "districts": [
+        {
+          "adcode": "410502",
+          "name": "文峰区",
+          "postal_code": "455000",
+          "longitude": "114.352562",
+          "latitude": "36.098101"
+        },
+        {
+          "adcode": "410503",
+          "name": "北关区",
+          "postal_code": "455001",
+          "longitude": "114.352646",
+          "latitude": "36.10978"
+        },
+        {
+          "adcode": "410505",
+          "name": "殷都区",
+          "postal_code": "455004",
+          "longitude": "114.300098",
+          "latitude": "36.108974"
+        },
+        {
+          "adcode": "410506",
+          "name": "龙安区",
+          "postal_code": "455001",
+          "longitude": "114.323522",
+          "latitude": "36.095568"
+        },
+        {
+          "adcode": "410522",
+          "name": "安阳县",
+          "postal_code": "455000",
+          "longitude": "114.130207",
+          "latitude": "36.130585"
+        },
+        {
+          "adcode": "410523",
+          "name": "汤阴县",
+          "postal_code": "456150",
+          "longitude": "114.362357",
+          "latitude": "35.922349"
+        },
+        {
+          "adcode": "410526",
+          "name": "滑县",
+          "postal_code": "456400",
+          "longitude": "114.524",
+          "latitude": "35.574628"
+        },
+        {
+          "adcode": "410527",
+          "name": "内黄县",
+          "postal_code": "456350",
+          "longitude": "114.904582",
+          "latitude": "35.953702"
+        },
+        {
+          "adcode": "410581",
+          "name": "林州市",
+          "postal_code": "456550",
+          "longitude": "113.823767",
+          "latitude": "36.063403"
+        }
+      ],
+      "longitude": "114.352482",
+      "latitude": "36.103442"
+    },
+    {
+      "adcode": "410600",
+      "name": "鹤壁市",
+      "postal_code": "456600",
+      "districts": [
+        {
+          "adcode": "410602",
+          "name": "鹤山区",
+          "postal_code": "458010",
+          "longitude": "114.166551",
+          "latitude": "35.936128"
+        },
+        {
+          "adcode": "410603",
+          "name": "山城区",
+          "postal_code": "458000",
+          "longitude": "114.184202",
+          "latitude": "35.896058"
+        },
+        {
+          "adcode": "410611",
+          "name": "淇滨区",
+          "postal_code": "458000",
+          "longitude": "114.293917",
+          "latitude": "35.748382"
+        },
+        {
+          "adcode": "410621",
+          "name": "浚县",
+          "postal_code": "456250",
+          "longitude": "114.550162",
+          "latitude": "35.671282"
+        },
+        {
+          "adcode": "410622",
+          "name": "淇县",
+          "postal_code": "456750",
+          "longitude": "114.200379",
+          "latitude": "35.609478"
+        }
+      ],
+      "longitude": "114.295444",
+      "latitude": "35.748236"
+    },
+    {
+      "adcode": "410700",
+      "name": "新乡市",
+      "postal_code": "453000",
+      "districts": [
+        {
+          "adcode": "410702",
+          "name": "红旗区",
+          "postal_code": "453000",
+          "longitude": "113.878158",
+          "latitude": "35.302684"
+        },
+        {
+          "adcode": "410703",
+          "name": "卫滨区",
+          "postal_code": "453011",
+          "longitude": "113.866065",
+          "latitude": "35.304905"
+        },
+        {
+          "adcode": "410704",
+          "name": "凤泉区",
+          "postal_code": "453003",
+          "longitude": "113.906712",
+          "latitude": "35.379855"
+        },
+        {
+          "adcode": "410711",
+          "name": "牧野区",
+          "postal_code": "453002",
+          "longitude": "113.89716",
+          "latitude": "35.312974"
+        },
+        {
+          "adcode": "410721",
+          "name": "新乡县",
+          "postal_code": "453700",
+          "longitude": "113.806186",
+          "latitude": "35.190021"
+        },
+        {
+          "adcode": "410724",
+          "name": "获嘉县",
+          "postal_code": "453800",
+          "longitude": "113.657249",
+          "latitude": "35.261685"
+        },
+        {
+          "adcode": "410725",
+          "name": "原阳县",
+          "postal_code": "453500",
+          "longitude": "113.965966",
+          "latitude": "35.054001"
+        },
+        {
+          "adcode": "410726",
+          "name": "延津县",
+          "postal_code": "453200",
+          "longitude": "114.200982",
+          "latitude": "35.149515"
+        },
+        {
+          "adcode": "410727",
+          "name": "封丘县",
+          "postal_code": "453300",
+          "longitude": "114.423405",
+          "latitude": "35.04057"
+        },
+        {
+          "adcode": "410781",
+          "name": "卫辉市",
+          "postal_code": "453100",
+          "longitude": "114.065855",
+          "latitude": "35.404295"
+        },
+        {
+          "adcode": "410782",
+          "name": "辉县市",
+          "postal_code": "453600",
+          "longitude": "113.802518",
+          "latitude": "35.461318"
+        },
+        {
+          "adcode": "410783",
+          "name": "长垣市",
+          "postal_code": "453400",
+          "longitude": "114.673807",
+          "latitude": "35.19615"
+        }
+      ],
+      "longitude": "113.883991",
+      "latitude": "35.302616"
+    },
+    {
+      "adcode": "410800",
+      "name": "焦作市",
+      "postal_code": "454000",
+      "districts": [
+        {
+          "adcode": "410802",
+          "name": "解放区",
+          "postal_code": "454000",
+          "longitude": "113.226126",
+          "latitude": "35.241353"
+        },
+        {
+          "adcode": "410803",
+          "name": "中站区",
+          "postal_code": "454191",
+          "longitude": "113.175485",
+          "latitude": "35.236145"
+        },
+        {
+          "adcode": "410804",
+          "name": "马村区",
+          "postal_code": "454171",
+          "longitude": "113.321703",
+          "latitude": "35.265453"
+        },
+        {
+          "adcode": "410811",
+          "name": "山阳区",
+          "postal_code": "454002",
+          "longitude": "113.26766",
+          "latitude": "35.21476"
+        },
+        {
+          "adcode": "410821",
+          "name": "修武县",
+          "postal_code": "454350",
+          "longitude": "113.447465",
+          "latitude": "35.229923"
+        },
+        {
+          "adcode": "410822",
+          "name": "博爱县",
+          "postal_code": "454450",
+          "longitude": "113.069313",
+          "latitude": "35.170351"
+        },
+        {
+          "adcode": "410823",
+          "name": "武陟县",
+          "postal_code": "454950",
+          "longitude": "113.408334",
+          "latitude": "35.09885"
+        },
+        {
+          "adcode": "410825",
+          "name": "温县",
+          "postal_code": "454850",
+          "longitude": "113.079118",
+          "latitude": "34.941233"
+        },
+        {
+          "adcode": "410882",
+          "name": "沁阳市",
+          "postal_code": "454550",
+          "longitude": "112.934538",
+          "latitude": "35.08901"
+        },
+        {
+          "adcode": "410883",
+          "name": "孟州市",
+          "postal_code": "454750",
+          "longitude": "112.78708",
+          "latitude": "34.90963"
+        }
+      ],
+      "longitude": "113.238266",
+      "latitude": "35.23904"
+    },
+    {
+      "adcode": "410900",
+      "name": "濮阳市",
+      "postal_code": "457000",
+      "districts": [
+        {
+          "adcode": "410902",
+          "name": "华龙区",
+          "postal_code": "457001",
+          "longitude": "115.03184",
+          "latitude": "35.760473"
+        },
+        {
+          "adcode": "410922",
+          "name": "清丰县",
+          "postal_code": "457300",
+          "longitude": "115.107287",
+          "latitude": "35.902413"
+        },
+        {
+          "adcode": "410923",
+          "name": "南乐县",
+          "postal_code": "457400",
+          "longitude": "115.204336",
+          "latitude": "36.075204"
+        },
+        {
+          "adcode": "410926",
+          "name": "范县",
+          "postal_code": "457500",
+          "longitude": "115.504212",
+          "latitude": "35.851977"
+        },
+        {
+          "adcode": "410927",
+          "name": "台前县",
+          "postal_code": "457600",
+          "longitude": "115.855681",
+          "latitude": "35.996474"
+        },
+        {
+          "adcode": "410928",
+          "name": "濮阳县",
+          "postal_code": "457100",
+          "longitude": "115.023844",
+          "latitude": "35.710349"
+        }
+      ],
+      "longitude": "115.041299",
+      "latitude": "35.768234"
+    },
+    {
+      "adcode": "411000",
+      "name": "许昌市",
+      "postal_code": "461000",
+      "districts": [
+        {
+          "adcode": "411002",
+          "name": "魏都区",
+          "postal_code": "461000",
+          "longitude": "113.828307",
+          "latitude": "34.02711"
+        },
+        {
+          "adcode": "411003",
+          "name": "建安区",
+          "postal_code": "461100",
+          "longitude": "113.842898",
+          "latitude": "34.005018"
+        },
+        {
+          "adcode": "411024",
+          "name": "鄢陵县",
+          "postal_code": "461200",
+          "longitude": "114.188507",
+          "latitude": "34.100502"
+        },
+        {
+          "adcode": "411025",
+          "name": "襄城县",
+          "postal_code": "461700",
+          "longitude": "113.493166",
+          "latitude": "33.855943"
+        },
+        {
+          "adcode": "411071",
+          "name": "许昌经济技术开发区",
+          "postal_code": "461000",
+          "longitude": "113.805623",
+          "latitude": "34.008878"
+        },
+        {
+          "adcode": "411081",
+          "name": "禹州市",
+          "postal_code": "461670",
+          "longitude": "113.471316",
+          "latitude": "34.154403"
+        },
+        {
+          "adcode": "411082",
+          "name": "长葛市",
+          "postal_code": "461500",
+          "longitude": "113.768912",
+          "latitude": "34.219257"
+        }
+      ],
+      "longitude": "113.826063",
+      "latitude": "34.022956"
+    },
+    {
+      "adcode": "411100",
+      "name": "漯河市",
+      "postal_code": "462000",
+      "districts": [
+        {
+          "adcode": "411102",
+          "name": "源汇区",
+          "postal_code": "462000",
+          "longitude": "114.017948",
+          "latitude": "33.565441"
+        },
+        {
+          "adcode": "411103",
+          "name": "郾城区",
+          "postal_code": "462300",
+          "longitude": "114.016813",
+          "latitude": "33.588897"
+        },
+        {
+          "adcode": "411104",
+          "name": "召陵区",
+          "postal_code": "462300",
+          "longitude": "114.051686",
+          "latitude": "33.567555"
+        },
+        {
+          "adcode": "411121",
+          "name": "舞阳县",
+          "postal_code": "462400",
+          "longitude": "113.610565",
+          "latitude": "33.436278"
+        },
+        {
+          "adcode": "411122",
+          "name": "临颍县",
+          "postal_code": "462600",
+          "longitude": "113.938891",
+          "latitude": "33.80609"
+        }
+      ],
+      "longitude": "114.026405",
+      "latitude": "33.575855"
+    },
+    {
+      "adcode": "411200",
+      "name": "三门峡市",
+      "postal_code": "472000",
+      "districts": [
+        {
+          "adcode": "411202",
+          "name": "湖滨区",
+          "postal_code": "472000",
+          "longitude": "111.19487",
+          "latitude": "34.77812"
+        },
+        {
+          "adcode": "411203",
+          "name": "陕州区",
+          "postal_code": "472100",
+          "longitude": "111.103851",
+          "latitude": "34.720244"
+        },
+        {
+          "adcode": "411221",
+          "name": "渑池县",
+          "postal_code": "472400",
+          "longitude": "111.762992",
+          "latitude": "34.763487"
+        },
+        {
+          "adcode": "411224",
+          "name": "卢氏县",
+          "postal_code": "472200",
+          "longitude": "111.052649",
+          "latitude": "34.053995"
+        },
+        {
+          "adcode": "411271",
+          "name": "河南三门峡经济开发区",
+          "postal_code": "472000",
+          "longitude": "111.168117",
+          "latitude": "34.797745"
+        },
+        {
+          "adcode": "411281",
+          "name": "义马市",
+          "postal_code": "472300",
+          "longitude": "111.869417",
+          "latitude": "34.746868"
+        },
+        {
+          "adcode": "411282",
+          "name": "灵宝市",
+          "postal_code": "472500",
+          "longitude": "110.88577",
+          "latitude": "34.521264"
+        }
+      ],
+      "longitude": "111.194099",
+      "latitude": "34.777338"
+    },
+    {
+      "adcode": "411300",
+      "name": "南阳市",
+      "postal_code": "473000",
+      "districts": [
+        {
+          "adcode": "411302",
+          "name": "宛城区",
+          "postal_code": "473001",
+          "longitude": "112.544591",
+          "latitude": "32.994857"
+        },
+        {
+          "adcode": "411303",
+          "name": "卧龙区",
+          "postal_code": "473003",
+          "longitude": "112.528789",
+          "latitude": "32.989877"
+        },
+        {
+          "adcode": "411321",
+          "name": "南召县",
+          "postal_code": "474650",
+          "longitude": "112.435583",
+          "latitude": "33.488617"
+        },
+        {
+          "adcode": "411322",
+          "name": "方城县",
+          "postal_code": "473200",
+          "longitude": "113.010933",
+          "latitude": "33.255138"
+        },
+        {
+          "adcode": "411323",
+          "name": "西峡县",
+          "postal_code": "474550",
+          "longitude": "111.485772",
+          "latitude": "33.302981"
+        },
+        {
+          "adcode": "411324",
+          "name": "镇平县",
+          "postal_code": "474250",
+          "longitude": "112.232722",
+          "latitude": "33.036651"
+        },
+        {
+          "adcode": "411325",
+          "name": "内乡县",
+          "postal_code": "474350",
+          "longitude": "111.843801",
+          "latitude": "33.046358"
+        },
+        {
+          "adcode": "411326",
+          "name": "淅川县",
+          "postal_code": "474450",
+          "longitude": "111.489026",
+          "latitude": "33.136106"
+        },
+        {
+          "adcode": "411327",
+          "name": "社旗县",
+          "postal_code": "473300",
+          "longitude": "112.938279",
+          "latitude": "33.056126"
+        },
+        {
+          "adcode": "411328",
+          "name": "唐河县",
+          "postal_code": "473400",
+          "longitude": "112.838492",
+          "latitude": "32.687892"
+        },
+        {
+          "adcode": "411329",
+          "name": "新野县",
+          "postal_code": "473500",
+          "longitude": "112.365624",
+          "latitude": "32.524006"
+        },
+        {
+          "adcode": "411330",
+          "name": "桐柏县",
+          "postal_code": "474750",
+          "longitude": "113.406059",
+          "latitude": "32.367153"
+        },
+        {
+          "adcode": "411381",
+          "name": "邓州市",
+          "postal_code": "474150",
+          "longitude": "112.092716",
+          "latitude": "32.681642"
+        }
+      ],
+      "longitude": "112.540918",
+      "latitude": "32.999082"
+    },
+    {
+      "adcode": "411400",
+      "name": "商丘市",
+      "postal_code": "476000",
+      "districts": [
+        {
+          "adcode": "411402",
+          "name": "梁园区",
+          "postal_code": "476000",
+          "longitude": "115.65459",
+          "latitude": "34.436553"
+        },
+        {
+          "adcode": "411403",
+          "name": "睢阳区",
+          "postal_code": "476100",
+          "longitude": "115.653813",
+          "latitude": "34.390536"
+        },
+        {
+          "adcode": "411421",
+          "name": "民权县",
+          "postal_code": "476800",
+          "longitude": "115.148146",
+          "latitude": "34.648455"
+        },
+        {
+          "adcode": "411422",
+          "name": "睢县",
+          "postal_code": "476900",
+          "longitude": "115.070109",
+          "latitude": "34.428433"
+        },
+        {
+          "adcode": "411423",
+          "name": "宁陵县",
+          "postal_code": "476700",
+          "longitude": "115.320055",
+          "latitude": "34.449299"
+        },
+        {
+          "adcode": "411424",
+          "name": "柘城县",
+          "postal_code": "476200",
+          "longitude": "115.307433",
+          "latitude": "34.075277"
+        },
+        {
+          "adcode": "411425",
+          "name": "虞城县",
+          "postal_code": "476300",
+          "longitude": "115.863811",
+          "latitude": "34.399634"
+        },
+        {
+          "adcode": "411426",
+          "name": "夏邑县",
+          "postal_code": "476400",
+          "longitude": "116.13989",
+          "latitude": "34.240894"
+        },
+        {
+          "adcode": "411481",
+          "name": "永城市",
+          "postal_code": "476600",
+          "longitude": "116.449672",
+          "latitude": "33.931318"
+        }
+      ],
+      "longitude": "115.650497",
+      "latitude": "34.437054"
+    },
+    {
+      "adcode": "411500",
+      "name": "信阳市",
+      "postal_code": "464000",
+      "districts": [
+        {
+          "adcode": "411502",
+          "name": "浉河区",
+          "postal_code": "464000",
+          "longitude": "114.075031",
+          "latitude": "32.123274"
+        },
+        {
+          "adcode": "411503",
+          "name": "平桥区",
+          "postal_code": "464100",
+          "longitude": "114.126027",
+          "latitude": "32.098395"
+        },
+        {
+          "adcode": "411521",
+          "name": "罗山县",
+          "postal_code": "464200",
+          "longitude": "114.533414",
+          "latitude": "32.203206"
+        },
+        {
+          "adcode": "411522",
+          "name": "光山县",
+          "postal_code": "465450",
+          "longitude": "114.903577",
+          "latitude": "32.010398"
+        },
+        {
+          "adcode": "411523",
+          "name": "新县",
+          "postal_code": "465550",
+          "longitude": "114.87705",
+          "latitude": "31.63515"
+        },
+        {
+          "adcode": "411524",
+          "name": "商城县",
+          "postal_code": "465350",
+          "longitude": "115.406297",
+          "latitude": "31.799982"
+        },
+        {
+          "adcode": "411525",
+          "name": "固始县",
+          "postal_code": "465250",
+          "longitude": "115.667328",
+          "latitude": "32.183074"
+        },
+        {
+          "adcode": "411526",
+          "name": "潢川县",
+          "postal_code": "465150",
+          "longitude": "115.050123",
+          "latitude": "32.134024"
+        },
+        {
+          "adcode": "411527",
+          "name": "淮滨县",
+          "postal_code": "464400",
+          "longitude": "115.415451",
+          "latitude": "32.452639"
+        },
+        {
+          "adcode": "411528",
+          "name": "息县",
+          "postal_code": "464300",
+          "longitude": "114.740713",
+          "latitude": "32.344744"
+        }
+      ],
+      "longitude": "114.075031",
+      "latitude": "32.123274"
+    },
+    {
+      "adcode": "411600",
+      "name": "周口市",
+      "postal_code": "466000",
+      "districts": [
+        {
+          "adcode": "411602",
+          "name": "川汇区",
+          "postal_code": "466000",
+          "longitude": "114.652136",
+          "latitude": "33.614836"
+        },
+        {
+          "adcode": "411603",
+          "name": "淮阳区",
+          "postal_code": "466700",
+          "longitude": "114.870166",
+          "latitude": "33.732547"
+        },
+        {
+          "adcode": "411621",
+          "name": "扶沟县",
+          "postal_code": "461300",
+          "longitude": "114.392008",
+          "latitude": "34.054061"
+        },
+        {
+          "adcode": "411622",
+          "name": "西华县",
+          "postal_code": "466600",
+          "longitude": "114.530067",
+          "latitude": "33.784378"
+        },
+        {
+          "adcode": "411623",
+          "name": "商水县",
+          "postal_code": "466100",
+          "longitude": "114.60927",
+          "latitude": "33.543845"
+        },
+        {
+          "adcode": "411624",
+          "name": "沈丘县",
+          "postal_code": "466300",
+          "longitude": "115.078375",
+          "latitude": "33.395514"
+        },
+        {
+          "adcode": "411625",
+          "name": "郸城县",
+          "postal_code": "477150",
+          "longitude": "115.189",
+          "latitude": "33.643852"
+        },
+        {
+          "adcode": "411627",
+          "name": "太康县",
+          "postal_code": "461400",
+          "longitude": "114.853834",
+          "latitude": "34.065312"
+        },
+        {
+          "adcode": "411628",
+          "name": "鹿邑县",
+          "postal_code": "477200",
+          "longitude": "115.486386",
+          "latitude": "33.861067"
+        },
+        {
+          "adcode": "411681",
+          "name": "项城市",
+          "postal_code": "466200",
+          "longitude": "114.899521",
+          "latitude": "33.443085"
+        }
+      ],
+      "longitude": "114.649653",
+      "latitude": "33.620357"
+    },
+    {
+      "adcode": "411700",
+      "name": "驻马店市",
+      "postal_code": "463000",
+      "districts": [
+        {
+          "adcode": "411702",
+          "name": "驿城区",
+          "postal_code": "463000",
+          "longitude": "114.029149",
+          "latitude": "32.977559"
+        },
+        {
+          "adcode": "411721",
+          "name": "西平县",
+          "postal_code": "463900",
+          "longitude": "114.026864",
+          "latitude": "33.382315"
+        },
+        {
+          "adcode": "411722",
+          "name": "上蔡县",
+          "postal_code": "463800",
+          "longitude": "114.266892",
+          "latitude": "33.264719"
+        },
+        {
+          "adcode": "411723",
+          "name": "平舆县",
+          "postal_code": "463400",
+          "longitude": "114.637105",
+          "latitude": "32.955626"
+        },
+        {
+          "adcode": "411724",
+          "name": "正阳县",
+          "postal_code": "463600",
+          "longitude": "114.38948",
+          "latitude": "32.601826"
+        },
+        {
+          "adcode": "411725",
+          "name": "确山县",
+          "postal_code": "463200",
+          "longitude": "114.026679",
+          "latitude": "32.801538"
+        },
+        {
+          "adcode": "411726",
+          "name": "泌阳县",
+          "postal_code": "463700",
+          "longitude": "113.32605",
+          "latitude": "32.725129"
+        },
+        {
+          "adcode": "411727",
+          "name": "汝南县",
+          "postal_code": "463300",
+          "longitude": "114.359495",
+          "latitude": "33.004535"
+        },
+        {
+          "adcode": "411728",
+          "name": "遂平县",
+          "postal_code": "463100",
+          "longitude": "114.00371",
+          "latitude": "33.14698"
+        },
+        {
+          "adcode": "411729",
+          "name": "新蔡县",
+          "postal_code": "463500",
+          "longitude": "114.975246",
+          "latitude": "32.749948"
+        }
+      ],
+      "longitude": "114.024736",
+      "latitude": "32.980169"
+    },
+    {
+      "adcode": "419001",
+      "name": "济源市",
+      "postal_code": "454650",
+      "longitude": "112.590047",
+      "latitude": "35.090378"
+    }
+  ],
+  "longitude": "113.665412",
+  "latitude": "34.757975"
+}

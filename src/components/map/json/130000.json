@@ -1,0 +1,1291 @@
+{
+  "adcode": "130000",
+  "name": "河北省",
+  "postal_code": "050000",
+  "cities": [
+    {
+      "adcode": "130100",
+      "name": "石家庄市",
+      "postal_code": "050011",
+      "districts": [
+        {
+          "adcode": "130102",
+          "name": "长安区",
+          "postal_code": "050011",
+          "longitude": "114.548151",
+          "latitude": "38.047501"
+        },
+        {
+          "adcode": "130104",
+          "name": "桥西区",
+          "postal_code": "050051",
+          "longitude": "114.462931",
+          "latitude": "38.028383"
+        },
+        {
+          "adcode": "130105",
+          "name": "新华区",
+          "postal_code": "050051",
+          "longitude": "114.465974",
+          "latitude": "38.067142"
+        },
+        {
+          "adcode": "130107",
+          "name": "井陉矿区",
+          "postal_code": "050100",
+          "longitude": "114.058178",
+          "latitude": "38.069748"
+        },
+        {
+          "adcode": "130108",
+          "name": "裕华区",
+          "postal_code": "050081",
+          "longitude": "114.533257",
+          "latitude": "38.027696"
+        },
+        {
+          "adcode": "130109",
+          "name": "藁城区",
+          "postal_code": "050200",
+          "longitude": "114.849647",
+          "latitude": "38.033767"
+        },
+        {
+          "adcode": "130110",
+          "name": "鹿泉区",
+          "postal_code": "050221",
+          "longitude": "114.321023",
+          "latitude": "38.093994"
+        },
+        {
+          "adcode": "130111",
+          "name": "栾城区",
+          "postal_code": "051430",
+          "longitude": "114.654281",
+          "latitude": "37.886911"
+        },
+        {
+          "adcode": "130121",
+          "name": "井陉县",
+          "postal_code": "050300",
+          "longitude": "114.144488",
+          "latitude": "38.033614"
+        },
+        {
+          "adcode": "130123",
+          "name": "正定县",
+          "postal_code": "050800",
+          "longitude": "114.569887",
+          "latitude": "38.147835"
+        },
+        {
+          "adcode": "130125",
+          "name": "行唐县",
+          "postal_code": "050600",
+          "longitude": "114.552734",
+          "latitude": "38.437422"
+        },
+        {
+          "adcode": "130126",
+          "name": "灵寿县",
+          "postal_code": "050500",
+          "longitude": "114.37946",
+          "latitude": "38.306546"
+        },
+        {
+          "adcode": "130127",
+          "name": "高邑县",
+          "postal_code": "051330",
+          "longitude": "114.610699",
+          "latitude": "37.605714"
+        },
+        {
+          "adcode": "130128",
+          "name": "深泽县",
+          "postal_code": "052560",
+          "longitude": "115.200207",
+          "latitude": "38.18454"
+        },
+        {
+          "adcode": "130129",
+          "name": "赞皇县",
+          "postal_code": "051230",
+          "longitude": "114.387756",
+          "latitude": "37.660199"
+        },
+        {
+          "adcode": "130130",
+          "name": "无极县",
+          "postal_code": "052460",
+          "longitude": "114.977845",
+          "latitude": "38.176376"
+        },
+        {
+          "adcode": "130131",
+          "name": "平山县",
+          "postal_code": "050400",
+          "longitude": "114.184144",
+          "latitude": "38.259311"
+        },
+        {
+          "adcode": "130132",
+          "name": "元氏县",
+          "postal_code": "051130",
+          "longitude": "114.52618",
+          "latitude": "37.762514"
+        },
+        {
+          "adcode": "130133",
+          "name": "赵县",
+          "postal_code": "051530",
+          "longitude": "114.775362",
+          "latitude": "37.754341"
+        },
+        {
+          "adcode": "130181",
+          "name": "辛集市",
+          "postal_code": "052300",
+          "longitude": "115.217451",
+          "latitude": "37.92904"
+        },
+        {
+          "adcode": "130183",
+          "name": "晋州市",
+          "postal_code": "052260",
+          "longitude": "115.044886",
+          "latitude": "38.027478"
+        },
+        {
+          "adcode": "130184",
+          "name": "新乐市",
+          "postal_code": "050700",
+          "longitude": "114.68578",
+          "latitude": "38.344768"
+        }
+      ],
+      "longitude": "114.502461",
+      "latitude": "38.045474"
+    },
+    {
+      "adcode": "130200",
+      "name": "唐山市",
+      "postal_code": "063000",
+      "districts": [
+        {
+          "adcode": "130202",
+          "name": "路南区",
+          "postal_code": "063017",
+          "longitude": "118.210821",
+          "latitude": "39.615162"
+        },
+        {
+          "adcode": "130203",
+          "name": "路北区",
+          "postal_code": "063015",
+          "longitude": "118.174736",
+          "latitude": "39.628538"
+        },
+        {
+          "adcode": "130204",
+          "name": "古冶区",
+          "postal_code": "063104",
+          "longitude": "118.45429",
+          "latitude": "39.715736"
+        },
+        {
+          "adcode": "130205",
+          "name": "开平区",
+          "postal_code": "063021",
+          "longitude": "118.264425",
+          "latitude": "39.676171"
+        },
+        {
+          "adcode": "130207",
+          "name": "丰南区",
+          "postal_code": "063300",
+          "longitude": "118.110793",
+          "latitude": "39.56303"
+        },
+        {
+          "adcode": "130208",
+          "name": "丰润区",
+          "postal_code": "063000",
+          "longitude": "118.155779",
+          "latitude": "39.831363"
+        },
+        {
+          "adcode": "130209",
+          "name": "曹妃甸区",
+          "postal_code": "063200",
+          "longitude": "118.446585",
+          "latitude": "39.278277"
+        },
+        {
+          "adcode": "130224",
+          "name": "滦南县",
+          "postal_code": "063500",
+          "longitude": "118.681552",
+          "latitude": "39.506201"
+        },
+        {
+          "adcode": "130225",
+          "name": "乐亭县",
+          "postal_code": "063600",
+          "longitude": "118.905341",
+          "latitude": "39.42813"
+        },
+        {
+          "adcode": "130227",
+          "name": "迁西县",
+          "postal_code": "064300",
+          "longitude": "118.305139",
+          "latitude": "40.146238"
+        },
+        {
+          "adcode": "130229",
+          "name": "玉田县",
+          "postal_code": "064100",
+          "longitude": "117.753665",
+          "latitude": "39.887323"
+        },
+        {
+          "adcode": "130281",
+          "name": "遵化市",
+          "postal_code": "064200",
+          "longitude": "117.965875",
+          "latitude": "40.188616"
+        },
+        {
+          "adcode": "130283",
+          "name": "迁安市",
+          "postal_code": "064400",
+          "longitude": "118.701933",
+          "latitude": "40.012108"
+        },
+        {
+          "adcode": "130284",
+          "name": "滦州市",
+          "postal_code": "066400",
+          "longitude": "118.699546",
+          "latitude": "39.74485"
+        }
+      ],
+      "longitude": "118.175393",
+      "latitude": "39.635113"
+    },
+    {
+      "adcode": "130300",
+      "name": "秦皇岛市",
+      "postal_code": "066000",
+      "districts": [
+        {
+          "adcode": "130302",
+          "name": "海港区",
+          "postal_code": "066000",
+          "longitude": "119.596224",
+          "latitude": "39.943458"
+        },
+        {
+          "adcode": "130303",
+          "name": "山海关区",
+          "postal_code": "066200",
+          "longitude": "119.753591",
+          "latitude": "39.998023"
+        },
+        {
+          "adcode": "130304",
+          "name": "北戴河区",
+          "postal_code": "066100",
+          "longitude": "119.486286",
+          "latitude": "39.825121"
+        },
+        {
+          "adcode": "130306",
+          "name": "抚宁区",
+          "postal_code": "066300",
+          "longitude": "119.240651",
+          "latitude": "39.887053"
+        },
+        {
+          "adcode": "130321",
+          "name": "青龙满族自治县",
+          "postal_code": "066500",
+          "longitude": "118.954555",
+          "latitude": "40.406023"
+        },
+        {
+          "adcode": "130322",
+          "name": "昌黎县",
+          "postal_code": "066600",
+          "longitude": "119.164541",
+          "latitude": "39.709729"
+        },
+        {
+          "adcode": "130324",
+          "name": "卢龙县",
+          "postal_code": "066400",
+          "longitude": "118.881809",
+          "latitude": "39.891639"
+        }
+      ],
+      "longitude": "119.586579",
+      "latitude": "39.942531"
+    },
+    {
+      "adcode": "130400",
+      "name": "邯郸市",
+      "postal_code": "056002",
+      "districts": [
+        {
+          "adcode": "130402",
+          "name": "邯山区",
+          "postal_code": "056001",
+          "longitude": "114.484989",
+          "latitude": "36.603196"
+        },
+        {
+          "adcode": "130403",
+          "name": "丛台区",
+          "postal_code": "056004",
+          "longitude": "114.494703",
+          "latitude": "36.611082"
+        },
+        {
+          "adcode": "130404",
+          "name": "复兴区",
+          "postal_code": "056003",
+          "longitude": "114.458242",
+          "latitude": "36.615484"
+        },
+        {
+          "adcode": "130406",
+          "name": "峰峰矿区",
+          "postal_code": "056200",
+          "longitude": "114.209936",
+          "latitude": "36.420487"
+        },
+        {
+          "adcode": "130407",
+          "name": "肥乡区",
+          "postal_code": "057550",
+          "longitude": "114.805154",
+          "latitude": "36.555778"
+        },
+        {
+          "adcode": "130408",
+          "name": "永年区",
+          "postal_code": "057150",
+          "longitude": "114.496162",
+          "latitude": "36.776413"
+        },
+        {
+          "adcode": "130423",
+          "name": "临漳县",
+          "postal_code": "056600",
+          "longitude": "114.610703",
+          "latitude": "36.337604"
+        },
+        {
+          "adcode": "130424",
+          "name": "成安县",
+          "postal_code": "056700",
+          "longitude": "114.680356",
+          "latitude": "36.443832"
+        },
+        {
+          "adcode": "130425",
+          "name": "大名县",
+          "postal_code": "056900",
+          "longitude": "115.152586",
+          "latitude": "36.283316"
+        },
+        {
+          "adcode": "130426",
+          "name": "涉县",
+          "postal_code": "056400",
+          "longitude": "113.673297",
+          "latitude": "36.563143"
+        },
+        {
+          "adcode": "130427",
+          "name": "磁县",
+          "postal_code": "056500",
+          "longitude": "114.38208",
+          "latitude": "36.367673"
+        },
+        {
+          "adcode": "130430",
+          "name": "邱县",
+          "postal_code": "057450",
+          "longitude": "115.168584",
+          "latitude": "36.81325"
+        },
+        {
+          "adcode": "130431",
+          "name": "鸡泽县",
+          "postal_code": "057350",
+          "longitude": "114.878517",
+          "latitude": "36.914908"
+        },
+        {
+          "adcode": "130432",
+          "name": "广平县",
+          "postal_code": "057650",
+          "longitude": "114.950859",
+          "latitude": "36.483603"
+        },
+        {
+          "adcode": "130433",
+          "name": "馆陶县",
+          "postal_code": "057750",
+          "longitude": "115.289057",
+          "latitude": "36.539461"
+        },
+        {
+          "adcode": "130434",
+          "name": "魏县",
+          "postal_code": "056800",
+          "longitude": "114.93411",
+          "latitude": "36.354248"
+        },
+        {
+          "adcode": "130435",
+          "name": "曲周县",
+          "postal_code": "057250",
+          "longitude": "114.957588",
+          "latitude": "36.773398"
+        },
+        {
+          "adcode": "130481",
+          "name": "武安市",
+          "postal_code": "056300",
+          "longitude": "114.194581",
+          "latitude": "36.696115"
+        }
+      ],
+      "longitude": "114.490686",
+      "latitude": "36.612273"
+    },
+    {
+      "adcode": "130500",
+      "name": "邢台市",
+      "postal_code": "054000",
+      "districts": [
+        {
+          "adcode": "130502",
+          "name": "襄都区",
+          "postal_code": "054000",
+          "longitude": "114.507131",
+          "latitude": "37.064125"
+        },
+        {
+          "adcode": "130503",
+          "name": "信都区",
+          "postal_code": "054000",
+          "longitude": "114.473687",
+          "latitude": "37.068009"
+        },
+        {
+          "adcode": "130505",
+          "name": "任泽区",
+          "postal_code": "054000",
+          "longitude": "114.684469",
+          "latitude": "37.129952"
+        },
+        {
+          "adcode": "130506",
+          "name": "南和区",
+          "postal_code": "054000",
+          "longitude": "114.691377",
+          "latitude": "37.003812"
+        },
+        {
+          "adcode": "130522",
+          "name": "临城县",
+          "postal_code": "054300",
+          "longitude": "114.506873",
+          "latitude": "37.444009"
+        },
+        {
+          "adcode": "130523",
+          "name": "内丘县",
+          "postal_code": "054200",
+          "longitude": "114.511523",
+          "latitude": "37.287663"
+        },
+        {
+          "adcode": "130524",
+          "name": "柏乡县",
+          "postal_code": "055450",
+          "longitude": "114.693382",
+          "latitude": "37.483596"
+        },
+        {
+          "adcode": "130525",
+          "name": "隆尧县",
+          "postal_code": "055350",
+          "longitude": "114.776348",
+          "latitude": "37.350925"
+        },
+        {
+          "adcode": "130528",
+          "name": "宁晋县",
+          "postal_code": "055550",
+          "longitude": "114.921027",
+          "latitude": "37.618956"
+        },
+        {
+          "adcode": "130529",
+          "name": "巨鹿县",
+          "postal_code": "055250",
+          "longitude": "115.038782",
+          "latitude": "37.21768"
+        },
+        {
+          "adcode": "130530",
+          "name": "新河县",
+          "postal_code": "055650",
+          "longitude": "115.247537",
+          "latitude": "37.526216"
+        },
+        {
+          "adcode": "130531",
+          "name": "广宗县",
+          "postal_code": "054600",
+          "longitude": "115.142797",
+          "latitude": "37.075548"
+        },
+        {
+          "adcode": "130532",
+          "name": "平乡县",
+          "postal_code": "054500",
+          "longitude": "115.029218",
+          "latitude": "37.069404"
+        },
+        {
+          "adcode": "130533",
+          "name": "威县",
+          "postal_code": "054700",
+          "longitude": "115.272749",
+          "latitude": "36.983272"
+        },
+        {
+          "adcode": "130534",
+          "name": "清河县",
+          "postal_code": "054800",
+          "longitude": "115.668999",
+          "latitude": "37.059991"
+        },
+        {
+          "adcode": "130535",
+          "name": "临西县",
+          "postal_code": "054900",
+          "longitude": "115.498684",
+          "latitude": "36.8642"
+        },
+        {
+          "adcode": "130571",
+          "name": "河北邢台经济开发区",
+          "postal_code": "054000",
+          "longitude": "114.572242",
+          "latitude": "37.067609"
+        },
+        {
+          "adcode": "130581",
+          "name": "南宫市",
+          "postal_code": "055750",
+          "longitude": "115.398102",
+          "latitude": "37.359668"
+        },
+        {
+          "adcode": "130582",
+          "name": "沙河市",
+          "postal_code": "054100",
+          "longitude": "114.504902",
+          "latitude": "36.861903"
+        }
+      ],
+      "longitude": "114.508851",
+      "latitude": "37.0682"
+    },
+    {
+      "adcode": "130600",
+      "name": "保定市",
+      "postal_code": "071000",
+      "districts": [
+        {
+          "adcode": "130602",
+          "name": "竞秀区",
+          "postal_code": "071051",
+          "longitude": "115.470659",
+          "latitude": "38.88662"
+        },
+        {
+          "adcode": "130606",
+          "name": "莲池区",
+          "postal_code": "071000",
+          "longitude": "115.500934",
+          "latitude": "38.865005"
+        },
+        {
+          "adcode": "130607",
+          "name": "满城区",
+          "postal_code": "072150",
+          "longitude": "115.32442",
+          "latitude": "38.95138"
+        },
+        {
+          "adcode": "130608",
+          "name": "清苑区",
+          "postal_code": "071100",
+          "longitude": "115.492221",
+          "latitude": "38.771012"
+        },
+        {
+          "adcode": "130609",
+          "name": "徐水区",
+          "postal_code": "072550",
+          "longitude": "115.64941",
+          "latitude": "39.020395"
+        },
+        {
+          "adcode": "130623",
+          "name": "涞水县",
+          "postal_code": "074100",
+          "longitude": "115.711985",
+          "latitude": "39.393148"
+        },
+        {
+          "adcode": "130624",
+          "name": "阜平县",
+          "postal_code": "073200",
+          "longitude": "114.198801",
+          "latitude": "38.847276"
+        },
+        {
+          "adcode": "130626",
+          "name": "定兴县",
+          "postal_code": "072650",
+          "longitude": "115.796895",
+          "latitude": "39.266195"
+        },
+        {
+          "adcode": "130627",
+          "name": "唐县",
+          "postal_code": "072350",
+          "longitude": "114.981241",
+          "latitude": "38.748542"
+        },
+        {
+          "adcode": "130628",
+          "name": "高阳县",
+          "postal_code": "071500",
+          "longitude": "115.778878",
+          "latitude": "38.690092"
+        },
+        {
+          "adcode": "130629",
+          "name": "容城县",
+          "postal_code": "071700",
+          "longitude": "115.866247",
+          "latitude": "39.05282"
+        },
+        {
+          "adcode": "130630",
+          "name": "涞源县",
+          "postal_code": "074300",
+          "longitude": "114.692567",
+          "latitude": "39.35755"
+        },
+        {
+          "adcode": "130631",
+          "name": "望都县",
+          "postal_code": "072450",
+          "longitude": "115.154009",
+          "latitude": "38.707448"
+        },
+        {
+          "adcode": "130632",
+          "name": "安新县",
+          "postal_code": "071600",
+          "longitude": "115.931979",
+          "latitude": "38.929912"
+        },
+        {
+          "adcode": "130633",
+          "name": "易县",
+          "postal_code": "074200",
+          "longitude": "115.501146",
+          "latitude": "39.35297"
+        },
+        {
+          "adcode": "130634",
+          "name": "曲阳县",
+          "postal_code": "073100",
+          "longitude": "114.704055",
+          "latitude": "38.619992"
+        },
+        {
+          "adcode": "130635",
+          "name": "蠡县",
+          "postal_code": "071400",
+          "longitude": "115.583631",
+          "latitude": "38.496429"
+        },
+        {
+          "adcode": "130636",
+          "name": "顺平县",
+          "postal_code": "072250",
+          "longitude": "115.132749",
+          "latitude": "38.845127"
+        },
+        {
+          "adcode": "130637",
+          "name": "博野县",
+          "postal_code": "071300",
+          "longitude": "115.461798",
+          "latitude": "38.458271"
+        },
+        {
+          "adcode": "130638",
+          "name": "雄县",
+          "postal_code": "071800",
+          "longitude": "116.107474",
+          "latitude": "38.990819"
+        },
+        {
+          "adcode": "130681",
+          "name": "涿州市",
+          "postal_code": "072750",
+          "longitude": "115.973409",
+          "latitude": "39.485765"
+        },
+        {
+          "adcode": "130682",
+          "name": "定州市",
+          "postal_code": "073000",
+          "longitude": "114.991389",
+          "latitude": "38.517602"
+        },
+        {
+          "adcode": "130683",
+          "name": "安国市",
+          "postal_code": "071200",
+          "longitude": "115.33141",
+          "latitude": "38.421367"
+        },
+        {
+          "adcode": "130684",
+          "name": "高碑店市",
+          "postal_code": "074000",
+          "longitude": "115.882704",
+          "latitude": "39.327689"
+        },
+        {
+          "adcode": "130698",
+          "name": "高新技术产业开发区",
+          "postal_code": "071051",
+          "longitude": "115.471822",
+          "latitude": "38.910566"
+        }
+      ],
+      "longitude": "115.482331",
+      "latitude": "38.867657"
+    },
+    {
+      "adcode": "130700",
+      "name": "张家口市",
+      "postal_code": "075000",
+      "districts": [
+        {
+          "adcode": "130702",
+          "name": "桥东区",
+          "postal_code": "075000",
+          "longitude": "114.885658",
+          "latitude": "40.813875"
+        },
+        {
+          "adcode": "130703",
+          "name": "桥西区",
+          "postal_code": "075061",
+          "longitude": "114.882127",
+          "latitude": "40.824385"
+        },
+        {
+          "adcode": "130705",
+          "name": "宣化区",
+          "postal_code": "075100",
+          "longitude": "115.0632",
+          "latitude": "40.609368"
+        },
+        {
+          "adcode": "130706",
+          "name": "下花园区",
+          "postal_code": "075300",
+          "longitude": "115.281002",
+          "latitude": "40.488645"
+        },
+        {
+          "adcode": "130708",
+          "name": "万全区",
+          "postal_code": "076250",
+          "longitude": "114.736131",
+          "latitude": "40.765136"
+        },
+        {
+          "adcode": "130709",
+          "name": "崇礼区",
+          "postal_code": "076350",
+          "longitude": "115.281652",
+          "latitude": "40.971302"
+        },
+        {
+          "adcode": "130722",
+          "name": "张北县",
+          "postal_code": "076450",
+          "longitude": "114.715951",
+          "latitude": "41.151713"
+        },
+        {
+          "adcode": "130723",
+          "name": "康保县",
+          "postal_code": "076650",
+          "longitude": "114.615809",
+          "latitude": "41.850046"
+        },
+        {
+          "adcode": "130724",
+          "name": "沽源县",
+          "postal_code": "076550",
+          "longitude": "115.684836",
+          "latitude": "41.667419"
+        },
+        {
+          "adcode": "130725",
+          "name": "尚义县",
+          "postal_code": "076750",
+          "longitude": "113.977713",
+          "latitude": "41.080091"
+        },
+        {
+          "adcode": "130726",
+          "name": "蔚县",
+          "postal_code": "075700",
+          "longitude": "114.582695",
+          "latitude": "39.837181"
+        },
+        {
+          "adcode": "130727",
+          "name": "阳原县",
+          "postal_code": "075800",
+          "longitude": "114.167343",
+          "latitude": "40.113419"
+        },
+        {
+          "adcode": "130728",
+          "name": "怀安县",
+          "postal_code": "076150",
+          "longitude": "114.422364",
+          "latitude": "40.671274"
+        },
+        {
+          "adcode": "130730",
+          "name": "怀来县",
+          "postal_code": "075400",
+          "longitude": "115.520846",
+          "latitude": "40.405405"
+        },
+        {
+          "adcode": "130731",
+          "name": "涿鹿县",
+          "postal_code": "075600",
+          "longitude": "115.219246",
+          "latitude": "40.378701"
+        },
+        {
+          "adcode": "130732",
+          "name": "赤城县",
+          "postal_code": "075500",
+          "longitude": "115.832708",
+          "latitude": "40.912081"
+        }
+      ],
+      "longitude": "114.884091",
+      "latitude": "40.811901"
+    },
+    {
+      "adcode": "130800",
+      "name": "承德市",
+      "postal_code": "067000",
+      "districts": [
+        {
+          "adcode": "130802",
+          "name": "双桥区",
+          "postal_code": "067000",
+          "longitude": "117.939152",
+          "latitude": "40.976204"
+        },
+        {
+          "adcode": "130803",
+          "name": "双滦区",
+          "postal_code": "067001",
+          "longitude": "117.797485",
+          "latitude": "40.959756"
+        },
+        {
+          "adcode": "130804",
+          "name": "鹰手营子矿区",
+          "postal_code": "067200",
+          "longitude": "117.661154",
+          "latitude": "40.546956"
+        },
+        {
+          "adcode": "130821",
+          "name": "承德县",
+          "postal_code": "067400",
+          "longitude": "118.172496",
+          "latitude": "40.768637"
+        },
+        {
+          "adcode": "130822",
+          "name": "兴隆县",
+          "postal_code": "067300",
+          "longitude": "117.507098",
+          "latitude": "40.418525"
+        },
+        {
+          "adcode": "130824",
+          "name": "滦平县",
+          "postal_code": "068250",
+          "longitude": "117.337124",
+          "latitude": "40.936644"
+        },
+        {
+          "adcode": "130825",
+          "name": "隆化县",
+          "postal_code": "068150",
+          "longitude": "117.736343",
+          "latitude": "41.316667"
+        },
+        {
+          "adcode": "130826",
+          "name": "丰宁满族自治县",
+          "postal_code": "068350",
+          "longitude": "116.65121",
+          "latitude": "41.209903"
+        },
+        {
+          "adcode": "130827",
+          "name": "宽城满族自治县",
+          "postal_code": "067600",
+          "longitude": "118.488642",
+          "latitude": "40.607981"
+        },
+        {
+          "adcode": "130828",
+          "name": "围场满族蒙古族自治县",
+          "postal_code": "068450",
+          "longitude": "117.764086",
+          "latitude": "41.949404"
+        },
+        {
+          "adcode": "130881",
+          "name": "平泉市",
+          "postal_code": "067500",
+          "longitude": "118.690238",
+          "latitude": "41.00561"
+        }
+      ],
+      "longitude": "117.939152",
+      "latitude": "40.976204"
+    },
+    {
+      "adcode": "130900",
+      "name": "沧州市",
+      "postal_code": "061000",
+      "districts": [
+        {
+          "adcode": "130902",
+          "name": "新华区",
+          "postal_code": "061000",
+          "longitude": "116.873049",
+          "latitude": "38.308273"
+        },
+        {
+          "adcode": "130903",
+          "name": "运河区",
+          "postal_code": "061001",
+          "longitude": "116.840063",
+          "latitude": "38.307405"
+        },
+        {
+          "adcode": "130921",
+          "name": "沧县",
+          "postal_code": "061000",
+          "longitude": "117.007478",
+          "latitude": "38.219856"
+        },
+        {
+          "adcode": "130922",
+          "name": "青县",
+          "postal_code": "062650",
+          "longitude": "116.838384",
+          "latitude": "38.569646"
+        },
+        {
+          "adcode": "130923",
+          "name": "东光县",
+          "postal_code": "061600",
+          "longitude": "116.542062",
+          "latitude": "37.88655"
+        },
+        {
+          "adcode": "130924",
+          "name": "海兴县",
+          "postal_code": "061200",
+          "longitude": "117.496606",
+          "latitude": "38.141582"
+        },
+        {
+          "adcode": "130925",
+          "name": "盐山县",
+          "postal_code": "061300",
+          "longitude": "117.229814",
+          "latitude": "38.056141"
+        },
+        {
+          "adcode": "130926",
+          "name": "肃宁县",
+          "postal_code": "062350",
+          "longitude": "115.835856",
+          "latitude": "38.427102"
+        },
+        {
+          "adcode": "130927",
+          "name": "南皮县",
+          "postal_code": "061500",
+          "longitude": "116.709171",
+          "latitude": "38.042439"
+        },
+        {
+          "adcode": "130928",
+          "name": "吴桥县",
+          "postal_code": "061800",
+          "longitude": "116.391512",
+          "latitude": "37.628182"
+        },
+        {
+          "adcode": "130929",
+          "name": "献县",
+          "postal_code": "062250",
+          "longitude": "116.123844",
+          "latitude": "38.189661"
+        },
+        {
+          "adcode": "130930",
+          "name": "孟村回族自治县",
+          "postal_code": "061400",
+          "longitude": "117.105104",
+          "latitude": "38.057953"
+        },
+        {
+          "adcode": "130981",
+          "name": "泊头市",
+          "postal_code": "062150",
+          "longitude": "116.570163",
+          "latitude": "38.073479"
+        },
+        {
+          "adcode": "130982",
+          "name": "任丘市",
+          "postal_code": "062550",
+          "longitude": "116.106764",
+          "latitude": "38.706513"
+        },
+        {
+          "adcode": "130983",
+          "name": "黄骅市",
+          "postal_code": "061100",
+          "longitude": "117.343803",
+          "latitude": "38.369238"
+        },
+        {
+          "adcode": "130984",
+          "name": "河间市",
+          "postal_code": "062450",
+          "longitude": "116.089452",
+          "latitude": "38.44149"
+        }
+      ],
+      "longitude": "116.857461",
+      "latitude": "38.310582"
+    },
+    {
+      "adcode": "131000",
+      "name": "廊坊市",
+      "postal_code": "065000",
+      "districts": [
+        {
+          "adcode": "131002",
+          "name": "安次区",
+          "postal_code": "065000",
+          "longitude": "116.694544",
+          "latitude": "39.502569"
+        },
+        {
+          "adcode": "131003",
+          "name": "广阳区",
+          "postal_code": "065001",
+          "longitude": "116.713708",
+          "latitude": "39.521931"
+        },
+        {
+          "adcode": "131022",
+          "name": "固安县",
+          "postal_code": "065500",
+          "longitude": "116.299894",
+          "latitude": "39.436468"
+        },
+        {
+          "adcode": "131023",
+          "name": "永清县",
+          "postal_code": "065600",
+          "longitude": "116.498089",
+          "latitude": "39.319717"
+        },
+        {
+          "adcode": "131024",
+          "name": "香河县",
+          "postal_code": "065400",
+          "longitude": "117.007161",
+          "latitude": "39.757212"
+        },
+        {
+          "adcode": "131025",
+          "name": "大城县",
+          "postal_code": "065900",
+          "longitude": "116.640735",
+          "latitude": "38.699215"
+        },
+        {
+          "adcode": "131026",
+          "name": "文安县",
+          "postal_code": "065800",
+          "longitude": "116.460107",
+          "latitude": "38.866801"
+        },
+        {
+          "adcode": "131028",
+          "name": "大厂回族自治县",
+          "postal_code": "065300",
+          "longitude": "116.986501",
+          "latitude": "39.889266"
+        },
+        {
+          "adcode": "131081",
+          "name": "霸州市",
+          "postal_code": "065700",
+          "longitude": "116.392021",
+          "latitude": "39.117331"
+        },
+        {
+          "adcode": "131082",
+          "name": "三河市",
+          "postal_code": "065200",
+          "longitude": "117.077018",
+          "latitude": "39.982778"
+        }
+      ],
+      "longitude": "116.704441",
+      "latitude": "39.523927"
+    },
+    {
+      "adcode": "131100",
+      "name": "衡水市",
+      "postal_code": "053000",
+      "districts": [
+        {
+          "adcode": "131102",
+          "name": "桃城区",
+          "postal_code": "053000",
+          "longitude": "115.694945",
+          "latitude": "37.732237"
+        },
+        {
+          "adcode": "131103",
+          "name": "冀州区",
+          "postal_code": "053200",
+          "longitude": "115.579173",
+          "latitude": "37.542788"
+        },
+        {
+          "adcode": "131121",
+          "name": "枣强县",
+          "postal_code": "053100",
+          "longitude": "115.726499",
+          "latitude": "37.511512"
+        },
+        {
+          "adcode": "131122",
+          "name": "武邑县",
+          "postal_code": "053400",
+          "longitude": "115.892415",
+          "latitude": "37.803774"
+        },
+        {
+          "adcode": "131123",
+          "name": "武强县",
+          "postal_code": "053300",
+          "longitude": "115.970236",
+          "latitude": "38.03698"
+        },
+        {
+          "adcode": "131124",
+          "name": "饶阳县",
+          "postal_code": "053900",
+          "longitude": "115.726577",
+          "latitude": "38.232671"
+        },
+        {
+          "adcode": "131125",
+          "name": "安平县",
+          "postal_code": "053600",
+          "longitude": "115.519627",
+          "latitude": "38.233511"
+        },
+        {
+          "adcode": "131126",
+          "name": "故城县",
+          "postal_code": "053800",
+          "longitude": "115.966747",
+          "latitude": "37.350981"
+        },
+        {
+          "adcode": "131127",
+          "name": "景县",
+          "postal_code": "053500",
+          "longitude": "116.258446",
+          "latitude": "37.686622"
+        },
+        {
+          "adcode": "131128",
+          "name": "阜城县",
+          "postal_code": "053700",
+          "longitude": "116.164727",
+          "latitude": "37.869945"
+        },
+        {
+          "adcode": "131182",
+          "name": "深州市",
+          "postal_code": "053800",
+          "longitude": "115.554596",
+          "latitude": "38.00347"
+        }
+      ],
+      "longitude": "115.665993",
+      "latitude": "37.735097"
+    }
+  ],
+  "longitude": "114.502461",
+  "latitude": "38.045474"
+}

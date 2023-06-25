@@ -1,0 +1,859 @@
+{
+  "adcode": "150000",
+  "name": "内蒙古自治区",
+  "postal_code": "010000",
+  "cities": [
+    {
+      "adcode": "150100",
+      "name": "呼和浩特市",
+      "postal_code": "010020",
+      "districts": [
+        {
+          "adcode": "150102",
+          "name": "新城区",
+          "postal_code": "010010",
+          "longitude": "111.685964",
+          "latitude": "40.826225"
+        },
+        {
+          "adcode": "150103",
+          "name": "回民区",
+          "postal_code": "010030",
+          "longitude": "111.662162",
+          "latitude": "40.815149"
+        },
+        {
+          "adcode": "150104",
+          "name": "玉泉区",
+          "postal_code": "010020",
+          "longitude": "111.66543",
+          "latitude": "40.799421"
+        },
+        {
+          "adcode": "150105",
+          "name": "赛罕区",
+          "postal_code": "010020",
+          "longitude": "111.698463",
+          "latitude": "40.807834"
+        },
+        {
+          "adcode": "150121",
+          "name": "土默特左旗",
+          "postal_code": "010100",
+          "longitude": "111.133615",
+          "latitude": "40.720416"
+        },
+        {
+          "adcode": "150122",
+          "name": "托克托县",
+          "postal_code": "010200",
+          "longitude": "111.197317",
+          "latitude": "40.276729"
+        },
+        {
+          "adcode": "150123",
+          "name": "和林格尔县",
+          "postal_code": "011500",
+          "longitude": "111.824143",
+          "latitude": "40.380288"
+        },
+        {
+          "adcode": "150124",
+          "name": "清水河县",
+          "postal_code": "011600",
+          "longitude": "111.67222",
+          "latitude": "39.912479"
+        },
+        {
+          "adcode": "150125",
+          "name": "武川县",
+          "postal_code": "011700",
+          "longitude": "111.456563",
+          "latitude": "41.094483"
+        }
+      ],
+      "longitude": "111.670801",
+      "latitude": "40.818311"
+    },
+    {
+      "adcode": "150200",
+      "name": "包头市",
+      "postal_code": "014025",
+      "districts": [
+        {
+          "adcode": "150202",
+          "name": "东河区",
+          "postal_code": "014040",
+          "longitude": "110.026895",
+          "latitude": "40.587056"
+        },
+        {
+          "adcode": "150203",
+          "name": "昆都仑区",
+          "postal_code": "014010",
+          "longitude": "109.822932",
+          "latitude": "40.661345"
+        },
+        {
+          "adcode": "150204",
+          "name": "青山区",
+          "postal_code": "014030",
+          "longitude": "109.880049",
+          "latitude": "40.668558"
+        },
+        {
+          "adcode": "150205",
+          "name": "石拐区",
+          "postal_code": "014070",
+          "longitude": "110.272565",
+          "latitude": "40.672094"
+        },
+        {
+          "adcode": "150206",
+          "name": "白云鄂博矿区",
+          "postal_code": "014080",
+          "longitude": "109.97016",
+          "latitude": "41.769246"
+        },
+        {
+          "adcode": "150207",
+          "name": "九原区",
+          "postal_code": "014060",
+          "longitude": "109.968122",
+          "latitude": "40.600581"
+        },
+        {
+          "adcode": "150221",
+          "name": "土默特右旗",
+          "postal_code": "014100",
+          "longitude": "110.526766",
+          "latitude": "40.566434"
+        },
+        {
+          "adcode": "150222",
+          "name": "固阳县",
+          "postal_code": "014200",
+          "longitude": "110.063421",
+          "latitude": "41.030004"
+        },
+        {
+          "adcode": "150223",
+          "name": "达尔罕茂明安联合旗",
+          "postal_code": "014500",
+          "longitude": "110.438452",
+          "latitude": "41.702836"
+        }
+      ],
+      "longitude": "109.840405",
+      "latitude": "40.658168"
+    },
+    {
+      "adcode": "150300",
+      "name": "乌海市",
+      "postal_code": "016000",
+      "districts": [
+        {
+          "adcode": "150302",
+          "name": "海勃湾区",
+          "postal_code": "016000",
+          "longitude": "106.817762",
+          "latitude": "39.673527"
+        },
+        {
+          "adcode": "150303",
+          "name": "海南区",
+          "postal_code": "016030",
+          "longitude": "106.884789",
+          "latitude": "39.44153"
+        },
+        {
+          "adcode": "150304",
+          "name": "乌达区",
+          "postal_code": "016040",
+          "longitude": "106.722711",
+          "latitude": "39.502288"
+        }
+      ],
+      "longitude": "106.825563",
+      "latitude": "39.673734"
+    },
+    {
+      "adcode": "150400",
+      "name": "赤峰市",
+      "postal_code": "024000",
+      "districts": [
+        {
+          "adcode": "150402",
+          "name": "红山区",
+          "postal_code": "024020",
+          "longitude": "118.961087",
+          "latitude": "42.269732"
+        },
+        {
+          "adcode": "150403",
+          "name": "元宝山区",
+          "postal_code": "024076",
+          "longitude": "119.289877",
+          "latitude": "42.041168"
+        },
+        {
+          "adcode": "150404",
+          "name": "松山区",
+          "postal_code": "024005",
+          "longitude": "118.938958",
+          "latitude": "42.281046"
+        },
+        {
+          "adcode": "150421",
+          "name": "阿鲁科尔沁旗",
+          "postal_code": "025550",
+          "longitude": "120.094969",
+          "latitude": "43.87877"
+        },
+        {
+          "adcode": "150422",
+          "name": "巴林左旗",
+          "postal_code": "025450",
+          "longitude": "119.391737",
+          "latitude": "43.980715"
+        },
+        {
+          "adcode": "150423",
+          "name": "巴林右旗",
+          "postal_code": "025150",
+          "longitude": "118.678347",
+          "latitude": "43.528963"
+        },
+        {
+          "adcode": "150424",
+          "name": "林西县",
+          "postal_code": "025250",
+          "longitude": "118.05775",
+          "latitude": "43.605326"
+        },
+        {
+          "adcode": "150425",
+          "name": "克什克腾旗",
+          "postal_code": "025350",
+          "longitude": "117.542465",
+          "latitude": "43.256233"
+        },
+        {
+          "adcode": "150426",
+          "name": "翁牛特旗",
+          "postal_code": "024500",
+          "longitude": "119.022619",
+          "latitude": "42.937128"
+        },
+        {
+          "adcode": "150428",
+          "name": "喀喇沁旗",
+          "postal_code": "024400",
+          "longitude": "118.708572",
+          "latitude": "41.92778"
+        },
+        {
+          "adcode": "150429",
+          "name": "宁城县",
+          "postal_code": "024200",
+          "longitude": "119.339242",
+          "latitude": "41.598692"
+        },
+        {
+          "adcode": "150430",
+          "name": "敖汉旗",
+          "postal_code": "024300",
+          "longitude": "119.906486",
+          "latitude": "42.287012"
+        }
+      ],
+      "longitude": "118.956806",
+      "latitude": "42.275317"
+    },
+    {
+      "adcode": "150500",
+      "name": "通辽市",
+      "postal_code": "028000",
+      "districts": [
+        {
+          "adcode": "150502",
+          "name": "科尔沁区",
+          "postal_code": "028000",
+          "longitude": "122.264042",
+          "latitude": "43.617422"
+        },
+        {
+          "adcode": "150521",
+          "name": "科尔沁左翼中旗",
+          "postal_code": "029300",
+          "longitude": "123.313873",
+          "latitude": "44.127166"
+        },
+        {
+          "adcode": "150522",
+          "name": "科尔沁左翼后旗",
+          "postal_code": "028100",
+          "longitude": "122.355155",
+          "latitude": "42.954564"
+        },
+        {
+          "adcode": "150523",
+          "name": "开鲁县",
+          "postal_code": "028400",
+          "longitude": "121.308797",
+          "latitude": "43.602432"
+        },
+        {
+          "adcode": "150524",
+          "name": "库伦旗",
+          "postal_code": "028200",
+          "longitude": "121.774886",
+          "latitude": "42.734692"
+        },
+        {
+          "adcode": "150525",
+          "name": "奈曼旗",
+          "postal_code": "028300",
+          "longitude": "120.662543",
+          "latitude": "42.84685"
+        },
+        {
+          "adcode": "150526",
+          "name": "扎鲁特旗",
+          "postal_code": "029100",
+          "longitude": "120.905275",
+          "latitude": "44.555294"
+        },
+        {
+          "adcode": "150571",
+          "name": "通辽经济技术开发区",
+          "postal_code": "028000",
+          "longitude": "122.255572",
+          "latitude": "43.657807"
+        },
+        {
+          "adcode": "150581",
+          "name": "霍林郭勒市",
+          "postal_code": "029200",
+          "longitude": "119.657862",
+          "latitude": "45.532361"
+        }
+      ],
+      "longitude": "122.263119",
+      "latitude": "43.617429"
+    },
+    {
+      "adcode": "150600",
+      "name": "鄂尔多斯市",
+      "postal_code": "017000",
+      "districts": [
+        {
+          "adcode": "150602",
+          "name": "东胜区",
+          "postal_code": "017000",
+          "longitude": "109.98945",
+          "latitude": "39.81788"
+        },
+        {
+          "adcode": "150603",
+          "name": "康巴什区",
+          "postal_code": "017010",
+          "longitude": "109.790076",
+          "latitude": "39.607472"
+        },
+        {
+          "adcode": "150621",
+          "name": "达拉特旗",
+          "postal_code": "014300",
+          "longitude": "110.040281",
+          "latitude": "40.404076"
+        },
+        {
+          "adcode": "150622",
+          "name": "准格尔旗",
+          "postal_code": "017100",
+          "longitude": "111.238332",
+          "latitude": "39.865221"
+        },
+        {
+          "adcode": "150623",
+          "name": "鄂托克前旗",
+          "postal_code": "016200",
+          "longitude": "107.48172",
+          "latitude": "38.183257"
+        },
+        {
+          "adcode": "150624",
+          "name": "鄂托克旗",
+          "postal_code": "016100",
+          "longitude": "107.982604",
+          "latitude": "39.095752"
+        },
+        {
+          "adcode": "150625",
+          "name": "杭锦旗",
+          "postal_code": "017400",
+          "longitude": "108.736324",
+          "latitude": "39.831789"
+        },
+        {
+          "adcode": "150626",
+          "name": "乌审旗",
+          "postal_code": "017300",
+          "longitude": "108.842454",
+          "latitude": "38.596611"
+        },
+        {
+          "adcode": "150627",
+          "name": "伊金霍洛旗",
+          "postal_code": "017200",
+          "longitude": "109.787402",
+          "latitude": "39.604312"
+        }
+      ],
+      "longitude": "109.99029",
+      "latitude": "39.817179"
+    },
+    {
+      "adcode": "150700",
+      "name": "呼伦贝尔市",
+      "postal_code": "021008",
+      "districts": [
+        {
+          "adcode": "150702",
+          "name": "海拉尔区",
+          "postal_code": "021000",
+          "longitude": "119.764923",
+          "latitude": "49.213889"
+        },
+        {
+          "adcode": "150703",
+          "name": "扎赉诺尔区",
+          "postal_code": "021410",
+          "longitude": "117.716373",
+          "latitude": "49.456567"
+        },
+        {
+          "adcode": "150721",
+          "name": "阿荣旗",
+          "postal_code": "162750",
+          "longitude": "123.464615",
+          "latitude": "48.130503"
+        },
+        {
+          "adcode": "150722",
+          "name": "莫力达瓦达斡尔族自治旗",
+          "postal_code": "162850",
+          "longitude": "124.507401",
+          "latitude": "48.478385"
+        },
+        {
+          "adcode": "150723",
+          "name": "鄂伦春自治旗",
+          "postal_code": "165450",
+          "longitude": "123.725684",
+          "latitude": "50.590177"
+        },
+        {
+          "adcode": "150724",
+          "name": "鄂温克族自治旗",
+          "postal_code": "021100",
+          "longitude": "119.754041",
+          "latitude": "49.143293"
+        },
+        {
+          "adcode": "150725",
+          "name": "陈巴尔虎旗",
+          "postal_code": "021500",
+          "longitude": "119.437609",
+          "latitude": "49.328422"
+        },
+        {
+          "adcode": "150726",
+          "name": "新巴尔虎左旗",
+          "postal_code": "021200",
+          "longitude": "118.267454",
+          "latitude": "48.216571"
+        },
+        {
+          "adcode": "150727",
+          "name": "新巴尔虎右旗",
+          "postal_code": "021300",
+          "longitude": "116.825991",
+          "latitude": "48.669134"
+        },
+        {
+          "adcode": "150781",
+          "name": "满洲里市",
+          "postal_code": "021400",
+          "longitude": "117.455561",
+          "latitude": "49.590788"
+        },
+        {
+          "adcode": "150782",
+          "name": "牙克石市",
+          "postal_code": "022150",
+          "longitude": "120.729005",
+          "latitude": "49.287024"
+        },
+        {
+          "adcode": "150783",
+          "name": "扎兰屯市",
+          "postal_code": "162650",
+          "longitude": "122.744401",
+          "latitude": "48.007412"
+        },
+        {
+          "adcode": "150784",
+          "name": "额尔古纳市",
+          "postal_code": "022250",
+          "longitude": "120.178636",
+          "latitude": "50.2439"
+        },
+        {
+          "adcode": "150785",
+          "name": "根河市",
+          "postal_code": "022350",
+          "longitude": "121.532724",
+          "latitude": "50.780454"
+        }
+      ],
+      "longitude": "119.758168",
+      "latitude": "49.215333"
+    },
+    {
+      "adcode": "150800",
+      "name": "巴彦淖尔市",
+      "postal_code": "015001",
+      "districts": [
+        {
+          "adcode": "150802",
+          "name": "临河区",
+          "postal_code": "015001",
+          "longitude": "107.417018",
+          "latitude": "40.757092"
+        },
+        {
+          "adcode": "150821",
+          "name": "五原县",
+          "postal_code": "015100",
+          "longitude": "108.270658",
+          "latitude": "41.097639"
+        },
+        {
+          "adcode": "150822",
+          "name": "磴口县",
+          "postal_code": "015200",
+          "longitude": "107.006056",
+          "latitude": "40.330479"
+        },
+        {
+          "adcode": "150823",
+          "name": "乌拉特前旗",
+          "postal_code": "014400",
+          "longitude": "108.656816",
+          "latitude": "40.725209"
+        },
+        {
+          "adcode": "150824",
+          "name": "乌拉特中旗",
+          "postal_code": "015300",
+          "longitude": "108.515255",
+          "latitude": "41.57254"
+        },
+        {
+          "adcode": "150825",
+          "name": "乌拉特后旗",
+          "postal_code": "015500",
+          "longitude": "107.074941",
+          "latitude": "41.084307"
+        },
+        {
+          "adcode": "150826",
+          "name": "杭锦后旗",
+          "postal_code": "015400",
+          "longitude": "107.147682",
+          "latitude": "40.888797"
+        }
+      ],
+      "longitude": "107.416959",
+      "latitude": "40.757402"
+    },
+    {
+      "adcode": "150900",
+      "name": "乌兰察布市",
+      "postal_code": "012000",
+      "districts": [
+        {
+          "adcode": "150902",
+          "name": "集宁区",
+          "postal_code": "012000",
+          "longitude": "113.116453",
+          "latitude": "41.034134"
+        },
+        {
+          "adcode": "150921",
+          "name": "卓资县",
+          "postal_code": "012300",
+          "longitude": "112.577702",
+          "latitude": "40.89576"
+        },
+        {
+          "adcode": "150922",
+          "name": "化德县",
+          "postal_code": "013350",
+          "longitude": "114.01008",
+          "latitude": "41.899335"
+        },
+        {
+          "adcode": "150923",
+          "name": "商都县",
+          "postal_code": "013400",
+          "longitude": "113.560643",
+          "latitude": "41.560163"
+        },
+        {
+          "adcode": "150924",
+          "name": "兴和县",
+          "postal_code": "013650",
+          "longitude": "113.834009",
+          "latitude": "40.872437"
+        },
+        {
+          "adcode": "150925",
+          "name": "凉城县",
+          "postal_code": "013750",
+          "longitude": "112.500911",
+          "latitude": "40.531627"
+        },
+        {
+          "adcode": "150926",
+          "name": "察哈尔右翼前旗",
+          "postal_code": "012200",
+          "longitude": "113.211958",
+          "latitude": "40.786859"
+        },
+        {
+          "adcode": "150927",
+          "name": "察哈尔右翼中旗",
+          "postal_code": "013550",
+          "longitude": "112.633563",
+          "latitude": "41.274212"
+        },
+        {
+          "adcode": "150928",
+          "name": "察哈尔右翼后旗",
+          "postal_code": "012400",
+          "longitude": "113.1906",
+          "latitude": "41.447213"
+        },
+        {
+          "adcode": "150929",
+          "name": "四子王旗",
+          "postal_code": "011800",
+          "longitude": "111.70123",
+          "latitude": "41.528114"
+        },
+        {
+          "adcode": "150981",
+          "name": "丰镇市",
+          "postal_code": "012100",
+          "longitude": "113.163462",
+          "latitude": "40.437534"
+        }
+      ],
+      "longitude": "113.114543",
+      "latitude": "41.034126"
+    },
+    {
+      "adcode": "152200",
+      "name": "兴安盟",
+      "postal_code": "137401",
+      "districts": [
+        {
+          "adcode": "152201",
+          "name": "乌兰浩特市",
+          "postal_code": "137400",
+          "longitude": "122.068975",
+          "latitude": "46.077238"
+        },
+        {
+          "adcode": "152202",
+          "name": "阿尔山市",
+          "postal_code": "137800",
+          "longitude": "119.943656",
+          "latitude": "47.177"
+        },
+        {
+          "adcode": "152221",
+          "name": "科尔沁右翼前旗",
+          "postal_code": "137400",
+          "longitude": "121.957544",
+          "latitude": "46.076497"
+        },
+        {
+          "adcode": "152222",
+          "name": "科尔沁右翼中旗",
+          "postal_code": "029400",
+          "longitude": "121.472818",
+          "latitude": "45.059645"
+        },
+        {
+          "adcode": "152223",
+          "name": "扎赉特旗",
+          "postal_code": "137600",
+          "longitude": "122.909332",
+          "latitude": "46.725136"
+        },
+        {
+          "adcode": "152224",
+          "name": "突泉县",
+          "postal_code": "137500",
+          "longitude": "121.564856",
+          "latitude": "45.380986"
+        }
+      ],
+      "longitude": "122.070317",
+      "latitude": "46.076268"
+    },
+    {
+      "adcode": "152500",
+      "name": "锡林郭勒盟",
+      "postal_code": "026000",
+      "districts": [
+        {
+          "adcode": "152501",
+          "name": "二连浩特市",
+          "postal_code": "011100",
+          "longitude": "111.97981",
+          "latitude": "43.652895"
+        },
+        {
+          "adcode": "152502",
+          "name": "锡林浩特市",
+          "postal_code": "026021",
+          "longitude": "116.091903",
+          "latitude": "43.944301"
+        },
+        {
+          "adcode": "152522",
+          "name": "阿巴嘎旗",
+          "postal_code": "011400",
+          "longitude": "114.970618",
+          "latitude": "44.022728"
+        },
+        {
+          "adcode": "152523",
+          "name": "苏尼特左旗",
+          "postal_code": "011300",
+          "longitude": "113.653412",
+          "latitude": "43.854108"
+        },
+        {
+          "adcode": "152524",
+          "name": "苏尼特右旗",
+          "postal_code": "011200",
+          "longitude": "112.65539",
+          "latitude": "42.746662"
+        },
+        {
+          "adcode": "152525",
+          "name": "东乌珠穆沁旗",
+          "postal_code": "026300",
+          "longitude": "116.980022",
+          "latitude": "45.510307"
+        },
+        {
+          "adcode": "152526",
+          "name": "西乌珠穆沁旗",
+          "postal_code": "026200",
+          "longitude": "117.615249",
+          "latitude": "44.586147"
+        },
+        {
+          "adcode": "152527",
+          "name": "太仆寺旗",
+          "postal_code": "027000",
+          "longitude": "115.28728",
+          "latitude": "41.895199"
+        },
+        {
+          "adcode": "152528",
+          "name": "镶黄旗",
+          "postal_code": "013250",
+          "longitude": "113.843869",
+          "latitude": "42.239229"
+        },
+        {
+          "adcode": "152529",
+          "name": "正镶白旗",
+          "postal_code": "013800",
+          "longitude": "115.031423",
+          "latitude": "42.286807"
+        },
+        {
+          "adcode": "152530",
+          "name": "正蓝旗",
+          "postal_code": "027200",
+          "longitude": "116.003311",
+          "latitude": "42.245895"
+        },
+        {
+          "adcode": "152531",
+          "name": "多伦县",
+          "postal_code": "027300",
+          "longitude": "116.477288",
+          "latitude": "42.197962"
+        },
+        {
+          "adcode": "152571",
+          "name": "乌拉盖管委会",
+          "postal_code": "026000",
+          "longitude": "118.845168",
+          "latitude": "45.71698"
+        }
+      ],
+      "longitude": "116.090996",
+      "latitude": "43.944018"
+    },
+    {
+      "adcode": "152900",
+      "name": "阿拉善盟",
+      "postal_code": "750306",
+      "districts": [
+        {
+          "adcode": "152921",
+          "name": "阿拉善左旗",
+          "postal_code": "750306",
+          "longitude": "105.70192",
+          "latitude": "38.847241"
+        },
+        {
+          "adcode": "152922",
+          "name": "阿拉善右旗",
+          "postal_code": "737300",
+          "longitude": "101.671984",
+          "latitude": "39.21159"
+        },
+        {
+          "adcode": "152923",
+          "name": "额济纳旗",
+          "postal_code": "735400",
+          "longitude": "101.06944",
+          "latitude": "41.958813"
+        },
+        {
+          "adcode": "152971",
+          "name": "内蒙古阿拉善经济开发区",
+          "postal_code": "750306",
+          "longitude": "106.687811",
+          "latitude": "39.407543"
+        }
+      ],
+      "longitude": "105.706422",
+      "latitude": "38.844814"
+    }
+  ],
+  "longitude": "111.670801",
+  "latitude": "40.818311"
+}

@@ -1,0 +1,139 @@
+{
+  "adcode": "810000",
+  "name": "香港特别行政区",
+  "postal_code": "999077",
+  "cities": [
+    {
+      "districts": [
+        {
+          "adcode": "810001",
+          "name": "中西区",
+          "postal_code": "999077",
+          "longitude": "114.1543731",
+          "latitude": "22.28198083"
+        },
+        {
+          "adcode": "810002",
+          "name": "湾仔区",
+          "postal_code": "999077",
+          "longitude": "114.1829153",
+          "latitude": "22.27638889"
+        },
+        {
+          "adcode": "810003",
+          "name": "东区",
+          "postal_code": "999077",
+          "longitude": "114.2260031",
+          "latitude": "22.27969306"
+        },
+        {
+          "adcode": "810004",
+          "name": "南区",
+          "postal_code": "999077",
+          "longitude": "114.1600117",
+          "latitude": "22.24589667"
+        },
+        {
+          "adcode": "810005",
+          "name": "油尖旺区",
+          "postal_code": "999077",
+          "longitude": "114.1733317",
+          "latitude": "22.31170389"
+        },
+        {
+          "adcode": "810006",
+          "name": "深水埗区",
+          "postal_code": "999077",
+          "longitude": "114.1632417",
+          "latitude": "22.33385417"
+        },
+        {
+          "adcode": "810007",
+          "name": "九龙城区",
+          "postal_code": "999077",
+          "longitude": "114.1928467",
+          "latitude": "22.31251"
+        },
+        {
+          "adcode": "810008",
+          "name": "黄大仙区",
+          "postal_code": "999077",
+          "longitude": "114.2038856",
+          "latitude": "22.33632056"
+        },
+        {
+          "adcode": "810009",
+          "name": "观塘区",
+          "postal_code": "999077",
+          "longitude": "114.2140542",
+          "latitude": "22.32083778"
+        },
+        {
+          "adcode": "810010",
+          "name": "荃湾区",
+          "postal_code": "999077",
+          "longitude": "114.1210792",
+          "latitude": "22.36830667"
+        },
+        {
+          "adcode": "810011",
+          "name": "屯门区",
+          "postal_code": "999077",
+          "longitude": "113.9765742",
+          "latitude": "22.39384417"
+        },
+        {
+          "adcode": "810012",
+          "name": "元朗区",
+          "postal_code": "999077",
+          "longitude": "114.0324381",
+          "latitude": "22.44142833"
+        },
+        {
+          "adcode": "810013",
+          "name": "北区",
+          "postal_code": "999077",
+          "longitude": "114.1473639",
+          "latitude": "22.49610389"
+        },
+        {
+          "adcode": "810014",
+          "name": "大埔区",
+          "postal_code": "999077",
+          "longitude": "114.1717431",
+          "latitude": "22.44565306"
+        },
+        {
+          "adcode": "810015",
+          "name": "西贡区",
+          "postal_code": "999077",
+          "longitude": "114.264645",
+          "latitude": "22.31421306"
+        },
+        {
+          "adcode": "810016",
+          "name": "沙田区",
+          "postal_code": "999077",
+          "longitude": "114.1953653",
+          "latitude": "22.37953167"
+        },
+        {
+          "adcode": "810017",
+          "name": "葵青区",
+          "postal_code": "999077",
+          "longitude": "114.1393194",
+          "latitude": "22.36387667"
+        },
+        {
+          "adcode": "810018",
+          "name": "离岛区",
+          "postal_code": "999077",
+          "longitude": "113.94612",
+          "latitude": "22.28640778"
+        }
+      ]
+    }
+  ],
+  "longitude": "114.1543731",
+  "latitude": "22.28198083"
+}
