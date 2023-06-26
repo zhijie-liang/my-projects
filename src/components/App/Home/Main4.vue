@@ -97,18 +97,18 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        visualMap: {
-          type: "piecewise",
-          pieces: [
-            { min: 100000000, label: ">100000000", color: "#9dc49f" },
-            { min: 10000000, max: 99999999, label: "10000000-99999999", color: "#a8caa9" },
-            { min: 1000000, max: 9999999, label: "1000000-9999999", color: "#b3d1b4" },
-            { max: 999999, label: "<1000000", color: "#bed7bf" },
-          ],
-          orient: "vertical",
-          left: "20",
-          top: "400",
-        },
+        // visualMap: {
+        //   type: "piecewise",
+        //   pieces: [
+        //     { min: 100000000, label: ">100000000", color: "#9dc49f" },
+        //     { min: 10000000, max: 99999999, label: "10000000-99999999", color: "#a8caa9" },
+        //     { min: 1000000, max: 9999999, label: "1000000-9999999", color: "#b3d1b4" },
+        //     { max: 999999, label: "<1000000", color: "#bed7bf" },
+        //   ],
+        //   orient: "vertical",
+        //   left: "20",
+        //   top: "400",
+        // },
         backgroundColor: "white",
         tooltip: {
           formatter: "{b}<br/>{c}",

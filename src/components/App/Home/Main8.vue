@@ -20,6 +20,12 @@ export default {
           {
             type: "map",
             map: "chinamap",
+            zlevel: 5,
+            label: {
+              show: true,
+              fontSize: 10,
+              color: "#a3c36a",
+            },
           },
         ],
       },
@@ -27,11 +33,33 @@ export default {
   },
   mounted() {
     this.initCharts();
+    this.$refs.charts.addEventListener("click", this.handleMapClick);
+  },
+  beforeDestroy() {
+    this.$refs.charts.removeEventListener("click", this.handleMapClick);
   },
   methods: {
     initCharts() {
-      this.charts = echarts.init(this.$refs["charts"]);
+      this.charts = echarts.init(this.$refs.charts);
+      this.registerMap();
       this.charts.setOption(this.option);
+    },
+    registerMap() {
+      echarts.registerMap(this.mapName, this.mapJson);
+    },
+    handleMapClick(event) {
+      const clickedRegion = event.target.getAttribute("name");
+
+      if (clickedRegion === this.highlightedRegion) {
+        // 如果点击的是已经高亮的区域，则输出"已经高亮"
+        console.log("已经高亮");
+      } else if (clickedRegion) {
+        // 如果点击的是未高亮的区域，则输出"未高亮"
+        console.log("未高亮");
+      } else {
+        // 如果点击的是地图区域之外的区域，则输出"空白"
+        console.log("空白");
+      }
     },
   },
 };
