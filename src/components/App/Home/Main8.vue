@@ -26,6 +26,7 @@ export default {
               fontSize: 10,
               color: "#a3c36a",
             },
+            emphasis: { disabled: false },
           },
         ],
       },

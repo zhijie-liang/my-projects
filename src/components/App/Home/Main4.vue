@@ -9,16 +9,13 @@
 import * as echarts from "echarts";
 import axios from "axios";
 
-
 export default {
   name: "ChinaMap",
   data() {
     return {
       chart: null, // 图表实例
       mapData: null, // 地图数据
-      series: [
-        { name: "adcode", data: [] },
-      ],
+      series: [{ name: "adcode", data: [] }],
     };
   },
   mounted() {
@@ -115,15 +112,36 @@ export default {
         },
         toolbox: {
           feature: {
+            saveAsImage: {},
             restore: {},
+            dataView: {},
+            dataZoom: {},
+            magicType: {
+              // type: ["line", "bar", "stack"],
+            },
+            brush: {},
           },
         },
+        aria: {
+        // 下面几行可以不写，因为 label.enabled 默认 true
+        label: {
+            enabled: true
+        },
+        enabled: true
+    },
         series: [
           {
             name: "adcode",
             map: "chinamap",
             type: "map",
+            // colorBy : "series",
+
+            // selectedMode: "multiple",
             roam: true,
+            //         projection: {
+            //     project: (point) => [point[0] / 180 * Math.PI, -Math.log(Math.tan((Math.PI / 2 + point[1] / 180 * Math.PI) / 2))],
+            //     unproject: (point) => [point[0] * 180 / Math.PI, 2 * 180 / Math.PI * Math.atan(Math.exp(point[1])) - 90]
+            // },
             // color: "#9dc49f",
             animationDurationUpdate: 0,
             // geoIndex: 0,
@@ -139,6 +157,7 @@ export default {
               borderColor: "#579bd3",
             },
             emphasis: {
+              // disabled: true,
               label: {
                 show: true,
                 fontSize: 16,
@@ -149,10 +168,13 @@ export default {
               },
             },
             select: {
+              disabled: true,
               itemStyle: {
                 areaColor: "#579bd3",
               },
             },
+            // labelLine: { show: true, showAbove: top },
+            // layoutSize: 100,
             data: this.mapData.features.map(item => {
               return {
                 name: item.properties.name,

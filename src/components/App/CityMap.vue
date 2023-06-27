@@ -7,7 +7,7 @@
 <script>
 import * as echarts from "echarts";
 // import chinamap from "../map/dtsj/100000副.json";
-import chinamap from "../map/dtsj/provinces/350000.json";
+import chinamap from "../map/dtsj/provinces/310000.json";
 import axios from "axios";
 echarts.registerMap("chinamap", chinamap);
 var provinces = [
@@ -100,7 +100,7 @@ export default {
       const option = {
         //以下是地图右侧“还原”“下载”工具框
         toolbox: {
-          show: true,
+          show: false,
           orient: "vertical",
           left: "right",
           top: "center",
@@ -119,7 +119,7 @@ export default {
             normal: {
               show: true, // 是否显示对应地名
               textStyle: {
-                color: "rgba(0,0,0)",
+                color: "rgba(255,255,255)",
               },
             },
           },
