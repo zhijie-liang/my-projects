@@ -1,460 +1,249 @@
 <template>
   <div class="content">
-    <div ref="charts" style="width: 100%; height: 100%; margin: 0 auto"></div>
+    <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
+    <el-button @click="changeBG" class="changeBG-btn" style="color: #333">
+      {{ cbc ? "透明" : "白色" }}
+    </el-button>
+    <el-button @click="changePN" class="changePN-btn" style="color: #333">
+      {{ showMapLabel ? "取消" : "恢复" }}
+    </el-button>
+    <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
 
 <script>
 import * as echarts from "echarts";
-import chinamap from "../../map/dtsj/100000副";
+import axios from "axios";
+
 export default {
+  name: "ChinaMap",
   data() {
     return {
-      mapName: "chinamap",
-      mapJson: chinamap,
-      charts: null,
-      option: {
-        color: ["#9d70e3", "#9d70e3"],
-        textStyle: { fontFamily: "Microsoft YaHei", fontSize: 12, fontStyle: "normal", fontWeight: "normal" },
-        animation: "auto",
-        animationDuration: 1000,
-        animationDurationUpdate: 300,
-        animationEasing: "exponentialOut",
-        animationEasingUpdate: "cubicOut",
-        animationThreshold: 2000,
-        progressiveThreshold: 3000,
-        progressive: 400,
-        hoverLayerThreshold: 3000,
-        useUTC: false,
-        title: [
-          {
-            text: "地图",
-            subtext: "副标题",
-            left: "center",
-            zlevel: 0,
-            z: 6,
-            show: true,
-            target: "blank",
-            subtarget: "blank",
-            top: 0,
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "#ccc",
-            borderWidth: 0,
-            padding: 5,
-            itemGap: 10,
-            textStyle: { fontSize: 18, fontWeight: "bolder", color: "#333" },
-            subtextStyle: { color: "#aaa" },
-            right: null,
-          },
-        ],
-        geo: [
-          {
-            map: "chinamap",
-            zoom: 1,
-            roam: true,
-            label: {
-              normal: { show: false, textStyle: { color: "#000" } },
-              emphasis: { show: false, textStyle: { color: "rgb(100,0,0)" } },
-            },
-            itemStyle: {
-              normal: {
-                label: { show: true },
-                borderColor: "#80a9c3",
-                areaStyle: { color: "fff" },
-                borderWidth: 0.5,
-                color: "#eee",
-              },
-              emphasis: { label: { show: false }, color: "rgba(255,215,0,0.8)" },
-            },
-            zlevel: 0,
-            z: 0,
-            show: true,
-            left: "center",
-            top: "center",
-            aspectScale: 0.75,
-            silent: false,
-            boundingCoords: null,
-            center: null,
-            scaleLimit: null,
-            regions: [
-              { name: "台湾" },
-              { name: "河北" },
-              { name: "山西" },
-              { name: "内蒙古" },
-              { name: "辽宁" },
-              { name: "吉林" },
-              { name: "黑龙江" },
-              { name: "江苏" },
-              { name: "浙江" },
-              { name: "安徽" },
-              { name: "福建" },
-              { name: "江西" },
-              { name: "山东" },
-              { name: "河南" },
-              { name: "湖北" },
-              { name: "湖南" },
-              { name: "广东" },
-              { name: "广西" },
-              { name: "海南" },
-              { name: "四川" },
-              { name: "贵州" },
-              { name: "云南" },
-              { name: "西藏" },
-              { name: "陕西" },
-              { name: "甘肃" },
-              { name: "青海" },
-              { name: "宁夏" },
-              { name: "新疆" },
-              { name: "北京" },
-              { name: "天津" },
-              { name: "上海" },
-              { name: "重庆" },
-              { name: "香港" },
-              { name: "澳门" },
-            ],
-          },
-        ],
-        axisPointer: [
-          {
-            show: "auto",
-            triggerOn: null,
-            zlevel: 0,
-            z: 50,
-            type: "line",
-            snap: false,
-            triggerTooltip: true,
-            value: null,
-            status: null,
-            link: [],
-            animation: null,
-            animationDurationUpdate: 200,
-            lineStyle: { color: "#aaa", width: 1, type: "solid" },
-            shadowStyle: { color: "rgba(150,150,150,0.3)" },
-            label: {
-              show: true,
-              formatter: null,
-              precision: "auto",
-              margin: 3,
-              textStyle: { color: "#fff" },
-              padding: [5, 7, 5, 7],
-              backgroundColor: "auto",
-              borderColor: null,
-              borderWidth: 0,
-              shadowBlur: 3,
-              shadowColor: "#aaa",
-            },
-            handle: {
-              show: false,
-              icon: "M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7v-1.2h6.6z M13.3,22H6.7v-1.2h6.6z M13.3,19.6H6.7v-1.2h6.6z",
-              size: 45,
-              margin: 50,
-              color: "#333",
-              shadowBlur: 3,
-              shadowColor: "#aaa",
-              shadowOffsetX: 0,
-              shadowOffsetY: 2,
-              throttle: 40,
-            },
-          },
-        ],
-        tooltip: [
-          {
-            detail: true,
-            zlevel: 0,
-            z: 8,
-            show: true,
-            showContent: true,
-            trigger: "item",
-            triggerOn: "mousemove|click",
-            alwaysShowContent: false,
-            displayMode: "single",
-            confine: false,
-            showDelay: 0,
-            hideDelay: 100,
-            transitionDuration: 0.4,
-            enterable: false,
-            backgroundColor: "rgba(50,50,50,0.7)",
-            borderColor: "#333",
-            borderRadius: 4,
-            borderWidth: 0,
-            padding: 5,
-            extraCssText: "",
-            axisPointer: {
-              type: "line",
-              axis: "auto",
-              animation: "auto",
-              animationDurationUpdate: 200,
-              animationEasingUpdate: "exponentialOut",
-              crossStyle: { color: "#999", width: 1, type: "dashed", textStyle: {} },
-            },
-            textStyle: { color: "#fff", fontSize: 14 },
-          },
-        ],
-        series: [
-          {
-            name: "流入",
-            type: "map",
-            mapType: "china",
-            showLegendSymbol: false,
-            itemStyle: {
-              normal: { areaColor: "#ecf9ff", borderColor: "#8fc3e8", borderWidth: 0.5 },
-              emphasis: { label: null, areaColor: "#ff9a4a" },
-            },
-            label: {
-              normal: { show: false, textStyle: { color: "#000" } },
-              emphasis: { show: true, textStyle: { color: "rgb(100,0,0)" } },
-            },
-            data: [
-              { name: "四川", value: 1000 },
-              { name: "西藏", value: 300 },
-              { name: "广西", value: 900 },
-              { name: "青海", value: 300 },
-              { name: "甘肃", value: 500 },
-              { name: "陕西", value: 500 },
-              { name: "河北", value: 850 },
-              { name: "北京", value: 610 },
-              { name: "河南", value: 530 },
-              { name: "海南", value: 950 },
-              { name: "云南", value: 550 },
-              { name: "北海", value: 50 },
-              { name: "海口", value: 50 },
-              { name: "昆明", value: 50 },
-              { name: "台湾" },
-              { name: "山西" },
-              { name: "内蒙古" },
-              { name: "辽宁" },
-              { name: "吉林" },
-              { name: "黑龙江" },
-              { name: "江苏" },
-              { name: "浙江" },
-              { name: "安徽" },
-              { name: "福建" },
-              { name: "江西" },
-              { name: "山东" },
-              { name: "湖北" },
-              { name: "湖南" },
-              { name: "广东" },
-              { name: "贵州" },
-              { name: "宁夏" },
-              { name: "新疆" },
-              { name: "天津" },
-              { name: "上海" },
-              { name: "重庆" },
-              { name: "香港" },
-              { name: "澳门" },
-            ],
-            zoom: 1,
-            roam: true,
-            map: "chinamap",
-            zlevel: 0,
-            z: 2,
-            coordinateSystem: "geo",
-            left: "center",
-            top: "center",
-            aspectScale: 0.75,
-            dataRangeHoverLink: true,
-            boundingCoords: null,
-            center: null,
-            scaleLimit: null,
-          },
-          {
-            name: "流出",
-            type: "map",
-            mapType: "china",
-            showLegendSymbol: false,
-            itemStyle: {
-              normal: { areaColor: "#ecf9ff", borderColor: "#8fc3e8", borderWidth: 0.5 },
-              emphasis: { label: null, areaColor: "#ff9a4a" },
-            },
-            label: {
-              normal: { show: false, textStyle: { color: "#000" } },
-              emphasis: { show: true, textStyle: { color: "rgb(100,0,0)" } },
-            },
-            data: [
-              { name: "四川", value: 500 },
-              { name: "西藏", value: 700 },
-              { name: "广西", value: 50 },
-              { name: "青海", value: 50 },
-              { name: "甘肃", value: 1000 },
-              { name: "陕西", value: 500 },
-              { name: "河北", value: 750 },
-              { name: "北京", value: 558 },
-              { name: "河南", value: 750 },
-              { name: "海南", value: 950 },
-              { name: "云南", value: 950 },
-              { name: "北海", value: 50 },
-              { name: "海口", value: 50 },
-              { name: "昆明", value: 50 },
-              { name: "台湾" },
-              { name: "山西" },
-              { name: "内蒙古" },
-              { name: "辽宁" },
-              { name: "吉林" },
-              { name: "黑龙江" },
-              { name: "江苏" },
-              { name: "浙江" },
-              { name: "安徽" },
-              { name: "福建" },
-              { name: "江西" },
-              { name: "山东" },
-              { name: "湖北" },
-              { name: "湖南" },
-              { name: "广东" },
-              { name: "贵州" },
-              { name: "宁夏" },
-              { name: "新疆" },
-              { name: "天津" },
-              { name: "上海" },
-              { name: "重庆" },
-              { name: "香港" },
-              { name: "澳门" },
-            ],
-            zoom: 1,
-            roam: true,
-            map: "chinamap",
-            zlevel: 0,
-            z: 2,
-            coordinateSystem: "geo",
-            left: "center",
-            top: "center",
-            aspectScale: 0.75,
-            dataRangeHoverLink: true,
-            boundingCoords: null,
-            center: null,
-            scaleLimit: null,
-          },
-        ],
-        markArea: [
-          {
-            zlevel: 0,
-            z: 1,
-            tooltip: { trigger: "item" },
-            animation: false,
-            label: { normal: { show: true, position: "top" }, emphasis: { show: true, position: "top" } },
-            itemStyle: { normal: { borderWidth: 0 } },
-          },
-        ],
-        markLine: [
-          {
-            zlevel: 0,
-            z: 5,
-            symbol: ["circle", "arrow"],
-            symbolSize: [8, 16],
-            precision: 2,
-            tooltip: { trigger: "item" },
-            label: { normal: { show: true, position: "end" }, emphasis: { show: true } },
-            lineStyle: { normal: { type: "dashed" }, emphasis: { width: 3 } },
-            animationEasing: "linear",
-          },
-        ],
-        markPoint: [
-          {
-            zlevel: 0,
-            z: 5,
-            symbol: "pin",
-            symbolSize: 50,
-            tooltip: { trigger: "item" },
-            label: { normal: { show: true, position: "inside" }, emphasis: { show: true } },
-            itemStyle: { normal: { borderWidth: 2 } },
-          },
-        ],
-        marker: [],
-        visualMap: [
-          {
-            min: 0,
-            max: 1900,
-            left: "left",
-            top: "bottom",
-            text: ["高", "低"],
-            calculable: true,
-            inRange: { color: ["#ddf5ff", "#5fb0ff"] },
-            show: true,
-            zlevel: 0,
-            z: 4,
-            seriesIndex: [0, 1],
-            dimension: null,
-            outOfRange: null,
-            right: null,
-            bottom: null,
-            itemWidth: null,
-            itemHeight: null,
-            inverse: false,
-            orient: "vertical",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "#ccc",
-            contentColor: "#5793f3",
-            inactiveColor: "#aaa",
-            borderWidth: 0,
-            padding: 5,
-            textGap: 10,
-            precision: 0,
-            color: null,
-            formatter: null,
-            textStyle: { color: "#333" },
-            align: "auto",
-            range: [0, 1900],
-            realtime: true,
-            hoverLink: true,
-            hoverLinkDataSize: null,
-            hoverLinkOnHandle: true,
-            target: {
-              inRange: { color: ["#ddf5ff", "#5fb0ff"] },
-              outOfRange: { color: ["rgba(0,0,0,0)"], opacity: [0, 0] },
-            },
-            controller: {
-              inRange: { color: ["#ddf5ff", "#5fb0ff"], symbol: ["roundRect"], symbolSize: [20, 20] },
-              outOfRange: { color: ["#aaa"], symbol: ["roundRect"], symbolSize: [20, 20] },
-            },
-          },
-        ],
-        dataZoom: [],
-        brush: [],
-        legend: [
-          {
-            orient: "vertical",
-            top: "bottom",
-            left: "right",
-            data: ["流入", "流出"],
-            zlevel: 0,
-            z: 4,
-            show: true,
-            align: "auto",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "#ccc",
-            borderWidth: 0,
-            padding: 5,
-            itemGap: 10,
-            itemWidth: 25,
-            itemHeight: 14,
-            inactiveColor: "#ccc",
-            textStyle: { color: "#333" },
-            selectedMode: true,
-            tooltip: { show: false },
-            right: null,
-            bottom: null,
-            selected: {},
-          },
-        ],
-      },
+      showMapLabel: true,
+      cbc: true,
+      chart: null, // 图表实例
+      mapData: null, // 地图数据
     };
   },
   mounted() {
-    this.initCharts();
+    this.getMapData().then(() => {
+      this.renderMap();
+    });
+
+    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
+  },
+  beforeDestroy() {
+    // 在组件销毁前释放图表实例
+    if (this.chart != null) {
+      this.chart.dispose();
+      this.chart = null;
+    }
+
+    document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   methods: {
-    async initCharts() {
-      this.charts = echarts.init(this.$refs["charts"]);
-      this.registerMap();
-      this.charts.setOption(this.option);
+    handleFullscreenChange() {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        // 退出全屏时恢复原始尺寸
+        const elem = this.$refs.map;
+        elem.style.width = "100%";
+        elem.style.height = "100%";
+        this.chart.resize();
+      }
     },
-    registerMap() {
-      echarts.registerMap(this.mapName, this.mapJson);
+    fullScreen() {
+      const elem = this.$refs.map;
+
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+
+      if (this.chart) {
+        elem.style.width = window.innerWidth + "px";
+        elem.style.height = window.innerHeight + 161 + "px";
+        this.chart.resize();
+      }
+    },
+    changePN() {
+      this.showMapLabel = !this.showMapLabel;
+      let option = {
+        series: [
+          {
+            label: {
+              normal: {
+                show: this.showMapLabel,
+              },
+            },
+          },
+        ],
+      };
+      this.chart.setOption(option);
+    },
+    changeBG() {
+      this.cbc = !this.cbc;
+      if (this.chart) {
+        let option = this.chart.getOption();
+        option.backgroundColor = option.backgroundColor === "white" ? "transparent" : "white";
+        this.chart.setOption(option);
+      }
+    },
+    getMapData() {
+      // 获取地图数据
+      return axios
+        .get("/map/dtsj3/china/100000副.json")
+        .then(res => {
+          if (!res.data || !Array.isArray(res.data.features)) {
+            console.error("无效的地图数据:", res.data);
+            alert("无效的地图数据。请稍后再试。");
+            return Promise.reject();
+          }
+          this.mapData = res.data;
+          let featrues = this.mapData.features;
+          let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
+          if (errorProvince) {
+            alert(`地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`);
+            return Promise.reject();
+          }
+          return Promise.resolve();
+        })
+        .catch(error => {
+          console.error("获取地图数据失败:", error);
+          alert("获取地图数据失败。请稍后再试。");
+        });
+    },
+    renderMap() {
+      // 渲染地图
+      let chart = echarts.init(this.$refs.map);
+      echarts.registerMap("chinamap", this.mapData);
+      let option = {
+        backgroundColor: "white",
+        tooltip: {
+          formatter: "{b}<br/>{c}",
+        },
+        toolbox: {
+          show: true,
+          orient: "vertical",
+          left: "right",
+          feature: {
+            restore: {},
+            saveAsImage: {},
+            // saveAsImage: {},
+          },
+        },
+        series: [
+          {
+            name: "adcode",
+            map: "chinamap",
+            type: "map",
+            label: {
+              emphasis: {
+                show: false,
+              },
+              // 不需要显示地名可直接删除normal此项
+              normal: {
+                show: this.showMapLabel, // 是否显示对应地名
+                textStyle: {
+                  color: "rgba(0,0,0)",
+                },
+              },
+            },
+            roam: true,
+            itemStyle: {
+              normal: {
+                areaColor: "#6FA7CE", //地图颜色
+                borderColor: "#fff", //地图边线颜色
+              },
+              emphasis: {
+                areaColor: "#B7DFED", //鼠标移入颜色
+              },
+            },
+            data: this.mapData.features.map(item => {
+              return {
+                name: item.properties.name,
+                value: parseInt(item.properties.adcode),
+              };
+            }),
+          },
+        ],
+      };
+      chart.setOption(option);
+      chart.on("click", this.handleMapClick); // 添加点击事件处理器
+
+      this.chart = chart;
+
+      chart.setOption(option);
+      chart.on("click", this.handleMapClick);
+      chart.on("restore", this.handleRestore);
+    },
+    async handleMapClick(params) {
+      // 处理地图点击事件
+      // 加载数据期间禁用地图
+      this.chart.off("click");
+      let selectedName = params.name;
+      let adcode = params.value;
+      try {
+        let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
+        let newMapData = res.data;
+        echarts.registerMap(selectedName, newMapData);
+        let series = {
+          type: "map",
+          map: selectedName,
+          data: newMapData.features.map(feature => ({
+            name: feature.properties.name,
+            value: feature.properties.adcode,
+          })),
+        };
+
+        this.chart.setOption({ series });
+      } catch (error) {
+        if (error.response && error.response.status === 404) {
+          alert("没有下级地图了");
+        } else {
+          console.error(error);
+        }
+      }
+
+      // 加载数据后重新启用地图
+      this.chart.on("click", this.handleMapClick);
     },
   },
 };
 </script>
+
 <style scoped>
 .content {
-  height: 100%;
+  height: 90%;
+}
+.fullscreen-btn {
+  top: 20px;
+  right: 20px;
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.changePN-btn {
+  top: 20px;
+  right: 20px;
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.changeBG-btn {
+  top: 20px;
+  right: 20px;
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 </style>

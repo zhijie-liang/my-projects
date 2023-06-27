@@ -14,38 +14,22 @@ export default {
       mapName: "chinamap",
       mapJson: chinamap,
       charts: null,
-      highlightedArea: null,
       option: {
-        // 添加"背景"区域
-        graphic: {
-          type: 'rect',
-          shape: {
-            width: '100%',
-            height: '100%'
-          },
-          z: -10,
-          invisible: false,
-          draggable: false,
-          onclick: () => {
-            this.highlightedArea = null;
-            this.updateMap();
-          }
-        },
+        backgroundColor: "white",
         series: [
           {
             type: "map",
             map: "chinamap",
-            data: chinamap.features.map(feature => {
-              return {
-                name: feature.properties.name,
-                itemStyle: {
-                  areaColor: '#fff',
+            label: {
+              emphasis: {
+                show: false,
+              },
+              // 不需要显示地名可直接删除normal此项
+              normal: {
+                show: true, // 是否显示对应地名
+                textStyle: {
+                  color: "rgba(0,0,0)",
                 },
-              };
-            }),
-            emphasis: {
-              itemStyle: {
-                areaColor: '#fbd437',
               },
             },
           },
@@ -57,34 +41,13 @@ export default {
     this.initCharts();
   },
   methods: {
-    async initCharts() {
+    initCharts() {
       this.charts = echarts.init(this.$refs["charts"]);
-      echarts.registerMap(this.mapName, this.mapJson);
+      this.registerMap();
       this.charts.setOption(this.option);
-
-      this.charts.on("click", params => {
-        if (params.componentType === "series") {
-          if (this.highlightedArea === params.name) {
-            this.highlightedArea = null;
-          } else {
-            this.highlightedArea = params.name;
-          }
-          this.updateMap();
-        }
-      });
     },
-
-    updateMap() {
-      this.option.series[0].data = this.mapJson.features.map(feature => {
-        return {
-          name: feature.properties.name,
-          itemStyle: {
-            areaColor: feature.properties.name === this.highlightedArea ? '#fbd437' : '#fff',
-          },
-        };
-      });
-
-      this.charts.setOption(this.option);
+    registerMap() {
+      echarts.registerMap(this.mapName, this.mapJson);
     },
   },
 };
