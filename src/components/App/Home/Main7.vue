@@ -4,6 +4,9 @@
     <el-button @click="changeBG" class="changeBG-btn" style="color: #333">
       {{ cbc ? "透明" : "白色" }}
     </el-button>
+
+    <el-color-picker v-model="color"></el-color-picker>
+
     <el-button @click="changePN" class="changePN-btn" style="color: #333">
       {{ showMapLabel ? "取消" : "恢复" }}
     </el-button>
@@ -23,6 +26,7 @@ export default {
       cbc: true,
       chart: null, // 图表实例
       mapData: null, // 地图数据
+      color: "rgba(19, 206, 102, 0.8)",
     };
   },
   mounted() {
@@ -151,7 +155,8 @@ export default {
               normal: {
                 show: this.showMapLabel, // 是否显示对应地名
                 textStyle: {
-                  color: "rgba(0,0,0)",
+                  // color: "rgba(0,0,0)",
+                  color: this.color,
                 },
               },
             },
@@ -213,6 +218,23 @@ export default {
 
       // 加载数据后重新启用地图
       this.chart.on("click", this.handleMapClick);
+    },
+  },
+  watch: {
+    color(val) {
+      this.chart.setOption({
+        series: [
+          {
+            label: {
+              normal: {
+                textStyle: {
+                  color: val,
+                },
+              },
+            },
+          },
+        ],
+      });
     },
   },
 };
