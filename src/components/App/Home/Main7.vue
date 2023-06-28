@@ -1,11 +1,15 @@
 <template>
   <div class="content">
+    <!-- <el-color-picker v-model="color" style="margin-left: 10px; margin-right: 10px; top: 10px" size="mini"></el-color-picker> -->
+    <el-color-picker
+      v-model="color"
+      style="margin-left: 10px; margin-right: 10px; top: 10px"
+      size="mini"
+    ></el-color-picker>
     <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
     <el-button @click="changeBG" class="changeBG-btn" style="color: #333">
       {{ cbc ? "透明" : "白色" }}
     </el-button>
-
-    <el-color-picker v-model="color"></el-color-picker>
 
     <el-button @click="changePN" class="changePN-btn" style="color: #333">
       {{ showMapLabel ? "取消" : "恢复" }}
