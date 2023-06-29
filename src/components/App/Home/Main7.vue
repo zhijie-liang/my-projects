@@ -1,19 +1,31 @@
 <template>
   <div class="content">
-    <!-- <el-color-picker v-model="color" style="margin-left: 10px; margin-right: 10px; top: 10px" size="mini"></el-color-picker> -->
-    <el-color-picker
-      v-model="color"
-      style="margin-left: 10px; margin-right: 10px; top: 10px"
-      size="mini"
-    ></el-color-picker>
-    <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
-    <el-button @click="changeBG" class="changeBG-btn" style="color: #333">
-      {{ cbc ? "透明" : "白色" }}
-    </el-button>
-
-    <el-button @click="changePN" class="changePN-btn" style="color: #333">
-      {{ showMapLabel ? "取消" : "恢复" }}
-    </el-button>
+    <div>
+      <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
+      <el-button @click="changePN" class="changePN-btn" style="color: #333">
+        {{ showMapLabel ? "不显地名" : "显示地名" }}
+      </el-button>
+    </div>
+    <div>
+      字体颜色:
+      <el-color-picker
+        v-model="fontColor"
+        style="margin-left: 10px; margin-right: 10px; margin-bottom: 20px; top: 10px"
+        size="mini"
+      ></el-color-picker>
+      地图区域颜色:
+      <el-color-picker
+        v-model="mapAreaColor"
+        style="margin-left: 10px; margin-right: 10px; margin-bottom: 20px; top: 10px"
+        size="mini"
+      ></el-color-picker>
+      背景颜色:
+      <el-color-picker
+        v-model="backgroundColor"
+        style="margin-left: 10px; margin-right: 10px; margin-bottom: 20px; top: 10px"
+        size="mini"
+      ></el-color-picker>
+    </div>
     <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -27,10 +39,11 @@ export default {
   data() {
     return {
       showMapLabel: true,
-      cbc: true,
       chart: null, // 图表实例
       mapData: null, // 地图数据
-      color: "rgba(19, 206, 102, 0.8)",
+      fontColor: "rgba(0,0,0)",
+      mapAreaColor: "#6FA7CE",
+      backgroundColor: "#fff",
     };
   },
   mounted() {
@@ -95,14 +108,6 @@ export default {
       };
       this.chart.setOption(option);
     },
-    changeBG() {
-      this.cbc = !this.cbc;
-      if (this.chart) {
-        let option = this.chart.getOption();
-        option.backgroundColor = option.backgroundColor === "white" ? "transparent" : "white";
-        this.chart.setOption(option);
-      }
-    },
     getMapData() {
       // 获取地图数据
       return axios
@@ -132,7 +137,7 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        backgroundColor: "white",
+        // backgroundColor: this.backgroundColor,
         tooltip: {
           formatter: "{b}<br/>{c}",
         },
@@ -142,8 +147,10 @@ export default {
           left: "right",
           feature: {
             restore: {},
-            saveAsImage: {},
-            // saveAsImage: {},
+            saveAsImage: {
+              // type: "jpg",
+              backgroundColor: "transparent",
+            },
           },
         },
         series: [
@@ -159,19 +166,23 @@ export default {
               normal: {
                 show: this.showMapLabel, // 是否显示对应地名
                 textStyle: {
-                  // color: "rgba(0,0,0)",
-                  color: this.color,
+                  color: this.fontColor,
                 },
               },
             },
             roam: true,
             itemStyle: {
               normal: {
-                areaColor: "#6FA7CE", //地图颜色
+                areaColor: this.mapAreaColor,
                 borderColor: "#fff", //地图边线颜色
               },
               emphasis: {
                 areaColor: "#B7DFED", //鼠标移入颜色
+              },
+            },
+            select: {
+              itemStyle: {
+                areaColor: "#579bd3",
               },
             },
             data: this.mapData.features.map(item => {
@@ -225,19 +236,37 @@ export default {
     },
   },
   watch: {
-    color(val) {
+    fontColor(val1) {
       this.chart.setOption({
         series: [
           {
             label: {
               normal: {
                 textStyle: {
-                  color: val,
+                  color: val1,
                 },
               },
             },
           },
         ],
+      });
+    },
+    mapAreaColor(val2) {
+      this.chart.setOption({
+        series: [
+          {
+            itemStyle: {
+              normal: {
+                areaColor: val2,
+              },
+            },
+          },
+        ],
+      });
+    },
+    backgroundColor(val3) {
+      this.chart.setOption({
+        backgroundColor: val3,
       });
     },
   },

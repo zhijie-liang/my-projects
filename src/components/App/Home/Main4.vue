@@ -15,9 +15,7 @@ export default {
     return {
       chart: null, // 图表实例
       mapData: null, // 地图数据
-      series: [
-        { name: "adcode", data: [] },
-      ],
+      series: [{ name: "adcode", data: [] }],
     };
   },
   mounted() {
@@ -96,19 +94,7 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        // visualMap: {
-        //   type: "piecewise",
-        //   pieces: [
-        //     { min: 100000000, label: ">100000000", color: "#9dc49f" },
-        //     { min: 10000000, max: 99999999, label: "10000000-99999999", color: "#a8caa9" },
-        //     { min: 1000000, max: 9999999, label: "1000000-9999999", color: "#b3d1b4" },
-        //     { max: 999999, label: "<1000000", color: "#bed7bf" },
-        //   ],
-        //   orient: "vertical",
-        //   left: "20",
-        //   top: "300",
-        // },
-        backgroundColor: "transparent",
+        backgroundColor: "white",
         tooltip: {
           formatter: "{b}<br/>{c}",
         },
@@ -133,7 +119,7 @@ export default {
             // geoIndex: 0,
             label: {
               show: true,
-              fontSize: 10,
+              fontSize: 15,
               color: "red",
             },
             itemStyle: {
@@ -190,7 +176,7 @@ export default {
           },
         ],
       };
-      chart.setOption(option);
+      chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
 
       // 添加georoam事件处理函数,同步缩放功能
@@ -204,12 +190,12 @@ export default {
           option.geo[0].center = option.series[0].center;
         }
 
-        chart.setOption(option);
+        chart.setOption(option, true);
       });
 
       this.chart = chart;
 
-      chart.setOption(option);
+      chart.setOption(option, true);
       chart.on("click", this.handleMapClick);
       chart.on("restore", this.handleRestore);
     },
@@ -223,20 +209,82 @@ export default {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
+        let backgroundColor = "white";
+        let tooltip = {
+          formatter: "{b}<br/>{c}",
+        };
+        let toolbox = {
+          show: true,
+          orient: "vertical",
+          left: "right",
+          feature: {
+            restore: {},
+            saveAsImage: {},
+            // saveAsImage: {},
+          },
+        };
         let series = {
-          type: "map",
           map: selectedName,
+          name: "adcode",
+          type: "map",
+          roam: true,
+          // color: "#9dc49f",
+          animationDurationUpdate: 0,
+          // geoIndex: 0,
+          label: {
+            show: true,
+            fontSize: 15,
+            color: "red",
+          },
+          itemStyle: {
+            areaColor: "#9dc49f",
+            color: "transparent",
+            borderWidth: "0.5",
+            borderColor: "#579bd3",
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 16,
+              color: "#fff",
+            },
+            itemStyle: {
+              areaColor: "#579bd3",
+            },
+          },
+          select: {
+            itemStyle: {
+              areaColor: "#579bd3",
+            },
+          },
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
             value: feature.properties.adcode,
           })),
         };
-
         let geo = {
           map: selectedName,
+          // roam: true,
+          animationDurationUpdate: 0,
+          silent: true,
+          top: "11%",
+          itemStyle: {
+            color: "transparent",
+            borderWidth: "0",
+            areaColor: "#e0e7c8",
+            shadowBlur: "12",
+          },
+          emphasis: {
+            label: {
+              show: false,
+            },
+            itemStyle: {
+              borderWidth: 0,
+              borderColor: "#31A0E6",
+            },
+          },
         };
-
-        this.chart.setOption({ series, geo }); // 更新series和geo
+        this.chart.setOption({ backgroundColor, tooltip, toolbox, series, geo }, true); // 更新series和geo
       } catch (error) {
         if (error.response && error.response.status === 404) {
           alert("没有下级地图了");
@@ -247,6 +295,9 @@ export default {
 
       // 加载数据后重新启用地图
       this.chart.on("click", this.handleMapClick);
+    },
+    handleRestore() {
+      this.renderMap();
     },
   },
 };

@@ -1,6 +1,10 @@
 <template>
   <div class="content">
-    <el-color-picker v-model="color"></el-color-picker>
+    <div style="display: flex; align-items: center;">
+      <el-input v-model="tempColor" placeholder="请输入颜色值"></el-input>
+      <el-button type="text" @click="clearColor">清空</el-button>
+      <el-button type="primary" @click="confirmColor">确定</el-button>
+    </div>
     <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -18,6 +22,8 @@ export default {
       chart: null, // 图表实例
       mapData: null, // 地图数据
       color: "rgba(19, 206, 102, 0.8)",
+      tempColor: "", // 临时存储颜色值的变量
+      isConfirmed: false, // 用户是否点击了确认按钮
     };
   },
   mounted() {
@@ -30,7 +36,7 @@ export default {
       // 获取地图数据
       return axios
         .get("/map/dtsj3/china/100000副.json")
-        .then(res => {
+        .then((res) => {
           if (!res.data || !Array.isArray(res.data.features)) {
             console.error("无效的地图数据:", res.data);
             alert("无效的地图数据。请稍后再试。");
@@ -38,14 +44,18 @@ export default {
           }
           this.mapData = res.data;
           let featrues = this.mapData.features;
-          let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
+          let errorProvince = featrues.find(
+            (f) => isNaN(parseInt(f.properties.adcode))
+          );
           if (errorProvince) {
-            alert(`地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`);
+            alert(
+              `地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`
+            );
             return Promise.reject();
           }
           return Promise.resolve();
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("获取地图数据失败:", error);
           alert("获取地图数据失败。请稍后再试。");
         });
@@ -65,23 +75,21 @@ export default {
               emphasis: {
                 show: false,
               },
-              // 不需要显示地名可直接删除normal此项
               normal: {
-                show: this.showMapLabel, // 是否显示对应地名
+                show: this.showMapLabel,
                 textStyle: {
-                  // color: "rgba(0,0,0)",
-                  color: this.color,
+                  color: this.isConfirmed ? this.color : "",
                 },
               },
             },
             roam: true,
             itemStyle: {
               normal: {
-                areaColor: "#6FA7CE", //地图颜色
-                borderColor: "#fff", //地图边线颜色
+                areaColor: "#6FA7CE",
+                borderColor: "#fff",
               },
               emphasis: {
-                areaColor: "#B7DFED", //鼠标移入颜色
+                areaColor: "#B7DFED",
               },
             },
           },
@@ -94,22 +102,37 @@ export default {
       chart.on("click", this.handleMapClick);
       chart.on("restore", this.handleRestore);
     },
-  },
-  watch: {
-    color(val) {
+    clearColor() {
+      this.tempColor = "";
+    },
+    confirmColor() {
+      if (this.tempColor) {
+        this.color = this.tempColor;
+        this.isConfirmed = true;
+        this.updateLabelStyle();
+      }
+    },
+    updateLabelStyle() {
       this.chart.setOption({
         series: [
           {
             label: {
               normal: {
                 textStyle: {
-                  color: val,
+                  color: this.color,
                 },
               },
             },
           },
         ],
       });
+    },
+  },
+  watch: {
+    tempColor() {
+      if (this.isConfirmed) {
+        this.updateLabelStyle();
+      }
     },
   },
 };

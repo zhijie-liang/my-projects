@@ -149,7 +149,7 @@ export default {
             // roam: true,
             animationDurationUpdate: 0,
             silent: true,
-            top: "12%",
+            top: "11%",
             itemStyle: {
               color: "transparent",
               borderWidth: "0",
@@ -168,7 +168,7 @@ export default {
           },
         ],
       };
-      chart.setOption(option);
+      chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
 
       // 添加georoam事件处理函数,同步缩放功能
@@ -182,7 +182,7 @@ export default {
           option.geo[0].center = option.series[0].center;
         }
 
-        chart.setOption(option);
+        chart.setOption(option, true);
       });
 
       this.chart = chart;
@@ -198,9 +198,38 @@ export default {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
+        let backgroundColor = "white";
         let series = {
           type: "map",
           map: selectedName,
+          roam: true,
+          animationDurationUpdate: 0,
+          // geoIndex: 0,
+          label: {
+            show: true,
+            fontSize: 10,
+            color: "red",
+          },
+          itemStyle: {
+            color: "transparent",
+            borderWidth: "0.5",
+            borderColor: "#579bd3",
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 16,
+              color: "#fff",
+            },
+            itemStyle: {
+              areaColor: "#579bd3",
+            },
+          },
+          select: {
+            itemStyle: {
+              areaColor: "#579bd3",
+            },
+          },
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
             value: feature.properties.adcode,
@@ -209,10 +238,28 @@ export default {
 
         let geo = {
           map: selectedName,
-          //... rest of your geo properties
+          // roam: true,
+          animationDurationUpdate: 0,
+          silent: true,
+          top: "11%",
+          itemStyle: {
+            color: "transparent",
+            borderWidth: "0",
+            areaColor: "#e0e7c8",
+            shadowBlur: "12",
+          },
+          emphasis: {
+            label: {
+              show: false,
+            },
+            itemStyle: {
+              borderWidth: 0,
+              borderColor: "#31A0E6",
+            },
+          },
         };
 
-        this.chart.setOption({ series, geo }); // 更新series和geo
+        this.chart.setOption({ backgroundColor, series, geo }, true); // 更新series和geo
       } catch (error) {
         if (error.response && error.response.status === 404) {
           alert("没有下级地图了");

@@ -2,7 +2,6 @@
   <div class="content">
     <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
     <div ref="charts" style="width: 100%; height: 100%; margin: 0 auto"></div>
-
   </div>
 </template>
 
@@ -28,6 +27,8 @@ export default {
         visualMap: {
           type: "piecewise",
           pieces: [
+            { min: 30, max: 35, label: "30-35", color: "#8BCAF6" },
+            { min: 25, max: 30, label: "25-30", color: "#E8E892" },
             { min: 20, max: 25, label: "20-25", color: "#e7c0c3" },
             { min: 15, max: 20, label: "15-20", color: "#edeac6" },
             { min: 10, max: 15, label: "10-15", color: "#cbded5" },
@@ -38,7 +39,7 @@ export default {
           left: "20",
           top: "1800",
         },
-        backgroundColor: "white",
+        backgroundColor: "transparent",
         series: [
           {
             map: "chinamap",
@@ -52,18 +53,18 @@ export default {
                 textStyle: {
                   color: "rgba(0,0,0)",
                 },
-                formatter: function (params) {
-                  if (params.name === "朝阳区" || params.name === "海淀区") {
-                    return params.name; // 只显示朝阳和海淀的地名
-                  } else {
-                    return ""; // 其他地方不显示地名
-                  }
-                },
-                textFixed: {
-                  // 控制地名位置
-                  朝阳: [110.5, 39.8], // 朝阳的地名显示在[110.5, 39.8]处
-                  海淀: [116.2, 40.1], // 海淀的地名显示在[116.2, 40.1]处
-                },
+                // formatter: function (params) {
+                //   if (params.name === "朝阳区" || params.name === "海淀区") {
+                //     return params.name; // 只显示朝阳和海淀的地名
+                //   } else {
+                //     return ""; // 其他地方不显示地名
+                //   }
+                // },
+                // textFixed: {
+                //   // 控制地名位置
+                //   朝阳: [110.5, 39.8], // 朝阳的地名显示在[110.5, 39.8]处
+                //   海淀: [116.2, 40.1], // 海淀的地名显示在[116.2, 40.1]处
+                // },
               },
             },
             roam: true,
@@ -78,22 +79,100 @@ export default {
             },
             data: [
               { name: "海淀区", value: 8 },
-              { name: "朝阳区", value: 8 },
+              { name: "朝阳区", value: 18 },
               { name: "延庆区", value: 8 },
               { name: "东城区", value: 3 },
               { name: "西城区", value: 3 },
               { name: "房山区", value: 18 },
               { name: "大兴区", value: 23 },
               { name: "通州区", value: 13 },
-              { name: "顺义区", value: 18 },
+              { name: "顺义区", value: 33 },
               { name: "平谷区", value: 23 },
               { name: "怀柔区", value: 3 },
               { name: "昌平区", value: 13 },
               { name: "密云区", value: 13 },
               { name: "门头沟区", value: 3 },
               { name: "石景山区", value: 18 },
-              { name: "丰台区", value: 13 },
+              { name: "丰台区", value: 28 },
             ],
+            markPoint: {
+              symbolSize: 10,
+              label: {
+                show: true,
+                fontSize: 12,
+              },
+              itemStyle: {
+                borderWidth: 2,
+                color: "#fff",
+                borderColor: "red",
+              },
+              data: [
+                {
+                  name: "东城区",
+                  coord: [116.418757, 39.917544],
+                },
+                {
+                  name: "西城区",
+                  coord: [116.366794, 39.915309],
+                },
+                {
+                  name: "海淀区",
+                  coord: [116.310316, 39.956074],
+                },
+                {
+                  name: "朝阳区",
+                  coord: [116.486409, 39.921489],
+                },
+                {
+                  name: "延庆区",
+                  coord: [116.2, 40.465325],
+                },
+                {
+                  name: "房山区",
+                  coord: [115.839157, 39.735535],
+                },
+                {
+                  name: "大兴区",
+                  coord: [116.338033, 39.628908],
+                },
+                {
+                  name: "通州区",
+                  coord: [116.758603, 39.702486],
+                },
+                {
+                  name: "顺义区",
+                  coord: [116.653525, 40.128936],
+                },
+                {
+                  name: "平谷区",
+                  coord: [117.112335, 40.144783],
+                },
+                {
+                  name: "怀柔区",
+                  coord: [116.637122, 40.724272],
+                },
+                {
+                  name: "昌平区",
+                  coord: [116.235906, 40.218085],
+                },
+                {
+                  name: "密云区",
+                  coord: [116.943352, 40.477362],
+                },
+                {
+                  name: "门头沟区",
+                  coord: [115.705381, 39.937183],
+                },
+                {
+                  name: "石景山区",
+                  coord: [116.195445, 39.914601],
+                },
+                {
+                  name: "丰台区",
+                  coord: [116.286968, 39.863642],
+                },
+              ],
+            },
           },
         ],
       },
@@ -102,7 +181,6 @@ export default {
   mounted() {
     // 获取容器的引用
     const container = this.$refs.charts;
-
 
     // 初始化地图
     this.charts = echarts.init(container);
@@ -131,7 +209,7 @@ export default {
     async initCharts() {
       this.charts = echarts.init(this.$refs["charts"]);
       this.registerMap();
-        this.charts.setOption(this.option);
+      this.charts.setOption(this.option);
     },
     registerMap() {
       echarts.registerMap(this.mapName, this.mapJson);
