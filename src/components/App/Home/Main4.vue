@@ -1,6 +1,5 @@
 <template>
   <div class="content">
-    <!-- <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button> -->
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -55,7 +54,7 @@ export default {
     },
     highlightProvince(params) {
       this.mapClicked = true;
-      console.log("省份名：" + params.name); // 新增代码
+      console.log("地名：" + params.name);
 
       if (this.selectedProvince === params.name) {
         // 如果点击的省份已经是高亮的，取消高亮
@@ -86,7 +85,7 @@ export default {
           this.selectedProvince = null;
         }
       } else {
-        console.log("空白处"); // 新增代码
+        console.log("空白处");
       }
       this.mapClicked = false;
     },
@@ -245,7 +244,6 @@ export default {
                 borderColor: "#31A0E6",
               },
             },
-            
           },
         ],
       };
@@ -423,12 +421,4 @@ export default {
 .content {
   height: 100%;
 }
-/* .fullscreen-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-} */
 </style>
