@@ -106,7 +106,7 @@ export default {
           },
         ],
       };
-      this.chart.setOption(option);
+      this.chart.setOption(option, true);
     },
     getMapData() {
       // 获取地图数据
@@ -194,12 +194,12 @@ export default {
           },
         ],
       };
-      chart.setOption(option);
+      chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
 
       this.chart = chart;
 
-      chart.setOption(option);
+      chart.setOption(option, true);
       chart.on("click", this.handleMapClick);
       chart.on("restore", this.handleRestore);
     },

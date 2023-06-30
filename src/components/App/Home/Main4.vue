@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
-    <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
+    <!-- <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button> -->
+    <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
     return {
       chart: null, // 图表实例
       mapData: null, // 地图数据
-      series: [{ name: "adcode", data: [] }],
+      selectedProvince: null, // 当前选中的省份
+      mapClicked: false, // 是否点击了地图
     };
   },
   mounted() {
@@ -26,6 +27,8 @@ export default {
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
     document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
+
+    window.addEventListener("click", this.onGlobalClick);
   },
   beforeDestroy() {
     // 在组件销毁前释放图表实例
@@ -37,6 +40,8 @@ export default {
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("msfullscreenchange", this.handleFullscreenChange);
+
+    window.removeEventListener("click", this.onGlobalClick);
   },
   methods: {
     handleFullscreenChange() {
@@ -48,22 +53,42 @@ export default {
         this.chart.resize();
       }
     },
-    fullScreen() {
-      const elem = this.$refs.map;
+    highlightProvince(params) {
+      this.mapClicked = true;
+      console.log("省份名：" + params.name); // 新增代码
 
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
+      if (this.selectedProvince === params.name) {
+        // 如果点击的省份已经是高亮的，取消高亮
+        this.selectedProvince = null;
+        this.chart.dispatchAction({
+          type: "mapUnSelect",
+          seriesIndex: 0,
+          name: params.name,
+        });
+      } else {
+        // 如果点击的省份不是已经高亮的，设置为高亮
+        this.selectedProvince = params.name;
+        this.chart.dispatchAction({
+          type: "mapSelect",
+          seriesIndex: 0,
+          name: params.name,
+        });
       }
-
-      if (this.chart) {
-        elem.style.width = window.innerWidth + "px";
-        elem.style.height = window.innerHeight + 161 + "px";
-        this.chart.resize();
+    },
+    onGlobalClick() {
+      if (this.mapClicked) {
+        if (this.selectedProvince) {
+          this.chart.dispatchAction({
+            type: "mapUnSelect",
+            seriesIndex: 0,
+            name: this.selectedProvince,
+          });
+          this.selectedProvince = null;
+        }
+      } else {
+        console.log("空白处"); // 新增代码
       }
+      this.mapClicked = false;
     },
     getMapData() {
       // 获取地图数据
@@ -105,7 +130,48 @@ export default {
           feature: {
             restore: {},
             saveAsImage: {},
-            // saveAsImage: {},
+            myFull: {
+              show: true,
+              title: "全屏",
+              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              onclick: () => {
+                this.fullFlag = true;
+                let element = document.getElementById("map");
+                // 一些浏览器的兼容性
+                if (element.requestFullScreen) {
+                  // HTML W3C 提议
+                  element.requestFullScreen();
+                } else if (element.msRequestFullscreen) {
+                  // IE11
+                  element.msRequestFullScreen();
+                } else if (element.webkitRequestFullScreen) {
+                  // Webkit (works in Safari5.1 and Chrome 15)
+                  element.webkitRequestFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  // Firefox (works in nightly)
+                  element.mozRequestFullScreen();
+                }
+
+                if (this.chart) {
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
+                  this.chart.resize();
+                }
+                // window.location.reload()
+                // this.$refs.map.focus();
+                // this.handleRestore()
+                // 退出全屏
+                if (element.requestFullScreen) {
+                  document.exitFullscreen();
+                } else if (element.msRequestFullScreen) {
+                  document.msExitFullscreen();
+                } else if (element.webkitRequestFullScreen) {
+                  document.webkitCancelFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  document.mozCancelFullScreen();
+                }
+              },
+            },
           },
         },
         series: [
@@ -114,6 +180,8 @@ export default {
             map: "chinamap",
             type: "map",
             roam: true,
+            selectedMode: "single",
+            // zlevel: 1,
             // color: "#9dc49f",
             animationDurationUpdate: 0,
             // geoIndex: 0,
@@ -153,8 +221,12 @@ export default {
         ],
         geo: [
           {
+            name: "adcode",
             map: "chinamap",
-            // roam: true,
+            // zlevel: 2,
+            type: "map",
+            roam: true,
+            selectedMode: "single",
             animationDurationUpdate: 0,
             silent: true,
             top: "11%",
@@ -173,10 +245,12 @@ export default {
                 borderColor: "#31A0E6",
               },
             },
+            
           },
         ],
       };
       chart.setOption(option, true);
+      chart.on("click", this.highlightProvince);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
 
       // 添加georoam事件处理函数,同步缩放功能
@@ -203,6 +277,8 @@ export default {
       // 处理地图点击事件
       // 加载数据期间禁用地图
       this.chart.off("click");
+
+      window.addEventListener("click", this.onGlobalClick);
       let selectedName = params.name;
       let adcode = params.value;
       try {
@@ -220,7 +296,45 @@ export default {
           feature: {
             restore: {},
             saveAsImage: {},
-            // saveAsImage: {},
+            myFull: {
+              show: true,
+              title: "全屏查看",
+              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              onclick: () => {
+                this.fullFlag = true;
+                let element = document.getElementById("map");
+                // 一些浏览器的兼容性
+                if (element.requestFullScreen) {
+                  // HTML W3C 提议
+                  element.requestFullScreen();
+                } else if (element.msRequestFullscreen) {
+                  // IE11
+                  element.msRequestFullScreen();
+                } else if (element.webkitRequestFullScreen) {
+                  // Webkit (works in Safari5.1 and Chrome 15)
+                  element.webkitRequestFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  // Firefox (works in nightly)
+                  element.mozRequestFullScreen();
+                }
+                this.$refs.map.focus();
+                if (this.chart) {
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
+                  this.chart.resize();
+                }
+                // 退出全屏
+                if (element.requestFullScreen) {
+                  document.exitFullscreen();
+                } else if (element.msRequestFullScreen) {
+                  document.msExitFullscreen();
+                } else if (element.webkitRequestFullScreen) {
+                  document.webkitCancelFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  document.mozCancelFullScreen();
+                }
+              },
+            },
           },
         };
         let series = {
@@ -228,6 +342,7 @@ export default {
           name: "adcode",
           type: "map",
           roam: true,
+          selectedMode: "single",
           // color: "#9dc49f",
           animationDurationUpdate: 0,
           // geoIndex: 0,
@@ -285,6 +400,7 @@ export default {
           },
         };
         this.chart.setOption({ backgroundColor, tooltip, toolbox, series, geo }, true); // 更新series和geo
+        this.chart.on("click", this.highlightProvince);
       } catch (error) {
         if (error.response && error.response.status === 404) {
           alert("没有下级地图了");
@@ -305,17 +421,14 @@ export default {
 
 <style scoped>
 .content {
-  /* background-image: url("../../../assets/R-C.jpg"); */
-  background-size: cover;
-  background-position: center;
-  height: 90%;
+  height: 100%;
 }
-.fullscreen-btn {
+/* .fullscreen-btn {
   top: 20px;
   right: 20px;
   background-color: #ccc;
   border: none;
   padding: 10px;
   cursor: pointer;
-}
+} */
 </style>
