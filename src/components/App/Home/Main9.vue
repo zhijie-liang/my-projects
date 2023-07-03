@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" @click="handleContainerClick">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -7,49 +7,29 @@
 <script>
 import * as echarts from "echarts";
 import axios from "axios";
-
+import Swal from "sweetalert2";
+//
 export default {
   name: "ChinaMap",
   data() {
     return {
       chart: null, // 图表实例
       mapData: null, // 地图数据
-
-      selectedProvince: null, // 当前选中的省份
-      mapClicked: false, // 是否点击了地图
+      wasFeatureClicked: false,
     };
   },
   mounted() {
     this.getMapData().then(() => {
       this.renderMap();
     });
-
-    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   beforeDestroy() {
-    // 在组件销毁前释放图表实例
     if (this.chart != null) {
-      this.chart.dispose();
       this.chart = null;
     }
-    document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
-    document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    document.removeEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   methods: {
-    handleFullscreenChange() {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // 退出全屏时恢复原始尺寸
-        const elem = this.$refs.map;
-        elem.style.width = "100%";
-        elem.style.height = "100%";
-        this.chart.resize();
-      }
-    },
     getMapData() {
-      // 获取地图数据
       return axios
         .get("/map/dtsj3/china/100000副.json")
         .then(res => {
@@ -73,7 +53,6 @@ export default {
         });
     },
     renderMap() {
-      // 渲染地图
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
@@ -89,7 +68,7 @@ export default {
             restore: {},
             myFull: {
               show: true,
-              title: "全屏查看",
+              title: "全屏",
               icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
               onclick: () => {
                 this.fullFlag = true;
@@ -113,6 +92,9 @@ export default {
                   element.style.height = window.innerHeight + 161 + "px";
                   this.chart.resize();
                 }
+                // window.location.reload()
+                // this.$refs.map.focus();
+                // this.handleRestore()
                 // 退出全屏
                 if (element.requestFullScreen) {
                   document.exitFullscreen();
@@ -133,9 +115,8 @@ export default {
             map: "chinamap",
             type: "map",
             roam: true,
-
+            // seriesIndex: 0,
             selectedMode: "single",
-            // color: "#9dc49f",
             animationDurationUpdate: 0,
             label: {
               show: true,
@@ -173,28 +154,22 @@ export default {
         ],
       };
       chart.setOption(option, true);
-      chart.on("click", this.highlightProvince);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
-
       this.chart = chart;
-
-      chart.setOption(option, true);
-      chart.on("click", this.handleMapClick);
       chart.on("restore", this.handleRestore);
     },
     async handleMapClick(params) {
-      // 处理地图点击事件
-      // 加载数据期间禁用地图
-      this.chart.off("click");
-
-      window.addEventListener("click", this.onGlobalClick);
+      if (params.name && params.value) {
+        console.log(params.name);
+        this.wasFeatureClicked = true;
+      }
       let selectedName = params.name;
+      this.selectedName = params.name;
       let adcode = params.value;
       try {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
-
         let backgroundColor = "white";
         let tooltip = {
           formatter: "{b}<br/>{c}",
@@ -205,8 +180,47 @@ export default {
           left: "right",
           feature: {
             restore: {},
-            saveAsImage: {},
-            // saveAsImage: {},
+            myFull: {
+              show: true,
+              title: "全屏",
+              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              onclick: () => {
+                this.fullFlag = true;
+                let element = document.getElementById("map");
+                // 一些浏览器的兼容性
+                if (element.requestFullScreen) {
+                  // HTML W3C 提议
+                  element.requestFullScreen();
+                } else if (element.msRequestFullscreen) {
+                  // IE11
+                  element.msRequestFullScreen();
+                } else if (element.webkitRequestFullScreen) {
+                  // Webkit (works in Safari5.1 and Chrome 15)
+                  element.webkitRequestFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  // Firefox (works in nightly)
+                  element.mozRequestFullScreen();
+                }
+                if (this.chart) {
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
+                  this.chart.resize();
+                }
+                // window.location.reload()
+                // this.$refs.map.focus();
+                // this.handleRestore()
+                // 退出全屏
+                if (element.requestFullScreen) {
+                  document.exitFullscreen();
+                } else if (element.msRequestFullScreen) {
+                  document.msExitFullscreen();
+                } else if (element.webkitRequestFullScreen) {
+                  document.webkitCancelFullScreen();
+                } else if (element.mozRequestFullScreen) {
+                  document.mozCancelFullScreen();
+                }
+              },
+            },
           },
         };
         let series = {
@@ -214,9 +228,8 @@ export default {
           name: "adcode",
           type: "map",
           roam: true,
-
+          seriesIndex: 0,
           selectedMode: "single",
-          // color: "#9dc49f",
           animationDurationUpdate: 0,
           label: {
             show: true,
@@ -250,17 +263,29 @@ export default {
           })),
         };
         this.chart.setOption({ backgroundColor, tooltip, toolbox, series }, true); // 更新series
-        this.chart.on("click", this.highlightProvince);
       } catch (error) {
         if (error.response && error.response.status === 404) {
-          alert("没有下级地图了");
+          Swal.fire({
+            title: "没有下级地图了",
+            timer: 300,
+            showConfirmButton: false,
+          });
         } else {
           console.error(error);
         }
       }
-
-      // 加载数据后重新启用地图
       this.chart.on("click", this.handleMapClick);
+    },
+    handleContainerClick() {
+      if (this.wasFeatureClicked) {
+        this.wasFeatureClicked = false;
+      } else {
+        console.log("空白");
+        this.chart.dispatchAction({
+          type: "unselect",
+          name: this.selectedName,
+        });
+      }
     },
     handleRestore() {
       this.renderMap();
@@ -272,13 +297,5 @@ export default {
 <style scoped>
 .content {
   height: 90%;
-}
-.fullscreen-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
 }
 </style>
