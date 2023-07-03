@@ -73,7 +73,11 @@ export default {
     },
     renderMap() {
       // 渲染地图
-      let chart = echarts.init(this.$refs.map);
+      if (this.chart == null) {
+  this.chart = echarts.init(this.$refs.map);
+}
+let chart = this.chart;
+
       echarts.registerMap("chinamap", this.mapData);
       let option = {
         backgroundColor: "white",
@@ -327,8 +331,8 @@ export default {
       } else {
         console.log("空白");
         this.chart.dispatchAction({
-          // type: "unselect",
-          type: "mapUnSelect",
+          type: "unselect",
+          // type: "mapUnSelect",
           name: this.selectedName,
         });
       }

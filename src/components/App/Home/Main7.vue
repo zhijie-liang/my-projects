@@ -95,18 +95,19 @@ export default {
     },
     changePN() {
       this.showMapLabel = !this.showMapLabel;
-      let option = {
-        series: [
-          {
-            label: {
-              normal: {
-                show: this.showMapLabel,
-              },
-            },
-          },
-        ],
-      };
-      this.chart.setOption(option, true);
+      // let option = {
+      //   series: [
+      //     {
+      //       label: {
+      //         normal: {
+      //           show: this.showMapLabel,
+      //         },
+      //       },
+      //     },
+      //   ],
+      // };
+      // this.chart.setOption(option, true);
+      this.renderMap();
     },
     getMapData() {
       // 获取地图数据
