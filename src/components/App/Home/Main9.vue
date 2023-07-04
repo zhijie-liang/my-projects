@@ -8,7 +8,7 @@
 import * as echarts from "echarts";
 import axios from "axios";
 import Swal from "sweetalert2";
-//
+
 export default {
   name: "ChinaMap",
   data() {
@@ -22,13 +22,29 @@ export default {
     this.getMapData().then(() => {
       this.renderMap();
     });
+    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
+    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   beforeDestroy() {
     if (this.chart != null) {
       this.chart = null;
     }
+    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
+    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   methods: {
+    handleFullscreenChange() {
+      this.$refs.map.focus();
+      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        // 退出全屏时恢复原始尺寸
+        const elem = this.$refs.map;
+        elem.style.width = "100%";
+        elem.style.height = "100%";
+        this.chart.resize();
+      }
+    },
     getMapData() {
       return axios
         .get("/map/dtsj3/china/100000副.json")
@@ -73,37 +89,35 @@ export default {
               onclick: () => {
                 this.fullFlag = true;
                 let element = document.getElementById("map");
-                // 一些浏览器的兼容性
-                if (element.requestFullScreen) {
-                  // HTML W3C 提议
-                  element.requestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                  // IE11
-                  element.msRequestFullScreen();
-                } else if (element.webkitRequestFullScreen) {
-                  // Webkit (works in Safari5.1 and Chrome 15)
-                  element.webkitRequestFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  // Firefox (works in nightly)
-                  element.mozRequestFullScreen();
+                if (document.fullscreenElement) {
+                  // 当前已在全屏模式，先退出全屏
+                  if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                  } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                  } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                  } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                  }
+                } else {
+                  // 当前不在全屏模式，请求全屏
+                  if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                  } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                  } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                  } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                  }
                 }
                 if (this.chart) {
-                  element.style.width = window.innerWidth + "px";
-                  element.style.height = window.innerHeight + 161 + "px";
+                  // element.style.width = window.innerWidth + "px";
+                  // element.style.height = window.innerHeight + 161 + "px";
+                  element.style.width = "100vw";
+                  element.style.height = "120vh";
                   this.chart.resize();
-                }
-                // window.location.reload()
-                // this.$refs.map.focus();
-                // this.handleRestore()
-                // 退出全屏
-                if (element.requestFullScreen) {
-                  document.exitFullscreen();
-                } else if (element.msRequestFullScreen) {
-                  document.msExitFullscreen();
-                } else if (element.webkitRequestFullScreen) {
-                  document.webkitCancelFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  document.mozCancelFullScreen();
                 }
               },
             },

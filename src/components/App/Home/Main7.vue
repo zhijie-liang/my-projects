@@ -1,12 +1,6 @@
 <template>
   <div class="content">
     <div>
-      <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
-      <el-button @click="changePN" class="changePN-btn" style="color: #333">
-        {{ showMapLabel ? "不显地名" : "显示地名" }}
-      </el-button>
-    </div>
-    <div>
       字体颜色:
       <el-color-picker
         v-model="fontColor"
@@ -26,7 +20,7 @@
         size="mini"
       ></el-color-picker>
     </div>
-    <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
+    <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
 
@@ -50,7 +44,6 @@ export default {
     this.getMapData().then(() => {
       this.renderMap();
     });
-
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
     document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
@@ -61,7 +54,6 @@ export default {
       this.chart.dispose();
       this.chart = null;
     }
-
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("msfullscreenchange", this.handleFullscreenChange);
@@ -75,39 +67,6 @@ export default {
         elem.style.height = "100%";
         this.chart.resize();
       }
-    },
-    fullScreen() {
-      const elem = this.$refs.map;
-
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      }
-
-      if (this.chart) {
-        elem.style.width = window.innerWidth + "px";
-        elem.style.height = window.innerHeight + 161 + "px";
-        this.chart.resize();
-      }
-    },
-    changePN() {
-      this.showMapLabel = !this.showMapLabel;
-      // let option = {
-      //   series: [
-      //     {
-      //       label: {
-      //         normal: {
-      //           show: this.showMapLabel,
-      //         },
-      //       },
-      //     },
-      //   ],
-      // };
-      // this.chart.setOption(option, true);
-      this.renderMap();
     },
     getMapData() {
       // 获取地图数据
@@ -149,8 +108,53 @@ export default {
           feature: {
             restore: {},
             saveAsImage: {
-              // type: "jpg",
               backgroundColor: "transparent",
+            },
+            myFull: {
+              show: true,
+              title: "全屏",
+              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              onclick: () => {
+                this.fullFlag = true;
+                let element = document.getElementById("map");
+                if (document.fullscreenElement) {
+                  // 当前已在全屏模式，先退出全屏
+                  if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                  } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                  } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                  } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                  }
+                } else {
+                  // 当前不在全屏模式，请求全屏
+                  if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                  } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                  } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                  } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                  }
+                }
+                if (this.chart) {
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
+                  this.chart.resize();
+                }
+              },
+            },
+            myChangePN: {
+              show: true,
+              title: "不显地名",
+              icon: "M0 0h24v24H0z",
+              onclick: () => {
+                this.showMapLabel = !this.showMapLabel;
+                this.renderMap();
+              },
             },
           },
         },
@@ -197,11 +201,7 @@ export default {
       };
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
-
       this.chart = chart;
-
-      chart.setOption(option, true);
-      chart.on("click", this.handleMapClick);
       chart.on("restore", this.handleRestore);
     },
     async handleMapClick(params) {
@@ -215,7 +215,7 @@ export default {
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
         let series = {
-          type: "map",
+          // type: "map",
           map: selectedName,
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
@@ -231,7 +231,6 @@ export default {
           console.error(error);
         }
       }
-
       // 加载数据后重新启用地图
       this.chart.on("click", this.handleMapClick);
     },
@@ -276,30 +275,6 @@ export default {
 
 <style scoped>
 .content {
-  height: 90%;
-}
-.fullscreen-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-.changePN-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-.changeBG-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  height: 100%;
 }
 </style>
