@@ -74,13 +74,14 @@ export default {
     renderMap() {
       // 渲染地图
       if (this.chart == null) {
-  this.chart = echarts.init(this.$refs.map);
-}
-let chart = this.chart;
+        this.chart = echarts.init(this.$refs.map);
+      }
+      let chart = this.chart;
 
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        backgroundColor: "white",
+        backgroundColor: "bisque",
+        // backgroundColor: "white",
         tooltip: {
           formatter: "{b}<br/>{c}",
         },
@@ -98,38 +99,36 @@ let chart = this.chart;
               onclick: () => {
                 this.fullFlag = true;
                 let element = document.getElementById("map");
-                // 一些浏览器的兼容性
-                if (element.requestFullScreen) {
-                  // HTML W3C 提议
-                  element.requestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                  // IE11
-                  element.msRequestFullScreen();
-                } else if (element.webkitRequestFullScreen) {
-                  // Webkit (works in Safari5.1 and Chrome 15)
-                  element.webkitRequestFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  // Firefox (works in nightly)
-                  element.mozRequestFullScreen();
+                if (document.fullscreenElement) {
+                  // 当前已在全屏模式，先退出全屏
+                  if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                  } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                  } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                  } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                  }
+                } else {
+                  // 当前不在全屏模式，请求全屏
+                  if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                  } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                  } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                  } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                  }
                 }
-                if (this.chart) {
-                  element.style.width = window.innerWidth + "px";
-                  element.style.height = window.innerHeight + 161 + "px";
-                  this.chart.resize();
-                }
-                // window.location.reload()
-                // this.$refs.map.focus();
-                // this.handleRestore()
-                // 退出全屏
-                if (element.requestFullScreen) {
-                  document.exitFullscreen();
-                } else if (element.msRequestFullScreen) {
-                  document.msExitFullscreen();
-                } else if (element.webkitRequestFullScreen) {
-                  document.webkitCancelFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  document.mozCancelFullScreen();
-                }
+                setTimeout(() => {
+                  if (this.chart) {
+                    element.style.width = window.innerWidth + "px";
+                    element.style.height = window.innerHeight + 161 + "px";
+                    this.chart.resize();
+                  }
+                }, 2000);
               },
             },
           },
@@ -238,7 +237,8 @@ let chart = this.chart;
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
-        let backgroundColor = "white";
+        // let backgroundColor = "white";
+        let backgroundColor = "bisque";
         let tooltip = {
           formatter: "{b}<br/>{c}",
         };
