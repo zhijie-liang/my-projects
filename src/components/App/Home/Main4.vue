@@ -122,13 +122,11 @@ export default {
                     element.webkitRequestFullscreen();
                   }
                 }
-                setTimeout(() => {
-                  if (this.chart) {
-                    element.style.width = window.innerWidth + "px";
-                    element.style.height = window.innerHeight + 161 + "px";
-                    this.chart.resize();
-                  }
-                }, 2000);
+                if (this.chart) {
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
+                  this.chart.resize();
+                }
               },
             },
           },

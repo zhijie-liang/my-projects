@@ -1,56 +1,64 @@
 <template>
-  <div class="content">
-    <draggable :list="tableList" draggable=".el-table__row">
-      <el-table :data="tableData">
-        <el-table-column prop="name" label="省份"></el-table-column>
-        <el-table-column prop="value" label="人口数量(人)"></el-table-column>
-      </el-table>
-    </draggable>
+  <div>
+    <div id="fullscreen-container" style="background-color: #fff">
+      这里的内容会被全屏！
+      <button id="fullscreen-btn">进入全屏</button>
+    </div>
+    <div>这里的不会被全屏</div>
   </div>
 </template>
 
 <script>
-import draggable from "vuedraggable";
-import axios from "axios";
-
 export default {
-  components: {
-    draggable,
-  },
   data() {
-    return {
-      tableData: [],
-      tableList: [],
-    };
+    return {};
   },
   mounted() {
-    this.fetchtableData();
-  },
-  methods: {
-    async fetchtableData() {
-      try {
-        const response = await axios.get("http://localhost:3000/data");
-        const data = response.data;
-        this.tableData = data.map(item => ({
-          name: item.name,
-          value: item.value,
-        }));
-        this.tableList = [...this.tableData]; // 初始化列表顺序
-      } catch (error) {
-        console.log(error);
+    /**
+     * 全屏指定元素
+     */
+    function fullScreen(element) {
+      const runfullScreen =
+        element.requestFullscreen ||
+        element.mozRequestFullScreen ||
+        element.webkitRequestFullScreen ||
+        element.msRequestFullscreen;
+
+      if (runfullScreen) runfullScreen.call(element);
+      else {
+        console.error("当前浏览器不支持部分全屏！");
       }
-    },
+    }
+
+    /**
+     * 退出全屏
+     */
+    function exitFullScreen() {
+      const runExit =
+        document.exitFullscreen ||
+        document.mozCancelFullScreen ||
+        document.webkitExitFullscreen ||
+        document.msExitFullscreen;
+
+      if (runExit) runExit.call(document);
+      else {
+        console.error("当前浏览器不支持退出全屏！");
+      }
+    }
+
+    let isFullScreen = false;
+    const button = document.getElementById("fullscreen-btn");
+
+    button.addEventListener("click", () => {
+      if (isFullScreen) {
+        exitFullScreen();
+        button.innerText = "进入全屏";
+      } else {
+        fullScreen(document.getElementById("fullscreen-container"));
+        button.innerText = "退出全屏";
+      }
+      isFullScreen = !isFullScreen;
+    });
   },
 };
 </script>
-
-<style scoped>
-.content {
-  /* background-image: url("../../../assets/R-C.jpg"); */
-  background-size: cover;
-  height: 100%;
-}
-.el-table__row.is-dragging {
-  background-color: #e6f7ff; /* 被拖拽元素的背景色 */
-}
-</style>
