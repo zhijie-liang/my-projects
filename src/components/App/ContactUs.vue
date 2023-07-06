@@ -2,7 +2,7 @@
   <div class="search-container" style="margin-top: 100px;">
     <form @submit.prevent="submitHandler">
       <input type="text" v-model="query" placeholder="请输入关键字"/>
-      <button type="submit">搜123456789索</button>
+      <button type="submit">搜索</button>
     </form>
   </div>
 </template>
