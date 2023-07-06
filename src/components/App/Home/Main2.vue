@@ -57,6 +57,7 @@ export default {
             return Promise.reject();
           }
           this.mapData = res.data;
+          // this.mapLevel = 100000;
           let featrues = this.mapData.features;
           let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
           if (errorProvince) {
@@ -83,7 +84,7 @@ export default {
           orient: "vertical",
           left: "right",
           feature: {
-            restore: {},
+            restore: { mapLevel: "100000" },
             myFull: {
               show: true,
               title: "全屏",
@@ -162,6 +163,7 @@ export default {
             },
             data: this.mapData.features.map(item => {
               return {
+                mapLevel: "100000",
                 name: item.properties.name,
                 value: parseInt(item.properties.adcode),
               };

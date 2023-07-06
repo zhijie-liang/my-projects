@@ -1,5 +1,5 @@
 <template>
-  <div class="content" @click="handleContainerClick">
+  <div class="content">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -13,9 +13,11 @@ export default {
   name: "ChinaMap",
   data() {
     return {
-      chart: null, // 图表实例
-      mapData: null, // 地图数据
+      chart: null,
+      mapData: null,
       wasFeatureClicked: false,
+      selectedName: "中华人民共和国",
+      mapStack: [],
     };
   },
   mounted() {
@@ -23,22 +25,25 @@ export default {
       this.renderMap();
     });
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
+    this.$refs.map.addEventListener("mousedown", this.handleMouseDown);
   },
   beforeDestroy() {
     if (this.chart != null) {
       this.chart = null;
     }
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
+    this.$refs.map.addEventListener("mousedown", this.handleMouseDown);
   },
   methods: {
+    handleMouseDown(event) {
+      if (event.button === 1) {
+        event.preventDefault();
+        this.handleContainerClick();
+      }
+    },
     handleFullscreenChange() {
       this.$refs.map.focus();
       if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // 退出全屏时恢复原始尺寸
         const elem = this.$refs.map;
         elem.style.width = "100%";
         elem.style.height = "100%";
@@ -73,6 +78,12 @@ export default {
       echarts.registerMap("chinamap", this.mapData);
       let option = {
         backgroundColor: "white",
+        title: [
+          {
+            text: this.selectedName,
+            left: "center",
+          },
+        ],
         tooltip: {
           formatter: "{b}<br/>{c}",
         },
@@ -81,7 +92,16 @@ export default {
           orient: "vertical",
           left: "right",
           feature: {
-            restore: {},
+            // restore: {},
+            myRestore: {
+              show: true,
+              title: "还原",
+              icon: "path://M330.667,233.376c-50.176,0-93.653,19.456-127.36,53.163C162.965,334.725,143.509,378.202,143.509,428.378s19.456,93.653,59.797,127.36c40.21,33.621,93.419,53.28,146.361,53.28s106.152-19.659,146.464-53.28c40.308-33.707,59.771-77.184,59.771-127.36S420.976,233.376,370.8,233.376L370.8,233.376z M370.8,614.058c-48.683,0-91.883-18.816-124.48-52.224c-32.501-33.504-52.117-76.928-52.117-128.455c0-51.522,19.616-94.949,52.117-128.448c32.597-33.411,75.797-52.224,124.48-52.224s91.881,18.813,124.48,52.224c32.5,33.498,52.112,76.925,52.112,128.448c0,51.527-19.612,94.951-52.112,128.455C462.677,595.242,419.483,614.058,370.8,614.058L370.8,614.058z M322.909,378.93l76.8,66.816l-76.8,66.816V378.93L322.909,378.93z", // 这应该是你自己的图标路径
+              onclick: () => {
+                chart.setOption(option, true);
+              },
+            },
+            saveAsImage: {},
             myFull: {
               show: true,
               title: "全屏",
@@ -90,7 +110,6 @@ export default {
                 this.fullFlag = true;
                 let element = document.getElementById("map");
                 if (document.fullscreenElement) {
-                  // 当前已在全屏模式，先退出全屏
                   if (document.exitFullscreen) {
                     document.exitFullscreen();
                   } else if (document.msExitFullscreen) {
@@ -101,7 +120,6 @@ export default {
                     document.webkitExitFullscreen();
                   }
                 } else {
-                  // 当前不在全屏模式，请求全屏
                   if (element.requestFullscreen) {
                     element.requestFullscreen();
                   } else if (element.msRequestFullscreen) {
@@ -113,10 +131,8 @@ export default {
                   }
                 }
                 if (this.chart) {
-                  // element.style.width = window.innerWidth + "px";
-                  // element.style.height = window.innerHeight + 161 + "px";
-                  element.style.width = "100vw";
-                  element.style.height = "120vh";
+                  element.style.width = window.innerWidth + "px";
+                  element.style.height = window.innerHeight + 161 + "px";
                   this.chart.resize();
                 }
               },
@@ -129,7 +145,6 @@ export default {
             map: "chinamap",
             type: "map",
             roam: true,
-            // seriesIndex: 0,
             selectedMode: "single",
             animationDurationUpdate: 0,
             label: {
@@ -176,6 +191,10 @@ export default {
       if (params.name && params.value) {
         console.log(params.name);
         this.wasFeatureClicked = true;
+        this.mapStack.push({
+          data: this.mapData,
+          name: this.selectedName,
+        });
       }
       let selectedName = params.name;
       this.selectedName = params.name;
@@ -185,6 +204,12 @@ export default {
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
         let backgroundColor = "white";
+        let title = [
+          {
+            text: this.selectedName,
+            left: "center",
+          },
+        ];
         let tooltip = {
           formatter: "{b}<br/>{c}",
         };
@@ -193,7 +218,14 @@ export default {
           orient: "vertical",
           left: "right",
           feature: {
-            restore: {},
+            myRestore: {
+              show: true,
+              title: "还原",
+              icon: "path://M330.667,233.376c-50.176,0-93.653,19.456-127.36,53.163C162.965,334.725,143.509,378.202,143.509,428.378s19.456,93.653,59.797,127.36c40.21,33.621,93.419,53.28,146.361,53.28s106.152-19.659,146.464-53.28c40.308-33.707,59.771-77.184,59.771-127.36S420.976,233.376,370.8,233.376L370.8,233.376z M370.8,614.058c-48.683,0-91.883-18.816-124.48-52.224c-32.501-33.504-52.117-76.928-52.117-128.455c0-51.522,19.616-94.949,52.117-128.448c32.597-33.411,75.797-52.224,124.48-52.224s91.881,18.813,124.48,52.224c32.5,33.498,52.112,76.925,52.112,128.448c0,51.527-19.612,94.951-52.112,128.455C462.677,595.242,419.483,614.058,370.8,614.058L370.8,614.058z M322.909,378.93l76.8,66.816l-76.8,66.816V378.93L322.909,378.93z", // 这应该是你自己的图标路径
+              onclick: () => {
+                this.chart.setOption({ title, backgroundColor, tooltip, toolbox, series }, true);
+              },
+            },
             myFull: {
               show: true,
               title: "全屏",
@@ -201,37 +233,31 @@ export default {
               onclick: () => {
                 this.fullFlag = true;
                 let element = document.getElementById("map");
-                // 一些浏览器的兼容性
-                if (element.requestFullScreen) {
-                  // HTML W3C 提议
-                  element.requestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                  // IE11
-                  element.msRequestFullScreen();
-                } else if (element.webkitRequestFullScreen) {
-                  // Webkit (works in Safari5.1 and Chrome 15)
-                  element.webkitRequestFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  // Firefox (works in nightly)
-                  element.mozRequestFullScreen();
+                if (document.fullscreenElement) {
+                  if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                  } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                  } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                  } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                  }
+                } else {
+                  if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                  } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                  } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                  } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                  }
                 }
                 if (this.chart) {
                   element.style.width = window.innerWidth + "px";
                   element.style.height = window.innerHeight + 161 + "px";
                   this.chart.resize();
-                }
-                // window.location.reload()
-                // this.$refs.map.focus();
-                // this.handleRestore()
-                // 退出全屏
-                if (element.requestFullScreen) {
-                  document.exitFullscreen();
-                } else if (element.msRequestFullScreen) {
-                  document.msExitFullscreen();
-                } else if (element.webkitRequestFullScreen) {
-                  document.webkitCancelFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  document.mozCancelFullScreen();
                 }
               },
             },
@@ -276,7 +302,8 @@ export default {
             value: feature.properties.adcode,
           })),
         };
-        this.chart.setOption({ backgroundColor, tooltip, toolbox, series }, true); // 更新series
+        this.chart.setOption({ title, backgroundColor, tooltip, toolbox, series }, true); // 更新series
+        this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
           Swal.fire({
@@ -295,10 +322,15 @@ export default {
         this.wasFeatureClicked = false;
       } else {
         console.log("空白");
-        this.chart.dispatchAction({
-          type: "unselect",
-          name: this.selectedName,
-        });
+        // 检查堆栈是否为空
+        if (this.mapStack.length > 0) {
+          // 从堆栈中取出上一级的地图数据和配置
+          const lastMapState = this.mapStack.pop();
+          this.mapData = lastMapState.data;
+          this.selectedName = lastMapState.name;
+          // 重新渲染地图
+          this.renderMap();
+        }
       }
     },
     handleRestore() {
