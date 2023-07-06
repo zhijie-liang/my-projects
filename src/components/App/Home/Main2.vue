@@ -1,5 +1,5 @@
 <template>
-  <div class="content" @click="handleContainerClick">
+  <div class="content">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -13,40 +13,24 @@ export default {
   name: "ChinaMap",
   data() {
     return {
-      chart: null, // 图表实例
-      mapData: null, // 地图数据
-      wasFeatureClicked: false,
-      mapLevel: "100000", // 添加这一行，初始为 'china'
+      chart: null,
+      mapData: null,
+      selectedName: "中华人民共和国",
+      mapStack: [],
     };
   },
-
   mounted() {
     this.getMapData().then(() => {
       this.renderMap();
     });
-    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   beforeDestroy() {
     if (this.chart != null) {
+      this.chart.dispose();
       this.chart = null;
     }
-    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    // document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   methods: {
-    handleFullscreenChange() {
-      this.$refs.map.focus();
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // 退出全屏时恢复原始尺寸
-        const elem = this.$refs.map;
-        elem.style.width = "100%";
-        elem.style.height = "100%";
-        this.chart.resize();
-      }
-    },
     getMapData() {
       return axios
         .get("/map/dtsj3/china/100000副.json")
@@ -57,7 +41,6 @@ export default {
             return Promise.reject();
           }
           this.mapData = res.data;
-          // this.mapLevel = 100000;
           let featrues = this.mapData.features;
           let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
           if (errorProvince) {
@@ -75,7 +58,13 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        backgroundColor: "white",
+        title: [
+          {
+            text: this.selectedName,
+            subtext: "地名",
+            left: "center",
+          },
+        ],
         tooltip: {
           formatter: "{b}<br/>{c}",
         },
@@ -84,43 +73,17 @@ export default {
           orient: "vertical",
           left: "right",
           feature: {
-            restore: { mapLevel: "100000" },
-            myFull: {
+            myReturnMap: {
               show: true,
-              title: "全屏",
-              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              title: "先取消选中再返回上级地图",
+              icon: "M0 0h24v24H0z",
               onclick: () => {
-                this.fullFlag = true;
-                let element = document.getElementById("map");
-                if (document.fullscreenElement) {
-                  // 当前已在全屏模式，先退出全屏
-                  if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                  } else if (document.msExitFullscreen) {
-                    document.msExitFullscreen();
-                  } else if (document.mozCancelFullScreen) {
-                    document.mozCancelFullScreen();
-                  } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                  }
-                } else {
-                  // 当前不在全屏模式，请求全屏
-                  if (element.requestFullscreen) {
-                    element.requestFullscreen();
-                  } else if (element.msRequestFullscreen) {
-                    element.msRequestFullscreen();
-                  } else if (element.mozRequestFullScreen) {
-                    element.mozRequestFullScreen();
-                  } else if (element.webkitRequestFullscreen) {
-                    element.webkitRequestFullscreen();
-                  }
-                }
-                if (this.chart) {
-                  // element.style.width = window.innerWidth + "px";
-                  // element.style.height = window.innerHeight + 161 + "px";
-                  element.style.width = "100vw";
-                  element.style.height = "120vh";
-                  this.chart.resize();
+                if (this.mapStack.length > 0) {
+                  console.log("先取消选中再返回上级地图");
+                  const lastMapState = this.mapStack.pop();
+                  this.mapData = lastMapState.data;
+                  this.selectedName = lastMapState.name;
+                  this.renderMap();
                 }
               },
             },
@@ -132,7 +95,6 @@ export default {
             map: "chinamap",
             type: "map",
             roam: true,
-            // seriesIndex: 0,
             selectedMode: "single",
             animationDurationUpdate: 0,
             label: {
@@ -146,24 +108,8 @@ export default {
               borderWidth: "0.5",
               borderColor: "#579bd3",
             },
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: 16,
-                color: "#fff",
-              },
-              itemStyle: {
-                areaColor: "#579bd3",
-              },
-            },
-            select: {
-              itemStyle: {
-                areaColor: "#579bd3",
-              },
-            },
             data: this.mapData.features.map(item => {
               return {
-                mapLevel: "100000",
                 name: item.properties.name,
                 value: parseInt(item.properties.adcode),
               };
@@ -172,24 +118,31 @@ export default {
         ],
       };
       chart.setOption(option, true);
-      chart.on("click", this.handleMapClick); // 添加点击事件处理器
+      chart.on("click", this.handleMapClick);
       this.chart = chart;
-      chart.on("restore", this.handleRestore);
     },
     async handleMapClick(params) {
       if (params.name && params.value) {
         console.log(params.name);
-        this.wasFeatureClicked = true;
       }
       let selectedName = params.name;
-      this.selectedName = params.name;
       let adcode = params.value;
+      this.mapStack.push({
+        data: this.mapData,
+        name: this.selectedName,
+      });
       try {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
-        this.mapLevel = adcode; // 更新当前地图层级
         echarts.registerMap(selectedName, newMapData);
-        let backgroundColor = "white";
+        this.selectedName = selectedName;
+        let title = [
+          {
+            text: this.selectedName,
+            subtext: "地名",
+            left: "center",
+          },
+        ];
         let tooltip = {
           formatter: "{b}<br/>{c}",
         };
@@ -198,38 +151,17 @@ export default {
           orient: "vertical",
           left: "right",
           feature: {
-            restore: {
-              mapLevel: "100000",
-            },
-            myFull: {
+            myReturnMap: {
               show: true,
-              title: "全屏",
-              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              title: "先取消选中再返回上级地图",
+              icon: "M0 0h24v24H0z",
               onclick: () => {
-                this.fullFlag = true;
-                let element = document.getElementById("map");
-                if (element.requestFullScreen) {
-                  element.requestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                  element.msRequestFullScreen();
-                } else if (element.webkitRequestFullScreen) {
-                  element.webkitRequestFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  element.mozRequestFullScreen();
-                }
-                if (this.chart) {
-                  element.style.width = window.innerWidth + "px";
-                  element.style.height = window.innerHeight + 161 + "px";
-                  this.chart.resize();
-                }
-                if (element.requestFullScreen) {
-                  document.exitFullscreen();
-                } else if (element.msRequestFullScreen) {
-                  document.msExitFullscreen();
-                } else if (element.webkitRequestFullScreen) {
-                  document.webkitCancelFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  document.mozCancelFullScreen();
+                if (this.mapStack.length > 0) {
+                  console.log("先取消选中再返回上级地图");
+                  const lastMapState = this.mapStack.pop();
+                  this.mapData = lastMapState.data;
+                  this.selectedName = lastMapState.name;
+                  this.renderMap();
                 }
               },
             },
@@ -240,7 +172,6 @@ export default {
           name: "adcode",
           type: "map",
           roam: true,
-          seriesIndex: 0,
           selectedMode: "single",
           animationDurationUpdate: 0,
           label: {
@@ -254,27 +185,13 @@ export default {
             borderWidth: "0.5",
             borderColor: "#579bd3",
           },
-          emphasis: {
-            label: {
-              show: true,
-              fontSize: 16,
-              color: "#fff",
-            },
-            itemStyle: {
-              areaColor: "#579bd3",
-            },
-          },
-          select: {
-            itemStyle: {
-              areaColor: "#579bd3",
-            },
-          },
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
             value: feature.properties.adcode,
           })),
         };
-        this.chart.setOption({ backgroundColor, tooltip, toolbox, series }, true); // 更新series
+        this.chart.setOption({ title, tooltip, toolbox, series }, true);
+        this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
           Swal.fire({
@@ -288,25 +205,12 @@ export default {
       }
       this.chart.on("click", this.handleMapClick);
     },
-    handleContainerClick() {
-      if (this.wasFeatureClicked) {
-        this.wasFeatureClicked = false;
-      } else {
-        console.log(this.mapLevel);
-        // 如果当前不在最高层级
-        // TODO: 加载上一级地图
-        // this.mapLevel = "china"; // 将地图级别设置回 'china' 或者其他上一级的级别
-      }
-    },
-    handleRestore() {
-      this.renderMap();
-    },
   },
 };
 </script>
 
 <style scoped>
 .content {
-  height: 90%;
+  height: 100%;
 }
 </style>
