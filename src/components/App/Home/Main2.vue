@@ -61,7 +61,7 @@ export default {
         title: [
           {
             text: this.selectedName,
-            subtext: "地名",
+            subtext: "地区",
             left: "center",
           },
         ],
@@ -84,6 +84,12 @@ export default {
                   this.mapData = lastMapState.data;
                   this.selectedName = lastMapState.name;
                   this.renderMap();
+                } else {
+                  Swal.fire({
+                    title: "没有上级地图了",
+                    timer: 300,
+                    showConfirmButton: false,
+                  });
                 }
               },
             },
@@ -91,15 +97,11 @@ export default {
         },
         series: [
           {
-            name: "adcode",
             map: "chinamap",
             type: "map",
-            roam: true,
-            selectedMode: "single",
-            animationDurationUpdate: 0,
             label: {
               show: true,
-              fontSize: 15,
+              fontSize: 8,
               color: "red",
             },
             itemStyle: {
@@ -118,28 +120,38 @@ export default {
         ],
       };
       chart.setOption(option, true);
-      chart.on("click", this.handleMapClick);
+      chart.on("click", this.handleMapClick); // 添加点击事件处理器
       this.chart = chart;
     },
     async handleMapClick(params) {
-      if (params.name && params.value) {
-        console.log(params.name);
-      }
       let selectedName = params.name;
       let adcode = params.value;
-      this.mapStack.push({
-        data: this.mapData,
-        name: this.selectedName,
-      });
       try {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
+
+        if (selectedName !== this.selectedName) {
+          console.log("添加");
+          // 只有在进入新的地图时, m才会添加新的状态到apStack 中
+          this.mapStack.push({
+            data: this.mapData,
+            name: this.selectedName,
+          });
+        } else {
+          console.log("错了");
+          Swal.fire({
+            title: "没有下级地图了",
+            timer: 300,
+            showConfirmButton: false,
+          });
+          return;
+        }
         echarts.registerMap(selectedName, newMapData);
         this.selectedName = selectedName;
         let title = [
           {
             text: this.selectedName,
-            subtext: "地名",
+            subtext: "地区",
             left: "center",
           },
         ];
@@ -169,14 +181,10 @@ export default {
         };
         let series = {
           map: selectedName,
-          name: "adcode",
           type: "map",
-          roam: true,
-          selectedMode: "single",
-          animationDurationUpdate: 0,
           label: {
             show: true,
-            fontSize: 15,
+            fontSize: 8,
             color: "red",
           },
           itemStyle: {

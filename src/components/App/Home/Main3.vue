@@ -1,6 +1,5 @@
 <template>
   <div class="content">
-    <el-button @click="fullScreen" class="fullscreen-btn" style="color: #333">全屏</el-button>
     <div ref="charts" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -15,62 +14,88 @@ export default {
       mapJson: chinamap,
       charts: null,
       option: {
+        // backgroundColor: "transparent",
+        backgroundColor: "#fff",
+        title: [
+          {
+            text: "企业数量",
+            left: "20",
+            top: "250",
+          },
+        ],
         toolbox: {
           show: true,
           orient: "vertical",
           left: "right",
           feature: {
             restore: {},
+            myFull: {
+              show: true,
+              title: "全屏",
+              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
+              onclick: () => {
+                this.fullFlag = true;
+                const elem = this.$refs.charts;
+                if (elem.requestFullscreen) {
+                  elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                  elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                  elem.msRequestFullscreen();
+                }
+                if (this.charts) {
+                  elem.style.width = window.innerWidth + "px";
+                  elem.style.height = window.innerHeight + 151 + "px";
+                  this.charts.resize();
+                }
+              },
+            },
             saveAsImage: {},
           },
         },
+        // visualMap: {
+        //   type: "continuous", // 连续型可视化映射类型
+        //   min: 0, // 数据范围最小值
+        //   max: 20000, // 数据范围最大值
+        //   inRange: {
+        //     color: ["#fff2cc", "#ffe699", "#ffd966", "#ed7d31"], // 颜色区间，可以自定义颜色
+        //   },
+        //   textStyle: {
+        //     color: "#333", // 文本样式颜色
+        //   },
+        //   orient: "vertical", // 可视化映射方向，水平或垂直
+        //   left: "20",
+        //   top: "300",
+        // },
         visualMap: {
-          type: "piecewise",
+          type: "piecewise", //分段型可视化映射，即将数据按照一定的分段范围进行分类并显示不同的颜色或标签。
+          // type: "continuous", //连续型可视化映射，即将数据按照一个连续的数值范围进行映射，并通过渐变的颜色表示数据的大小。
+          // type: "category", //类别型可视化映射，即将数据按照一组离散的类别进行映射，并为每个类别指定一个特定的颜色。
           pieces: [
-            { min: 30, max: 35, label: "30-35", color: "#8BCAF6" },
-            { min: 25, max: 30, label: "25-30", color: "#E8E892" },
-            { min: 20, max: 25, label: "20-25", color: "#e7c0c3" },
-            { min: 15, max: 20, label: "15-20", color: "#edeac6" },
-            { min: 10, max: 15, label: "10-15", color: "#cbded5" },
-            { min: 5, max: 10, label: "5-10", color: "#ecd3b9" },
-            { max: 5, label: "<5", color: "#e6bfe0" },
+            { min: 10001, label: ">10000", color: "#ed7d31" },
+            { min: 5001, max: 10000, label: "5001-10000", color: "#ffd966" },
+            { min: 3001, max: 5000, label: "3001-5000", color: "#ffe699" },
+            { max: 2999, label: "<3000", color: "#fff2cc" },
           ],
           orient: "vertical",
           left: "20",
-          top: "1800",
+          top: "300",
         },
-        backgroundColor: "transparent",
         series: [
           {
             map: "chinamap",
             type: "map",
+            roam: true,
             label: {
-              emphasis: {
-                show: false,
-              },
               normal: {
-                show: true,
+                show: true, //是否显示地名
                 textStyle: {
-                  color: "rgba(0,0,0)",
+                  fontSize: 15, //地名字体大小
                 },
-                // formatter: function (params) {
-                //   if (params.name === "朝阳区" || params.name === "海淀区") {
-                //     return params.name; // 只显示朝阳和海淀的地名
-                //   } else {
-                //     return ""; // 其他地方不显示地名
-                //   }
-                // },
-                // textFixed: {
-                //   // 控制地名位置
-                //   朝阳: [110.5, 39.8], // 朝阳的地名显示在[110.5, 39.8]处
-                //   海淀: [116.2, 40.1], // 海淀的地名显示在[116.2, 40.1]处
-                // },
               },
             },
-            roam: true,
             itemStyle: {
               normal: {
-                areaColor: "#6FA7CE", //地图颜色
                 borderColor: "#fff", //地图边线颜色
               },
               emphasis: {
@@ -78,33 +103,30 @@ export default {
               },
             },
             data: [
-              { name: "海淀区", value: 8 },
-              { name: "朝阳区", value: 18 },
-              { name: "延庆区", value: 8 },
-              { name: "东城区", value: 3 },
-              { name: "西城区", value: 3 },
-              { name: "房山区", value: 18 },
-              { name: "大兴区", value: 23 },
-              { name: "通州区", value: 13 },
-              { name: "顺义区", value: 33 },
-              { name: "平谷区", value: 23 },
-              { name: "怀柔区", value: 3 },
-              { name: "昌平区", value: 13 },
-              { name: "密云区", value: 13 },
-              { name: "门头沟区", value: 3 },
-              { name: "石景山区", value: 18 },
-              { name: "丰台区", value: 28 },
+              { name: "西城区", value: 1559 },
+              { name: "密云区", value: 1683 },
+              { name: "东城区", value: 1694 },
+              { name: "门头沟区", value: 2033 },
+              { name: "延庆区", value: 2256 },
+              { name: "石景山区", value: 2652 },
+              { name: "怀柔区", value: 3172 },
+              { name: "平谷区", value: 3241 },
+              { name: "顺义区", value: 3341 },
+              { name: "房山区", value: 4226 },
+              { name: "通州区", value: 4342 },
+              { name: "丰台区", value: 4408 },
+              { name: "大兴区", value: 6587 },
+              { name: "昌平区", value: 7831 },
+              { name: "朝阳区", value: 11455 },
+              { name: "海淀区", value: 19180 },
             ],
+            //地图点
             markPoint: {
-              symbolSize: 10,
-              label: {
-                show: true,
-                fontSize: 12,
-              },
+              symbolSize: 10, //标记大小
               itemStyle: {
-                borderWidth: 2,
-                color: "#fff",
-                borderColor: "red",
+                borderWidth: 2, //外层宽度
+                color: "#fff", //内层颜色
+                borderColor: "red", //外层颜色
               },
               data: [
                 {
@@ -179,13 +201,9 @@ export default {
     };
   },
   mounted() {
-    // 获取容器的引用
     const container = this.$refs.charts;
-
-    // 初始化地图
     this.charts = echarts.init(container);
     this.registerMap();
-
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
     document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
@@ -199,7 +217,6 @@ export default {
   methods: {
     handleFullscreenChange() {
       if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // 退出全屏时恢复原始尺寸
         const elem = this.$refs.charts;
         elem.style.width = "100%";
         elem.style.height = "100%";
@@ -214,36 +231,11 @@ export default {
     registerMap() {
       echarts.registerMap(this.mapName, this.mapJson);
     },
-    fullScreen() {
-      const elem = this.$refs.charts;
-
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      }
-
-      if (this.charts) {
-        elem.style.width = window.innerWidth + "px";
-        elem.style.height = window.innerHeight + 151 + "px";
-        this.charts.resize();
-      }
-    },
   },
 };
 </script>
 <style scoped>
 .content {
-  height: 90%;
-}
-.fullscreen-btn {
-  top: 20px;
-  right: 20px;
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  height: 100%;
 }
 </style>

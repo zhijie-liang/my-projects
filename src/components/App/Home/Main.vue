@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" @click="handleContainerClick">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
       mapData: null,
       wasFeatureClicked: false,
       selectedName: "中华人民共和国",
+      selectName: "",
       mapStack: [],
     };
   },
@@ -78,7 +79,7 @@ export default {
         title: [
           {
             text: this.selectedName,
-            subtext:"地名",
+            subtext: "地区",
             left: "center",
           },
         ],
@@ -147,6 +148,12 @@ export default {
                   this.mapData = lastMapState.data;
                   this.selectedName = lastMapState.name;
                   this.renderMap();
+                } else {
+                  Swal.fire({
+                    title: "没有上级地图了",
+                    timer: 300,
+                    showConfirmButton: false,
+                  });
                 }
               },
             },
@@ -243,20 +250,33 @@ export default {
         this.wasFeatureClicked = true;
       }
       let selectedName = params.name;
+      this.selectName = params.name;
       let adcode = params.value;
-      this.mapStack.push({
-        data: this.mapData,
-        name: this.selectedName,
-      });
       try {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
+        if (selectedName !== this.selectedName) {
+          console.log("添加");
+          // 只有在进入新的地图时,才会添加新的状态到 mapStack 中
+          this.mapStack.push({
+            data: this.mapData,
+            name: this.selectedName,
+          });
+        } else {
+          console.log("错了");
+          Swal.fire({
+            title: "没有下级地图了",
+            timer: 300,
+            showConfirmButton: false,
+          });
+          return;
+        }
         echarts.registerMap(selectedName, newMapData);
         this.selectedName = selectedName;
         let title = [
           {
             text: this.selectedName,
-            subtext:"地名",
+            subtext: "地区",
             left: "center",
           },
         ];
@@ -403,6 +423,18 @@ export default {
         }
       }
       this.chart.on("click", this.handleMapClick);
+    },
+    handleContainerClick() {
+      if (this.wasFeatureClicked) {
+        this.wasFeatureClicked = false;
+      } else {
+        console.log("空白");
+        this.chart.dispatchAction({
+          type: "unselect",
+          // type: "mapUnSelect",
+          name: this.selectName,
+        });
+      }
     },
   },
 };
