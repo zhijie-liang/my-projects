@@ -1,5 +1,5 @@
 <template>
-  <div class="content" @click="handleContainerClick">
+  <div class="content" @click="handleContainerClick" style="height: 100%">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -76,6 +76,7 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
+        backgroundColor: "white",
         title: [
           {
             text: this.selectedName,
@@ -271,6 +272,7 @@ export default {
         }
         echarts.registerMap(selectedName, newMapData);
         this.selectedName = selectedName;
+        let backgroundColor = "white";
         let title = [
           {
             text: this.selectedName,
@@ -406,7 +408,7 @@ export default {
             },
           },
         };
-        this.chart.setOption({ title, tooltip, toolbox, series, geo }, true);
+        this.chart.setOption({ backgroundColor, title, tooltip, toolbox, series, geo }, true);
         this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
@@ -436,8 +438,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.content {
-  height: 100%;
-}
-</style>
+<style scoped></style>
