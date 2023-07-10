@@ -560,6 +560,7 @@
       "type": "Feature",
       "properties": {
         "name": "河北省",
+        "cp": [115.21 , 38.44],
         "center": [114.502461, 38.045474],
         "childrenNum": 11,
         "level": "province",
