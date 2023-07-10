@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" style="height: 100%">
     <div ref="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -133,7 +133,7 @@ export default {
           })),
         };
 
-        this.chart.setOption({ series }); // 更新series和geo
+        this.chart.setOption({ series }); // 更新series
       } catch (error) {
         if (error.response && error.response.status === 404) {
           alert("没有下级地图了");
@@ -147,8 +147,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.content {
-  height: 100%;
-}
-</style>
+<style scoped></style>
