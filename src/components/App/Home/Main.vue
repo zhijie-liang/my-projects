@@ -50,27 +50,30 @@ export default {
       }
     },
     getMapData() {
-      return axios
-        .get("/map/dtsj3/china/100000副.json")
-        .then(res => {
-          if (!res.data || !Array.isArray(res.data.features)) {
-            console.error("无效的地图数据:", res.data);
-            alert("无效的地图数据。请稍后再试。");
-            return Promise.reject();
-          }
-          this.mapData = res.data;
-          let featrues = this.mapData.features;
-          let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
-          if (errorProvince) {
-            alert(`地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`);
-            return Promise.reject();
-          }
-          return Promise.resolve();
-        })
-        .catch(error => {
-          console.error("获取地图数据失败:", error);
-          alert("获取地图数据失败。请稍后再试。");
-        });
+      return (
+        axios
+          .get("/map/dtsj3/china/100000副.json")
+          // .get("/map/dtsj3/provinces/650000.json")
+          .then(res => {
+            if (!res.data || !Array.isArray(res.data.features)) {
+              console.error("无效的地图数据:", res.data);
+              alert("无效的地图数据。请稍后再试。");
+              return Promise.reject();
+            }
+            this.mapData = res.data;
+            let featrues = this.mapData.features;
+            let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
+            if (errorProvince) {
+              alert(`地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`);
+              return Promise.reject();
+            }
+            return Promise.resolve();
+          })
+          .catch(error => {
+            console.error("获取地图数据失败:", error);
+            alert("获取地图数据失败。请稍后再试。");
+          })
+      );
     },
     renderMap() {
       let chart = echarts.init(this.$refs.map);
@@ -165,6 +168,7 @@ export default {
             map: "chinamap",
             type: "map",
             roam: true,
+            // zoom:0.5,
             selectedMode: "single",
             animationDurationUpdate: 0,
             label: {
@@ -206,10 +210,14 @@ export default {
             name: "adcode",
             map: "chinamap",
             roam: true,
+            // zoom:0.5,
             selectedMode: "single",
             animationDurationUpdate: 0,
             silent: true,
             top: "11%",
+            // layoutCenter: ["50%", "52%"],
+            // layoutSize: "100%",
+            // center: [115.97, 29.71],
             itemStyle: {
               color: "transparent",
               borderWidth: "0",
@@ -230,15 +238,21 @@ export default {
       };
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
+
       // 添加georoam事件处理函数,同步缩放功能
       chart.on("georoam", params => {
         let option = chart.getOption();
+        // console.log(option.geo[0].center);
+        // console.log(option.series[0].center);
         if (params.zoom != null && params.zoom != undefined) {
           option.geo[0].zoom = option.series[0].zoom;
           option.geo[0].center = option.series[0].center;
         } else {
           option.geo[0].center = option.series[0].center;
         }
+        chart.dispatchAction({
+          type: "restore",
+        });
         chart.setOption(option, true);
       });
       this.chart = chart;
@@ -255,7 +269,7 @@ export default {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         if (selectedName !== this.selectedName) {
-          console.log("添加");
+          console.log("添加新的状态到mapStack中");
           // 只有在进入新的地图时,才会添加新的状态到 mapStack 中
           this.mapStack.push({
             data: this.mapData,
@@ -392,6 +406,9 @@ export default {
           animationDurationUpdate: 0,
           silent: true,
           top: "11%",
+          // layoutCenter: ["50%", "52%"],
+          // layoutSize: "100%",
+          // center: [115.97, 29.71],
           itemStyle: {
             color: "transparent",
             borderWidth: "0",
