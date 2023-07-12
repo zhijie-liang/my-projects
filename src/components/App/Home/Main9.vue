@@ -28,7 +28,7 @@ export default {
     if (this.chart != null) {
       this.chart = null;
     }
-    
+
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
   },
   methods: {
@@ -113,12 +113,9 @@ export default {
         },
         series: [
           {
-            name: "adcode",
             map: "chinamap",
             type: "map",
             roam: true,
-            selectedMode: "single",
-            animationDurationUpdate: 0,
             label: {
               show: true,
               fontSize: 15,
@@ -141,6 +138,25 @@ export default {
       };
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
+      // 监听容器宽度变化
+      window.onresize = function () {
+        // 获取容器的新宽度
+        var newWidth = document.getElementById("map").offsetWidth;
+        console.log(document.getElementById("map").offsetWidth);
+        // 根据新的宽度计算地图应该有的top值
+        var newTop = calculateTop(newWidth);
+        // 更新地图的配置
+        option.series.top = newTop;
+        // 用新的配置更新地图
+        chart.setOption(option, true);
+        chart.resize(); // 新添加的这一行
+      };
+      // 计算新的top值的函数
+      function calculateTop(width) {
+        // 这里你需要根据实际需求来编写适合你的计算函数
+        var percentage = (width / 1000) * 10; // 这只是一个示例，你需要根据实际情况进行调整
+        return percentage + "%";
+      }
       this.chart = chart;
     },
     async handleMapClick(params) {
@@ -194,12 +210,8 @@ export default {
         };
         let series = {
           map: selectedName,
-          name: "adcode",
           type: "map",
           roam: true,
-          seriesIndex: 0,
-          selectedMode: "single",
-          animationDurationUpdate: 0,
           label: {
             show: true,
             fontSize: 15,
@@ -228,6 +240,25 @@ export default {
         } else {
           console.error(error);
         }
+      }
+      // 监听容器宽度变化
+      window.onresize = function () {
+        // 获取容器的新宽度
+        var newWidth = document.getElementById("map").offsetHeight;
+        console.log(document.getElementById("map").offsetHeight);
+        // 根据新的宽度计算地图应该有的top值
+        var newTop = calculateTop(newWidth);
+        // 更新地图的配置
+        this.series.top = newTop;
+        // 用新的配置更新地图
+        this.chart.setOption(this.series, true);
+        this.chart.resize(); // 新添加的这一行
+      };
+      // 计算新的top值的函数
+      function calculateTop(width) {
+        // 这里你需要根据实际需求来编写适合你的计算函数
+        var percentage = (width / 1000) * 10; // 这只是一个示例，你需要根据实际情况进行调整
+        return percentage + "%";
       }
       this.chart.on("click", this.handleMapClick);
     },

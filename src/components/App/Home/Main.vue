@@ -53,7 +53,7 @@ export default {
       return (
         axios
           .get("/map/dtsj3/china/100000副.json")
-          // .get("/map/dtsj3/provinces/650000.json")
+          // .get("/map/dtsj3/provinces/140000.json")
           .then(res => {
             if (!res.data || !Array.isArray(res.data.features)) {
               console.error("无效的地图数据:", res.data);
