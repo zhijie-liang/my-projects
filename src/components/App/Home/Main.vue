@@ -214,6 +214,7 @@ export default {
             selectedMode: "single",
             animationDurationUpdate: 0,
             silent: true,
+            // top: "60",
             top: "11%",
             // layoutCenter: ["50%", "52%"],
             // layoutSize: "100%",
@@ -238,7 +239,34 @@ export default {
       };
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
+      // let echartsInstance = echarts.init(document.getElementById("map"));
+      // echartsInstance.setOption(option);
 
+      // // 一旦地图数据加载完毕
+      // echartsInstance.on("geoRoam", function () {
+      //   let region = echartsInstance.getModel().getComponent("geo").getRegion("中国");
+      //   let boundingRect = region && region.getBoundingRect();
+      //   console.log(boundingRect); // 输出：{x: 最小经度, y: 最小纬度, width: 经度差, height: 纬度差}
+      // });
+      // 监听容器宽度变化
+      // window.onresize = function () {
+      //   // 获取容器的新宽度
+      //   var newWidth = document.getElementById("map").offsetHeight;
+      //   console.log(document.getElementById("map").offsetHeight);
+      //   // 根据新的宽度计算地图应该有的top值
+      //   var newTop = calculateTop(newWidth);
+      //   // 更新地图的配置
+      //   option.geo[0].top = newTop;
+      //   // 用新的配置更新地图
+      //   chart.setOption(option, true);
+      //   chart.resize();  // 新添加的这一行
+      // };
+      // // 计算新的top值的函数
+      // function calculateTop(width) {
+      //   // 这里你需要根据实际需求来编写适合你的计算函数
+      //   var percentage = (width / 1000) * 10; // 这只是一个示例，你需要根据实际情况进行调整
+      //   return percentage + "%";
+      // }
       // 添加georoam事件处理函数,同步缩放功能
       chart.on("georoam", params => {
         let option = chart.getOption();
@@ -405,6 +433,7 @@ export default {
           map: selectedName,
           animationDurationUpdate: 0,
           silent: true,
+          // top: "110",
           top: "11%",
           // layoutCenter: ["50%", "52%"],
           // layoutSize: "100%",

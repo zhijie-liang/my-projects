@@ -107,6 +107,17 @@ export default {
           left: "right",
           feature: {
             restore: {},
+            // myRestore: {
+            //   show: true,
+            //   title: "还原",
+            //   icon: "path://M330.667,233.376c-50.176,0-93.653,19.456-127.36,53.163C162.965,334.725,143.509,378.202,143.509,428.378s19.456,93.653,59.797,127.36c40.21,33.621,93.419,53.28,146.361,53.28s106.152-19.659,146.464-53.28c40.308-33.707,59.771-77.184,59.771-127.36S420.976,233.376,370.8,233.376L370.8,233.376z M370.8,614.058c-48.683,0-91.883-18.816-124.48-52.224c-32.501-33.504-52.117-76.928-52.117-128.455c0-51.522,19.616-94.949,52.117-128.448c32.597-33.411,75.797-52.224,124.48-52.224s91.881,18.813,124.48,52.224c32.5,33.498,52.112,76.925,52.112,128.448c0,51.527-19.612,94.951-52.112,128.455C462.677,595.242,419.483,614.058,370.8,614.058L370.8,614.058z M322.909,378.93l76.8,66.816l-76.8,66.816V378.93L322.909,378.93z", // 这应该是你自己的图标路径
+            //   onclick: () => {
+            //     chart.setOption(option, true);
+            //     this.fontColor = "rgba(0,0,0)";
+            //     this.mapAreaColor = "#6FA7CE";
+            //     this.backgroundColor = "#fff";
+            //   },
+            // },
             saveAsImage: {
               backgroundColor: "transparent",
             },
@@ -215,7 +226,6 @@ export default {
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
         let series = {
-          // type: "map",
           map: selectedName,
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
