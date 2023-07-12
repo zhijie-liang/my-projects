@@ -13,7 +13,7 @@
     >
       <div style="display: flex; justify-content: space-between; align-items: center">
         <!-- <a href="/" style="font-size: 2rem; font-weight: bold; color: #333; text-decoration: none">LOGO</a> -->
-        <img src="./assets/youtube.png" alt="Logo" width="100" height="50" style="margin-left: 30px" />
+        <img src="./assets/LYYDB.jpg" alt="Logo" width="100" height="50" style="margin-left: 30px" />
         <img />
         <ul style="list-style: none; display: flex" class="nav-links">
           <li>

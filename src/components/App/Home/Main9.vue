@@ -11,13 +11,11 @@ import Swal from "sweetalert2";
 
 export default {
   name: "ChinaMap",
+
   data() {
     return {
       chart: null,
       mapData: null,
-      wasFeatureClicked: false,
-      selectedName: "中华人民共和国",
-      mapStack: [],
     };
   },
   mounted() {
@@ -25,22 +23,15 @@ export default {
       this.renderMap();
     });
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    this.$refs.map.addEventListener("mousedown", this.handleMouseDown);
   },
   beforeDestroy() {
     if (this.chart != null) {
       this.chart = null;
     }
-    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    this.$refs.map.addEventListener("mousedown", this.handleMouseDown);
+    
+    document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
   },
   methods: {
-    handleMouseDown(event) {
-      if (event.button === 1) {
-        event.preventDefault();
-        this.handleContainerClick();
-      }
-    },
     handleFullscreenChange() {
       this.$refs.map.focus();
       if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -50,6 +41,7 @@ export default {
         this.chart.resize();
       }
     },
+
     getMapData() {
       return axios
         .get("/map/dtsj3/china/100000副.json")
@@ -77,31 +69,11 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
-        backgroundColor: "white",
-        title: [
-          {
-            text: this.selectedName,
-            left: "center",
-          },
-        ],
-        tooltip: {
-          formatter: "{b}<br/>{c}",
-        },
         toolbox: {
           show: true,
           orient: "vertical",
           left: "right",
           feature: {
-            // restore: {},
-            myRestore: {
-              show: true,
-              title: "还原",
-              icon: "path://M330.667,233.376c-50.176,0-93.653,19.456-127.36,53.163C162.965,334.725,143.509,378.202,143.509,428.378s19.456,93.653,59.797,127.36c40.21,33.621,93.419,53.28,146.361,53.28s106.152-19.659,146.464-53.28c40.308-33.707,59.771-77.184,59.771-127.36S420.976,233.376,370.8,233.376L370.8,233.376z M370.8,614.058c-48.683,0-91.883-18.816-124.48-52.224c-32.501-33.504-52.117-76.928-52.117-128.455c0-51.522,19.616-94.949,52.117-128.448c32.597-33.411,75.797-52.224,124.48-52.224s91.881,18.813,124.48,52.224c32.5,33.498,52.112,76.925,52.112,128.448c0,51.527-19.612,94.951-52.112,128.455C462.677,595.242,419.483,614.058,370.8,614.058L370.8,614.058z M322.909,378.93l76.8,66.816l-76.8,66.816V378.93L322.909,378.93z", // 这应该是你自己的图标路径
-              onclick: () => {
-                chart.setOption(option, true);
-              },
-            },
-            saveAsImage: {},
             myFull: {
               show: true,
               title: "全屏",
@@ -158,21 +130,6 @@ export default {
               borderWidth: "0.5",
               borderColor: "#579bd3",
             },
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: 16,
-                color: "#fff",
-              },
-              itemStyle: {
-                areaColor: "#579bd3",
-              },
-            },
-            select: {
-              itemStyle: {
-                areaColor: "#579bd3",
-              },
-            },
             data: this.mapData.features.map(item => {
               return {
                 name: item.properties.name,
@@ -185,47 +142,19 @@ export default {
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
       this.chart = chart;
-      chart.on("restore", this.handleRestore);
     },
     async handleMapClick(params) {
-      if (params.name && params.value) {
-        console.log(params.name);
-        this.wasFeatureClicked = true;
-        this.mapStack.push({
-          data: this.mapData,
-          name: this.selectedName,
-        });
-      }
       let selectedName = params.name;
-      this.selectedName = params.name;
       let adcode = params.value;
       try {
         let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
-        let backgroundColor = "white";
-        let title = [
-          {
-            text: this.selectedName,
-            left: "center",
-          },
-        ];
-        let tooltip = {
-          formatter: "{b}<br/>{c}",
-        };
         let toolbox = {
           show: true,
           orient: "vertical",
           left: "right",
           feature: {
-            myRestore: {
-              show: true,
-              title: "还原",
-              icon: "path://M330.667,233.376c-50.176,0-93.653,19.456-127.36,53.163C162.965,334.725,143.509,378.202,143.509,428.378s19.456,93.653,59.797,127.36c40.21,33.621,93.419,53.28,146.361,53.28s106.152-19.659,146.464-53.28c40.308-33.707,59.771-77.184,59.771-127.36S420.976,233.376,370.8,233.376L370.8,233.376z M370.8,614.058c-48.683,0-91.883-18.816-124.48-52.224c-32.501-33.504-52.117-76.928-52.117-128.455c0-51.522,19.616-94.949,52.117-128.448c32.597-33.411,75.797-52.224,124.48-52.224s91.881,18.813,124.48,52.224c32.5,33.498,52.112,76.925,52.112,128.448c0,51.527-19.612,94.951-52.112,128.455C462.677,595.242,419.483,614.058,370.8,614.058L370.8,614.058z M322.909,378.93l76.8,66.816l-76.8,66.816V378.93L322.909,378.93z", // 这应该是你自己的图标路径
-              onclick: () => {
-                this.chart.setOption({ title, backgroundColor, tooltip, toolbox, series }, true);
-              },
-            },
             myFull: {
               show: true,
               title: "全屏",
@@ -282,27 +211,12 @@ export default {
             borderWidth: "0.5",
             borderColor: "#579bd3",
           },
-          emphasis: {
-            label: {
-              show: true,
-              fontSize: 16,
-              color: "#fff",
-            },
-            itemStyle: {
-              areaColor: "#579bd3",
-            },
-          },
-          select: {
-            itemStyle: {
-              areaColor: "#579bd3",
-            },
-          },
           data: newMapData.features.map(feature => ({
             name: feature.properties.name,
             value: feature.properties.adcode,
           })),
         };
-        this.chart.setOption({ title, backgroundColor, tooltip, toolbox, series }, true); // 更新series
+        this.chart.setOption({ toolbox, series }, true); // 更新series
         this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
@@ -316,25 +230,6 @@ export default {
         }
       }
       this.chart.on("click", this.handleMapClick);
-    },
-    handleContainerClick() {
-      if (this.wasFeatureClicked) {
-        this.wasFeatureClicked = false;
-      } else {
-        console.log("空白");
-        // 检查堆栈是否为空
-        if (this.mapStack.length > 0) {
-          // 从堆栈中取出上一级的地图数据和配置
-          const lastMapState = this.mapStack.pop();
-          this.mapData = lastMapState.data;
-          this.selectedName = lastMapState.name;
-          // 重新渲染地图
-          this.renderMap();
-        }
-      }
-    },
-    handleRestore() {
-      this.renderMap();
     },
   },
 };

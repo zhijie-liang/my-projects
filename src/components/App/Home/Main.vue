@@ -34,9 +34,9 @@ export default {
       this.chart.dispose();
       this.chart = null;
     }
-    document.addEventListener("fullscreenchange", this.handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
-    document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
   methods: {
     handleFullscreenChange() {
