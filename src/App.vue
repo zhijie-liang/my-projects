@@ -15,6 +15,7 @@
         <!-- <a href="/" style="font-size: 2rem; font-weight: bold; color: #333; text-decoration: none">LOGO</a> -->
         <img src="./assets/LYYDB.jpg" alt="Logo" width="100" height="50" style="margin-left: 30px" />
         <img />
+        <a href="https://www.google.com.hk">谷歌</a>
         <ul style="list-style: none; display: flex" class="nav-links">
           <li>
             <router-link

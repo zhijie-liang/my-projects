@@ -29,10 +29,11 @@ export default {
     document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullscreenChange);
   },
+  // `beforeDestroy` 是 Vue 的生命周期钩子，会在实例被销毁前调用。在这个方法中，销毁 `chart` 实例，防止内存泄漏。
   beforeDestroy() {
     if (this.chart != null) {
-      this.chart.dispose();
-      this.chart = null;
+      this.chart.dispose(); // 如果 `chart` 不为空，则调用 echarts 的 `dispose` 方法销毁图表实例，
+      this.chart = null; // 然后将 `chart` 设置为 null，彻底解除对对象的引用。
     }
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
