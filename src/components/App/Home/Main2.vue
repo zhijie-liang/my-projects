@@ -1,26 +1,30 @@
 <template>
-  <div style="width: 100%; height: 100%; display: flex">
-    <div style="width: 25%; height: 100%">
-      <span>{{ selectedName }}</span>
-      <div class="legend-table">
-        <el-table :data="tableData" style="width: 100%" size="mini">
-          <el-table-column type="index" label="排名" width="100" align="center"></el-table-column>
-          <el-table-column prop="name" label="省份" width="100" align="center"></el-table-column>
-          <el-table-column prop="value" label="人口数量(人)" align="center"></el-table-column>
-        </el-table>
-        <el-pagination
-          size="mini"
-          :page-size="pageSize"
-          :current-page="currentPage"
-          :page-sizes="[5, 10, 20, 40, 100]"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          layout="total, sizes, prev, pager, next, jumper"
-        />
+  <div style="width: 100%; height: 100%">
+    <div style="width: 100%; height: 50%; display: flex">
+      <div style="width: 50%; height: 100%">
+        <span>{{ selectedName }}</span>
+        <div class="legend-table">
+          <el-table :data="tableData" style="width: 100%" size="mini">
+            <el-table-column type="index" label="排名" width="100" align="center"></el-table-column>
+            <el-table-column prop="name" label="省份" width="100" align="center"></el-table-column>
+            <el-table-column prop="value" label="人口数量(人)" align="center"></el-table-column>
+          </el-table>
+          <el-pagination
+            size="mini"
+            :page-size="pageSize"
+            :current-page="currentPage"
+            :page-sizes="[5, 10, 20, 40, 100]"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            layout="total, sizes, prev, pager, next, jumper"
+          />
+        </div>
       </div>
+      <div ref="map" id="map" style="width: 50%; height: 100%; margin: 0 auto"></div>
     </div>
-    <div ref="map" id="map" style="width: 50%; height: 100%; margin: 0 auto"></div>
-    <div style="width: 25%; height: 100%"></div>
+    <div style="width: 100%; height: 70%; display: flex">
+      <div ref="bar" style="width: 100%; height: 100%"></div>
+    </div>
   </div>
 </template>
 
@@ -33,9 +37,8 @@ export default {
   name: "ChinaMap",
   data() {
     return {
-      // title: "中国",
       tableData: [],
-      pageSize: 10,
+      pageSize: 5,
       currentPage: 1,
       totalRows: 0,
       chart: null,
@@ -49,6 +52,7 @@ export default {
       this.renderMap();
     });
     this.fetchtableData();
+    this.fetchData();
   },
   beforeDestroy() {
     if (this.chart != null) {
@@ -57,6 +61,7 @@ export default {
     }
   },
   methods: {
+    //////地图
     getMapData() {
       return axios.get("/map/dtsj3/china/100000副.json").then(res => {
         this.mapData = res.data;
@@ -221,6 +226,7 @@ export default {
       }
       this.chart.on("click", this.handleMapClick);
     },
+    ///////表格
     async fetchtableData() {
       try {
         const response = await axios.get("http://localhost:3000/data");
@@ -253,6 +259,68 @@ export default {
     updateOption() {
       this.option.series[0].data = this.tableData;
       this.charts.setOption(this.option);
+    },
+    /////////柱状图
+    fetchData() {
+      axios
+        .get("http://localhost:3000/data")
+        .then(response => {
+          this.chartData = response.data;
+          this.renderChart();
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+    renderChart() {
+      if (!this.chartData) return;
+
+      var myChart = echarts.init(this.$refs.bar);
+      var option = {
+        toolbox: {
+          show: true,
+          orient: "vertical",
+          left: "right",
+          feature: {
+            saveAsImage: {},
+          },
+        },
+        xAxis: {
+          type: "category",
+          data: this.chartData.map(item => item.name),
+          axisLabel: {
+            rotate: 60, // 旋转标签文本
+            formatter: function (value) {
+              // 自定义标签格式
+              return value.substring(0, 4) + "..."; // 只显示前四个字符
+            },
+          },
+        },
+        yAxis: {
+          type: "value",
+          name: "（人）",
+        },
+        series: [
+          {
+            data: this.chartData.map(item => item.value),
+            type: "bar",
+            barWidth: "50%",
+            itemStyle: {
+              normal: {
+                label: {
+                  // show: true,
+                  position: "top",
+                  textStyle: {
+                    color: "black",
+                    fontSize: 10,
+                  },
+                },
+              },
+            },
+          },
+        ],
+      };
+      myChart.setOption(option);
     },
   },
 };
