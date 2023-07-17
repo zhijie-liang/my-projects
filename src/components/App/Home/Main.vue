@@ -1,5 +1,5 @@
 <template>
-  <div class="content" @click="handleContainerClick" style="height: 100%">
+  <div style="height: 100%" @click="handleContainerClick">
     <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>

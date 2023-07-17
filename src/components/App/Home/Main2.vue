@@ -1,6 +1,26 @@
 <template>
-  <div class="content">
-    <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
+  <div style="width: 100%; height: 100%; display: flex">
+    <div style="width: 25%; height: 100%">
+      <span>{{ selectedName }}</span>
+      <div class="legend-table">
+        <el-table :data="tableData" style="width: 100%" size="mini">
+          <el-table-column type="index" label="排名" width="100" align="center"></el-table-column>
+          <el-table-column prop="name" label="省份" width="100" align="center"></el-table-column>
+          <el-table-column prop="value" label="人口数量(人)" align="center"></el-table-column>
+        </el-table>
+        <el-pagination
+          size="mini"
+          :page-size="pageSize"
+          :current-page="currentPage"
+          :page-sizes="[5, 10, 20, 40, 100]"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          layout="total, sizes, prev, pager, next, jumper"
+        />
+      </div>
+    </div>
+    <div ref="map" id="map" style="width: 50%; height: 100%; margin: 0 auto"></div>
+    <div style="width: 25%; height: 100%"></div>
   </div>
 </template>
 
@@ -13,6 +33,11 @@ export default {
   name: "ChinaMap",
   data() {
     return {
+      // title: "中国",
+      tableData: [],
+      pageSize: 10,
+      currentPage: 1,
+      totalRows: 0,
       chart: null,
       mapData: null,
       selectedName: "中华人民共和国",
@@ -23,6 +48,7 @@ export default {
     this.getMapData().then(() => {
       this.renderMap();
     });
+    this.fetchtableData();
   },
   beforeDestroy() {
     if (this.chart != null) {
@@ -32,27 +58,9 @@ export default {
   },
   methods: {
     getMapData() {
-      return axios
-        .get("/map/dtsj3/china/100000副.json")
-        .then(res => {
-          if (!res.data || !Array.isArray(res.data.features)) {
-            console.error("无效的地图数据:", res.data);
-            alert("无效的地图数据。请稍后再试。");
-            return Promise.reject();
-          }
-          this.mapData = res.data;
-          let featrues = this.mapData.features;
-          let errorProvince = featrues.find(f => isNaN(parseInt(f.properties.adcode)));
-          if (errorProvince) {
-            alert(`地图数据 ${errorProvince.properties.name} 加载失败，请检查数据文件是否存在！`);
-            return Promise.reject();
-          }
-          return Promise.resolve();
-        })
-        .catch(error => {
-          console.error("获取地图数据失败:", error);
-          alert("获取地图数据失败。请稍后再试。");
-        });
+      return axios.get("/map/dtsj3/china/100000副.json").then(res => {
+        this.mapData = res.data;
+      });
     },
     renderMap() {
       let chart = echarts.init(this.$refs.map);
@@ -213,12 +221,39 @@ export default {
       }
       this.chart.on("click", this.handleMapClick);
     },
+    async fetchtableData() {
+      try {
+        const response = await axios.get("http://localhost:3000/data");
+        const data = response.data;
+        // 根据分页信息过滤出当前页的数据
+        const start = (this.currentPage - 1) * this.pageSize;
+        const end = start + this.pageSize;
+        const tableData = data.slice(start, end).map(item => ({
+          name: item.name,
+          value: item.value,
+        }));
+        // 更新表格数据和总条数等分页信息
+        this.tableData = tableData;
+        this.totalRows = data.length;
+        // 更新图表数据和配置
+        this.updateOption();
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    handleSizeChange(newSize) {
+      this.pageSize = newSize;
+      this.currentPage = 1; // 切换每页行数时重置当前页码
+      this.fetchtableData();
+    },
+    handleCurrentChange(newPage) {
+      this.currentPage = newPage;
+      this.fetchtableData();
+    },
+    updateOption() {
+      this.option.series[0].data = this.tableData;
+      this.charts.setOption(this.option);
+    },
   },
 };
 </script>
-
-<style scoped>
-.content {
-  height: 100%;
-}
-</style>
