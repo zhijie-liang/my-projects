@@ -45,6 +45,7 @@ export default {
       mapData: null,
       selectedName: "中华人民共和国",
       mapStack: [],
+      cs: true,
     };
   },
   mounted() {
@@ -229,20 +230,37 @@ export default {
     ///////表格
     async fetchtableData() {
       try {
-        const response = await axios.get("http://localhost:3000/data");
-        const data = response.data;
-        // 根据分页信息过滤出当前页的数据
-        const start = (this.currentPage - 1) * this.pageSize;
-        const end = start + this.pageSize;
-        const tableData = data.slice(start, end).map(item => ({
-          name: item.name,
-          value: item.value,
-        }));
-        // 更新表格数据和总条数等分页信息
-        this.tableData = tableData;
-        this.totalRows = data.length;
-        // 更新图表数据和配置
-        this.updateOption();
+        if (this.cs === true) {
+          const response = await axios.get("http://localhost:3000/data");
+          const data = response.data;
+          // 根据分页信息过滤出当前页的数据
+          const start = (this.currentPage - 1) * this.pageSize;
+          const end = start + this.pageSize;
+          const tableData = data.slice(start, end).map(item => ({
+            name: item.name,
+            value: item.value,
+          }));
+          // 更新表格数据和总条数等分页信息
+          this.tableData = tableData;
+          this.totalRows = data.length;
+          // 更新图表数据和配置
+          this.updateOption();
+        } else {
+          const response = await axios.get("http://localhost:4000/data");
+          const data = response.data;
+          // 根据分页信息过滤出当前页的数据
+          const start = (this.currentPage - 1) * this.pageSize;
+          const end = start + this.pageSize;
+          const tableData = data.slice(start, end).map(item => ({
+            name: item.name,
+            value: item.value,
+          }));
+          // 更新表格数据和总条数等分页信息
+          this.tableData = tableData;
+          this.totalRows = data.length;
+          // 更新图表数据和配置
+          this.updateOption();
+        }
       } catch (error) {
         console.log(error);
       }
@@ -262,15 +280,27 @@ export default {
     },
     /////////柱状图
     fetchData() {
-      axios
-        .get("http://localhost:3000/data")
-        .then(response => {
-          this.chartData = response.data;
-          this.renderChart();
-        })
-        .catch(error => {
-          console.error(error);
-        });
+      if (this.cs === true) {
+        axios
+          .get("http://localhost:3000/data")
+          .then(response => {
+            this.chartData = response.data;
+            this.renderChart();
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      } else {
+        axios
+          .get("http://localhost:4000/data")
+          .then(response => {
+            this.chartData = response.data;
+            this.renderChart();
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
     },
     renderChart() {
       if (!this.chartData) return;
