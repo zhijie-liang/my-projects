@@ -1,147 +1,120 @@
 <template>
-  <div class="content">
-    <div ref="map" id="map" style="width: 100%; height: 100%; margin: 0 auto"></div>
+  <div style="width: 100%; position: relative; overflow: hidden; padding-bottom: 44.64%">
+    <div ref="map" id="map" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0"></div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import * as echarts from "echarts";
-import chinamap from "../../map/dtsj/100000副";
 
 export default {
+  name: "ChinaMap",
   data() {
     return {
-      mapName: "chinamap",
-      mapJson: chinamap,
-      map: null,
-      mapClicked: false,
-      selectedProvince: null,
-      option: {
-        backgroundColor: "white",
-        toolbox: {
-          show: true,
-          orient: "vertical",
-          left: "right",
-          feature: {
-            restore: {},
-            myFull: {
-              show: true,
-              title: "全屏查看",
-              icon: "path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891",
-              onclick: () => {
-                this.fullFlag = true;
-                let element = document.getElementById("map");
-                // 一些浏览器的兼容性
-                if (element.requestFullScreen) {
-                  // HTML W3C 提议
-                  element.requestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                  // IE11
-                  element.msRequestFullScreen();
-                } else if (element.webkitRequestFullScreen) {
-                  // Webkit (works in Safari5.1 and Chrome 15)
-                  element.webkitRequestFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  // Firefox (works in nightly)
-                  element.mozRequestFullScreen();
-                }
-                if (this.map) {
-                  element.style.width = window.innerWidth + "px";
-                  element.style.height = window.innerHeight + 161 + "px";
-                  this.map.resize();
-                }
-                // 退出全屏
-                if (element.requestFullScreen) {
-                  document.exitFullscreen();
-                } else if (element.msRequestFullScreen) {
-                  document.msExitFullscreen();
-                } else if (element.webkitRequestFullScreen) {
-                  document.webkitCancelFullScreen();
-                } else if (element.mozRequestFullScreen) {
-                  document.mozCancelFullScreen();
-                }
-              },
-            },
-          },
-        },
-        series: [
-          {
-            type: "map",
-            map: "chinamap",
-            selectedMode: "single",
-            label: {
-              show: true,
-              emphasis: {
-                show: true,
-              },
-            },
-            data: [],
-          },
-        ],
-      },
+      chart: null,
+      mapData: null,
     };
   },
   mounted() {
-    this.initCharts();
-    this.map.on("click", this.onMapClick);
-    window.addEventListener("click", this.onGlobalClick);
+    this.getMapData().then(() => {
+      this.renderMap();
+    });
   },
   beforeDestroy() {
-    window.removeEventListener("click", this.onGlobalClick);
+    if (this.chart != null) {
+      this.chart.dispose();
+      this.chart = null;
+    }
   },
   methods: {
-    initCharts() {
-      if (this.map) {
-        // 如果 map 已经存在，就先 dispose
-        this.map.dispose();
-      }
-      this.map = echarts.init(this.$refs["map"]);
-      this.registerMap();
-      this.map.setOption(this.option);
-      this.map.on("click", this.onMapClick);
+    getMapData() {
+      return axios.get("/map/dtsj3/china/100000副.json").then(res => {
+        this.mapData = res.data;
+      });
     },
-    registerMap() {
-      echarts.registerMap(this.mapName, this.mapJson);
-    },
-    onMapClick(e) {
-      // 点击的是省份
-      this.mapClicked = true;
-
-      if (this.selectedProvince === e.name) {
-        // 如果点击的省份已经是高亮的，取消高亮
-        this.selectedProvince = null;
-        this.option.series[0].data = this.option.series[0].data.filter(item => item.name !== e.name);
-      } else {
-        // 如果点击的省份不是已经高亮的，设置为高亮
-        this.selectedProvince = e.name;
-        this.option.series[0].data = [{ name: e.name, selected: true }];
-      }
-
-      console.log("点击的是省份：" + e.name);
-      this.map.setOption(this.option);
-    },
-    onGlobalClick() {
-      // 如果没有点击省份，取消所有省份的高亮
-      if (!this.mapClicked) {
-        console.log("点击的是空白处");
-        // 清空数据
-        this.option.series[0].data = [];
-        // 更新图表
-        this.map.setOption(this.option, true);
-        // 强制更新选中状态
-        this.option.series[0].selectedMode = "multiple";
-        this.map.setOption(this.option, true);
-        this.option.series[0].selectedMode = "single";
-        this.map.setOption(this.option, true);
-      }
-      this.mapClicked = false;
+    renderMap() {
+      let chart = echarts.init(this.$refs.map);
+      echarts.registerMap("chinamap", this.mapData);
+      let option = {
+        series: [
+          {
+            map: "chinamap",
+            type: "map",
+            roam: true,
+            animationDurationUpdate: 0,
+            label: {
+              show: true,
+              fontSize: 15,
+              color: "red",
+            },
+            itemStyle: {
+              areaColor: "#9dc49f",
+              color: "transparent",
+              borderWidth: "0.5",
+              borderColor: "#579bd3",
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: 16,
+                color: "#fff",
+              },
+              itemStyle: {
+                areaColor: "#579bd3",
+              },
+            },
+            select: {
+              itemStyle: {
+                areaColor: "#579bd3",
+              },
+            },
+            data: this.mapData.features.map(item => {
+              return {
+                name: item.properties.name,
+                value: parseInt(item.properties.adcode),
+              };
+            }),
+          },
+        ],
+        geo: [
+          {
+            name: "adcode",
+            map: "chinamap",
+            silent: true,
+            top: "11%", //11%是相对容器高度而言的，可我想使其相对的是地图的高度而言，有啥好办法吗？
+            roam: true,
+            itemStyle: {
+              color: "transparent",
+              borderWidth: "0",
+              areaColor: "#e0e7c8",
+              shadowBlur: "12",
+            },
+            emphasis: {
+              label: {
+                show: false,
+              },
+              itemStyle: {
+                borderWidth: 0,
+                borderColor: "#31A0E6",
+              },
+            },
+          },
+        ],
+      };
+      chart.setOption(option, true);
+      // 添加georoam事件处理函数,同步缩放功能
+      chart.on("georoam", params => {
+        let option = chart.getOption();
+        if (params.zoom != null && params.zoom != undefined) {
+          option.geo[0].zoom = option.series[0].zoom;
+          option.geo[0].center = option.series[0].center;
+        } else {
+          option.geo[0].center = option.series[0].center;
+        }
+        chart.setOption(option, true);
+      });
     },
   },
 };
 </script>
-
-<style scoped>
-.content {
-  height: 100%;
-}
-</style>
