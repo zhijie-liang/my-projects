@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%; position: relative; overflow: hidden; padding-bottom: 44.58%">
+  <div style="width: 100%; position: relative; overflow: hidden; padding-bottom: 44.58%" @click="handleContainerClick">
     <div ref="map" id="map" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0"></div>
   </div>
 </template>
@@ -135,11 +135,6 @@ export default {
                     element.msRequestFullscreen(); // Internet Explorer
                   }
                 }
-                // if (this.chart) {
-                //   element.style.width = window.innerWidth + "px";
-                //   element.style.height = window.innerHeight + 150 + "px";
-                //   this.chart.resize();
-                // }
                 if (this.chart) {
                   let ratio = 1 / 1.62; // 你的高宽比
                   let windowWidth = window.innerWidth;
@@ -222,14 +217,14 @@ export default {
             map: "chinamap",
             roam: true,
             // zoom:0.5,
+            // aspectScale: 0.5,
             selectedMode: "single",
             animationDurationUpdate: 0,
             silent: true,
-            // top: "60",
-            top: "11%",
+            // top: "11%",
             // layoutCenter: ["50%", "52%"],
             // layoutSize: "100%",
-            // center: [115.97, 29.71],
+            center: [115.97, 29.71],
             itemStyle: {
               color: "transparent",
               borderWidth: "0",
@@ -351,8 +346,12 @@ export default {
                   }
                 }
                 if (this.chart) {
-                  element.style.width = window.innerWidth + "px";
-                  element.style.height = window.innerHeight + 161 + "px";
+                  let ratio = 1 / 1.62; // 你的高宽比
+                  let windowWidth = window.innerWidth;
+                  let newHeight = windowWidth * ratio;
+                  element.style.width = windowWidth + "px";
+                  element.style.height = newHeight + "px";
+                  element.style.marginTop = (window.innerHeight - newHeight) / 2 + "px"; // 使图表在垂直方向居中
                   this.chart.resize();
                 }
               },
