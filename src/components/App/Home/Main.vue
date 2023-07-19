@@ -172,6 +172,16 @@ export default {
           {
             name: "adcode",
             map: "chinamap",
+            projection: {
+              project: point => [
+                (point[0] / 180) * Math.PI,
+                -Math.log(Math.tan((Math.PI / 2 + (point[1] / 180) * Math.PI) / 2)),
+              ],
+              unproject: point => [
+                (point[0] * 180) / Math.PI,
+                ((2 * 180) / Math.PI) * Math.atan(Math.exp(point[1])) - 90,
+              ],
+            },
             type: "map",
             roam: true,
             // zoom:0.5,
@@ -224,7 +234,7 @@ export default {
             // top: "11%",
             // layoutCenter: ["50%", "52%"],
             // layoutSize: "100%",
-            center: [115.97, 29.71],
+            // center: [115.97, 29.71],
             itemStyle: {
               color: "transparent",
               borderWidth: "0",
