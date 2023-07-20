@@ -172,21 +172,24 @@ export default {
           {
             name: "adcode",
             map: "chinamap",
-            projection: {
-              project: point => [
-                (point[0] / 180) * Math.PI,
-                -Math.log(Math.tan((Math.PI / 2 + (point[1] / 180) * Math.PI) / 2)),
-              ],
-              unproject: point => [
-                (point[0] * 180) / Math.PI,
-                ((2 * 180) / Math.PI) * Math.atan(Math.exp(point[1])) - 90,
-              ],
-            },
+            // projection: {
+            //   //定义了投影和反投影的方法。
+            //   project: point => [
+            //     //将经纬度坐标 (point) 转换为投影坐标。这里使用的是经典的 Mercator 投影方法进行计算。
+            //     (point[0] / 180) * Math.PI,
+            //     -Math.log(Math.tan((Math.PI / 2 + (point[1] / 180) * Math.PI) / 2)),
+            //   ],
+            //   unproject: point => [
+            //     //将投影坐标转换回经纬度坐标。
+            //     (point[0] * 180) / Math.PI,
+            //     ((2 * 180) / Math.PI) * Math.atan(Math.exp(point[1])) - 90,
+            //   ],
+            // },
             type: "map",
             roam: true,
             // zoom:0.5,
-            selectedMode: "single",
-            animationDurationUpdate: 0,
+            selectedMode: "single", //指定选中模式，这里设置为 "single"，表示只能选择一个区域。
+            animationDurationUpdate: 0, //设置动画更新的持续时间，这里设置为 0，表示没有动画效果。
             label: {
               show: true,
               fontSize: 15,
@@ -231,7 +234,7 @@ export default {
             selectedMode: "single",
             animationDurationUpdate: 0,
             silent: true,
-            // top: "11%",
+            top: "11%",
             // layoutCenter: ["50%", "52%"],
             // layoutSize: "100%",
             // center: [115.97, 29.71],

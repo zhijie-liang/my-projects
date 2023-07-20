@@ -27,6 +27,8 @@ const ColorPicker = () => import("../components/App/ColorPicker.vue");
 // const Cascader = () => import("../components/App/Cascader.vue");
 const ContactUs = () => import("../components/App/ContactUs.vue");
 const cs1 = () => import("../components/cs/cs1.vue");
+const cs2 = () => import("../components/cs/cs2.vue");
+const cs3 = () => import("../components/cs/cs3.vue");
 
 const routes = [
   {
@@ -150,6 +152,16 @@ const routes = [
     path: '/cs1',
     name: 'cs1',
     component: cs1,
+  },
+  {
+    path: '/cs2',
+    name: 'cs2',
+    component: cs2,
+  },
+  {
+    path: '/cs3',
+    name: 'cs3',
+    component: cs3,
   },
 ]
 const router = new VueRouter({
