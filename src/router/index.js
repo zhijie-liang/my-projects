@@ -29,6 +29,7 @@ const ContactUs = () => import("../components/App/ContactUs.vue");
 const cs1 = () => import("../components/cs/cs1.vue");
 const cs2 = () => import("../components/cs/cs2.vue");
 const cs3 = () => import("../components/cs/cs3.vue");
+const cs4 = () => import("../components/cs/cs4.vue");
 
 const routes = [
   {
@@ -162,6 +163,11 @@ const routes = [
     path: '/cs3',
     name: 'cs3',
     component: cs3,
+  },
+  {
+    path: '/cs4',
+    name: 'cs4',
+    component: cs4,
   },
 ]
 const router = new VueRouter({
