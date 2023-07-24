@@ -1,6 +1,6 @@
 <template>
   <div style="width: 100%; height: 100%">
-    <div ref="lineChart" style="width: 100%; height: 100%"></div>
+    <div ref="chart" style="width: 100%; height: 100%"></div>
   </div>
 </template>
 
@@ -8,13 +8,13 @@
 import * as echarts from "echarts";
 
 export default {
-  name: "LineChart",
+  name: "chart",
   mounted() {
-    this.renderLineChart();
+    this.renderchart();
   },
   methods: {
-    renderLineChart() {
-      const chartDom = this.$refs.lineChart;
+    renderchart() {
+      const chartDom = this.$refs.chart;
       const myChart = echarts.init(chartDom);
 
       const xAxisData = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"]; // X轴数据

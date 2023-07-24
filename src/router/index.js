@@ -19,7 +19,7 @@ const Main10 = () => import("../components/App/Home/Main10.vue");
 const Map_Penetration = () => import("../components/App/Map_Penetration.vue");
 const Map_Penetration_3D = () => import("../components/App/Map_Penetration_3D.vue");
 const Map_3D = () => import("../components/App/Map_3D.vue");
-const ProductIntroduction = () => import("../components/BppLZJ/ProductIntroduction.vue");
+const DigitalInfrastructure = () => import("../components/BppLZJ/DigitalInfrastructure.vue");
 const News = () => import("../components/BppLZJ/News.vue");
 const CityComponent = () => import("../components/App/CityComponent.vue");
 const CityMap = () => import("../components/App/CityMap.vue");
@@ -110,9 +110,9 @@ const routes = [
     component: Map_3D,
   },
   {
-    path: '/ProductIntroduction',
-    name: 'ProductIntroduction',
-    component: ProductIntroduction,
+    path: '/DigitalInfrastructure',
+    name: 'DigitalInfrastructure',
+    component: DigitalInfrastructure,
   },
   {
     path: '/News',
