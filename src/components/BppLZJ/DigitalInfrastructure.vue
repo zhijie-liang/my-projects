@@ -8,7 +8,11 @@
     <div style="width: 50%">
       <Maps></Maps>
     </div>
-    <div style="width: 25%"></div>
+    <div style="width: 25%">
+      <div style="height: 33%"></div>
+      <div style="height: 33%"><ComputerList></ComputerList></div>
+      <div style="height: 33%"></div>
+    </div>
   </div>
 </template>
 
@@ -17,6 +21,9 @@ import Maps from "./ProductIntroduction/Maps.vue";
 import NetCheck from "./ProductIntroduction/NetCheck.vue";
 import MobileTerminal from "./ProductIntroduction/MobileTerminal.vue";
 import IoTDevice from "./ProductIntroduction/IoTDevice.vue";
+import ComputerList from "./ProductIntroduction/ComputerList.vue";
+// import IoTDevice from "./ProductIntroduction/IoTDevice.vue";
+// import IoTDevice from "./ProductIntroduction/IoTDevice.vue";
 
 export default {
   components: {
@@ -24,6 +31,7 @@ export default {
     NetCheck,
     MobileTerminal,
     IoTDevice,
+    ComputerList,
   },
 };
 </script>
