@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import App from './App.vue'
-// import App from './BppLZJ.vue'
+// import App from './App.vue'
+import App from './BppLZJ.vue'
 // import App from './cpp.vue'
 //添加
 import router from './router'
