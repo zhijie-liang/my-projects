@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <el-button type="primary" size="small" plain @click="goBack">返回</el-button>
     <div ref="charts" style="width: 100%; height: 100%; margin: 0 auto"></div>
   </div>
 </template>
@@ -230,6 +231,9 @@ export default {
     },
     registerMap() {
       echarts.registerMap(this.mapName, this.mapJson);
+    },
+    goBack() {
+      this.$router.back();
     },
   },
 };
