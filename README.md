@@ -28,6 +28,32 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+笔记：
+1.
+关闭vue项目中Uncaught runtime errors弹窗页面：
+解決办法
+在vue.config.js中添加以下配置：
+module.exports = defineConfig({
+	...
+	devServer: {
+    client: {
+      overlay: false
+    }
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 ICON:
 icon: "M0 0h24v24H0z",
 icon: "M15.5 14h-.79l-.28-.27a6.49 6.49 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-4 0a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0z",
