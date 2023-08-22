@@ -1,7 +1,1 @@
-NAME	KEY	CREATED	LAST_USED 	
-rlh	
-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
-2023年7月13日	2023年7月13日
-Siri	
-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
-2023年7月18日	Never
+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
