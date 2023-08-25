@@ -117,46 +117,9 @@ export default {
             }),
           },
         ],
-        geo: [
-          {
-            name: "adcode",
-            map: "chinamap",
-            silent: true,
-            // top: "11%",
-            itemStyle: {
-              color: "transparent",
-              borderWidth: "0",
-              areaColor: "#e0e7c8",
-              shadowBlur: "12",
-            },
-            emphasis: {
-              label: {
-                show: false,
-              },
-              itemStyle: {
-                borderWidth: 0,
-                borderColor: "#31A0E6",
-              },
-            },
-          },
-        ],
       };
       chart.setOption(option, true);
       chart.on("click", this.handleMapClick); // 添加点击事件处理器
-      // 添加georoam事件处理函数,同步缩放功能
-      chart.on("georoam", params => {
-        let option = chart.getOption();
-        if (params.zoom != null && params.zoom != undefined) {
-          option.geo[0].zoom = option.series[0].zoom;
-          option.geo[0].center = option.series[0].center;
-        } else {
-          option.geo[0].center = option.series[0].center;
-        }
-        chart.dispatchAction({
-          type: "restore",
-        });
-        chart.setOption(option, true);
-      });
       this.chart = chart;
     },
     async handleMapClick(params) {
@@ -168,7 +131,7 @@ export default {
       this.selectName = params.name;
       let adcode = params.value;
       try {
-        let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
+        let res = await axios.get(`/map/dtsj3/all/${adcode}.json`);
         let newMapData = res.data;
         if (selectedName !== this.selectedName) {
           console.log("添加新的状态到mapStack中");
@@ -253,27 +216,7 @@ export default {
             value: feature.properties.adcode,
           })),
         };
-        let geo = {
-          map: selectedName,
-          silent: true,
-          // top: "11%",
-          itemStyle: {
-            color: "transparent",
-            borderWidth: "0",
-            areaColor: "#e0e7c8",
-            shadowBlur: "12",
-          },
-          emphasis: {
-            label: {
-              show: false,
-            },
-            itemStyle: {
-              borderWidth: 0,
-              borderColor: "#31A0E6",
-            },
-          },
-        };
-        this.chart.setOption({ title, tooltip, toolbox, series, geo }, true);
+        this.chart.setOption({ title, tooltip, toolbox, series }, true);
         this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
