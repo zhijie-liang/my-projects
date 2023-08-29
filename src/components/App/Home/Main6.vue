@@ -131,8 +131,8 @@ export default {
       this.selectName = params.name;
       let adcode = params.value;
       try {
+        // let res = await axios.get(`/map/dtsj3/provinces/${adcode}.json`);
         let res = await axios.get(`/map/dtsj3/all/${adcode}.json`);
-        // let res = await axios.get(`/map/dtsj3/all/${adcode}.json`);
         let newMapData = res.data;
         if (selectedName !== this.selectedName) {
           console.log("添加新的状态到mapStack中");

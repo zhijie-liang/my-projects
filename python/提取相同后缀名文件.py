@@ -30,10 +30,17 @@ def collect_kml_files(src_folder, dst_folder):
 
 # 使用示例
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\丰台区"
-# dst_folder = r"E:\梁智杰\Bigemap\BMDownload\kml"
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\石景山区"
-# dst_folder = r"E:\梁智杰\Bigemap\BMDownload\kml"
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\海淀区"
-src_folder = r"E:\梁智杰\Bigemap\BMDownload\门头沟区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\门头沟区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\房山区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\通州区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\昌平区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\大兴区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\怀柔区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\密云区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\平谷区"
+# src_folder = r"E:\梁智杰\Bigemap\BMDownload\顺义区"
+src_folder = r"E:\梁智杰\Bigemap\BMDownload\延庆区"
 dst_folder = r"E:\梁智杰\Bigemap\BMDownload\kml"
 collect_kml_files(src_folder, dst_folder)
