@@ -35,6 +35,7 @@ export default {
   methods: {
     getMapData() {
       return axios.get("/map/dtsj3/china/100000副.json").then(res => {
+        // return axios.get("/map/dtsj3/all/310000.json").then(res => {
         this.mapData = res.data;
       });
     },
