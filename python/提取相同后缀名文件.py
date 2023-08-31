@@ -14,8 +14,8 @@ def collect_kml_files(src_folder, dst_folder):
         full_folder_path = os.path.join(src_folder, foldername)
         if os.path.isdir(full_folder_path):
             for filename in os.listdir(full_folder_path):
-                # if filename.endswith(".kml"):
-                if filename.endswith(".geojson"):
+                if filename.endswith(".kml"):
+                # if filename.endswith(".geojson"):
                     src_path = os.path.join(full_folder_path, filename)
                     dst_path = os.path.join(dst_folder, filename)
                     
@@ -23,8 +23,8 @@ def collect_kml_files(src_folder, dst_folder):
                     counter = 1
                     base_name = os.path.splitext(filename)[0]
                     while os.path.exists(dst_path):
-                        # filename = f"{base_name}_{counter}.kml"
-                        filename = f"{base_name}_{counter}.geojson"
+                        filename = f"{base_name}_{counter}.kml"
+                        # filename = f"{base_name}_{counter}.geojson"
                         dst_path = os.path.join(dst_folder, filename)
                         counter += 1
                     
@@ -72,8 +72,8 @@ def collect_kml_files(src_folder, dst_folder):
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\广州\越秀区"
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\广州\增城区"
 # src_folder = r"E:\梁智杰\Bigemap\BMDownload\上海"
-src_folder = r"E:\梁智杰\Bigemap\BMDownload\广州"
+src_folder = r"E:\梁智杰\Bigemap\BMDownload\山东\济南市\长清区"
 # dst_folder = r"E:\梁智杰\Bigemap\BMDownload\kml"
 # dst_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\上海"
-dst_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\广州"
+dst_folder = r"E:\梁智杰\Bigemap\BMDownload\山东\济南市\长清区\kml"
 collect_kml_files(src_folder, dst_folder)

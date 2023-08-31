@@ -44,7 +44,7 @@ export default {
 
     getMapData() {
       return axios
-        .get("/map/dtsj3/all/440100.json")
+        .get("/map/dtsj3/china/100000副.json")
         .then(res => {
           if (!res.data || !Array.isArray(res.data.features)) {
             console.error("无效的地图数据:", res.data);
@@ -110,9 +110,6 @@ export default {
               },
             },
           },
-        },
-        tooltip: {
-          formatter: "{b}<br/>{c}",
         },
         series: [
           {
