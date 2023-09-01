@@ -34,7 +34,7 @@ def process_file(file_path):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 # 文件夹路径
-folder_path = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/public/map/dtsj3/all"
+folder_path = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/行政区划级联数据(含乡镇街道)/and/河北/唐山市/code"
 
 # 遍历文件夹中的所有文件
 for filename in os.listdir(folder_path):

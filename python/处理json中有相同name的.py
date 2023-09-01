@@ -2,7 +2,7 @@ import json
 from collections import defaultdict
 
 # 加载所提供的JSON文件
-with open("C:/Users/梁智杰/Desktop/新建文件夹/my-projects/public/map/dtsj3/all/110108.json", "r", encoding="utf-8") as file:
+with open("C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/行政区划级联数据(含乡镇街道)/and/山东/青岛市/code/370215.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 # 按'name'属性进行分组
@@ -23,5 +23,5 @@ for name, features in grouped_by_name.items():
 data['features'] = merged_features
 
 # 将处理后的数据保存回原JSON文件
-with open("C:/Users/梁智杰/Desktop/新建文件夹/my-projects/public/map/dtsj3/all/110108.json", "w", encoding="utf-8") as file:
+with open("C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/行政区划级联数据(含乡镇街道)/and/山东/青岛市/code/370215.json", "w", encoding="utf-8") as file:
     json.dump(data, file, ensure_ascii=False)
