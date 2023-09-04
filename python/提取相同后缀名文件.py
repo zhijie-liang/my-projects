@@ -37,6 +37,6 @@ def collect_kml_files(src_folder):
                             shutil.copy(src_path, dst_path)
 
 # 使用示例
-src_folder = r"E:\梁智杰\Bigemap\BMDownload\河北\唐山市"
+src_folder = r"E:\梁智杰\Bigemap\BMDownload\河北\保定市"
 collect_kml_files(src_folder)
 
