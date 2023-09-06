@@ -17,7 +17,7 @@ def batch_rename_extension(src_dir, original_ext, new_ext):
             print(f"Renamed: {file_name} -> {new_name}")
 
 # 使用示例
-src_dir = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\山东\青岛市"  # 替换为你的目录路径
+src_dir = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\河北\衡水市\code"  # 替换为你的目录路径
 original_ext = '.geojson'   # 替换为你想要替换的原始后缀
 new_ext = '.json'        # 替换为你想要的新后缀
 batch_rename_extension(src_dir, original_ext, new_ext)

@@ -25,8 +25,8 @@ def process_file(input_path, output_path):
     return modified
 
 # 指定输入和输出文件夹
-input_folder = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/public/map/dtsj3/china/code"
-output_folder = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/public/map/dtsj3/china/code"
+input_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\河北\衡水市\code"
+output_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\河北\衡水市\code"
 
 for filename in os.listdir(input_folder):
     if filename.endswith(".json"):

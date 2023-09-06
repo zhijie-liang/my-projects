@@ -36,7 +36,7 @@ def merge_kml_as_text(directory):
 
     print(f"在 {directory} 中的KML文件合并完成！")
 
-base_directory = r"E:\梁智杰\Bigemap\BMDownload\河北\保定市"
+base_directory = r"E:\梁智杰\Bigemap\BMDownload\河北\廊坊市"
 subdirectories = [os.path.join(base_directory, d) for d in os.listdir(base_directory) if os.path.isdir(os.path.join(base_directory, d))]
 
 for subdirectory in subdirectories:
