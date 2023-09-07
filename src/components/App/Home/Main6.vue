@@ -43,6 +43,7 @@ export default {
       let chart = echarts.init(this.$refs.map);
       echarts.registerMap("chinamap", this.mapData);
       let option = {
+        backgroundColor: "white",
         title: [
           {
             text: this.selectedName,
@@ -121,7 +122,7 @@ export default {
             animationDurationUpdate: 0,
             label: {
               show: true,
-              fontSize: 15,
+              fontSize: 12,
               color: "red",
             },
             itemStyle: {
@@ -188,6 +189,7 @@ export default {
         }
         echarts.registerMap(selectedName, newMapData);
         this.selectedName = selectedName;
+        let backgroundColor = "white";
         let title = [
           {
             text: this.selectedName,
@@ -224,7 +226,7 @@ export default {
           animationDurationUpdate: 0,
           label: {
             show: true,
-            fontSize: 15,
+            fontSize: 12,
             color: "red",
           },
           itemStyle: {
@@ -253,7 +255,7 @@ export default {
             value: feature.properties.adcode,
           })),
         };
-        this.chart.setOption({ title, tooltip, toolbox, series }, true);
+        this.chart.setOption({ backgroundColor, title, tooltip, toolbox, series }, true);
         this.mapData = newMapData;
       } catch (error) {
         if (error.response && error.response.status === 404) {
