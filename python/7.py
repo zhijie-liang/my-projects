@@ -40,6 +40,6 @@ def create_directory_structure(json_file_path, root_folder_name):
                 os.makedirs(district_folder_path, exist_ok=True)
 
 if __name__ == "__main__":
-    json_file_path = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/140000.json"  # Replace with the path to your JSON file
-    root_folder_name = "山西省"  # Replace with the name of the root folder
+    json_file_path = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/150000.json"  # Replace with the path to your JSON file
+    root_folder_name = "内蒙古"  # Replace with the name of the root folder
     create_directory_structure(json_file_path, root_folder_name)
