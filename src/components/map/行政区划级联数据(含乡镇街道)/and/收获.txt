@@ -1,0 +1,55 @@
+在 Windows PowerShell 中，你可以使用 Sort-Object 命令来进行排序：
+
+Get-ChildItem | Sort-Object Name
+
+这会列出当前目录下的所有文件和目录，并按照其名称（Name）进行字母顺序排序。
+
+
+在 Windows PowerShell 中，如果你想按照时间顺序（最后修改时间）查看文件和目录，你可以使用 Sort-Object 命令并指定 LastWriteTime 作为排序字段。下面是一些示例。
+按照最后修改时间升序排序：
+
+powershell
+
+Get-ChildItem | Sort-Object LastWriteTime
+
+按照最后修改时间降序排序：
+
+powershell
+
+Get-ChildItem | Sort-Object LastWriteTime -Descending
+
+这些命令会列出当前目录下的所有文件和目录，并按照最后修改时间进行排序。如果你只对文件或目录感兴趣，可以使用 Where-Object 过滤结果。例如：
+只列出文件，按照最后修改时间升序排序：
+
+powershell
+
+Get-ChildItem | Where-Object { !$_.PSIsContainer } | Sort-Object LastWriteTime
+
+只列出目录，按照最后修改时间降序排序：
+
+powershell
+
+Get-ChildItem | Where-Object { $_.PSIsContainer } | Sort-Object LastWriteTime -Descending
+
+通过这些命令，你可以在 Windows PowerShell 中按照时间顺序查看文件和目录。希望这能帮助到你！
+
+
+只展示文件夹结构的前两层，且按照文件夹名的字母排序。这意味着，如果你有一个根文件夹，你只想看到该文件夹下的所有直接子文件夹，以及这些子文件夹下的子文件夹。其他更深层次的文件或文件夹则不需展示。
+以下是一个 PowerShell 脚本，它应该能满足你的需求：
+# 设置根目录
+$root = "C:\YourDirectory"
+# 只需要将 "C:\YourDirectory" 替换成你实际需要展示的根目录路径即可
+# 获取并排序根目录下的所有子项
+$firstLevelItems = Get-ChildItem -Path $root | Sort-Object Name
+foreach ($item in $firstLevelItems) {
+    # 输出第一层的文件夹或文件名
+    Write-Host $item.Name
+    if ($item.Attributes -eq 'Directory') {
+        # 如果是文件夹，获取并排序该文件夹下的所有子项
+        $secondLevelItems = Get-ChildItem -Path $item.FullName | Sort-Object Name
+        foreach ($subItem in $secondLevelItems) {
+            # 输出第二层的文件夹或文件名，用缩进表示层级
+            Write-Host ("  " + $subItem.Name)
+        }
+    }
+}

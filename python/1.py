@@ -1,4 +1,4 @@
-# 提取相同后缀名文件
+# 只提取相同后缀名文件
 
 import os
 import shutil
@@ -38,7 +38,22 @@ def collect_kml_files(src_folder):
                             
                             shutil.copy(src_path, dst_path)
 
-# 使用示例
-src_folder = r"E:\梁智杰\Bigemap\BMDownload\安徽\芜湖市"
-collect_kml_files(src_folder)
+# 包含多个源文件夹路径的列表
+src_folders = [
+    r"D:\梁智杰\BMDownload\内蒙古\乌兰察布市",
+    r"D:\梁智杰\BMDownload\内蒙古\乌海市",
+    # r"D:\梁智杰\BMDownload\内蒙古\兴安盟",
+    r"D:\梁智杰\BMDownload\内蒙古\包头市",
+    r"D:\梁智杰\BMDownload\内蒙古\呼伦贝尔市",
+    r"D:\梁智杰\BMDownload\内蒙古\呼和浩特市",
+    r"D:\梁智杰\BMDownload\内蒙古\巴彦淖尔市",
+    r"D:\梁智杰\BMDownload\内蒙古\赤峰市",
+    r"D:\梁智杰\BMDownload\内蒙古\通辽市",
+    r"D:\梁智杰\BMDownload\内蒙古\鄂尔多斯市",
+    r"D:\梁智杰\BMDownload\内蒙古\锡林郭勒盟",
+    # r"D:\梁智杰\BMDownload\内蒙古\阿拉善盟",
+]
 
+# 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数
+for src_folder in src_folders:
+    collect_kml_files(src_folder)

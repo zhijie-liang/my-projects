@@ -1,5 +1,6 @@
 # geom_type == 'GeometryCollection'修正
 
+
 import os
 import geopandas as gpd
 from shapely.geometry import Polygon
@@ -27,8 +28,8 @@ def process_file(input_path, output_path):
     return modified
 
 # 指定输入和输出文件夹
-input_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\安徽\宣城市\code"
-output_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\安徽\宣城市\code"
+input_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\内蒙古\code"
+output_folder = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\内蒙古\code"
 
 for filename in os.listdir(input_folder):
     if filename.endswith(".json"):
