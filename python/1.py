@@ -3,6 +3,7 @@
 import os
 import shutil
 
+
 def collect_kml_files(src_folder):
     """
     从 src_folder 中的每个子文件夹提取 .kml 文件，并复制到其新的 'kml' 子文件夹。
@@ -14,44 +15,57 @@ def collect_kml_files(src_folder):
         # 只处理子目录
         if os.path.isdir(full_folder_path):
             kml_dst_folder = os.path.join(full_folder_path, 'kml')
-            
+
             if not os.path.exists(kml_dst_folder):
                 os.makedirs(kml_dst_folder)
-            
+
             # 遍历该子目录下的所有子文件夹
             for subfoldername in os.listdir(full_folder_path):
-                full_subfolder_path = os.path.join(full_folder_path, subfoldername)
+                full_subfolder_path = os.path.join(
+                    full_folder_path, subfoldername)
 
                 if os.path.isdir(full_subfolder_path):
                     for filename in os.listdir(full_subfolder_path):
                         if filename.endswith(".kml"):
-                            src_path = os.path.join(full_subfolder_path, filename)
+                            src_path = os.path.join(
+                                full_subfolder_path, filename)
                             dst_path = os.path.join(kml_dst_folder, filename)
-                            
+
                             # 检查 'kml' 文件夹中是否已存在同名文件
                             counter = 1
                             base_name = os.path.splitext(filename)[0]
                             while os.path.exists(dst_path):
                                 filename = f"{base_name}_{counter}.kml"
-                                dst_path = os.path.join(kml_dst_folder, filename)
+                                dst_path = os.path.join(
+                                    kml_dst_folder, filename)
                                 counter += 1
-                            
+
                             shutil.copy(src_path, dst_path)
+
 
 # 包含多个源文件夹路径的列表
 src_folders = [
-    r"D:\梁智杰\BMDownload\内蒙古\乌兰察布市",
-    r"D:\梁智杰\BMDownload\内蒙古\乌海市",
-    # r"D:\梁智杰\BMDownload\内蒙古\兴安盟",
-    r"D:\梁智杰\BMDownload\内蒙古\包头市",
-    r"D:\梁智杰\BMDownload\内蒙古\呼伦贝尔市",
-    r"D:\梁智杰\BMDownload\内蒙古\呼和浩特市",
-    r"D:\梁智杰\BMDownload\内蒙古\巴彦淖尔市",
-    r"D:\梁智杰\BMDownload\内蒙古\赤峰市",
-    r"D:\梁智杰\BMDownload\内蒙古\通辽市",
-    r"D:\梁智杰\BMDownload\内蒙古\鄂尔多斯市",
-    r"D:\梁智杰\BMDownload\内蒙古\锡林郭勒盟",
-    # r"D:\梁智杰\BMDownload\内蒙古\阿拉善盟",
+    r"D:\梁智杰\BMDownload\广东\东莞市",
+    r"D:\梁智杰\BMDownload\广东\中山市",
+    r"D:\梁智杰\BMDownload\广东\云浮市",
+    r"D:\梁智杰\BMDownload\广东\佛山市",
+    r"D:\梁智杰\BMDownload\广东\广州市",
+    r"D:\梁智杰\BMDownload\广东\惠州市",
+    r"D:\梁智杰\BMDownload\广东\揭阳市",
+    r"D:\梁智杰\BMDownload\广东\梅州市",
+    r"D:\梁智杰\BMDownload\广东\汕头市",
+    r"D:\梁智杰\BMDownload\广东\汕尾市",
+    r"D:\梁智杰\BMDownload\广东\江门市",
+    r"D:\梁智杰\BMDownload\广东\河源市",
+    r"D:\梁智杰\BMDownload\广东\深圳市",
+    r"D:\梁智杰\BMDownload\广东\清远市",
+    r"D:\梁智杰\BMDownload\广东\湛江市",
+    r"D:\梁智杰\BMDownload\广东\潮州市",
+    r"D:\梁智杰\BMDownload\广东\珠海市",
+    r"D:\梁智杰\BMDownload\广东\肇庆市",
+    r"D:\梁智杰\BMDownload\广东\茂名市",
+    r"D:\梁智杰\BMDownload\广东\阳江市",
+    r"D:\梁智杰\BMDownload\广东\韶关市"
 ]
 
 # 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数
