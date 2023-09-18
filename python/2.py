@@ -1,62 +1,31 @@
-# 只合并kml文件
+# 批量处理某个文件夹里的xlsx文件。
+# 给所有xlsx文件新添加一列（Time）。
+# 这一列的内容是该文件的文件名。最后将处理后的文件输出到指定文件夹里。
 
 import os
+import pandas as pd
 
+# 指定源文件夹和目标文件夹
+src_folder = "C:/Users/梁智杰/Desktop/数字工作项目组/超级计算机top500（93-22）/8.py"
+dst_folder = "C:/Users/梁智杰/Desktop/数字工作项目组/超级计算机top500（93-22）/8.py/9.py"
 
-def merge_kml_as_text(directory):
-    kml_files = [f for f in os.listdir(directory) if f.endswith('.kml')]
-    kml_files = [os.path.join(directory, f) for f in kml_files]
-    if not kml_files:
-        return
-    with open(kml_files[0], 'r', encoding='utf-8') as file:
-        base_content = file.read()
-    kml_files = kml_files[1:]
-    folder_contents = []
-    for kml_file in kml_files:
-        with open(kml_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-            start_index = content.find('<Folder>')
-            end_index = content.find('</Folder>') + 9
-            folder_contents.append(content[start_index:end_index])
-    insert_index = base_content.rfind('</Document>')
-    merged_content = base_content[:insert_index] + \
-        '\n'.join(folder_contents) + base_content[insert_index:]
-    output_path = os.path.join(directory, "合并.kml")
-    with open(output_path, 'w', encoding='utf-8') as file:
-        file.write(merged_content)
-    print(f"在 {directory} 中的KML文件合并完成！")
+# 如果目标文件夹不存在，创建它
+if not os.path.exists(dst_folder):
+    os.makedirs(dst_folder)
 
+# 遍历源文件夹中的所有文件
+for filename in os.listdir(src_folder):
+    if filename.endswith(".xlsx"):
+        
+        filepath = os.path.join(src_folder, filename)
+        # 读取xlsx文件
+        df = pd.read_excel(filepath)
+        
+        # 添加新的列，该列的所有值都是文件名
+        df['Time'] = filename
+        
+        # 保存到目标文件夹
+        dst_filepath = os.path.join(dst_folder, filename)
+        df.to_excel(dst_filepath, index=False)
 
-# 包含多个源文件夹路径的列表
-base_directories = [
-    r"D:\梁智杰\BMDownload\广东\东莞市",
-    r"D:\梁智杰\BMDownload\广东\中山市",
-    r"D:\梁智杰\BMDownload\广东\云浮市",
-    r"D:\梁智杰\BMDownload\广东\佛山市",
-    r"D:\梁智杰\BMDownload\广东\广州市",
-    r"D:\梁智杰\BMDownload\广东\惠州市",
-    r"D:\梁智杰\BMDownload\广东\揭阳市",
-    r"D:\梁智杰\BMDownload\广东\梅州市",
-    r"D:\梁智杰\BMDownload\广东\汕头市",
-    r"D:\梁智杰\BMDownload\广东\汕尾市",
-    r"D:\梁智杰\BMDownload\广东\江门市",
-    r"D:\梁智杰\BMDownload\广东\河源市",
-    r"D:\梁智杰\BMDownload\广东\深圳市",
-    r"D:\梁智杰\BMDownload\广东\清远市",
-    r"D:\梁智杰\BMDownload\广东\湛江市",
-    r"D:\梁智杰\BMDownload\广东\潮州市",
-    r"D:\梁智杰\BMDownload\广东\珠海市",
-    r"D:\梁智杰\BMDownload\广东\肇庆市",
-    r"D:\梁智杰\BMDownload\广东\茂名市",
-    r"D:\梁智杰\BMDownload\广东\阳江市",
-    r"D:\梁智杰\BMDownload\广东\韶关市"
-]
-
-# 遍历路径列表，对每个源文件夹进行操作
-for base_directory in base_directories:
-    subdirectories = [os.path.join(base_directory, d) for d in os.listdir(
-        base_directory) if os.path.isdir(os.path.join(base_directory, d))]
-    for subdirectory in subdirectories:
-        kml_directory = os.path.join(subdirectory, 'kml')
-        if os.path.exists(kml_directory):
-            merge_kml_as_text(kml_directory)
+print("处理完成！")

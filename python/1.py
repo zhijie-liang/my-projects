@@ -1,73 +1,50 @@
-# 只提取相同后缀名文件
+# 批量处理某个文件夹里的xlsx文件。首先将所有xlsx文件浏览一遍，
+# 先把首行空缺的xlsx的文件统一删除首行。然后将首行作为导航，
+# 将除了（【rank】【site】【manufacturer】【total cores】不区分大小写）这几个的列之外的列全部删掉。
+# 最后将处理后的文件输出到指定文件夹里。
 
 import os
-import shutil
+import pandas as pd
 
+# 指定源文件夹和目标文件夹
+src_folder = "C:/Users/梁智杰/Desktop/数字工作项目组/超级计算机top500（93-22）"
+dst_folder = "C:/Users/梁智杰/Desktop/数字工作项目组/超级计算机top500（93-22）/8.py"
 
-def collect_kml_files(src_folder):
-    """
-    从 src_folder 中的每个子文件夹提取 .kml 文件，并复制到其新的 'kml' 子文件夹。
-    """
-    # 遍历源文件夹中的每个子文件夹
-    for foldername in os.listdir(src_folder):
-        full_folder_path = os.path.join(src_folder, foldername)
+# 如果目标文件夹不存在，创建它
+if not os.path.exists(dst_folder):
+    os.makedirs(dst_folder)
 
-        # 只处理子目录
-        if os.path.isdir(full_folder_path):
-            kml_dst_folder = os.path.join(full_folder_path, 'kml')
+# 遍历源文件夹中的所有文件
+for filename in os.listdir(src_folder):
+    if filename.endswith(".xlsx"):
+        
+        filepath = os.path.join(src_folder, filename)
+        
+        # 读取xlsx文件，不使用首行作为列名
+        df = pd.read_excel(filepath, header=None)
+        
+        # 检查首行是否为空，如果是则删除，并让第二行成为新的列名
+        if df.iloc[0].isna().all():
+            df = df.iloc[1:]
+            new_header = df.iloc[0]
+            df = df[1:]
+            df.columns = new_header
+        
+        else:
+            df.columns = df.iloc[0]
+            df = df[1:]
+        
+        # 转换列名为小写以便比较
+        columns_to_keep = []
+        for col in df.columns:
+            if str(col).lower() in ["rank", "site", "manufacturer", "total cores", "country"]:
+                columns_to_keep.append(col)
+        
+        # 只保留需要的列
+        df = df[columns_to_keep]
+        
+        # 保存到目标文件夹
+        dst_filepath = os.path.join(dst_folder, filename)
+        df.to_excel(dst_filepath, index=False)
 
-            if not os.path.exists(kml_dst_folder):
-                os.makedirs(kml_dst_folder)
-
-            # 遍历该子目录下的所有子文件夹
-            for subfoldername in os.listdir(full_folder_path):
-                full_subfolder_path = os.path.join(
-                    full_folder_path, subfoldername)
-
-                if os.path.isdir(full_subfolder_path):
-                    for filename in os.listdir(full_subfolder_path):
-                        if filename.endswith(".kml"):
-                            src_path = os.path.join(
-                                full_subfolder_path, filename)
-                            dst_path = os.path.join(kml_dst_folder, filename)
-
-                            # 检查 'kml' 文件夹中是否已存在同名文件
-                            counter = 1
-                            base_name = os.path.splitext(filename)[0]
-                            while os.path.exists(dst_path):
-                                filename = f"{base_name}_{counter}.kml"
-                                dst_path = os.path.join(
-                                    kml_dst_folder, filename)
-                                counter += 1
-
-                            shutil.copy(src_path, dst_path)
-
-
-# 包含多个源文件夹路径的列表
-src_folders = [
-    r"D:\梁智杰\BMDownload\广东\东莞市",
-    r"D:\梁智杰\BMDownload\广东\中山市",
-    r"D:\梁智杰\BMDownload\广东\云浮市",
-    r"D:\梁智杰\BMDownload\广东\佛山市",
-    r"D:\梁智杰\BMDownload\广东\广州市",
-    r"D:\梁智杰\BMDownload\广东\惠州市",
-    r"D:\梁智杰\BMDownload\广东\揭阳市",
-    r"D:\梁智杰\BMDownload\广东\梅州市",
-    r"D:\梁智杰\BMDownload\广东\汕头市",
-    r"D:\梁智杰\BMDownload\广东\汕尾市",
-    r"D:\梁智杰\BMDownload\广东\江门市",
-    r"D:\梁智杰\BMDownload\广东\河源市",
-    r"D:\梁智杰\BMDownload\广东\深圳市",
-    r"D:\梁智杰\BMDownload\广东\清远市",
-    r"D:\梁智杰\BMDownload\广东\湛江市",
-    r"D:\梁智杰\BMDownload\广东\潮州市",
-    r"D:\梁智杰\BMDownload\广东\珠海市",
-    r"D:\梁智杰\BMDownload\广东\肇庆市",
-    r"D:\梁智杰\BMDownload\广东\茂名市",
-    r"D:\梁智杰\BMDownload\广东\阳江市",
-    r"D:\梁智杰\BMDownload\广东\韶关市"
-]
-
-# 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数
-for src_folder in src_folders:
-    collect_kml_files(src_folder)
+print("处理完成！")
