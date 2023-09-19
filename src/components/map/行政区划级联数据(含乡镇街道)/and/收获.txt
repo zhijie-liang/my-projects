@@ -37,7 +37,7 @@ Get-ChildItem | Where-Object { $_.PSIsContainer } | Sort-Object LastWriteTime -D
 只展示文件夹结构的前两层，且按照文件夹名的字母排序。这意味着，如果你有一个根文件夹，你只想看到该文件夹下的所有直接子文件夹，以及这些子文件夹下的子文件夹。其他更深层次的文件或文件夹则不需展示。
 以下是一个 PowerShell 脚本，它应该能满足你的需求：
 # 设置根目录
-$root = "C:\YourDirectory"
+$root = "D:\梁智杰\BMDownload\辽宁"
 # 只需要将 "C:\YourDirectory" 替换成你实际需要展示的根目录路径即可
 # 获取并排序根目录下的所有子项
 $firstLevelItems = Get-ChildItem -Path $root | Sort-Object Name
