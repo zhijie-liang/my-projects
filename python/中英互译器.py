@@ -39,6 +39,6 @@ class TranslatorBot:
             print(f"TranslatorBot: {translation}")
 
 if __name__ == '__main__':
-    API_KEY = "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"  # 将这里的API Key替换为你的API Key
+    API_KEY = "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"  # 将这里的API Key替换为你的API Key
     bot = TranslatorBot(API_KEY)
     bot.chat()

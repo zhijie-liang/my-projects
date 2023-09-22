@@ -1,148 +1,42 @@
-# 根据字典，批量将地图名文件改为adcode文件
+# 要把批量文件夹里的文件都集合在一个指定文件夹里
 
 import os
+import shutil
 
-# 创建一个字典，将地图名映射到相应的代码
-name_to_code_mapping = {
-    "和平区": "210102",
-    "沈河区": "210103",
-    "大东区": "210104",
-    "皇姑区": "210105",
-    "铁西区": "210303",
-    "苏家屯区": "210111",
-    "浑南区": "210112",
-    "沈北新区": "210113",
-    "于洪区": "210114",
-    "辽中区": "210115",
-    "康平县": "210123",
-    "法库县": "210124",
-    "新民市": "210181",
-    "中山区": "210202",
-    "西岗区": "210203",
-    "沙河口区": "210204",
-    "甘井子区": "210211",
-    "旅顺口区": "210212",
-    "金州区": "210213",
-    "普兰店区": "210214",
-    "长海县": "210224",
-    "瓦房店市": "210281",
-    "庄河市": "210283",
-    "铁东区": "210302",
-    "立山区": "210304",
-    "千山区": "210311",
-    "台安县": "210321",
-    "岫岩满族自治县": "210323",
-    "海城市": "210381",
-    "新抚区": "210402",
-    "东洲区": "210403",
-    "望花区": "210404",
-    "顺城区": "210411",
-    "抚顺县": "210421",
-    "新宾满族自治县": "210422",
-    "清原满族自治县": "210423",
-    "平山区": "210502",
-    "溪湖区": "210503",
-    "明山区": "210504",
-    "南芬区": "210505",
-    "本溪满族自治县": "210521",
-    "桓仁满族自治县": "210522",
-    "元宝区": "210602",
-    "振兴区": "210603",
-    "振安区": "210604",
-    "宽甸满族自治县": "210624",
-    "东港市": "210681",
-    "凤城市": "210682",
-    "古塔区": "210702",
-    "凌河区": "210703",
-    "太和区": "210711",
-    "黑山县": "210726",
-    "义县": "210727",
-    "凌海市": "210781",
-    "北镇市": "210782",
-    "站前区": "210802",
-    "西市区": "210803",
-    "鲅鱼圈区": "210804",
-    "老边区": "210811",
-    "盖州市": "210881",
-    "大石桥市": "210882",
-    "海州区": "210902",
-    "新邱区": "210903",
-    "太平区": "210904",
-    "清河门区": "210905",
-    "细河区": "210911",
-    "阜新蒙古族自治县": "210921",
-    "彰武县": "210922",
-    "白塔区": "211002",
-    "文圣区": "211003",
-    "宏伟区": "211004",
-    "弓长岭区": "211005",
-    "太子河区": "211011",
-    "辽阳县": "211021",
-    "灯塔市": "211081",
-    "双台子区": "211102",
-    "兴隆台区": "211103",
-    "大洼区": "211104",
-    "盘山县": "211122",
-    "银州区": "211202",
-    "清河区": "211204",
-    "铁岭县": "211221",
-    "西丰县": "211223",
-    "昌图县": "211224",
-    "调兵山市": "211281",
-    "开原市": "211282",
-    "双塔区": "211302",
-    "龙城区": "211303",
-    "朝阳县": "211321",
-    "建平县": "211322",
-    "喀喇沁左翼蒙古族自治县": "211324",
-    "北票市": "211381",
-    "凌源市": "211382",
-    "连山区": "211402",
-    "龙港区": "211403",
-    "南票区": "211404",
-    "绥中县": "211421",
-    "建昌县": "211422",
-    "兴城市": "211481"
-    # 其他映射...
-}
-
-# 指定多个文件夹路径
-directories = [
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\丹东市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\大连市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\抚顺市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\朝阳市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\本溪市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\沈阳市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\盘锦市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\营口市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\葫芦岛市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\辽阳市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\铁岭市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\锦州市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\阜新市\code",
-    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\辽宁\鞍山市\code"
-    # 添加更多目录...
+# 源文件夹路径列表
+src_dirs = [
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\吉林市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\四平市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\延边朝鲜族自治州\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\松原市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\白城市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\白山市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\辽源市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\通化市\code",
+    r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\长春市\code"
 ]
 
-for directory in directories:
-    for filename in os.listdir(directory):
-        if filename.endswith(".json"):
-            # 提取地图名（去掉.json后缀）
-            map_name = filename[:-5]
+# 目标文件夹路径
+dst_dir = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\code"
 
-            # 获取新的代码
-            code = name_to_code_mapping.get(map_name)
+# 确保目标文件夹存在
+if not os.path.exists(dst_dir):
+    os.makedirs(dst_dir)
 
-            if code:
-                # 构造新的文件名
-                new_filename = f"{code}.json"
+# 开始移动文件
+for src in src_dirs:
+    for filename in os.listdir(src):
+        src_filepath = os.path.join(src, filename)
+        dst_filepath = os.path.join(dst_dir, filename)
 
-                # 获取完整的原文件和新文件路径
-                old_filepath = os.path.join(directory, filename)
-                new_filepath = os.path.join(directory, new_filename)
+        # 检查是否存在同名文件
+        counter = 1
+        while os.path.exists(dst_filepath):
+            name, ext = os.path.splitext(filename)
+            dst_filepath = os.path.join(dst_dir, f"{name}_{counter}{ext}")
+            counter += 1
 
-                # 重命名文件
-                os.rename(old_filepath, new_filepath)
-            else:
-                print(f"未找到 '{map_name}' 的映射代码")
+        # 移动文件
+        shutil.copy(src_filepath, dst_filepath)
+
+print("文件移动完成。")

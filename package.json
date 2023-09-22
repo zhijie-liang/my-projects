@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@mapbox/togeojson": "^0.16.1",
     "@vue-hero-icons/outline": "^1.7.2",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
@@ -30,7 +31,8 @@
     "vue-echarts": "^6.5.5",
     "vue-router": "^3.6.5",
     "vuedraggable": "^2.24.3",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
