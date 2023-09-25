@@ -45,19 +45,19 @@ def collect_kml_files(src_folder):
 
 # 包含多个源文件夹路径的列表
 src_folders = [
-    # r"D:\梁智杰\BMDownload\黑龙江\七台河市",
-    # r"D:\梁智杰\BMDownload\黑龙江\伊春市",
-    # r"D:\梁智杰\BMDownload\黑龙江\佳木斯市",
-    # r"D:\梁智杰\BMDownload\黑龙江\双鸭山市",
-    # r"D:\梁智杰\BMDownload\黑龙江\哈尔滨市",
-    # r"D:\梁智杰\BMDownload\黑龙江\大兴安岭地区",
-    # r"D:\梁智杰\BMDownload\黑龙江\大庆市",
-    # r"D:\梁智杰\BMDownload\黑龙江\牡丹江市",
-    # r"D:\梁智杰\BMDownload\黑龙江\绥化市",
-    # r"D:\梁智杰\BMDownload\黑龙江\鸡西市",
-    # r"D:\梁智杰\BMDownload\黑龙江\鹤岗市",
-    # r"D:\梁智杰\BMDownload\黑龙江\黑河市",
-    r"D:\梁智杰\BMDownload\重庆\市辖区"
+    r"D:\梁智杰\BMDownload\江苏\南京市",
+    r"D:\梁智杰\BMDownload\江苏\南通市",
+    r"D:\梁智杰\BMDownload\江苏\宿迁市",
+    r"D:\梁智杰\BMDownload\江苏\常州市",
+    r"D:\梁智杰\BMDownload\江苏\徐州市",
+    r"D:\梁智杰\BMDownload\江苏\扬州市",
+    r"D:\梁智杰\BMDownload\江苏\无锡市",
+    r"D:\梁智杰\BMDownload\江苏\泰州市",
+    r"D:\梁智杰\BMDownload\江苏\淮安市",
+    r"D:\梁智杰\BMDownload\江苏\盐城市",
+    r"D:\梁智杰\BMDownload\江苏\苏州市",
+    r"D:\梁智杰\BMDownload\江苏\连云港市",
+    r"D:\梁智杰\BMDownload\江苏\镇江市"
 ]
 
 # 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数

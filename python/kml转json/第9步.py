@@ -28,8 +28,8 @@ def process_file(input_path, output_path):
     return modified
 
 # 指定输入和输出文件夹
-input_folder = r"D:\梁智杰\BMDownload\重庆\总kml\json"
-output_folder = r"D:\梁智杰\BMDownload\重庆\总kml\json"
+input_folder = r"D:\梁智杰\BMDownload\江苏\总kml\json"
+output_folder = r"D:\梁智杰\BMDownload\江苏\总kml\json"
 
 for filename in os.listdir(input_folder):
     if filename.endswith(".json"):
