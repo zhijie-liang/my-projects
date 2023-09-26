@@ -13,7 +13,7 @@ def extract_districts(data):
     return result
 
 # 指定文件路径
-filepath = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/320000.json"  # 请替换为你的文件路径
+filepath = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/330000.json"  # 请替换为你的文件路径
 
 # 读取 JSON 文件
 with open(filepath, 'r', encoding='utf-8') as f:

@@ -45,19 +45,17 @@ def collect_kml_files(src_folder):
 
 # 包含多个源文件夹路径的列表
 src_folders = [
-    r"D:\梁智杰\BMDownload\江苏\南京市",
-    r"D:\梁智杰\BMDownload\江苏\南通市",
-    r"D:\梁智杰\BMDownload\江苏\宿迁市",
-    r"D:\梁智杰\BMDownload\江苏\常州市",
-    r"D:\梁智杰\BMDownload\江苏\徐州市",
-    r"D:\梁智杰\BMDownload\江苏\扬州市",
-    r"D:\梁智杰\BMDownload\江苏\无锡市",
-    r"D:\梁智杰\BMDownload\江苏\泰州市",
-    r"D:\梁智杰\BMDownload\江苏\淮安市",
-    r"D:\梁智杰\BMDownload\江苏\盐城市",
-    r"D:\梁智杰\BMDownload\江苏\苏州市",
-    r"D:\梁智杰\BMDownload\江苏\连云港市",
-    r"D:\梁智杰\BMDownload\江苏\镇江市"
+    r"D:\梁智杰\BMDownload\浙江\丽水市",
+    r"D:\梁智杰\BMDownload\浙江\台州市",
+    r"D:\梁智杰\BMDownload\浙江\嘉兴市",
+    r"D:\梁智杰\BMDownload\浙江\宁波市",
+    r"D:\梁智杰\BMDownload\浙江\杭州市",
+    r"D:\梁智杰\BMDownload\浙江\温州市",
+    r"D:\梁智杰\BMDownload\浙江\湖州市",
+    r"D:\梁智杰\BMDownload\浙江\绍兴市",
+    r"D:\梁智杰\BMDownload\浙江\舟山市",
+    r"D:\梁智杰\BMDownload\浙江\衢州市",
+    r"D:\梁智杰\BMDownload\浙江\金华市"
 ]
 
 # 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数
