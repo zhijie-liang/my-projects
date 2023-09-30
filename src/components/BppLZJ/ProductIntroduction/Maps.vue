@@ -40,7 +40,7 @@ export default {
     },
 
     getMapData() {
-      return axios.get("/map/地图数据/china/100000.json").then(res => {
+      return axios.get("/map/地图数据2/china/100000.json").then(res => {
         this.mapData = res.data;
       });
     },
@@ -121,7 +121,7 @@ export default {
       let selectedName = params.name;
       let adcode = params.value;
       try {
-        let res = await axios.get(`/map/地图数据/provinces/${adcode}.json`);
+        let res = await axios.get(`/map/地图数据2/provinces/${adcode}.json`);
         let newMapData = res.data;
         echarts.registerMap(selectedName, newMapData);
         let toolbox = {
