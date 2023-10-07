@@ -4,7 +4,7 @@ import json
 import os
 
 # 指定文件夹路径
-folder_path = 'C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/行政区划级联数据(含乡镇街道)/and/安徽/安庆市/code'
+folder_path = r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\public\map\dtsj3\all"
 
 # 获取文件夹中的所有文件
 for file_name in os.listdir(folder_path):

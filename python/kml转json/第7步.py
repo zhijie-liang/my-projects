@@ -31,7 +31,7 @@ dir_list = [
     # r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\白山市\code",
     # r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\辽源市\code",
     # r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\通化市\code",
-    r"D:\梁智杰\BMDownload\浙江\总kml\json"
+    r"D:\梁智杰\BMDownload\福建\总kml\json"
     # 添加更多目录...
 ]
 
