@@ -29,15 +29,17 @@ def merge_kml_as_text(directory):
 
 # 包含多个源文件夹路径的列表
 base_directories = [
-    r"D:\梁智杰\BMDownload\福建\三明市",
-    r"D:\梁智杰\BMDownload\福建\南平市",
-    r"D:\梁智杰\BMDownload\福建\厦门市",
-    r"D:\梁智杰\BMDownload\福建\宁德市",
-    r"D:\梁智杰\BMDownload\福建\泉州市",
-    r"D:\梁智杰\BMDownload\福建\漳州市",
-    r"D:\梁智杰\BMDownload\福建\福州市",
-    r"D:\梁智杰\BMDownload\福建\莆田市",
-    r"D:\梁智杰\BMDownload\福建\龙岩市"
+    r"D:\梁智杰\BMDownload\江西\上饶市",
+    r"D:\梁智杰\BMDownload\江西\九江市",
+    r"D:\梁智杰\BMDownload\江西\南昌市",
+    r"D:\梁智杰\BMDownload\江西\吉安市",
+    r"D:\梁智杰\BMDownload\江西\宜春市",
+    r"D:\梁智杰\BMDownload\江西\抚州市",
+    r"D:\梁智杰\BMDownload\江西\新余市",
+    r"D:\梁智杰\BMDownload\江西\景德镇市",
+    r"D:\梁智杰\BMDownload\江西\萍乡市",
+    r"D:\梁智杰\BMDownload\江西\赣州市",
+    r"D:\梁智杰\BMDownload\江西\鹰潭市"
 ]
 
 # 遍历路径列表，对每个源文件夹进行操作
