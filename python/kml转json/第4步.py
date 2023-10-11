@@ -7,8 +7,8 @@
 import os
 import shutil
 
-source_dir = r"D:\梁智杰\BMDownload\江西"
-destination_dir = r"D:\梁智杰\BMDownload\江西\总kml"  # 请替换为您的目标文件夹路径
+source_dir = r"D:\梁智杰\BMDownload\河南"
+destination_dir = r"D:\梁智杰\BMDownload\河南\总kml"  # 请替换为您的目标文件夹路径
 
 # 遍历一级子文件夹
 for city in os.listdir(source_dir):

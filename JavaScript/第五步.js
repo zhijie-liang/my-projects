@@ -1,3 +1,6 @@
+//.kml转换成.geojson
+
+
 const fs = require('fs');
 const DOMParser = require('xmldom').DOMParser;
 const toGeoJSON = require('@mapbox/togeojson');
@@ -26,4 +29,4 @@ function batchConvertKMLtoGeoJSON(directory) {
 }
 
 // 示例：将"myDirectory"文件夹中的所有.kml文件转换为.geojson
-batchConvertKMLtoGeoJSON('D:/梁智杰/BMDownload/江西/总kml');
+batchConvertKMLtoGeoJSON('D:/梁智杰/BMDownload/河南/总kml');
