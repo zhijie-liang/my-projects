@@ -2,8 +2,10 @@
 
 import json
 
+
 def extract_districts(data):
     result = {}
+    # 区级
     for city in data.get('cities', []):
         for district in city.get('districts', []):
             name = district.get('name')
@@ -11,9 +13,17 @@ def extract_districts(data):
             if name and adcode:
                 result[name] = adcode
     return result
+    # 市级
+    # for city in data.get('cities', []):
+    #         name = city.get('name')
+    #         adcode = city.get('adcode')
+    #         if name and adcode:
+    #             result[name] = adcode
+    # return result
+
 
 # 指定文件路径
-filepath = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/410000.json"  # 请替换为你的文件路径
+filepath = "C:/Users/梁智杰/Desktop/新建文件夹/my-projects/src/components/map/json/420000.json"  # 请替换为你的文件路径
 
 # 读取 JSON 文件
 with open(filepath, 'r', encoding='utf-8') as f:
