@@ -29,23 +29,20 @@ def merge_kml_as_text(directory):
 
 # 包含多个源文件夹路径的列表
 base_directories = [
-    r"D:\梁智杰\BMDownload\湖北\仙桃市",
-    r"D:\梁智杰\BMDownload\湖北\十堰市",
-    r"D:\梁智杰\BMDownload\湖北\咸宁市",
-    r"D:\梁智杰\BMDownload\湖北\天门市",
-    r"D:\梁智杰\BMDownload\湖北\孝感市",
-    r"D:\梁智杰\BMDownload\湖北\宜昌市",
-    r"D:\梁智杰\BMDownload\湖北\恩施土家族苗族自治州",
-    r"D:\梁智杰\BMDownload\湖北\武汉市",
-    r"D:\梁智杰\BMDownload\湖北\潜江市",
-    r"D:\梁智杰\BMDownload\湖北\神农架林区",
-    r"D:\梁智杰\BMDownload\湖北\荆州市",
-    r"D:\梁智杰\BMDownload\湖北\荆门市",
-    r"D:\梁智杰\BMDownload\湖北\襄阳市",
-    r"D:\梁智杰\BMDownload\湖北\鄂州市",
-    r"D:\梁智杰\BMDownload\湖北\随州市",
-    r"D:\梁智杰\BMDownload\湖北\黄冈市",
-    r"D:\梁智杰\BMDownload\湖北\黄石市"
+    r"D:\梁智杰\BMDownload\湖南\娄底市",
+    r"D:\梁智杰\BMDownload\湖南\岳阳市",
+    r"D:\梁智杰\BMDownload\湖南\常德市",
+    r"D:\梁智杰\BMDownload\湖南\张家界市",
+    r"D:\梁智杰\BMDownload\湖南\怀化市",
+    r"D:\梁智杰\BMDownload\湖南\株洲市",
+    r"D:\梁智杰\BMDownload\湖南\永州市",
+    r"D:\梁智杰\BMDownload\湖南\湘潭市",
+    r"D:\梁智杰\BMDownload\湖南\湘西土家族苗族自治州",
+    r"D:\梁智杰\BMDownload\湖南\益阳市",
+    r"D:\梁智杰\BMDownload\湖南\衡阳市",
+    r"D:\梁智杰\BMDownload\湖南\邵阳市",
+    r"D:\梁智杰\BMDownload\湖南\郴州市",
+    r"D:\梁智杰\BMDownload\湖南\长沙市"
 ]
 
 # 遍历路径列表，对每个源文件夹进行操作

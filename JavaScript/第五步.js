@@ -29,4 +29,4 @@ function batchConvertKMLtoGeoJSON(directory) {
 }
 
 // 示例：将"myDirectory"文件夹中的所有.kml文件转换为.geojson
-batchConvertKMLtoGeoJSON('D:/梁智杰/BMDownload/湖北/总kml');
+batchConvertKMLtoGeoJSON('D:/梁智杰/BMDownload/湖南/总kml');
