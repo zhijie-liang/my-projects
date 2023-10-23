@@ -45,25 +45,27 @@ def collect_kml_files(src_folder):
 
 # 包含多个源文件夹路径的列表
 src_folders = [
-    r"D:\梁智杰\BMDownload\海南\万宁市",
-    r"D:\梁智杰\BMDownload\海南\三亚市",
-    r"D:\梁智杰\BMDownload\海南\三沙市",
-    r"D:\梁智杰\BMDownload\海南\东方市",
-    r"D:\梁智杰\BMDownload\海南\临高县",
-    r"D:\梁智杰\BMDownload\海南\乐东黎族自治县",
-    r"D:\梁智杰\BMDownload\海南\五指山市",
-    r"D:\梁智杰\BMDownload\海南\保亭黎族苗族自治县",
-    r"D:\梁智杰\BMDownload\海南\儋州市",
-    r"D:\梁智杰\BMDownload\海南\定安县",
-    r"D:\梁智杰\BMDownload\海南\屯昌县",
-    r"D:\梁智杰\BMDownload\海南\文昌市",
-    r"D:\梁智杰\BMDownload\海南\昌江黎族自治县",
-    r"D:\梁智杰\BMDownload\海南\海口市",
-    r"D:\梁智杰\BMDownload\海南\澄迈县",
-    r"D:\梁智杰\BMDownload\海南\琼中黎族苗族自治县",
-    r"D:\梁智杰\BMDownload\海南\琼海市",
-    r"D:\梁智杰\BMDownload\海南\白沙黎族自治县",
-    r"D:\梁智杰\BMDownload\海南\陵水黎族自治县"
+    r"D:\梁智杰\BMDownload\四川\乐山市",
+    r"D:\梁智杰\BMDownload\四川\内江市",
+    r"D:\梁智杰\BMDownload\四川\凉山彝族自治州",
+    r"D:\梁智杰\BMDownload\四川\南充市",
+    r"D:\梁智杰\BMDownload\四川\宜宾市",
+    r"D:\梁智杰\BMDownload\四川\巴中市",
+    r"D:\梁智杰\BMDownload\四川\广元市",
+    r"D:\梁智杰\BMDownload\四川\广安市",
+    r"D:\梁智杰\BMDownload\四川\德阳市",
+    r"D:\梁智杰\BMDownload\四川\成都市",
+    r"D:\梁智杰\BMDownload\四川\攀枝花市",
+    r"D:\梁智杰\BMDownload\四川\泸州市",
+    r"D:\梁智杰\BMDownload\四川\甘孜藏族自治州",
+    r"D:\梁智杰\BMDownload\四川\眉山市",
+    r"D:\梁智杰\BMDownload\四川\绵阳市",
+    r"D:\梁智杰\BMDownload\四川\自贡市",
+    r"D:\梁智杰\BMDownload\四川\资阳市",
+    r"D:\梁智杰\BMDownload\四川\达州市",
+    r"D:\梁智杰\BMDownload\四川\遂宁市",
+    r"D:\梁智杰\BMDownload\四川\阿坝藏族羌族自治州",
+    r"D:\梁智杰\BMDownload\四川\雅安市"
 ]
 
 # 遍历路径列表，对每个源文件夹执行 collect_kml_files 函数

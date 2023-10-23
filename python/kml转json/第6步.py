@@ -24,7 +24,7 @@ def batch_rename_extension(src_dir, original_ext, new_ext):
 # 目录列表
 dir_list = [
     # r"C:\Users\梁智杰\Desktop\新建文件夹\my-projects\src\components\map\行政区划级联数据(含乡镇街道)\and\吉林\通化市\code",
-    r"D:\梁智杰\BMDownload\海南\总kml\json"
+    r"D:\梁智杰\BMDownload\四川\总kml\json"
     # 添加更多目录...
 ]
 
