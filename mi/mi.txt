@@ -1,0 +1,17 @@
+Phoenix连接地址： anguan-gdp003.gwssi.com:8765
+gwssi/jWA9zn5*j
+jdbc:phoenix:thin:url=http://{host}[:{port}];serialization=PROTOBUF
+org.apache.phoenix.queryserver.client.Driver
+连接属性：
+phoenix.schema.isNamespaceMappingEnabled  true
+phoenix.schema.mapSystemTablesToNamespace  true
+
+
+syncx账密：
+sa/0bHqBXIi3
+(http://172.20.15.168:8081)(http://172.20.16.32:8083)
+
+
+zepplin用户名密码:
+syncx/Gwssi@2023
+(http://172.20.15.166:12347/#/)

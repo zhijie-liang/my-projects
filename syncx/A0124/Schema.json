@@ -1,0 +1,139 @@
+{
+  "type": "record",
+  "name": "FileTransLogin",
+  "fields": [
+    {
+      "name": "payload",
+      "type": {
+        "type": "record",
+        "name": "Payload",
+        "fields": [
+          {
+            "name": "count",
+            "type": "int"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "ts",
+            "type": "long"
+          },
+          {
+            "name": "data_hash",
+            "type": "string"
+          },
+          {
+            "name": "root_hash",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "data",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    },
+    {
+      "name": "root",
+      "type": {
+        "type": "record",
+        "name": "FileTransLoginRoot",
+        "fields": [
+          {
+            "name": "FILE_TRANS_LOGIN_ID",
+            "type": "string"
+          },
+          {
+            "name": "RECORD_TIME",
+            "type": "int"
+          },
+          {
+            "name": "OTHER_ID",
+            "type": "string"
+          },
+          {
+            "name": "FROM_IP",
+            "type": "string"
+          },
+          {
+            "name": "FROM_PORT",
+            "type": "int"
+          },
+          {
+            "name": "TARGET_IP",
+            "type": "string"
+          },
+          {
+            "name": "TARGET_PORT",
+            "type": "int"
+          },
+          {
+            "name": "USER_LOGIN_NAME",
+            "type": "string"
+          },
+          {
+            "name": "USER_LOGIN_P_W_D",
+            "type": "string"
+          },
+          {
+            "name": "LOGIN_FLAG",
+            "type": "string"
+          },
+          {
+            "name": "DOWN_FILE_COUNT",
+            "type": "int"
+          },
+          {
+            "name": "UP_FILE_COUNT",
+            "type": "int"
+          },
+          {
+            "name": "LOGIN_TIME",
+            "type": "long"
+          },
+          {
+            "name": "SEESION_ID",
+            "type": "string"
+          },
+          {
+            "name": "DATA_LEVEL",
+            "type": "string"
+          },
+          {
+            "name": "CLASS_CODE_INDUSTRY",
+            "type": "string"
+          },
+          {
+            "name": "CLASS_CODE_SUBJECT",
+            "type": "string"
+          },
+          {
+            "name": "CLASS_CODE_AREA",
+            "type": "string"
+          },
+          {
+            "name": "SENSITIVE_FLAG",
+            "type": "string"
+          },
+          {
+            "name": "DATA_ELEMENT_CODE",
+            "type": "string"
+          },
+          {
+            "name": "APM_FLAG",
+            "type": "string"
+          },
+          {
+            "name": "SOURCE_TYPE",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
