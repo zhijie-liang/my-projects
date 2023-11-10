@@ -15,3 +15,7 @@ sa/0bHqBXIi3
 zepplin用户名密码:
 syncx/Gwssi@2023
 (http://172.20.15.166:12347/#/)
+
+
+sdc账号密码：
+admin/Gwssi@2022

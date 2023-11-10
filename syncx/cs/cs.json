@@ -1,0 +1,27 @@
+[
+  { "field": "/CLASS_CODE_INDUSTRY", "type": "STRING", "value": "" },
+  { "field": "/FROM_IP", "type": "STRING", "value": "192.168.48.72" },
+  { "field": "/DATA_ELEMENT_CODE", "type": "STRING", "value": "" },
+  { "field": "/RECORD_TIME", "type": "LONG", "value": "1698306332217184" },
+  { "field": "/DATA_LEVEL", "type": "STRING", "value": "" },
+  { "field": "/TARGET_IP", "type": "STRING", "value": "222.240.210.154" },
+  { "field": "/TARGET_REGION_ID", "type": "STRING", "value": "0" },
+  { "field": "/FROM_REGION_ID", "type": "STRING", "value": "0" },
+  { "field": "/LOG_TABLE", "type": "STRING", "value": "DSSP_FILE_TRANS_LOGIN" },
+  { "field": "/FROM_MAC", "type": "STRING" },
+  { "field": "/SOURCE_TYPE", "type": "STRING", "value": "01" },
+  { "field": "/CLASS_CODE_AREA", "type": "STRING", "value": "" },
+  { "field": "/ISO_TYPE", "type": "STRING", "value": "FTP" },
+  { "field": "/SENSITIVE_FLAG", "type": "STRING", "value": "" },
+  { "field": "/CLASS_CODE_SUBJECT", "type": "STRING", "value": "" },
+  { "field": "/OPERTION", "type": "STRING", "value": "004001" },
+  { "field": "/TARGET_PORT", "type": "INTEGER", "value": "21" },
+  {
+    "field": "/CONTENT",
+    "type": "STRING",
+    "value": "{\"RECORD_TIME\":1698306412,\"OTHER_ID\":\"1698306332217184\",\"USER_LOGIN_NAME\":\"test\",\"USER_LOGIN_P_W_D\":\"test\",\"LOGIN_FLAG\":\"1\",\"DOWN_FILE_COUNT\":1,\"UP_FILE_COUNT\":0,\"LOGIN_TIME\":1698306332217184,\"APM_FLAG\":\"\",\"SEESION_ID\":\"1698306332217184\"}"
+  },
+  { "field": "/LOG_ID", "type": "STRING", "value": "1f6ccfb36d8df6426668b25663effc9c" },
+  { "field": "/FROM_PORT", "type": "INTEGER", "value": "63232" },
+  { "field": "/TARGET_MAC", "type": "STRING" }
+]

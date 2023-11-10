@@ -30,6 +30,12 @@ const cs1 = () => import("../components/cs/cs1.vue");
 const cs2 = () => import("../components/cs/cs2.vue");
 const cs3 = () => import("../components/cs/cs3.vue");
 const cs4 = () => import("../components/cs/cs4.vue");
+const cs5 = () => import("../components/cs/cs5.vue");
+const cs6 = () => import("../components/cs/cs6.vue");
+const cs7 = () => import("../components/cs/cs5.vue");
+const cs8 = () => import("../components/cs/cs5.vue");
+const cs9 = () => import("../components/cs/cs5.vue");
+const cs10 = () => import("../components/cs/cs5.vue");
 
 const routes = [
   {
@@ -168,6 +174,36 @@ const routes = [
     path: '/cs4',
     name: 'cs4',
     component: cs4,
+  },
+  {
+    path: '/cs5',
+    name: 'cs5',
+    component: cs5,
+  },
+  {
+    path: '/cs6',
+    name: 'cs6',
+    component: cs6,
+  },
+  {
+    path: '/cs7',
+    name: 'cs7',
+    component: cs7,
+  },
+  {
+    path: '/cs8',
+    name: 'cs8',
+    component: cs8,
+  },
+  {
+    path: '/cs9',
+    name: 'cs9',
+    component: cs9,
+  },
+  {
+    path: '/cs10',
+    name: 'cs10',
+    component: cs10,
   },
 ]
 const router = new VueRouter({
