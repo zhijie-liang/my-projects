@@ -263,7 +263,20 @@ function getTimeDifference(timestamp1, timestamp2) {
   return date2 - date1;
 }
 
+// 第十二个脚本：转义字符转大写
+function convertLowercaseUnicodeToUppercase(inputString) {
+  // 使用正则表达式匹配`\u`后的四位字符
+  var regex = /\\u[a-f0-9]{4}/g;
 
+  // 使用replace方法将匹配到的字符进行转换
+  var resultString = inputString.replace(regex, function (match) {
+    // 将匹配到的字符转换为大写
+    return match.toUpperCase().replace(/\\U/g, '\\u');
+  });
+
+  return resultString;
+}
+state.convertLowercaseUnicodeToUppercase = convertLowercaseUnicodeToUppercase;
 state.convertNullToStr = convertNullToStr;
 state.convertNullToInt = convertNullToInt;
 state.hashcode = hashcode;
