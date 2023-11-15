@@ -1,0 +1,27 @@
+
+var obj = {};
+obj.REMOTE_CONTROL_LOGIN_ID = records[i].value['REMOTE_CONTROL_LOGIN_ID'];
+obj.RECORD_TIME = records[i].value['RECORD_TIME'];
+obj.OTHER_ID = records[i].value['OTHER_ID'];
+obj.FROM_IP = records[i].value['FROM_IP'];
+obj.FROM_PORT = records[i].value['FROM_PORT'];
+obj.TARGET_IP = records[i].value['TARGET_IP'];
+obj.TARGET_PORT = records[i].value['TARGET_PORT'];
+obj.LOGIN_TIME = records[i].value['LOGIN_TIME'];
+obj.LOGOUT_TIME = records[i].value['LOGOUT_TIME'];
+obj.CONNECTION_TIME = records[i].value['CONNECTION_TIME'];
+obj.LOGIN_FLAG = records[i].value['LOGIN_FLAG'];
+obj.LOGIN_USER = records[i].value['LOGIN_USER'];
+obj.KERNEL = records[i].value['KERNEL'];
+obj.CLIENT_OS = records[i].value['CLIENT_OS'];
+obj.STATUS = records[i].value['STATUS'];
+obj.SESSION_ID = records[i].value['SESSION_ID'];
+obj.APM_FLAG = records[i].value['APM_FLAG'];
+obj.SOURCE_TYPE = records[i].value['SOURCE_TYPE'];
+obj.DATA_LEVEL = records[i].value['DATA_LEVEL'];
+obj.CLASS_CODE_INDUSTRY = records[i].value['CLASS_CODE_INDUSTRY'];
+obj.CLASS_CODE_SUBJECT = records[i].value['CLASS_CODE_SUBJECT'];
+obj.CLASS_CODE_AREA = records[i].value['CLASS_CODE_AREA'];
+obj.SENSITIVE_FLAG = records[i].value['SENSITIVE_FLAG'];
+obj.DATA_ELEMENT_CODE = records[i].value['DATA_ELEMENT_CODE'];
+records[i].value.root = obj;
