@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>双色球中奖查询</title>
+  <script>
+    function formatAndSortNumbers() {
+      var redBalls = [];
+      // 收集红球号码
+      for (var i = 1; i <= 6; i++) {
+        var num = parseInt(document.getElementById('red-' + i).value, 10);
+        if (!isNaN(num) && num <= 33) {
+          redBalls.push(num);
+        }
+      }
+      // 排序并格式化
+      redBalls.sort(function (a, b) { return a - b; });
+      for (i = 1; i <= redBalls.length; i++) {
+        document.getElementById('red-' + i).value = redBalls[i - 1] < 10 ? '0' + redBalls[i - 1] : redBalls[i - 1];
+      }
+    }
+
+    function validateNumber(input, max) {
+      var num = parseInt(input.value, 10);
+      if (isNaN(num) || num < 1 || num > max) {
+        alert('输入的号码必须在1到' + max + '之间');
+        input.value = '';
+      } else {
+        input.value = num < 10 ? '0' + num : num.toString();
+        if (max === 33) { // 如果是红球，重新排序
+          formatAndSortNumbers();
+        }
+      }
+    }
+
+    function checkPrize() {
+      var userNumbers = [];
+      for (var i = 1; i <= 6; i++) {
+        var num = document.getElementById('red-' + i).value;
+        userNumbers.push(parseInt(num, 10));
+      }
+
+      var userBlue = parseInt(document.getElementById('blue').value, 10);
+
+      fetch('/check-prize', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ userNumbers: userNumbers, userBlue: userBlue })
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('result').innerText = '您的中奖情况：' + data.prize;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  </script>
+</head>
+
+<body>
+  <h1>双色球中奖查询</h1>
+  <div>
+    <p>红球号码（01-33）：</p>
+    <!-- 红球号码输入框 -->
+    <div id="red-balls">
+      <input type="text" id="red-1" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-2" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-3" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-4" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-5" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-6" maxlength="2" onblur="validateNumber(this, 33)">
+    </div>
+
+    <p>蓝球号码（01-16）：</p>
+    <!-- 蓝球号码输入框 -->
+    <input type="text" id="blue" maxlength="2" onblur="validateNumber(this, 16)">
+
+    <button onclick="checkPrize()">查询中奖情况</button>
+  </div>
+  <p id="result"></p>
+</body>
+
+</html>
