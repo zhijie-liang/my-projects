@@ -1,10 +1,7 @@
 {
-  "type": "record",
-  "name": "FileTransLogin",
-  "fields": [
+  "Row": [
     {
-      "name": "payload",
-      "type": {
+      "Columnfamily": {
         "type": "record",
         "name": "Payload",
         "fields": [
