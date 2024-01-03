@@ -1,45 +1,78 @@
-obj.MAIL_RECEIVE_ITEM_ID = records[i].value['MAIL_RECEIVE_ITEM_ID'];
-obj.RECORD_TIME = records[i].value['RECORDTIME_IMAPRRPAIR'];
-obj.OTHER_ID = records[i].value['OTHER_ID'];
-obj.FROM_IP = records[i].value['FROM_IP'];
-obj.FROM_PORT = records[i].value['FROM_PORT'];
-obj.TARGET_IP = records[i].value['TARGET_IP'];
-obj.TARGET_PORT = records[i].value['TARGET_PORT'];
-obj.FROM_USER = state.convertNullToStr(records[i].value['FROM_USER']);
-obj.TO_USER = state.convertNullToStr(records[i].value['TO_USER']);
-obj.CC_USER = state.convertNullToStr(records[i].value['CC_USER']);
-obj.BCC_USER = state.convertNullToStr(records[i].value['BCC_USER']);
-obj.FROM_DOMAIN = state.convertNullToStr(records[i].value['FROM_DOMAIN']);
-obj.TO_DOMAIN = state.convertNullToStr(records[i].value['TO_DOMAIN']);
-obj.CC_DOMAIN = state.convertNullToStr(records[i].value['CC_DOMAIN']);
-obj.BCC_DOMAIN = state.convertNullToStr(records[i].value['BCC_DOMAIN']);
-obj.ISO_TYPE = records[i].value['ISO_TYPE'];
-obj.CERTIFY_CATEGORY = records[i].value['CERTIFY_CATEGORY'];
-obj.MAIL_SUBJECT = state.convertNullToStr(records[i].value['MAIL_SUBJECT']);
-obj.CONTENT_DETAILS = state.convertNullToStr(records[i].value['CONTENT_DETAILS']);
-obj.ATTACHMENT_DETAILS = state.convertNullToStr(records[i].value['ATTACHMENT_DETAILS']);
-obj.ATTACHMENT_TOTAL_SIZE = records[i].value['ATTACHMENT_TOTAL_SIZE'];
-obj.EMAI_ID = records[i].value['EMAI_ID'];
-obj.RECEIVE_STATUS = records[i].value['RECEIVE_STATUS'];
-obj.FAILED_CODE = state.convertNullToStr(records[i].value['FAILED_CODE']);
-obj.SEND_DATE = records[i].value['SEND_DATE'];
-obj.RECEIVE_DATE = records[i].value['RECEIVE_DATE'];
-obj.SESSION_ID = records[i].value['SESSION_ID'];
-obj.REQ_BYTES = records[i].value['REQ_BYTES'];
-obj.RSP_BYTES = records[i].value['RSP_BYTES'];
-obj.REQ_PACKETS = records[i].value['REQ_PACKETS'];
-obj.RSP_PACKET = records[i].value['RSP_PACKET'];
-obj.RETRANS_REQKTS = records[i].value['RETRANS_REQKTS'];
-obj.RETRANS_REQBYTES = records[i].value['RETRANS_REQBYTES'];
-obj.RETRANS_PSPPKTS = records[i].value['RETRANS_PSPPKTS'];
-obj.RETRANS_PSPBYTES = records[i].value['RETRANS_PSPBYTES'];
-obj.REQ_TIME = records[i].value['REQ_TIME'];
-obj.RSP_TIME = records[i].value['RSP_TIME'];
-obj.APM_FLAG = state.convertNullToStr(records[i].value['APM_FLAG']);
-obj.SOURCE_TYPE = records[i].value['SOURCE_TYPE'];
-obj.DATA_LEVEL = records[i].value['DATA_LEVEL'];
-obj.CLASS_CODE_INDUSTRY = records[i].value['CLASS_CODE_INDUSTRY'];
-obj.CLASS_CODE_SUBJECT = records[i].value['CLASS_CODE_SUBJECT'];
-obj.CLASS_CODE_AREA = records[i].value['CLASS_CODE_AREA'];
-obj.SENSITIVE_FLAG = records[i].value['SENSITIVE_FLAG'];
-obj.DATA_ELEMENT_CODE = records[i].value['DATA_ELEMENT_CODE'];
+// Sample JavaScript code
+var records = sdc.records;
+for (var i = 0; i < records.length; i++) {
+  try {
+    listDataArray = records[i].value
+    // 遍历 listDataArray 中的每个元素，重新组织数据格式
+    for (var j = 0; j < listDataArray.length; j++) {
+      // 使用 sdc.createRecord 创建 ScriptRecord
+      var newRecord = sdc.createRecord('newRecordId' + j);
+
+      // 设置新的记录字段值
+      newRecord.value = {
+        "ROW": listDataArray[j].ROW,
+        "RecordTime": listDataArray[j].RECORDTIME,
+        "LinkID": listDataArray[j].LINKID,
+        "InterfaceID": listDataArray[j].INTERFACEID,
+        "CardID": listDataArray[j].CARDID,
+        "DeviceID": listDataArray[j].DEVICEID,
+        "PageID": listDataArray[j].PAGEID,
+        "PageURL": listDataArray[j].PAGEURL,
+        "ClientIPLower": listDataArray[j].CLIENTIPLOWER,
+        "ClientIPHigher": listDataArray[j].CLIENTIPHIGHER,
+        "StartTime": listDataArray[j].STARTTIME,
+        "EndTime": listDataArray[j].ENDTIME,
+        "PageTime": listDataArray[j].PAGETIME,
+        "PairCount": listDataArray[j].PAIRCOUNT,
+        "BytesReq": listDataArray[j].BYTESREQ,
+        "BytesRsp": listDataArray[j].BYTESRSP,
+        "PacketsReq": listDataArray[j].PACKETSREQ,
+        "PacketRsp": listDataArray[j].PACKETRSP,
+        "DNSLookups": listDataArray[j].DNSLOOKUPS,
+        "NewConnections": listDataArray[j].NEWCONNECTIONS,
+        "RedirCountsInPage": listDataArray[j].REDIRCOUNTSINPAGE,
+        "RedirCountsPrePage": listDataArray[j].REDIRCOUNTSPREPAGE,
+        "RedirBeg": listDataArray[j].REDIRBEG,
+        "RedirTime": listDataArray[j].REDIRTIME,
+        "KeepLiveCount": listDataArray[j].KEEPLIVECOUNT,
+        "codeCount304": listDataArray[j].CODECOUNT304,
+        "Count4XX5xx": listDataArray[j].COUNT4XX5XX,
+        "Cachehitcount": listDataArray[j].CACHEHITCOUNT,
+        "Cachehitbytes": listDataArray[j].CACHEHITBYTES,
+        "Cachemisscount": listDataArray[j].CACHEMISSCOUNT,
+        "Cachemissbytes": listDataArray[j].CACHEMISSBYTES,
+        "applicationcount": listDataArray[j].APPLICATIONCOUNT,
+        "applicationbytes": listDataArray[j].APPLICATIONBYTES,
+        "audiocount": listDataArray[j].AUDIOCOUNT,
+        "audiobytes": listDataArray[j].AUDIOBYTES,
+        "imagecount": listDataArray[j].IMAGECOUNT,
+        "imagebytes": listDataArray[j].IMAGEBYTES,
+        "messagecount": listDataArray[j].MESSAGECOUNT,
+        "messagebytes": listDataArray[j].MESSAGEBYTES,
+        "Textcount": listDataArray[j].TEXTCOUNT,
+        "textbytes": listDataArray[j].TEXTBYTES,
+        "videocount": listDataArray[j].VIDEOCOUNT,
+        "videobytes": listDataArray[j].VIDEOBYTES,
+        "multipartcount": listDataArray[j].MULTIPARTCOUNT,
+        "multipartbytes": listDataArray[j].MULTIPARTBYTES,
+        "Othercount": listDataArray[j].OTHERCOUNT,
+        "otherbytes": listDataArray[j].OTHERBYTES,
+        "AppID": listDataArray[j].APPID,
+        "ConfID": listDataArray[j].CONFID,
+        "LoadTime": listDataArray[j].LOADTIME,
+        "UA": listDataArray[j].UA,
+        "os": listDataArray[j].OS,
+        "explorer": listDataArray[j].EXPLORER,
+        "device": listDataArray[j].DEVICE,
+        "ApmFlag": listDataArray[j].APMFLAG,
+        "usersystem": listDataArray[j].USERSYSTEM,
+      };
+
+      // 将新的 ScriptRecord 对象写入处理器输出
+      sdc.output.write(newRecord);
+    }
+  } catch (e) {
+    // Send record to error
+    sdc.error.write(records[i], e);
+  }
+}

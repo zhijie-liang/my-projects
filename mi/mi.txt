@@ -19,3 +19,6 @@ syncx/Gwssi@2023
 
 sdc账号密码：
 admin/Gwssi@2022
+
+32/33服务器密码：
+7VxPHRY#B
