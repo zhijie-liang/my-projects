@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>双色球中奖查询</title>
+  <script>
+    
+  </script>
+</head>
+
+<body>
+  <h1>双色球中奖查询</h1>
+  <div>
+    <p>红球号码（01-33）：</p>
+    <!-- 红球号码输入框 -->
+    <div id="red-balls">
+      <input type="text" id="red-1" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-2" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-3" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-4" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-5" maxlength="2" onblur="validateNumber(this, 33)">
+      <input type="text" id="red-6" maxlength="2" onblur="validateNumber(this, 33)">
+    </div>
+
+    <p>蓝球号码（01-16）：</p>
+    <!-- 蓝球号码输入框 -->
+    <input type="text" id="blue" maxlength="2" onblur="validateNumber(this, 16)">
+
+    <button onclick="checkPrize()">查询中奖情况</button>
+  </div>
+  <p id="result"></p>
+</body>
+
+</html>
