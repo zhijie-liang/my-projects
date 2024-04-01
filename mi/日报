@@ -1,0 +1,346 @@
+2023/12/25:
+1：Phoenix语法验证。
+2：syncX2.4的部署安装。
+
+
+2023/12/26:
+1：Phoenix语法验证。
+2：syncX2.4的部署安装完成。
+3：保密检查。
+
+
+2023/12/27:
+Phoenix语法验证。
+a:表抽样不生效。
+b:联合主键必须是varchar类型。
+c:视图可以做upsert操作吗？
+
+
+2023/12/28:
+1：把phoenix验证的语法整理到execl中。
+2：构建Phoenix项目网站。
+
+
+2023/12/29:
+1：构建Phoenix项目网站。
+2：将ag环境上的"probe_ods".tbl_perf_httppageview这张表导入ft环境上。
+
+
+2024/01/02:
+1：将ag环境上的"probe_ods".tbl_perf_httppageview这张表导入ft环境上。
+2：练习离线安装syncx。
+加班：本地搭建大数据集群用以测试hbase以拍快照的方式实现不同环境之间的数据迁移。
+
+
+2024/01/03:
+1：通过syncX将ag环境上的"probe_ods".tbl_perf_httppageview这张表导入ft环境上。
+2：本地搭建大数据集群。
+
+
+2024/01/04:
+1：本地集群添加phoenix测试。
+2：通过导入导出将ag环境上的"probe_ods".tbl_perf_httppageview这张表导入ft环境上和本地集群上。
+hbase org.apache.hadoop.hbase.mapreduce.Export 'probe_ods:TBL_PERF_HTTPPAGEVIEW' file:///a/test
+hbase org.apache.hadoop.hbase.mapreduce.Import 'probe_ods:TBL_PERF_HTTPPAGEVIEW' file:///a/testttttt
+加班：验证arm环境上spark功能。
+
+2024/01/05:
+1：测试pyspark。
+2：保密检查。
+
+
+2024/01/08:
+验证spark。
+加班：验证arm环境上spark功能。
+
+2024/01/09:
+验证spark。
+	a.在 DataFrame 上重命名列的方法.
+	b.PySpark withColumn() 用法与示例.
+	c.如何从 DataFrame 中过滤数据.
+	d.PySpark orderBy() 和 sort() 解释.
+
+
+2024/01/10:
+验证spark。
+	a.PySpark 分解数组并将列映射到行.
+	b.将嵌套数组分解为行.
+	c.PySpark 将 CSV 文件读入 DataFrame.
+	d.PySpark 将 DataFrame 写入 CSV 文件.
+	e.PySpark – 阅读和使用写入 Parquet 文件.
+加班：验证spark。
+	f.PySpark – 阅读和使用写入 JSON 文件.
+	g.PySpark – 读取 Hive 表(未完成).
+
+
+2024/01/11:
+验证spark。
+	a.PySpark RDD 通过示例学习.
+	b.PySpark MapType.
+	c.PySpark 的 startsWith() 和 endsWith() 函数.
+	d.PySpark 读写 MySQL 数据库表(未完成).
+	e.转换 PySpark RDD 到 DataFrame.
+	f.将 PySpark DataFrame 转换为 Pandas(遇阻).
+
+
+2024/01/12:
+1:编写spark_CheckList。
+2:本地安装GDP。
+
+
+2024/01/15:
+本地安装GDP。
+	a:安装完成后其他组件都没有问题，启动 yarn 的 timeline service 服务时报错 /usr/hdp/3.1.4.0-315/hadoop-yarn/lib/service-dep.tar.gz 文件不存在。
+	b:本地安装 HDP 后从该目录找到 ervice-dep.tar.gz 文件，将其传到 GDP 环境的目录下，仍然启动不了该服务。
+	c:hdfs、hbase等的版本正确。
+加班：
+	a.解决 x86 版本 GDP 启动 yarn 的 timeline service 服务时报错，点击yarn→CONFIGS→ADVANCED→Advanced yarn-hbase-env,选择以下两项，保存（参数代表：不使用自带hbase，使用自己安装的hbase）.
+
+
+2024/01/16:
+本地安装GDP。
+	a:开启hdfs高可用.
+	b:解决 HDFS Service Check 报错问题.
+
+
+2024/01/17:
+本地安装GDP。
+	a:清空虚拟机重装.
+	b:***代理问题***遇到问题，集群启动后打不开NameNode UI和HBase Master UI等页面。
+	c:HDFS、HBase、yarn组件的 shell 命令测试.
+
+
+2024/01/18:
+本地安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:了解文档中不理解的命令。
+
+
+2024/01/19:
+本地安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:问题：本地源搭建失败.(代理问题)
+	c:问题：无法安装ambari-service.
+
+
+2024/01/22:
+本地安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:问题：安装包版本不对，一直无法安装成功。
+
+
+2024/01/23:
+本地安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:解决问题，本地安装成功（除phoenix）
+
+
+2024/01/24:
+c4安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:问题：本地源搭建失败.
+	c:帮清丽姐在堡垒机解决问题。
+	加班：c4安装GDP
+
+
+2024/01/25:
+c4安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:问题：本地源搭建失败.(arm版本bug,在 Manage Ambari > Versions 手动添加)
+	c:问题：datanode 总是自动宕机（/hadoop/hdfs/data/current/VERSION------确认所有节点在该VERSION里的clusterID相同。）
+	d:帮会姐在堡垒机上添加ip.
+	加班：c4安装GDP
+
+
+2024/01/26:
+c4安装GDP。
+	a:根据gdp_installation_helper.txt文档搭建GDP。
+	b:问题：无法远程连接c4服务器。
+	c:网上搜索解决无法连接服务器的问题。
+	d:帮会姐在堡垒机上添加ip.
+	f:在自己本地虚拟机上复现问题并想办法解决。
+
+
+2024/01/29:
+1：x86验证GDP。
+2：编写部分GDP安装手册
+
+
+2024/01/30:
+1：x86验证GDP。
+2：编写部分GDP安装手册
+
+
+2024/01/31:
+1：处理安管环境上phoenix挂掉的情况
+2：协助清丽姐下载安装Mongo的docker的docker镜像。
+
+
+2024/02/1:
+1：本地搭建syncx(OPENJDK在我机器上不可以)
+
+
+2024/02/2:
+1：编写GDP安装手册。
+
+
+2024/02/4:
+1：编写GDP安装手册。
+
+
+2024/02/19:
+1：整理syncx组件文档。
+
+
+2024/02/20:
+1：编写完全离线环境下安装x86架构的GDP。
+2：整理离线环境下安装x86架构的GDP所需要的所有依赖包。
+
+
+2024/02/21:
+1：服务器上添加白名单ip
+2：处理ft上phoenix无法连接问题
+
+
+2024/02/22:
+1：编写完全离线环境下安装x86架构的GDP。
+2：整理离线环境下安装x86架构的GDP所需要的所有依赖包。
+
+
+2024/02/23:
+1：和李骏交接工作
+2：处理ft大数据集群上的问题
+
+
+2024/02/26:
+1：服务器上添加白名单ip
+2：找杨鹏琛确认服务器情况（他说明天虚拟机就下来）
+
+
+2024/02/27:
+1：整理安装大数据集群过程中遇到的问题并给出解决方案。
+2：确认杨鹏琛给到的虚拟机资源
+
+
+2024/02/28:
+1：在海光新环境中安装GDP。
+
+
+2024/02/29:
+1：在海光新环境中安装GDP（regionserver启动后会自动挂掉，但是在该节点上启动phoenix后不再有该问题）。
+
+
+2024/03/01:
+1：在海光新环境中安装syncx（未完成，mongo数据集初始化不成功，正在解决）
+
+
+2024/03/02:
+与聪哥交接工作
+
+
+2024/03/03:
+与聪哥交接工作
+
+
+2024/03/04:
+请假
+
+
+2024/03/05:
+请假
+
+
+2024/03/06:
+请假
+
+
+2024/03/07:
+学习和熟悉防火墙策略的用法
+
+
+2024/03/08:
+1.配置海光上大数据集群节点的防火墙策略。
+2.海光服务器上安装syncx（mongo初始化单节点）。
+
+
+2024/03/11:
+1.解决海光环境syncx验证码问题
+2.找公共组同事确实需要申请的硬件资源，先报给杨鹏琛
+3.部署sdc
+
+
+2024/03/12:
+1.整理硬件资源使用情况
+
+
+2024/03/13:
+1.海光服务器上时钟同步的问题（已完成）
+2.海光上添加新节点到mongo副本集遇到的问题（进行中）
+
+
+2024/03/14:
+1.解决海光上mongo副本集初始化问题。（docker启动mongo27017时所有节点的mongo.key文件要完全一样，第一次初始化时不能+--auth，并且初始化时要使用IP而非hostname，否则无法识别连接超时）
+
+
+2024/03/15:
+1.运行初始化脚本
+2.与杨鹏琛沟通海光资源使用情况。
+
+
+2024/03/18:
+1.初始化脚本运行，调整大数据集群配置，海光syncx管道发布（完成）
+2.与杨鹏琛沟通海光资源使用情况。
+
+
+2024/03/19:
+1.编写海光系列物理服务器部署与应用计划。
+2.配合李博洋填写物理机资产统计表
+
+
+2024/03/20:
+1.去总部取回物理机
+2.海光环境测试phoenix性能
+3.海光环境安装spark
+
+
+2024/03/21:
+1.海光环境安装完成pyspark
+2.改进《海光系列物理服务器部署与应用计划》
+3.海光环境测试phoenix性能
+
+
+2024/03/22:
+1.与杨鹏琛沟通清楚资源分配
+2.海光环境测试phoenix性能
+
+
+2024/03/25:
+请假
+
+
+2024/03/26:
+1.沟通新的海光硬件分配
+2.海光环境上建立虚拟机
+
+
+2024/03/27:
+1.重新建立syncx虚拟机
+2.部署syncx
+3.中孚检查
+
+
+2024/03/28:
+1.飞腾环境搭建mongo4.4.0的副本集
+2.重新部署初始化脚本环境
+
+
+2024/03/29:
+海光服务器spark的部署和初始化脚本的运行
+
+
+2024/04/01:
+1:初始化脚本全部完成，包括（达梦）
+2:对于服务器的账号密码进行密级排查，密级不够的进行升级
+3:对服务器的防火墙白名单进行统计
+
+

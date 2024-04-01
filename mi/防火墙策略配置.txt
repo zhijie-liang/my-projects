@@ -1,0 +1,195 @@
+1.创建和配置新区域:
+
+
+创建一个新的持久化区域，名为 hvv:
+firewall-cmd --permanent --new-zone=hvv
+
+重新加载 firewalld 的配置，应用之前做的更改:
+firewall-cmd --reload
+
+将 hvv 区域设置为默认区域:
+firewall-cmd --set-default-zone=hvv
+
+向 hvv 区域添加一条富规则，允许来自 192.168.101.17 的所有 TCP 端口访问:
+firewall-cmd --permanent --zone=hvv --add-rich-rule="rule family='ipv4' source address='192.168.101.234' port port='0-65535' protocol='tcp' accept"
+
+在 hvv 区域的持久化配置中添加 TCP 端口 22 的开放规则:
+firewall-cmd --permanent --zone=hvv --add-port=22/tcp
+
+
+
+2.配置 IP 集合和信任区域:
+
+
+创建一个新的 IP 集合 hadoop331，类型为哈希表，用于存储 IP 地址:
+firewall-cmd --permanent --new-ipset=hadoop331 --type=hash:ip
+
+向 hadoop331 IP 集合中添加 IP 地址 172.20.15.116-119:
+firewall-cmd --permanent --ipset=hadoop331 --add-entry=172.20.15.116
+firewall-cmd --permanent --ipset=hadoop331 --add-entry=172.20.15.117
+firewall-cmd --permanent --ipset=hadoop331 --add-entry=172.20.15.118
+firewall-cmd --permanent --ipset=hadoop331 --add-entry=172.20.15.119
+
+显示 hadoop331 IP 集合的信息:
+firewall-cmd --info-ipset=hadoop331
+
+将 hadoop331 IP 集合添加到 trusted 区域，使集合中的 IP 地址被信任:
+firewall-cmd --permanent --zone=trusted --add-source=ipset:hadoop331
+
+
+
+firewall-cmd --permanent --zone=hvv --add-port=27018/tcp
+
+firewall-cmd --permanent --new-zone=hvv
+firewall-cmd --reload
+firewall-cmd --set-default-zone=hvv
+firewall-cmd --permanent --zone=hvv --add-rich-rule="rule family='ipv4' source address='192.168.101.234' port port='0-65535' protocol='tcp' accept"
+firewall-cmd --permanent --zone=hvv --add-rich-rule="rule family='ipv4' source address='192.168.100.134' port port='0-65535' protocol='tcp' accept"
+firewall-cmd --permanent --zone=hvv --add-port=22/tcp
+firewall-cmd --permanent --zone=hvv --add-port=123/udp
+firewall-cmd --permanent --zone=hvv --add-port=1022/tcp
+firewall-cmd --reload
+firewall-cmd --info-zone=hvv
+
+firewall-cmd --permanent --new-ipset=syncx --type=hash:ip
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.116
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.117
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.118
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.119
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.120
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.121
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.122
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.123
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.124
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.125
+firewall-cmd --info-ipset=syncx
+firewall-cmd --permanent --zone=trusted --add-source=ipset:syncx
+firewall-cmd --reload
+firewall-cmd --info-zone=hvv
+
+
+firewall-cmd --permanent --new-ipset=syncx --type=hash:ip
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.120
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.121
+firewall-cmd --permanent --ipset=syncx --add-entry=172.20.15.122
+firewall-cmd --info-ipset=syncx
+firewall-cmd --permanent --zone=trusted --add-source=ipset:syncx
+firewall-cmd --reload
+firewall-cmd --info-zone=hvv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+让我们挨个解析这些 `firewall-cmd` 命令，理解它们各自的功能和如何配合使用来实现特定的防火墙配置目标。
+
+### 查看和修改配置
+
+1. **`firewall-cmd --zone=public --list-sources`**
+   - 列出 `public` 区域中配置的所有源地址或源 IP。
+
+2. **`firewall-cmd --remove-source=192.168.101.17`**
+   - 从当前活动区域中移除源地址 `192.168.101.17`。注意，如果需要从特定区域移除源地址，应指定区域名。
+
+3. **`firewall-cmd --list-all-zones`**
+   - 列出所有定义的区域及其配置，包括绑定的接口、源地址、开放的端口、服务等。
+
+### 创建和配置新区域
+
+4. **`firewall-cmd --permanent --new-zone=hvv`**
+   - 创建一个新的持久化区域，名为 `hvv`。
+
+5. **`firewall-cmd --reload`**
+   - 重新加载 `firewalld` 的配置，应用之前做的更改。
+
+6. **`firewall-cmd --set-default-zone=hvv`**
+   - 将 `hvv` 区域设置为默认区域。
+
+### 配置区域规则
+
+7. **`firewall-cmd --permanent --zone=hvv --add-source=192.168.101.17`**
+   - 在 `hvv` 区域的持久化配置中添加源地址 `192.168.101.17`。
+
+8. **`firewall-cmd --permanent --zone=hvv --add-port=3306-3307/tcp`**
+   - 在 `hvv` 区域的持久化配置中添加 TCP 端口 3306 到 3307 的开放规则。
+
+9. **`firewall-cmd --zone=hvv --list-ports`**
+   - 列出 `hvv` 区域当前开放的端口。
+
+10. **`firewall-cmd --zone=hvv --list-sources`**
+    - 列出 `hvv` 区域当前配置的源地址。
+
+11. **`firewall-cmd --permanent --zone=hvv --add-rich-rule="rule family='ipv4' source address='192.168.101.17' port port='0-65535' protocol='tcp' accept"`**
+    - 向 `hvv` 区域添加一条富规则，允许来自 `192.168.101.17` 的所有 TCP 端口访问。
+
+12. **`firewall-cmd --permanent --zone=hvv --list-rich-rule`**
+    - 列出 `hvv` 区域中配置的所有富规则。
+
+### 启动和管理 firewalld 服务
+
+13. **`systemctl enable firewalld`**
+    - 设置 `firewalld` 服务在系统启动时自动启动。
+
+14. **`systemctl start firewalld`**
+    - 启动 `firewalld` 服务。
+
+### 配置 IP 集合和信任区域
+
+15. **`firewall-cmd --permanent --new-ipset=hadoop331 --type=hash:ip`**
+    - 创建一个新的 IP 集合 `hadoop331`，类型为哈希表，用于存储 IP 地址。
+
+16. **`firewall-cmd --permanent --ipset=hadoop331 --add-entry=172.20.16.23`**
+    - 向 `hadoop331` IP 集合中添加 IP 地址 `172.20.16.23`。
+
+17. **`firewall-cmd --info-ipset=hadoop331`**
+    - 显示 `hadoop331` IP 集合的信息。
+
+18. **`firewall-cmd --permanent --zone=trusted --add-source=ipset:hadoop331`**
+    - 将 `hadoop331` IP 集合添加到 `trusted` 区域，使集合中的 IP 地址被信任。
+
+### 其他查询和配置命令
+
+19. **`firewall-cmd --info-zone=hvv`**
+    - 显示 `hvv` 区域的详细信息。
+
+20. **`firewall-cmd --get-ipsets`**
+    - 列出所有配置的 IP 集合。
+
+21. **`firewall-cmd --permanent --zone=hvv --set-target=ACCEPT`**
+    - 设置 `hvv` 区域的默认行为为接受所有未明确匹配的流量。
+
+22. **`systemctl restart firewalld.service`**
+    - 重新启动 `firewalld` 服务，应用所有更改。
+
+### 远程管理
+
+23. **`ssh` 命令**
+    - 这些命令使用 SSH 远程启动和检查 `firewalld` 服务的状态。
+
+24. **`firewall-cmd --get-active-zones`**
+    - 列出当前活动的防火墙区域及其绑定的接口和源。
+
+通过这些命令，你可以创建和配置 `firewalld` 规则，包括开放或关闭特定的端口，允许或禁止特定的 IP 地址，以及管理防火墙服务。要实现禁止其他任何 IP 访问本服务器的任何端口，你可以创建一个新区域，仅将需要的 IP 添加为源，仅开放必要的端口，并将此区域设置为默认区域。
